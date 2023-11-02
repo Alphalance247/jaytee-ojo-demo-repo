@@ -21,10 +21,13 @@ function Header() {
           </div>
         </div>
   
-        {/* Subheader*/}
-        <div className="bg-green-500 text-white py-2 text-center" style={{ height: '65px' }}>
-          <div className="container mx-auto">
-            <ul className="flex justify-center space-x-4">
+        {/* Padding*/}
+        <div className="py-2" />
+  
+        {/* Subheader */}
+        <div className="bg-green-500 text-white" style={{ height: '65px' }}>
+          <div className="container mx-auto flex items-center justify-center">
+            <ul className="flex space-x-4">
               <li className="inline-block">
                 <a href="#" className="text-white border-b-2 border-transparent hover:border-white">
                   ABOUT US
