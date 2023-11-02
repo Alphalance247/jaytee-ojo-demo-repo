@@ -21,38 +21,38 @@ function Header() {
           </div>
         </div>
   
-        {/* Subheader with Six Menu Items */}
+        {/* Subheader*/}
         <div className="bg-green-500 text-white py-2 text-center" style={{ height: '65px' }}>
           <div className="container mx-auto">
             <ul className="flex justify-center space-x-4">
               <li className="inline-block">
                 <a href="#" className="text-white border-b-2 border-transparent hover:border-white">
-                  Menu 1
+                  ABOUT US
                 </a>
               </li>
               <li className="inline-block">
                 <a href="#" className="text-white border-b-2 border-transparent hover:border-white">
-                  Menu 2
+                  GET INVOLVED
                 </a>
               </li>
               <li className="inline-block">
                 <a href="#" className="text-white border-b-2 border-transparent hover:border-white">
-                  Menu 3
+                  OUR PROJECTS
                 </a>
               </li>
               <li className="inline-block">
                 <a href="#" className="text-white border-b-2 border-transparent hover:border-white">
-                  Menu 4
+                  MEDIA
                 </a>
               </li>
               <li className="inline-block">
                 <a href="#" className="text-white border-b-2 border-transparent hover:border-white">
-                  Menu 5
+                  NEWS & STORIES
                 </a>
               </li>
               <li className="inline-block">
                 <a href="#" className="text-white border-b-2 border-transparent hover:border-white">
-                  Menu 6
+                  CONTACT US
                 </a>
               </li>
             </ul>
