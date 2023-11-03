@@ -6,8 +6,7 @@ function Header() {
         <div className="container mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/logo.png" alt="Logo" className="w-10 h-10 mr-2" />
-            <h1 className="text-2xl font-semibold">Your Logo</h1>
+            <img src="/logo.png" alt="Logo" className=" mr-2" />
           </div>
   
           {/* Main Menu */}
