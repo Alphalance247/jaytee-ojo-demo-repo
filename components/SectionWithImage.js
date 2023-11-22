@@ -30,9 +30,9 @@ const SectionWithImage = () => {
           <a
             href="/your-link"
             className="bg-#369458 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md inline-block mt-4"
-            style={{ background: '#369458' }}
+            style={{ background: '#369458', fontSize: '14px' }}
           >
-            SPONSOR A CHILD
+            MAKE DONATIONS
           </a>
         </div>
       </div>

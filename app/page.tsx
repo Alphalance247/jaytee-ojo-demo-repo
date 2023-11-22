@@ -4,6 +4,7 @@ import Head from 'next/head';
 import SectionWithImage from '../components/SectionWithImage';
 import OurPrograms from '../components/OurPrograms';
 import ProgramsCard from '../components/ProgramsCard';
+import WhatWeDo from '../components/WhatWeDo';
 
 
 
@@ -13,6 +14,7 @@ export default function Home() {
       <SectionWithImage />
       < OurPrograms />
       < ProgramsCard />
+      < WhatWeDo />
       
     </main>
   )
