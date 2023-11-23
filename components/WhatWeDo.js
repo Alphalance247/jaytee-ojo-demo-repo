@@ -3,7 +3,7 @@ import React from 'react';
 const WhatWeDo = () => {
   return (
     <div className="bg-gray-100 p-8" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-      <h2 className="text-2xl font-bold mb-4 text-center">What We Do for the Community</h2>
+      <h2 className="text-2xl font-bold mt-10 mb-10 text-center">What We Do for the Community</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <div className="flex flex-col items-center">

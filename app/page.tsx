@@ -5,6 +5,7 @@ import SectionWithImage from '../components/SectionWithImage';
 import OurPrograms from '../components/OurPrograms';
 import ProgramsCard from '../components/ProgramsCard';
 import WhatWeDo from '../components/WhatWeDo';
+import Impact from '../components/Impact';
 
 
 
@@ -15,6 +16,7 @@ export default function Home() {
       < OurPrograms />
       < ProgramsCard />
       < WhatWeDo />
+      <Impact />
       
     </main>
   )
