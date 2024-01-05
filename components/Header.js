@@ -28,32 +28,32 @@ function Header() {
           <div className="container mx-auto flex items-center justify-center" style={{ height: '65px' }}>
             <ul className="flex space-x-4 gap-7">
               <li className="inline-block">
-                <a href="#" className="text-white border-b-2 border-transparent hover:border-white">
+                <a href="/about" className="text-white border-b-2 border-transparent hover:border-white" style={{ fontSize: '14px', fontWeight: '900' }}>
                   ABOUT US
                 </a>
               </li>
               <li className="inline-block">
-                <a href="#" className="text-white border-b-2 border-transparent hover:border-white">
+                <a href="#" className="text-white border-b-2 border-transparent hover:border-white" style={{ fontSize: '14px', fontWeight: '900' }}>
                   GET INVOLVED
                 </a>
               </li>
               <li className="inline-block">
-                <a href="#" className="text-white border-b-2 border-transparent hover:border-white">
+                <a href="#" className="text-white border-b-2 border-transparent hover:border-white" style={{ fontSize: '14px', fontWeight: '900' }}>
                   OUR PROJECTS
                 </a>
               </li>
               <li className="inline-block">
-                <a href="#" className="text-white border-b-2 border-transparent hover:border-white">
+                <a href="#" className="text-white border-b-2 border-transparent hover:border-white" style={{ fontSize: '14px', fontWeight: '900' }}>
                   MEDIA
                 </a>
               </li>
               <li className="inline-block">
-                <a href="#" className="text-white border-b-2 border-transparent hover:border-white">
+                <a href="#" className="text-white border-b-2 border-transparent hover:border-white" style={{ fontSize: '14px', fontWeight: '900' }}>
                   NEWS & STORIES
                 </a>
               </li>
               <li className="inline-block">
-                <a href="#" className="text-white border-b-2 border-transparent hover:border-white">
+                <a href="#" className="text-white border-b-2 border-transparent hover:border-white" style={{ fontSize: '14px', fontWeight: '900' }}>
                   CONTACT US
                 </a>
               </li>

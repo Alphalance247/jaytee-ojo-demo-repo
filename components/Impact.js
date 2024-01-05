@@ -21,7 +21,7 @@ const Impact = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="p-3">
             <div className="flex items-center">
-                <img src="assets/book.svg" alt="Give Icon" className="w-12 h-12 mb-4" />
+                <img src="assets/book.svg" alt="Give Icon" className="" />
                 <span className="ml-2" style={{color:'#369458', fontSize:'46px', fontWeight:'700', fontFamily:'roboto slab'}}>20,000</span>
             </div>
             <hr />
@@ -30,7 +30,7 @@ const Impact = () => {
         </div>
         <div className="p-3">
             <div className="flex items-center">
-                <img src="assets/book.svg" alt="Give Icon" className="w-12 h-12 mb-4" />
+                <img src="assets/book.svg" alt="Give Icon" className="" />
                 <span className="ml-2" style={{color:'#369458', fontSize:'46px', fontWeight:'700', fontFamily:'roboto slab'}}>20,000</span>
             </div>
             <hr />
@@ -38,7 +38,7 @@ const Impact = () => {
         </div>
         <div className="p-3">
             <div className="flex items-center">
-                <img src="assets/book.svg" alt="Give Icon" className="w-12 h-12 mb-4" />
+                <img src="assets/book.svg" alt="Give Icon" className="" />
                 <span className="ml-2" style={{color:'#369458', fontSize:'46px', fontWeight:'700', fontFamily:'roboto slab'}}>20,000</span>
             </div>
             <hr />
@@ -47,7 +47,7 @@ const Impact = () => {
         </div>
         <div className="p-3">
             <div className="flex items-center">
-                <img src="assets/book.svg" alt="Give Icon" className="w-12 h-12 mb-4" />
+                <img src="assets/book.svg" alt="Give Icon" className="" />
                 <span className="ml-2" style={{color:'#369458', fontSize:'46px', fontWeight:'700', fontFamily:'roboto slab'}}>20,000</span>
             </div>
             <hr />

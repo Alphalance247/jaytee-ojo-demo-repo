@@ -15,8 +15,8 @@ const OurPrograms = () => {
       </div>
 
       
-      <div className="flex-1" style={{ marginLeft: '300px' }}>
-        <p className="text-gray-600">
+      <div className="flex-1" style={{ marginLeft: '200px' }}>
+        <p className="text-gray-600" style={{ fontSize: '16px', fontWeight:'400', lineHeight:'24px'}}>
           We are continuously seeking new ways to create a brighter, more inclusive world.
           The Present Projects section showcases our current efforts,
           offering insight into the areas where we are currently making a difference.
