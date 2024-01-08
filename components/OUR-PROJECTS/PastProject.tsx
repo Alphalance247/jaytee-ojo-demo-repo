@@ -7,10 +7,10 @@ const PastProj = () => {
       <div className="w-[90%] mr-auto ml-auto pt-12 pb-[4rem]">
         <div className="w-[90%] m-auto flex justify-center items-center gap-64 mb-20">
           <div className=" w-[600px] flex flex-col gap-4">
-            <h3 className="text-[#262626] font-bold text-[36px]">
+            <h3 className="text-[#262626] font-bold text-4xl font-RobotoSlab">
               Past Projects
             </h3>
-            <p className="text-[#595959] break-words leading-6 font-normal">
+            <p className="text-[#595959] text-base font-Roboto break-words leading-6 font-normal">
               Every project leaves a lasting legacy of change, showcasing the
               tangible impact of our dedication. From educational programs to
               healthcare initiatives, each one leaves an indelible mark on the
@@ -25,7 +25,7 @@ const PastProj = () => {
                 color: "white",
                 boxShadow: " 0px 8px 16px 0px rgba(0, 0, 0, 0.08)",
               }}
-              className="py-2 px-4 rounded flex justify-center items-center"
+              className="py-2 px-4 rounded font-Roboto text-[14px] font-extrabold flex justify-center items-center"
             >
               LEARN MORE
             </button>
@@ -39,10 +39,10 @@ const PastProj = () => {
                 alt={data.imageAlt}
                 className="max-w-[377px] max-h-[275px]"
               />
-              <h4 className="text-[#3BA361] text-[14px] font-bold leading-7 font-[Roboto]">
+              <h4 className="text-[#3BA361] text-[14px] font-bold leading-7 font-Roboto">
                 {data.content}
               </h4>
-              <p className="text-[#595959] text-[18px] font-[400]">
+              <p className="text-[#595959] text-[18px] font-[400] font-Roboto">
                 {data.paragraph}
               </p>
             </div>

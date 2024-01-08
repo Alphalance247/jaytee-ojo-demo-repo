@@ -5,7 +5,9 @@ const News = () => {
   return (
     <div className="bg-white">
       <div className="w-[90%] mr-auto ml-auto pt-12 pb-20">
-        <h1 className="text-[41px] font-bold text-[#262626]">News & Stories</h1>
+        <h1 className="text-[41px] font-bold text-[#262626] font-RobotoSlab">
+          News & Stories
+        </h1>
 
         <div className="flex justify-center gap-8 mt-12">
           {NewsData.map((data) => (
@@ -20,16 +22,16 @@ const News = () => {
                 className="max-w-[377px] max-h-[275px]"
               />
               <div className="bg-white flex flex-col gap-4 max-w-[377px] p-8">
-                <h4 className="text-[#454545] text-[13px] font-[500] leading-7 font-[Roboto] uppercase">
+                <h4 className="text-[#454545] text-[13px] font-[500] leading-7 font-Roboto uppercase">
                   {data.content}
                 </h4>
-                <h3 className="text-[#262626] font-[500] text-[23px]">
+                <h3 className="text-[#262626] font-[500] text-[23px] leading-7 font-RobotoSlab">
                   {data.headings}
                 </h3>
-                <p className="text-[#454545] text-[16px] font-[400]">
+                <p className="text-[#454545] text-[16px] font-[400] font-Roboto">
                   {data.paragraph}
                 </p>
-                <p>
+                <p className="font-Roboto font-semibold text-xs uppercase">
                   {data.name} {data.date}
                 </p>
               </div>

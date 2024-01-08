@@ -7,14 +7,16 @@ const ReuseAble: React.FC<{
   return (
     <div className="flex flex-col lg:flex-row gap-[5rem]">
       <div className="lg:py-0">
-        {word && <p className="text-gray-600 ">{paragraph}</p>}
+        {word && <p className="text-gray-600">{paragraph}</p>}
 
-        <h2 className="text-[36px] font-bold sm:text-4xl">{heading}</h2>
+        <h2 className="text-[36px] font-bold sm:text-4xl font-RobotoSlab">
+          {heading}
+        </h2>
       </div>
 
       <div className="flex-1">
         <p
-          className="text-gray-600 ml-[50px] w-[568px]"
+          className="text-gray-600 ml-[50px] w-[568px] font-Roboto"
           style={{ fontSize: "16px", fontWeight: "400", lineHeight: "24px" }}
         >
           {text}

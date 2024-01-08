@@ -22,13 +22,13 @@ const Ongoing = () => {
                 alt={data.imageAlt}
                 className="max-w-[377px] max-h-[275px]"
               />
-              <h4 className="text-[#8C8C8C] text-[14px] font-bold leading-7 font-[Roboto] uppercase">
+              <h4 className="text-[#8C8C8C] text-[14px] font-bold leading-7 font-Roboto uppercase">
                 {data.content}
               </h4>
-              <p className="text-[#454545] text-[18px] font-[400]">
+              <p className="text-[#454545] text-[18px] font-[400] font-Roboto">
                 {data.paragraph}
               </p>
-              <button className="text-[14px] font-[900] text-[#369458] border-none outline-none">
+              <button className="text-[14px] font-[900] text-[#369458] border-none outline-none font-Roboto">
                 LEARN MORE
               </button>
             </div>

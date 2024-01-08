@@ -8,23 +8,15 @@ const Hero = () => {
       }}
     >
       <div
-        className="absolute top-0 left-0"
+        className="absolute top-0 left-0 w-[100%] h-[100%] z-[10]"
         style={{
           backgroundColor: "rgba(0, 0, 0, 0.5)",
-          width: "100%",
-          height: "100%",
-          zIndex: "10",
         }}
       ></div>
 
-      <div
-        className=" text-white text-center absolute"
-        style={{ zIndex: "20", top: "15rem", left: "32rem" }}
-      >
-        <p className=" mb-5 font-[Roboto]" style={{ fontSize: "1rem" }}>
-          OUR PROJECTS
-        </p>
-        <h1 className="text-[51px] font-bold font-['Roboto Slab'] ">
+      <div className=" text-white text-center absolute z-20 top-60 left-[32rem]">
+        <p className=" mb-5 font-Roboto text-lg font-bold">OUR PROJECTS</p>
+        <h1 className=" text-[51px] leading-6 font-bold font-RobotoSlab">
           Our Portfolio
         </h1>
       </div>
