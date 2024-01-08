@@ -21,7 +21,7 @@ const Hero = () => {
         className=" text-white text-center absolute"
         style={{ zIndex: "20", top: "15rem", left: "32rem" }}
       >
-        <p className=" mb-5 font-serif" style={{ fontSize: "1rem" }}>
+        <p className=" mb-5 font-[Roboto]" style={{ fontSize: "1rem" }}>
           OUR PROJECTS
         </p>
         <h1 className="text-[51px] font-bold font-['Roboto Slab'] ">

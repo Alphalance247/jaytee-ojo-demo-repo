@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 function Header() {
   return (
@@ -40,58 +41,58 @@ function Header() {
         >
           <ul className="flex space-x-4 gap-7">
             <li className="inline-block">
-              <a
+              <Link
                 href="/"
                 className="text-white border-b-2 border-transparent hover:border-white border-white"
                 style={{ fontSize: "14px", fontWeight: "900" }}
               >
                 ABOUT US
-              </a>
+              </Link>
             </li>
             <li className="inline-block">
-              <a
+              <Link
                 href="#"
                 className="text-white border-b-2 border-transparent hover:border-white"
                 style={{ fontSize: "14px", fontWeight: "900" }}
               >
                 GET INVOLVED
-              </a>
+              </Link>
             </li>
             <li className="inline-block">
-              <a
+              <Link
                 href="/ourProjects"
                 className="text-white border-b-2 border-transparent hover:border-white"
                 style={{ fontSize: "14px", fontWeight: "900" }}
               >
                 OUR PROJECTS
-              </a>
+              </Link>
             </li>
             <li className="inline-block">
-              <a
+              <Link
                 href="#"
                 className="text-white border-b-2 border-transparent hover:border-white"
                 style={{ fontSize: "14px", fontWeight: "900" }}
               >
                 MEDIA
-              </a>
+              </Link>
             </li>
             <li className="inline-block">
-              <a
+              <Link
                 href="#"
                 className="text-white border-b-2 border-transparent hover:border-white"
                 style={{ fontSize: "14px", fontWeight: "900" }}
               >
                 NEWS & STORIES
-              </a>
+              </Link>
             </li>
             <li className="inline-block">
-              <a
+              <Link
                 href="#"
                 className="text-white border-b-2 border-transparent hover:border-white"
                 style={{ fontSize: "14px", fontWeight: "900" }}
               >
                 CONTACT US
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

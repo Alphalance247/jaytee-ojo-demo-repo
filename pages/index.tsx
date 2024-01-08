@@ -32,7 +32,6 @@ export default function Home() {
         <SectionWithImage />
         <OurPrograms />
         <ProgramsCard />
-        {/* <h1>we are moving</h1> */}
         <WhatWeDo />
         <Impact />
         <Trainer />
