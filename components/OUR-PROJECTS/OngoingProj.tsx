@@ -1,5 +1,6 @@
 import ReuseAble from "./ReuseAble";
 import DataUtil from "./Data/OngoingDta";
+import Image from "next/image";
 
 const Ongoing = () => {
   return (
@@ -17,9 +18,11 @@ const Ongoing = () => {
         <div className="flex justify-center gap-8 mt-16">
           {DataUtil.map((data) => (
             <div className="flex flex-col items-start gap-2" key={data.id}>
-              <img
+              <Image
                 src={data.imageUrl}
                 alt={data.imageAlt}
+                width={377}
+                height={274}
                 className="max-w-[377px] max-h-[275px]"
               />
               <h4 className="text-[#8C8C8C] text-[14px] font-bold leading-7 font-Roboto uppercase">

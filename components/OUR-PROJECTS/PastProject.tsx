@@ -1,5 +1,6 @@
 import Button from "../Button";
 import { Data } from "./Data/PastData";
+import Image from "next/image";
 
 const PastProj = () => {
   return (
@@ -34,9 +35,11 @@ const PastProj = () => {
         <div className="flex justify-center gap-8">
           {Data.map((data) => (
             <div className="flex flex-col items-start gap-2" key={data.id}>
-              <img
+              <Image
                 src={data.imageUrl}
                 alt={data.imageAlt}
+                width={377}
+                height={274}
                 className="max-w-[377px] max-h-[275px]"
               />
               <h4 className="text-[#3BA361] text-[14px] font-bold leading-7 font-Roboto">

@@ -1,4 +1,5 @@
 import NewsData from "./Data/NewsData";
+import Image from "next/image";
 
 const News = () => {
   const date = new Date();
@@ -16,9 +17,11 @@ const News = () => {
               key={data.id}
               style={{ border: "1px solid #D9D9D9" }}
             >
-              <img
+              <Image
                 src={data.imageUrl}
                 alt={data.imageAlt}
+                width={377}
+                height={274}
                 className="max-w-[377px] max-h-[275px]"
               />
               <div className="bg-white flex flex-col gap-4 max-w-[377px] p-8">

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Impact = () => {
   return (
     <div
@@ -31,7 +33,13 @@ const Impact = () => {
           </p>
 
           <div className="">
-            <img src="/logo.png" alt="Logo" className=" m-auto" />
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              width={189}
+              height={56}
+              className=" m-auto"
+            />
           </div>
         </div>
       </div>
