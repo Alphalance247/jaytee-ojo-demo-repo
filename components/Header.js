@@ -1,8 +1,13 @@
-import React from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 function Header() {
+  const [isActive, setISActive] = useState(false);
+
+  const handleClick = () => {
+    setISActive(true);
+  };
   return (
     <header
       className="bg-white text-black"
@@ -50,8 +55,11 @@ function Header() {
             <li className="inline-block">
               <Link
                 href="/AboutUs"
-                className="text-white border-b-2 border-transparent hover:border-white border-white"
-                style={{ fontSize: "14px", fontWeight: "900" }}
+                className={`text-white  pb-4 ${
+                  isActive ? "border-b-2" : "border-b-2"
+                } border-transparent hover:border-white border-white`}
+                style={{ fontSize: "14px", fontWeight: `${900}` }}
+                onClick={handleClick}
               >
                 ABOUT US
               </Link>
@@ -59,7 +67,7 @@ function Header() {
             <li className="inline-block">
               <Link
                 href="#"
-                className="text-white border-b-2 border-transparent hover:border-white"
+                className="text-white border-b-2 pb-4 border-transparent hover:border-white"
                 style={{ fontSize: "14px", fontWeight: "900" }}
               >
                 GET INVOLVED
@@ -68,7 +76,7 @@ function Header() {
             <li className="inline-block">
               <Link
                 href="/Project/ourProjects"
-                className="text-white border-b-2 border-transparent hover:border-white"
+                className="text-white border-b-2 pb-4 border-transparent hover:border-white"
                 style={{ fontSize: "14px", fontWeight: "900" }}
               >
                 OUR PROJECTS
@@ -77,7 +85,7 @@ function Header() {
             <li className="inline-block">
               <Link
                 href="#"
-                className="text-white border-b-2 border-transparent hover:border-white"
+                className="text-white border-b-2 pb-4 border-transparent hover:border-white"
                 style={{ fontSize: "14px", fontWeight: "900" }}
               >
                 MEDIA
@@ -86,7 +94,7 @@ function Header() {
             <li className="inline-block">
               <Link
                 href="#"
-                className="text-white border-b-2 border-transparent hover:border-white"
+                className="text-white border-b-2 pb-4 border-transparent hover:border-white"
                 style={{ fontSize: "14px", fontWeight: "900" }}
               >
                 NEWS & STORIES
@@ -95,7 +103,7 @@ function Header() {
             <li className="inline-block">
               <Link
                 href="#"
-                className="text-white border-b-2 border-transparent hover:border-white"
+                className="text-white border-b-2 pb-4 border-transparent hover:border-white"
                 style={{ fontSize: "14px", fontWeight: "900" }}
               >
                 CONTACT US

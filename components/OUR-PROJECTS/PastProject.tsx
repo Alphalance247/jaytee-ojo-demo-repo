@@ -1,17 +1,16 @@
-import Button from "../Button";
 import { Data } from "./Data/PastData";
 import Image from "next/image";
 
 const PastProj = () => {
   return (
     <div className=" bg-white">
-      <div className="w-[90%] mr-auto ml-auto pt-12 pb-[4rem]">
-        <div className="w-[90%] m-auto flex justify-center items-center gap-64 mb-20">
-          <div className=" w-[600px] flex flex-col gap-4">
-            <h3 className="text-[#262626] font-bold text-4xl font-RobotoSlab">
+      <div className="w-[90%] mr-auto ml-auto pt-12 pb-[4rem] max-sm:w-[95%] max-sm:pt-[1rem] max-sm:pb-[1rem]">
+        <div className="w-[90%] m-auto flex flex-wrap justify-center items-center gap-64 mb-20 max-sm:gap-3 max-sm:items-start max-sm:justify-start max-sm:block max-sm:mb-8 max-md:block">
+          <div className=" w-[600px] flex flex-col gap-4 max-sm:gap-1 max-sm:w-fit">
+            <h3 className="text-[#262626] font-bold text-4xl font-RobotoSlab max-sm:text-[1.25rem]">
               Past Projects
             </h3>
-            <p className="text-[#595959] text-base font-Roboto break-words leading-6 font-normal">
+            <p className="text-[#595959] text-base font-Roboto break-words leading-6 font-normal max-sm:text-[.8rem] max-sm:leading-4 max-sm:break-words">
               Every project leaves a lasting legacy of change, showcasing the
               tangible impact of our dedication. From educational programs to
               healthcare initiatives, each one leaves an indelible mark on the
@@ -21,28 +20,28 @@ const PastProj = () => {
           <div>
             <button
               style={{
-                marginTop: "40px",
                 backgroundColor: "#3BA361",
-                color: "white",
                 boxShadow: " 0px 8px 16px 0px rgba(0, 0, 0, 0.08)",
               }}
-              className="py-2 px-4 rounded font-Roboto text-[14px] font-extrabold flex justify-center items-center"
+              className="text-white mt-[40px] py-2 px-4 rounded font-Roboto text-[14px] font-extrabold max-sm:mt-6 max-sm:w-[100%] max-md:w-[100%]"
             >
               LEARN MORE
             </button>
           </div>
         </div>
-        <div className="flex justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-8 max-sm:block max-md:grid max-md:grid-cols-2">
           {Data.map((data) => (
-            <div className="flex flex-col items-start gap-2" key={data.id}>
+            <div
+              className="flex flex-col items-start gap-2 max-w-[377px] max-sm:mb-8"
+              key={data.id}
+            >
               <Image
                 src={data.imageUrl}
                 alt={data.imageAlt}
                 width={377}
                 height={274}
-                className="max-w-[377px] max-h-[275px]"
               />
-              <h4 className="text-[#3BA361] text-[14px] font-bold leading-7 font-Roboto">
+              <h4 className="text-[#3BA361] text-[14px] font-bold leading-7 font-Roboto max-sm:leading-4">
                 {data.content}
               </h4>
               <p className="text-[#595959] text-[18px] font-[400] font-Roboto">

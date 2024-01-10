@@ -1,10 +1,9 @@
 const Hero = () => {
   return (
     <div
-      className=" bg-cover bg-center bg-no-repeat relative"
+      className="h-[650px] bg-cover bg-center bg-no-repeat relative max-sm:h-[200px] max-md:h-[350px] max-lg:h-[500px]"
       style={{
-        backgroundImage: ' url("../assets/HeroImg.jpg")',
-        height: "640px",
+        backgroundImage: 'url("../assets/HeroImg.jpg")',
       }}
     >
       <div
@@ -14,9 +13,14 @@ const Hero = () => {
         }}
       ></div>
 
-      <div className=" text-white text-center absolute z-20 top-60 left-[32rem]">
-        <h4 className="mb-8 font-Roboto text-lg font-bold">OUR PROJECTS</h4>
-        <h1 className=" text-[51px] leading-6 font-bold font-RobotoSlab">
+      <div
+        className=" text-white text-center absolute z-20 top-[50%] left-[50%]"
+        style={{ transform: " translate(-50%, -50%)" }}
+      >
+        <h4 className=" mb-12 font-Roboto text-lg font-bold max-sm:text-xs max-sm:mb-2">
+          OUR PROJECTS
+        </h4>
+        <h1 className=" text-[51px] leading-6 font-bold font-RobotoSlab max-sm:text-[25px] ">
           Our Portfolio
         </h1>
       </div>
