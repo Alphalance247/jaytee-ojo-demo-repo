@@ -1,13 +1,13 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 function Header() {
-  const [isActive, setISActive] = useState(false);
+  // const [isActive, setISActive] = useState(false);
 
-  const handleClick = () => {
-    setISActive(true);
-  };
+  // const handleClick = () => {
+  //   setISActive(true);
+  // };
   return (
     <header
       className="bg-white text-black"
@@ -15,13 +15,15 @@ function Header() {
     >
       <div className="container mx-auto flex items-center justify-between pl-20 pr-20">
         <div className="flex items-center">
-          <Image
-            src="/logo.png"
-            alt="Logo"
-            width={189}
-            height={56}
-            className=" mr-2"
-          />
+          <Link href="/Home">
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              width={189}
+              height={56}
+              className=" mr-2"
+            />
+          </Link>
         </div>
 
         {/* Main Menu */}
@@ -54,19 +56,17 @@ function Header() {
           <ul className="flex space-x-4 gap-7">
             <li className="inline-block">
               <Link
-                href="/AboutUs"
-                className={`text-white  pb-4 ${
-                  isActive ? "border-b-2" : "border-b-2"
-                } border-transparent hover:border-white border-white`}
+                href="#"
+                className={`text-white  pb-4 ${"border-b-2"} border-transparent hover:border-white border-white`}
                 style={{ fontSize: "14px", fontWeight: `${900}` }}
-                onClick={handleClick}
+                // onClick={handleClick}
               >
                 ABOUT US
               </Link>
             </li>
             <li className="inline-block">
               <Link
-                href="#"
+                href="/AboutUs"
                 className="text-white border-b-2 pb-4 border-transparent hover:border-white"
                 style={{ fontSize: "14px", fontWeight: "900" }}
               >

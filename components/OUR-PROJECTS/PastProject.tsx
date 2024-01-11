@@ -5,7 +5,7 @@ const PastProj = () => {
   return (
     <div className=" bg-white">
       <div className="w-[90%] mr-auto ml-auto pt-12 pb-[4rem] max-sm:w-[95%] max-sm:pt-[1rem] max-sm:pb-[1rem]">
-        <div className="w-[90%] m-auto flex flex-wrap justify-center items-center gap-64 mb-20 max-sm:gap-3 max-sm:items-start max-sm:justify-start max-sm:block max-sm:mb-8 max-md:block">
+        <div className="w-[90%] m-auto flex justify-center items-center gap-64 mb-20 max-sm:gap-3 max-sm:items-start max-sm:justify-start max-sm:block max-sm:mb-8 max-md:block">
           <div className=" w-[600px] flex flex-col gap-4 max-sm:gap-1 max-sm:w-fit">
             <h3 className="text-[#262626] font-bold text-4xl font-RobotoSlab max-sm:text-[1.25rem]">
               Past Projects
@@ -29,7 +29,7 @@ const PastProj = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-wrap justify-center gap-8 max-sm:block max-md:grid max-md:grid-cols-2">
+        <div className="flex justify-center gap-8 max-sm:block max-md:grid max-md:grid-cols-2">
           {Data.map((data) => (
             <div
               className="flex flex-col items-start gap-2 max-w-[377px] max-sm:mb-8"

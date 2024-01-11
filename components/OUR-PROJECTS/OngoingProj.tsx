@@ -15,7 +15,7 @@ const Ongoing = () => {
           />
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8 mt-16 max-sm:block max-sm:mt-10 max-md:grid max-md:grid-cols-2">
+        <div className="flex justify-center gap-8 mt-16 max-sm:block max-sm:mt-10 max-md:grid max-md:grid-cols-2">
           {DataUtil.map((data) => (
             <div
               className="flex flex-col items-start gap-2 max-w-[377px] max-sm:mb-4"

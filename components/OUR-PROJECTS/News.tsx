@@ -10,7 +10,7 @@ const News = () => {
           News & Stories
         </h1>
 
-        <div className="flex flex-wrap justify-center gap-8 mt-12 max-sm:block max-md:grid max-md:grid-cols-2 max-sm:mt-4 ">
+        <div className="flex justify-center gap-8 mt-12 max-sm:block max-md:grid max-md:grid-cols-2 max-sm:mt-4 ">
           {NewsData.map((data) => (
             <div
               className="flex flex-col items-start max-sm:mb-4"
