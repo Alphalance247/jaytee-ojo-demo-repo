@@ -16,7 +16,7 @@ const Impact = () => {
         }}
       >
         <div className="max-w-[780px] m-auto pt-[1.8rem] pb-[1.8rem] grid gap-4 max-sm:p-[.5rem] max-sm:gap-1 max-md:p-4">
-          <h3 className="text-[#262626] font-bold text-[36px] font-RobotoSlab max-sm:text-[1rem] ">
+          <h3 className="text-[#262626] font-bold text-[36px] font-RobotoSlab max-sm:text-[1rem] max-md:text-2xl">
             Explore Our Impact: Past and Present
           </h3>
           <p className="text-[#595959] font-Roboto text-base break-words leading-6 font-normal max-sm:text-[.7rem] max-sm:leading-3">

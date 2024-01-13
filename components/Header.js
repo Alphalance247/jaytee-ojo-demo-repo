@@ -56,7 +56,7 @@ function Header() {
           <ul className="flex space-x-4 gap-7">
             <li className="inline-block">
               <Link
-                href="#"
+                href="/AboutUs/About"
                 className={`text-white  pb-4 ${"border-b-2"} border-transparent hover:border-white border-white`}
                 style={{ fontSize: "14px", fontWeight: `${900}` }}
                 // onClick={handleClick}
