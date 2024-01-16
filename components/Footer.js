@@ -11,7 +11,7 @@ import {
 function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-6 ">
-      <div className="w-[90%]  mx-auto grid gap-16 max-sm:w-[95%]">
+      <div className=" px-20 pt-20 pb-14  mx-auto grid gap-16 max-sm:w-[95%]">
         <div className=" grid grid-cols-1 gap-4 max-sm:grid-cols-1 max-md:grid-cols-2 max-md:gap-10 lg:grid-cols-4 ">
           <div className="">
             <h2 className="font-bold font-RobotoSlab text-[25px] leading-6 mb-4">

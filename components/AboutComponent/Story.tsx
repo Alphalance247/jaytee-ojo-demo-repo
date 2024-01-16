@@ -3,7 +3,7 @@ import Button from "../Button";
 
 const Story = () => {
   return (
-    <div className=" p-24 flex gap-20">
+    <div className=" p-24 flex gap-20 bg-[#F5F5F5]">
       <Image
         width={596}
         height={410}
