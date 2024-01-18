@@ -4,14 +4,14 @@ import Image from "next/image";
 const Inspire = () => {
   return (
     <div
-      className="p-24 grid gap-20"
-      style={{ gridTemplateColumns: "450px 1fr" }}
+      className="p-24 grid gap-x-20 max-sm:p-6 max-sm:flex max-sm:flex-col max-sm:gap-y-10 max-md:p-8 max-md:flex max-md:gap-x-8"
+      style={{ gridTemplateColumns: "450px auto" }}
     >
       <div className="flex flex-col items-start gap-4">
-        <h2 className="text-[#262626] font-RobotoSlab text-4xl font-bold">
+        <h2 className="text-[#262626] font-RobotoSlab text-4xl font-bold max-sm:text-[2rem] max-md:text-3xl">
           To the Young Person
         </h2>
-        <p className="text-[#595959] text-lg font-Roboto font-normal">
+        <p className="text-[#595959] text-lg font-Roboto font-normal max-sm:text-base max-md:text-base">
           What do you want to be in future? What do you want to be when you grow
           up? I remember being asked this question as a little boy and you may
           have been asked the same question in a variety of ways. When I was a
@@ -32,6 +32,7 @@ const Inspire = () => {
         height={536}
         src="/assets/About/Achievement.jpg"
         alt="Achievement"
+        className=" max-md:h-[300px]"
       />
     </div>
   );

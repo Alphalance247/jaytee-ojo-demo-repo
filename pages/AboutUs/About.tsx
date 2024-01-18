@@ -4,6 +4,7 @@ import Story from "@/components/AboutComponent/Story";
 import Mission from "@/components/AboutComponent/Mission";
 import Inspire from "@/components/AboutComponent/Inspire";
 import Learning from "@/components/AboutComponent/Learning";
+import Leadership from "@/components/AboutComponent/Leadership";
 
 const About = () => {
   return (
@@ -13,6 +14,7 @@ const About = () => {
       <Mission />
       <Inspire />
       <Learning />
+      <Leadership />
     </Layout>
   );
 };
