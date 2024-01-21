@@ -29,7 +29,7 @@ const PastProj = () => {
             </button>
           </div>
         </div>
-        <div className="flex justify-center gap-8 max-sm:block max-md:grid max-md:grid-cols-2">
+        <div className="grid grid-cols-3 justify-center gap-8 max-sm:block max-md:grid max-md:grid-cols-2">
           {Data.map((data) => (
             <div
               className="flex flex-col items-start gap-2 max-w-[377px] max-sm:mb-8"

@@ -3,14 +3,17 @@ import Button from "../Button";
 
 const Story = () => {
   return (
-    <div className=" p-24 flex gap-x-20 bg-[#F5F5F5] max-sm:p-6 max-sm:grid max-sm:gap-y-8 max-md:p-8 max-md:flex max-md:gap-x-8">
-      <Image
-        width={596}
-        height={410}
-        src="/assets/About/Volunteer.jpg"
-        alt="Volunteer"
-      />
-      <div className=" flex flex-col justify-start items-start gap-y-8 max-sm:gap-4 max-sm:items-center max-sm:justify-center max-md:gap-y-2">
+    <div className=" p-24 grid grid-cols-2 gap-x-20 bg-[#F5F5F5] max-sm:p-6 max-sm:grid max-sm:grid-cols-1 max-sm:gap-y-8 max-md:p-8 max-md:grid max-md:grid-cols-2 max-md:gap-x-8">
+      <div className="grid justify-center items-center max-md:justify-normal">
+        <Image
+          width={596}
+          height={410}
+          src="/assets/About/Volunteer.jpg"
+          alt="Volunteer"
+        />
+      </div>
+
+      <div className=" flex flex-col justify-start items-start gap-y-2 max-sm:gap-4 max-sm:items-center max-sm:justify-center max-md:gap-y-2">
         <h1 className=" text-[#262626] font-RobotoSlab text-3xl font-bold max-sm:text-[2rem] max-md:text-[20px]">
           Our Story
         </h1>
