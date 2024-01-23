@@ -1,3 +1,4 @@
+// "use client";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -5,9 +6,14 @@ import { FaBars, FaArrowLeft } from "react-icons/fa";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   const handleMenuClick = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleActiveLink = () => {
+    setIsActive(!isActive);
   };
   return (
     <header className="bg-white text-black">
@@ -65,19 +71,23 @@ function Header() {
             isOpen ? "max-sm:grid" : "max-sm:hidden"
           }  max-sm:grid-cols-1 max-sm:z-50 max-sm:text-center max-sm:font-normal max-sm:w-[100%] max-sm:absolute max-sm:top-[3rem] max-sm:text-black max-sm:bg-white max-sm:h-[400px] max-sm:left-0 max-md:gap-2 max-md:space-x-2`}
         >
-          <li className="inline-block max-sm:mt-4">
+          <li
+            className={`inline-block max-sm:mt-4 ${
+              isActive ? "border-b-2" : ""
+            }`}
+            onClick={handleActiveLink}
+          >
             <Link
               href="/AboutUs/About"
-              className="text-white pb-4 border-b-2 border-transparent hover:border-white border-white  max-sm:text-black max-md:pb-2 max-md:text-xs max-md:font-medium"
+              className={`text-white pb-4  border-transparent hover:border-white  border-b-white  max-sm:text-black max-md:pb-2 max-md:text-xs max-md:font-medium`}
               style={{ fontSize: "14px", fontWeight: `${900}` }}
-              // onClick={handleClick}
             >
               ABOUT US
             </Link>
           </li>
           <li className="inline-block">
             <Link
-              href="/AboutUs"
+              href=""
               className="text-white border-b-2 pb-4 border-transparent hover:border-white max-sm:text-black max-md:pb-2"
               style={{ fontSize: "14px", fontWeight: "900" }}
             >
