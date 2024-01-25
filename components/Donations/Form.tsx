@@ -2,6 +2,7 @@ import Billing from "./Billing";
 import ContactInfo from "./ContactInfo";
 import DonateAmt from "./DonateAmt";
 import Heading from "./Heading";
+import Payment from "./Payment";
 
 const Form = () => {
   return (
@@ -62,6 +63,7 @@ const Form = () => {
         <DonateAmt />
         <ContactInfo />
         <Billing />
+        <Payment />
       </form>
     </div>
   );
