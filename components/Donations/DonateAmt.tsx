@@ -2,11 +2,11 @@ import Label from "./LabelReuse";
 
 const DonateAmt = () => {
   return (
-    <div className=" mt-16 ">
+    <div className=" mt-16 max-sm:mt-4">
       <h4 className=" mb-4 font-Roboto font-semibold text-base">
         Donation amount:
       </h4>
-      <div className="mb-8">
+      <div className="mb-8 max-sm:grid max-sm:gap-y-8">
         <input
           type="button"
           value="₦5,000"
@@ -17,25 +17,25 @@ const DonateAmt = () => {
           type="button"
           value="₦5,000"
           name="button"
-          className="text-[#369458] px-8 py-2 text-base uppercase border-2 border-[#595959] rounded-[3px] ml-12"
+          className="text-[#369458] px-8 py-2 text-base uppercase border-2 border-[#595959] rounded-[3px] ml-12 max-sm:ml-0"
         />
         <input
           type="button"
           value="₦5,000"
           name="button"
-          className="text-[#369458] px-8 py-2 text-base uppercase  border-2 border-[#595959] rounded-[3px] ml-12"
+          className="text-[#369458] px-8 py-2 text-base uppercase  border-2 border-[#595959] rounded-[3px] ml-12 max-sm:ml-0"
         />
         <input
           type="button"
           value="₦5,000"
           name="button"
-          className="text-[#369458] px-8 py-2 text-base uppercase border-2 border-[#595959] rounded-[3px] ml-12"
+          className="text-[#369458] px-8 py-2 text-base uppercase border-2 border-[#595959] rounded-[3px] ml-12 max-sm:ml-0"
         />
         <input
           type="button"
           value="₦5,000"
           name="button"
-          className="text-[#369458] px-8 py-2 text-base uppercase border-2 border-[#595959] rounded-[3px] ml-12"
+          className="text-[#369458] px-8 py-2 text-base uppercase border-2 border-[#595959] rounded-[3px] ml-12 max-sm:ml-0"
         />
       </div>
       <div className="flex mb-6">
@@ -51,7 +51,7 @@ const DonateAmt = () => {
         <input
           type="text"
           placeholder="Amount"
-          className="min-w-[680px] border-[#369458] border-2 italic before:'#this' outline-none pl-4 before:contents-['#'] text-[#595959] font-normal text-base"
+          className="w-[680px] border-[#369458] border-2 italic before:'#this' outline-none pl-4 before:contents-['#'] text-[#595959] font-normal text-base"
         />
       </div>
       <div>
@@ -63,7 +63,7 @@ const DonateAmt = () => {
           style={{
             background: "#369458",
           }}
-          className="mr-4 form-checkbox bg-[#369458]"
+          className="mr-4 form-checkbox bg-[#369458] max-sm:mr-2"
         />
         <Label
           html="check"

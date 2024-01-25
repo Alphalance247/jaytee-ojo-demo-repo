@@ -179,14 +179,14 @@ const Payment = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-8 mt-10">
+      <div className="grid grid-cols-2 gap-8 mt-10 max-sm:grid max-sm:grid-cols-1 max-sm:gap-4">
         <div>
           <Label html="card" content="Credit Card Holder Name " broken={true} />
           <input
             type="text"
             id="card"
             name="text"
-            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2"
+            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px]"
           />
         </div>
         <div>
@@ -195,7 +195,7 @@ const Payment = () => {
           <input
             type="number"
             id="cardnumber"
-            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2"
+            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px]"
           />
         </div>
         <div>
@@ -218,7 +218,7 @@ const Payment = () => {
             type="text"
             id="cardverification"
             name="text"
-            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2"
+            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px]"
           />
         </div>
         <div>
@@ -227,7 +227,7 @@ const Payment = () => {
           <input
             type="text"
             id="carddate"
-            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2"
+            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px]"
             placeholder="MM/YY"
           />
         </div>
