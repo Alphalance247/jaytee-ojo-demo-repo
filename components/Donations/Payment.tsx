@@ -1,6 +1,7 @@
 import Heading from "./Heading";
 import Image from "next/image";
 import Label from "./LabelReuse";
+import Button from "../Button";
 
 const Payment = () => {
   return (
@@ -467,6 +468,28 @@ const Payment = () => {
             />
           </svg>
         </div>
+      </div>
+
+      <div className="flex items-center mt-20 gap-x-8">
+        <div>
+          <p className=" text-sm font-Roboto text-[#595959]">
+            One-time donation
+          </p>
+          <h5 className="text-black font-medium text-xl font-Roboto">
+            #5,000{" "}
+            <span className="text-[#595959] text-base font-Roboto font-medium">
+              NGN
+            </span>
+          </h5>
+        </div>
+        <button
+          style={{
+            boxShadow: "0px 8px 16px 0px rgba(0, 0, 0, 0.08)",
+          }}
+          className="bg-[#369458] py-6 px-8 rounded flex justify-center items-center uppercase text-white font-Roboto text-base font-black"
+        >
+          MAKE donations
+        </button>
       </div>
     </div>
   );
