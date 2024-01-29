@@ -3,11 +3,19 @@ import ContactInfo from "./ContactInfo";
 import DonateAmt from "./DonateAmt";
 import Heading from "./Heading";
 import Payment from "./Payment";
+import { useState } from "react";
 
 const Form = () => {
+  const [active, setActive] = useState<string>("DONATE One time");
+  const handleClick = (text: string) => {
+    setActive(text);
+  };
   return (
-    <div className="px-[200px] py-24 max-sm:p-4">
-      <form action="" className="flex flex-col gap-y-8 max-sm:gap-y-4">
+    <div className="px-[200px] py-24 max-sm:p-4 max-md:p-8 max-lg:p-10 max-xl:p-20">
+      <form
+        action=""
+        className="flex flex-col gap-y-16 max-sm:gap-y-4 max-md:gap-y-12"
+      >
         <Heading content="1. choose your donations" />
         <div>
           <h4 className="mb-4 text-base font-semibold font-Roboto">
@@ -17,20 +25,28 @@ const Form = () => {
             <div className="inline-flex">
               <button
                 type="button"
-                className=" font-Roboto inline-flex text-white font-black px-8 py-2 text-[12px] uppercase bg-[#369458]  rounded-t-[2px] rounded-r-[2px] border-2 border-[#369458] max-sm:mr-4 max-sm:px-4"
+                className={`font-Roboto inline-flex  font-black ${
+                  active === "DONATE One time"
+                    ? "bg-[#369458] text-white"
+                    : "bg-white text-black"
+                } px-8 py-2 text-[12px] uppercase   rounded-t-[2px] rounded-r-[2px] border-2 border-[#369458] max-sm:mr-4 max-sm:px-4`}
+                onClick={() => handleClick("DONATE One time")}
               >
                 DONATE One time
               </button>
               <button
                 type="button"
-                className="font-Roboto inline-flex  text-[#262626] font-black text-[12px] uppercase bg-[] px-8 py-2 rounded-t-[2px] rounded-r-[2px] border-2 border-[#369458] max-sm:px-4"
+                className={`font-Roboto inline-flex  text-[#262626] ${
+                  active === "DONATE monthly" ? "bg-[#369458] text-white" : ""
+                } font-black text-[12px] uppercase bg-[] px-8 py-2 rounded-t-[2px] rounded-r-[2px] border-2 border-[#369458] max-sm:px-4`}
+                onClick={() => handleClick("DONATE monthly")}
               >
                 DONATE monthly
               </button>
             </div>
 
             <svg
-              className=" absolute text-8xl right-[32rem] bottom-[-3rem] max-sm:hidden"
+              className="absolute right-[32rem] bottom-[-3rem] max-sm:hidden max-md:right-[18rem]"
               xmlns="http://www.w3.org/2000/svg"
               width="98"
               height="90"

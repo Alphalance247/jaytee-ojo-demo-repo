@@ -7,8 +7,8 @@ const Payment = () => {
   return (
     <div className="">
       <Heading content="4. payment method" />
-      <div className="flex items-start gap-x-8">
-        <div className=" p-6 border-2 border-[#369458] rounded-[3px]">
+      <div className="flex items-start gap-x-8 max-sm:grid ">
+        <div className="p-6 border-2 border-[#369458] rounded-[3px] max-sm:mb-4">
           <input
             type="radio"
             id="credit"
@@ -186,7 +186,7 @@ const Payment = () => {
             type="text"
             id="card"
             name="text"
-            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px]"
+            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px] max-md:w-[330px]"
           />
         </div>
         <div>
@@ -195,7 +195,7 @@ const Payment = () => {
           <input
             type="number"
             id="cardnumber"
-            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px]"
+            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px] max-md:w-[330px]"
           />
         </div>
         <div>
@@ -207,7 +207,7 @@ const Payment = () => {
             />
             <a
               href="http://"
-              className=" pl-28 font-Roboto text-sm font-bold text-[#369458] underline"
+              className=" pl-28 font-Roboto text-sm font-bold text-[#369458] underline max-sm:pl-4 max-md:pl-2"
             >
               What is a CVV number?
             </a>
@@ -218,7 +218,7 @@ const Payment = () => {
             type="text"
             id="cardverification"
             name="text"
-            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px]"
+            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px] max-md:w-[330px]"
           />
         </div>
         <div>
@@ -227,7 +227,7 @@ const Payment = () => {
           <input
             type="text"
             id="carddate"
-            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px]"
+            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px] max-md:w-[330px]"
             placeholder="MM/YY"
           />
         </div>
@@ -470,7 +470,7 @@ const Payment = () => {
         </div>
       </div>
 
-      <div className="flex items-center mt-20 gap-x-8">
+      <div className="flex items-center mt-20 gap-x-8 max-sm:grid gap-y-4">
         <div>
           <p className=" text-sm font-Roboto text-[#595959]">
             One-time donation
