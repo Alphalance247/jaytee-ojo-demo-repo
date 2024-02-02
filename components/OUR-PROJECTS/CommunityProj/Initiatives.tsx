@@ -13,11 +13,11 @@ const initiatives = () => {
   return (
     <>
       <div className="bg-[#D9D9D9]">
-        <div className=" w-[70%] m-auto text-center">
+        <div className="w-[70%] m-auto text-center max-sm:w-[102%] max-sm:m-auto max-md:w-[100%]">
           <button
             className={`py-6 px-6 text-[#369458] ${
               isActive === "Health" ? "border-b-4" : ""
-            }  border-[#369458] mr-6 font-Roboto text-sm font-black uppercase hover:border-b-4`}
+            }  border-[#369458] mr-6 font-Roboto text-sm font-black uppercase hover:border-b-4 max-sm:mr-1 max-sm:p-2 max-sm:text-[8px] max-md:mr-3 max-md:p-3`}
             onClick={() => handleActiveClick("Health")}
           >
             Health
@@ -53,16 +53,76 @@ const initiatives = () => {
       {isActive === "Health" && (
         <>
           <Palliative
-            headings="Covid-19 Elderly Health Palliative"
-            text="During the COVID-19 pandemic, we launched an essential initiative
-          focused on providing specialized palliative care and support for
-          vulnerable elderly individuals."
-          />
-          <Palliative
             headings="Covid-19 Food Bank"
             text="During the COVID-19 pandemic, we launched an essential initiative
           focused on providing specialized palliative care and support for
           vulnerable elderly individuals."
+            image1="/assets/Community/treatment.png"
+            img2="/assets/Community/visitation.png"
+            img3="/assets/Community/palliatives.png"
+            alt1="treatment"
+            alt2="visitation"
+            alt3="palliatives"
+          />
+          <Palliative
+            headings="Covid-19 Elderly Health Palliative"
+            text="During the COVID-19 pandemic, we launched an essential initiative
+          focused on providing specialized palliative care and support for
+          vulnerable elderly individuals."
+            image1="/assets/Community/visitation.png"
+            img2="/assets/Community/treatment.png"
+            img3="/assets/Community/palliatives.png"
+            alt1="visitation"
+            alt2="treatment"
+            alt3="palliatives"
+          />
+
+          <Palliative
+            headings="Street Light Construction"
+            text="Solar Street light donated to Ikoro Ekiti Community to light up the main streets."
+            image1="/assets/Community/street.png"
+            img2="/assets/Community/light.png"
+            img3="/assets/Community/tranformer.png"
+            alt1="street"
+            alt2="light"
+            alt3="transformer"
+          />
+
+          <Palliative
+            headings="Borehole Construction"
+            text="Borehole for the young people drinking from a dirty stream."
+            image1="/assets/Community/pipe.png"
+            img2="/assets/Community/fetcing.png"
+            img3="/assets/Community/fixes.png"
+            alt1="pipe"
+            alt2="fetcing"
+            alt3="fixes"
+          />
+
+          <Palliative
+            headings="Covid-19 Elderly Health Palliative"
+            text="During the COVID-19 pandemic, we launched an essential initiative
+          focused on providing specialized palliative care and support for
+          vulnerable elderly individuals."
+            image1="/assets/Community/visitation.png"
+            img2="/assets/Community/visitation.png"
+            img3="/assets/Community/palliatives.png"
+            alt1="palliatives"
+            alt2="palliatives"
+            alt3="palliatives"
+          />
+
+          <Palliative
+            headings="Covid-19 Elderly Health Palliative"
+            text="During the COVID-19 pandemic, we launched an essential initiative
+          focused on providing specialized palliative care and support for
+          vulnerable elderly individuals."
+            image1="/assets/Community/visitation.png"
+            img2="/assets/Community/visitation.png"
+            img3="/assets/Community/palliatives.png"
+            alt1="visitation"
+            alt2="visitation"
+            alt3="visitation"
           />
         </>
       )}
@@ -71,18 +131,36 @@ const initiatives = () => {
         <Palliative
           headings="Street Light Construction"
           text="Solar Street light donated to Ikoro Ekiti Community to light up the main streets."
+          image1="/assets/Community/street.png"
+          img2="/assets/Community/light.png"
+          img3="/assets/Community/tranformer.png"
+          alt1="street"
+          alt2="light"
+          alt3="transformer"
         />
       )}
       {isActive === "water" && (
         <Palliative
           headings="Borehole Construction"
           text="Borehole for the young people drinking from a dirty stream."
+          image1="/assets/Community/pipe.png"
+          img2="/assets/Community/fetcing.png"
+          img3="/assets/Community/fixes.png"
+          alt1="pipe"
+          alt2="fetcing"
+          alt3="fixes"
         />
       )}
       {isActive === "renovation" && (
         <Palliative
           headings="Mofere Busstop Renovation"
           text="Renovation and Modernisation of Mofere Okada Bus-stop."
+          image1="/assets/Community/busstop.png"
+          img2="/assets/Community/construction.png"
+          img3="/assets/Community/innovate.png"
+          alt1="busstop"
+          alt2="constuction"
+          alt3="innovate"
         />
       )}
       {isActive === "education" && (
@@ -91,6 +169,12 @@ const initiatives = () => {
           text="During the COVID-19 pandemic, we launched an essential initiative
           focused on providing specialized palliative care and support for
           vulnerable elderly individuals."
+          image1="/assets/Community/visitation.png"
+          img2="/assets/Community/visitation.png"
+          img3="/assets/Community/palliatives.png"
+          alt1="palliatives"
+          alt2="palliatives"
+          alt3="palliatives"
         />
       )}
       {isActive === "security" && (
@@ -99,6 +183,12 @@ const initiatives = () => {
           text="During the COVID-19 pandemic, we launched an essential initiative
           focused on providing specialized palliative care and support for
           vulnerable elderly individuals."
+          image1="/assets/Community/visitation.png"
+          img2="/assets/Community/visitation.png"
+          img3="/assets/Community/palliatives.png"
+          alt1="visitation"
+          alt2="visitation"
+          alt3="visitation"
         />
       )}
     </>
