@@ -1,14 +1,15 @@
 import { Data } from "./Data/PastData";
 import Image from "next/image";
+import Link from "next/link";
 
-const PastProj = () => {
+const PastProj: React.FC<{ text: string }> = ({ text }) => {
   return (
     <div className=" bg-white">
       <div className="w-[90%] mr-auto ml-auto pt-12 pb-[4rem] max-sm:w-[95%] max-sm:pt-[1rem] max-sm:pb-[1rem] ">
         <div className="w-[90%] m-auto flex justify-center items-center gap-64 mb-20 max-sm:w-[95%] max-sm:gap-3 max-sm:items-start max-sm:justify-start max-sm:block max-sm:mb-8 max-md:block max-md:w-[100%]">
           <div className=" w-[600px] flex flex-col gap-4 max-sm:gap-1 max-sm:w-fit">
             <h3 className="text-[#262626] font-bold text-4xl font-RobotoSlab max-sm:text-[1.25rem]">
-              Past Projects
+              {text}
             </h3>
             <p className="text-[#595959] text-base font-Roboto break-words leading-6 font-normal max-sm:text-[.8rem] max-sm:leading-4 max-sm:break-words">
               Every project leaves a lasting legacy of change, showcasing the
@@ -18,15 +19,22 @@ const PastProj = () => {
             </p>
           </div>
           <div>
-            <button
-              style={{
-                backgroundColor: "#3BA361",
-                boxShadow: " 0px 8px 16px 0px rgba(0, 0, 0, 0.08)",
-              }}
-              className="text-white mt-[40px] py-2 px-4 rounded font-Roboto text-[14px] font-extrabold max-sm:mt-6 max-sm:w-[100%] max-md:w-[100%]"
+            <Link
+              href={`${
+                text === "Past Projects"
+                  ? "/Project/PastProjectsPage"
+                  : "/Project/Community"
+              }`}
             >
-              LEARN MORE
-            </button>
+              <button
+                style={{
+                  boxShadow: " 0px 8px 16px 0px rgba(0, 0, 0, 0.08)",
+                }}
+                className="text-white mt-[40px] bg-[#3BA361] py-2 px-4 rounded font-Roboto text-[14px] font-extrabold max-sm:mt-6 max-sm:w-[100%] max-md:w-[100%]"
+              >
+                LEARN MORE
+              </button>
+            </Link>
           </div>
         </div>
         <div className="grid grid-cols-3 justify-center gap-8 max-sm:block max-md:grid max-md:grid-cols-2">

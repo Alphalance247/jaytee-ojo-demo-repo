@@ -11,7 +11,7 @@ const Project = () => {
     <Layout>
       <Hero />
       <Impact />
-      <PastProj />
+      <PastProj text="Past Projects" />
       <Ongoing />
       <News />
     </Layout>

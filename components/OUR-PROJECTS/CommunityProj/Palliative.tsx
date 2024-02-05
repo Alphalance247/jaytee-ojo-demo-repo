@@ -11,7 +11,7 @@ const Palliative: React.FC<{
   alt3: string;
 }> = ({ text, headings, image1, img2, img3, alt1, alt2, alt3 }) => {
   return (
-    <div className="px-24 py-8 max-sm:p-4 max-md:p-8">
+    <div className="px-24 py-8 max-sm:p-3 max-md:p-8">
       <div className="mb-6 max-sm:m-4">
         <h2 className=" font-RobotoSlab font-bold text-2xl text-[#262626] mb-3 max-sm:text-xl">
           {headings}

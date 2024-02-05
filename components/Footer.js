@@ -11,8 +11,8 @@ import {
 function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-6 ">
-      <div className=" px-20 pt-20 pb-14 mx-auto grid gap-16 max-sm:w-[95%] max-sm:p-2">
-        <div className=" grid grid-cols-1 gap-4 max-sm:grid-cols-1 max-md:grid-cols-2 max-md:gap-10 lg:grid-cols-4 ">
+      <div className=" px-20 pt-20 pb-14 mx-auto grid gap-16 max-sm:w-[95%] max-sm:p-2 max-lg:p-10">
+        <div className=" grid grid-cols-4 gap-4 max-sm:grid-cols-1 max-md:grid-cols-2 max-md:gap-10 max-lg:grid-cols-2">
           <div className="">
             <h2 className="font-bold font-RobotoSlab text-[25px] leading-6 mb-4">
               Company
@@ -150,7 +150,7 @@ function Footer() {
             </div>
           </div>
 
-          <div className="flex gap-[7rem]  border-b-[1px] border-[#454545] py-[2rem] max-sm:inline-block max-sm:py-4 max-md:block max-md:border-none">
+          <div className="flex gap-[7rem]  border-b-[1px] border-[#454545] py-[2rem] max-sm:inline-block max-sm:py-4 max-md:block max-md:border-none max-lg:block">
             <div className=" mb-4">
               <p className="font-semibold uppercase">
                 Subscribe to our newsletter

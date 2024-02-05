@@ -1,6 +1,6 @@
 const Projects = () => {
   return (
-    <div className=" p-24 text-center flex flex-col gap-y-4 max-sm:p-4 max-sm:gap-y-2 max-md:p-8">
+    <div className=" p-24 text-center flex flex-col gap-y-4 max-sm:p-4 max-sm:gap-y-2 max-md:p-8 max-lg:p-12">
       <h4 className=" font-Roboto text-base font-black text-[#3BA361]">
         OUR PAST PROJECTS
       </h4>

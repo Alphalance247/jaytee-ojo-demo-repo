@@ -1,10 +1,9 @@
-import Button from "./Button";
+import Button from "../CommunityProj/Button";
 import { useState } from "react";
-import Palliative from "./Palliative";
+import Palliative from "../CommunityProj/Palliative";
 
-const initiatives = () => {
-  const [isActive, setIsActive] = useState("Health");
-  const [showText, setShowText] = useState(false);
+const Techy = () => {
+  const [isActive, setIsActive] = useState("school programming program");
 
   const handleActiveClick = (text: string) => {
     setIsActive(text);
@@ -13,46 +12,20 @@ const initiatives = () => {
   return (
     <>
       <div className="bg-[#D9D9D9]">
-        <div className="w-[90%] m-auto text-center max-sm:w-[100%] max-sm:m-auto max-md:w-[100%] max-lg:w-[100%]">
-          <button
-            className={`py-6 px-6 hover:text-[#369458] ${
-              isActive === "Health"
-                ? "border-b-4 text-[#369458]"
-                : "text-[#595959]"
-            }  border-[#369458] mr-6 font-Roboto text-sm font-black uppercase hover:border-b-4 max-sm:mr-4 max-sm:p-1 max-sm:text-[7px] max-md:mr-3 max-md:p-3 max-lg:mr-2`}
-            onClick={() => handleActiveClick("Health")}
-          >
-            Health
-          </button>
-
+        <div className=" text-center">
           <Button
-            text="infrastructure"
-            onClick={() => handleActiveClick("infrastructure")}
-            isActive={isActive === "infrastructure"}
+            text="school programming program"
+            onClick={() => handleActiveClick("school programming program")}
+            isActive={isActive === "school programming program"}
           />
           <Button
-            text="water"
-            onClick={() => handleActiveClick("water")}
-            isActive={isActive === "water"}
-          />
-          <Button
-            text="renovation"
-            onClick={() => handleActiveClick("renovation")}
-            isActive={isActive === "renovation"}
-          />
-          <Button
-            text="education"
-            onClick={() => handleActiveClick("education")}
-            isActive={isActive === "education"}
-          />
-          <Button
-            text="security"
-            onClick={() => handleActiveClick("security")}
-            isActive={isActive === "security"}
+            text="open programming program"
+            onClick={() => handleActiveClick("open programming program")}
+            isActive={isActive === "open programming program"}
           />
         </div>
       </div>
-      {isActive === "Health" && (
+      {isActive === "school programming program" && (
         <>
           <Palliative
             headings="Covid-19 Food Bank"
@@ -129,7 +102,7 @@ const initiatives = () => {
         </>
       )}
 
-      {isActive === "infrastructure" && (
+      {isActive === "open programming program" && (
         <Palliative
           headings="Street Light Construction"
           text="Solar Street light donated to Ikoro Ekiti Community to light up the main streets."
@@ -141,59 +114,8 @@ const initiatives = () => {
           alt3="transformer"
         />
       )}
-      {isActive === "water" && (
-        <Palliative
-          headings="Borehole Construction"
-          text="Borehole for the young people drinking from a dirty stream."
-          image1="/assets/Community/pipe.png"
-          img2="/assets/Community/fetcing.png"
-          img3="/assets/Community/fixes.png"
-          alt1="pipe"
-          alt2="fetcing"
-          alt3="fixes"
-        />
-      )}
-      {isActive === "renovation" && (
-        <Palliative
-          headings="Mofere Busstop Renovation"
-          text="Renovation and Modernisation of Mofere Okada Bus-stop."
-          image1="/assets/Community/busstop.png"
-          img2="/assets/Community/construction.png"
-          img3="/assets/Community/innovate.png"
-          alt1="busstop"
-          alt2="constuction"
-          alt3="innovate"
-        />
-      )}
-      {isActive === "education" && (
-        <Palliative
-          headings="Covid-19 Elderly Health Palliative"
-          text="During the COVID-19 pandemic, we launched an essential initiative
-          focused on providing specialized palliative care and support for
-          vulnerable elderly individuals."
-          image1="/assets/Community/visitation.png"
-          img2="/assets/Community/visitation.png"
-          img3="/assets/Community/palliatives.png"
-          alt1="palliatives"
-          alt2="palliatives"
-          alt3="palliatives"
-        />
-      )}
-      {isActive === "security" && (
-        <Palliative
-          headings="Covid-19 Elderly Health Palliative"
-          text="During the COVID-19 pandemic, we launched an essential initiative
-          focused on providing specialized palliative care and support for
-          vulnerable elderly individuals."
-          image1="/assets/Community/visitation.png"
-          img2="/assets/Community/visitation.png"
-          img3="/assets/Community/palliatives.png"
-          alt1="visitation"
-          alt2="visitation"
-          alt3="visitation"
-        />
-      )}
     </>
   );
 };
-export default initiatives;
+
+export default Techy;
