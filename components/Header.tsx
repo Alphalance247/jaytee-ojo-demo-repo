@@ -117,7 +117,7 @@ function Header() {
           </li>
           <li className="inline-block">
             <Link
-              href="#"
+              href="/News&Stories/NewsCampaign"
               className="text-white border-b-2 pb-4 border-transparent hover:border-white max-sm:text-black max-md:pb-2"
               style={{ fontSize: "14px", fontWeight: "900" }}
             >
