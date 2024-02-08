@@ -1,11 +1,14 @@
 import Layout from "@/app/layout";
 import Impacts from "@/components/AboutComponent/Impacts";
+import Story from "@/components/AboutComponent/Story";
 import Build from "@/components/NewsComponent/Build";
 import CaroNews from "@/components/NewsComponent/CaroNews";
 import Empower from "@/components/NewsComponent/Empower";
 import HeroNews from "@/components/NewsComponent/HeroNews";
+import Innovate from "@/components/NewsComponent/Innovate";
 import Program from "@/components/NewsComponent/Program";
 import Textbook from "@/components/NewsComponent/Textbook";
+import News from "@/components/OUR-PROJECTS/News";
 
 const NewsCampaign = () => {
   return (
@@ -25,6 +28,8 @@ const NewsCampaign = () => {
         borderColor="border-black"
       />
       <CaroNews />
+      <Innovate />
+      <News />
     </Layout>
   );
 };

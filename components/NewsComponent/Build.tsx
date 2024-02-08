@@ -1,19 +1,18 @@
-import build from "next/dist/build";
 
 const Build = () => {
   return (
-    <div className="p-24 bg-[#F5F5F5]">
-      <div className="px-8 grid grid-cols-2 gap-x-16">
-        <h3 className=" text-4xl font-bold font-RobotoSlab text-[#262626]">
+    <div className="p-24 bg-[#F5F5F5] max-sm:p-5 max-md:p-8 max-lg:p-10">
+      <div className="px-8 grid grid-cols-2 gap-x-16 max-sm:px-1 max-sm:gap-x-0">
+        <h3 className=" text-4xl font-bold font-RobotoSlab text-[#262626] max-sm:text-xl max-md:text-2xl">
           Building the future
         </h3>
-        <p className=" font-Roboto text-base text-[#595959]">
+        <p className=" font-Roboto text-base text-[#595959] max-sm:text-xs max-md:text-sm">
           Lorem ipsum dolor sit amet consectetur. Ridiculus tortor enim commodo
           fringilla venenatis lectus in. Lorem ipsum dolor sit amet
         </p>
       </div>
 
-      <div className="grid grid-cols-2 mt-16 gap-x-8">
+      <div className="grid grid-cols-2 mt-16 gap-x-8 max-sm:grid-cols-1 max-sm:mt-6 max-sm:gap-y-4">
         <div className=" bg-[#205A35] p-8 rounded">
           <div className="bg-white p-4 rounded">
             <h5 className=" font-RobotoSlab text-2xl font-bold mb-4">
