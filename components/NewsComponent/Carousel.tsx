@@ -25,7 +25,7 @@ const Carousel = () => {
         />
         {/* </div> */}
         <div className="font-Roboto text-sm flex flex-col items-center justify-center">
-          <p className="w-[70%] text-left">
+          <p className="w-[70%] text-left max-sm:w-[100%] max-md:w-[100%]">
             Lorem ipsum dolor sit amet consectetur. Facilisi posuere a purus
             pellentesque. Risus natoque velit nisl a elementum quam. Urna lacus
             egestas maecenas venenatis est ut in
@@ -42,7 +42,7 @@ const Carousel = () => {
         />
 
         <div className="font-Roboto text-sm flex flex-col items-center justify-center">
-          <p className="w-[70%] text-left">
+          <p className="w-[70%] text-left max-sm:w-[100%] max-md:w-[100%]">
             Lorem ipsum dolor sit amet consectetur. Facilisi posuere a purus
             pellentesque. Risus natoque velit nisl a elementum quam. Urna lacus
             egestas maecenas venenatis est ut in
