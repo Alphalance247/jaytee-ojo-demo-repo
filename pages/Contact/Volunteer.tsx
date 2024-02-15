@@ -1,4 +1,6 @@
 import Layout from "@/app/layout";
+import Give from "@/components/Contact/Give";
+import Help from "@/components/Contact/Help";
 import Leadership from "@/components/Contact/Leadership";
 
 const Volunteer = () => {
@@ -24,19 +26,21 @@ const Volunteer = () => {
           <p className=" mb-12 font-Roboto text-lg font-bold max-sm:text-xs max-sm:mb-2">
             GET INVOLVED
           </p>
-          <h4 className=" text-[51px] leading-6 font-bold font-RobotoSlab max-sm:text-[25px] ">
+          <h4 className=" text-[51px] leading-6 font-bold font-RobotoSlab max-sm:text-[20px] max-md:text-[25px]">
             Become a Volunteer
           </h4>
         </div>
       </div>
-      <div className="p-24 border-[#595959] border-b-2">
-        <h3 className=" font-RobotoSlab font-bold text-4xl text-[#369458] text-center ">
+      <div className="p-24 border-[#D9D9D9] border-b-2 max-sm:p-5 max-md:p-8">
+        <h3 className=" font-RobotoSlab font-bold text-4xl text-[#369458] text-center max-sm:text-xl max-md:text-2xl">
           Our National Distribution Center in Omaha is looking for great
           volunteers to help us help other nonprofit organizations.
         </h3>
       </div>
 
       <Leadership />
+      <Help />
+      <Give />
     </Layout>
   );
 };
