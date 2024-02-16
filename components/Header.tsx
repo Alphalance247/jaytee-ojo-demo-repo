@@ -32,26 +32,23 @@ function Header() {
 
         {/* Main Menu */}
         <div className="flex space-x-4 items-center ">
-          <a
-            href="#"
-            className="px-4 py-2 bg-red-600 text-white flex  max-sm:py-1 max-sm:px-2 max-sm:text-xs"
+          <Link
+            href="/Donate/Donate"
+            className="px-4 py-2 bg-red-600 text-white flex  max-sm:py-1 max-sm:px-2 max-sm:text-xs hover:bg-white hover:text-black hover:border-2 border-red-600"
           >
             <h3>
               <i>Donate Now ♥ </i>
             </h3>
-          </a>
-          <a
-            href="#"
-            className="px-4 py-2 bg-white text-black border border-green-500 text-green max-sm:py-1 max-sm:px-2 max-sm:text-xs"
+          </Link>
+
+          <Link
+            href=""
+            className="px-4 py-2 bg-white text-black border border-green-500 text-green hover:bg-green-400 max-sm:py-1 max-sm:px-2 max-sm:text-xs"
           >
             <h3>Impact Tech ↗ </h3>
-          </a>
+          </Link>
         </div>
       </div>
-
-      {/* Padding*/}
-      {/* <div className="py-2" /> */}
-      {/* Subheader */}
 
       <div className="text-white bg-[#369458] h-[65px] flex items-center justify-center max-sm:relative max-sm:pr-8 max-sm:justify-end max-md:h-[50px]">
         <FaBars
@@ -71,16 +68,10 @@ function Header() {
             isOpen ? "max-sm:grid" : "max-sm:hidden"
           }  max-sm:grid-cols-1 max-sm:z-50 max-sm:text-center max-sm:font-normal max-sm:w-[100%] max-sm:absolute max-sm:top-[3rem] max-sm:text-black max-sm:bg-white max-sm:h-[400px] max-sm:left-0 max-md:gap-2 max-md:space-x-2`}
         >
-          <li
-            className={`inline-block pb-4 max-sm:mt-4`}
-            // onClick={() => handleActiveLink("/AboutUs/About")}
-          >
+          <li>
             <Link
               href="/AboutUs/About"
-              className={`text-white pb-4  border-transparent
-             ${
-               isActive === "/AboutUs/About" ? "border-b-2 border-white" : ""
-             }hover:border-white border-b-2    max-sm:text-black max-md:pb-2 max-md:text-xs max-md:font-medium`}
+              className={`text-white pb-5 border-transparent hover:border-white border-b-2 max-sm:text-black max-md:pb-2 max-md:text-xs max-md:font-medium`}
               style={{ fontSize: "14px", fontWeight: `${900}` }}
               onClick={() => handleActiveLink("/AboutUs/About")}
             >
@@ -91,7 +82,7 @@ function Header() {
           <li className="inline-block">
             <Link
               href=""
-              className="text-white border-b-2 pb-4 border-transparent hover:border-white max-sm:text-black max-md:pb-2"
+              className="text-white border-b-2 pb-5 border-transparent hover:border-white max-sm:text-black max-md:pb-2"
               style={{ fontSize: "14px", fontWeight: "900" }}
             >
               GET INVOLVED
@@ -100,7 +91,7 @@ function Header() {
           <li className="inline-block">
             <Link
               href="/Project/ourProjects"
-              className="text-white border-b-2 pb-4 border-transparent hover:border-white max-sm:text-black max-md:pb-2"
+              className="text-white border-b-2 pb-5 border-transparent hover:border-white max-sm:text-black max-md:pb-2"
               style={{ fontSize: "14px", fontWeight: "900" }}
             >
               OUR PROJECTS
@@ -109,7 +100,7 @@ function Header() {
           <li className="inline-block">
             <Link
               href="#"
-              className="text-white border-b-2 pb-4 border-transparent hover:border-white max-sm:text-black max-md:pb-2"
+              className="text-white border-b-2 pb-5 border-transparent hover:border-white max-sm:text-black max-md:pb-2"
               style={{ fontSize: "14px", fontWeight: "900" }}
             >
               MEDIA
@@ -118,7 +109,7 @@ function Header() {
           <li className="inline-block">
             <Link
               href="/News&Stories/NewsCampaign"
-              className="text-white border-b-2 pb-4 border-transparent hover:border-white max-sm:text-black max-md:pb-2"
+              className="text-white border-b-2 pb-5 border-transparent hover:border-white max-sm:text-black max-md:pb-2"
               style={{ fontSize: "14px", fontWeight: "900" }}
             >
               NEWS & STORIES
@@ -127,7 +118,7 @@ function Header() {
           <li className="inline-block">
             <Link
               href="/Contact/ContactUs"
-              className="text-white border-b-2 pb-4 border-transparent hover:border-white max-sm:pb-2 max-sm:text-black max-md:pb-2"
+              className="text-white border-b-2 pb-5 border-transparent hover:border-white max-sm:pb-2 max-sm:text-black max-md:pb-2"
               style={{ fontSize: "14px", fontWeight: "900" }}
             >
               CONTACT US

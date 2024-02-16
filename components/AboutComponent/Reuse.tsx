@@ -7,7 +7,7 @@ const Reuse: React.FC<{
   return (
     <div className="flex flex-col gap-y-8 max-sm:gap-y-4 max-md:gap-y-4">
       <div className=" flex items-center">
-        <button className="text-[#369458] font-RobotoSlab text-xl font-extrabold max-sm:text-base max-md:text-base">
+        <button className="text-[#369458] font-RobotoSlab text-xl font-extrabold hover:underline max-sm:text-base max-md:text-base">
           {button}
         </button>
         <svg
@@ -27,7 +27,7 @@ const Reuse: React.FC<{
         {content1}
       </p>
       <div className="flex items-center">
-        <button className="text-[#369458] font-RobotoSlab text-xl font-extrabold max-sm:text-base max-md:text-base">
+        <button className="text-[#369458] font-RobotoSlab text-xl font-extrabold hover:underline max-sm:text-base max-md:text-base">
           {button2}
         </button>
         <svg

@@ -167,7 +167,7 @@ function Footer() {
               </button>
             </div>
           </div>
-          <div className="flex gap-40 py-[2rem] max-sm:inline-block max-md:gap-24">
+          <div className="flex items-start gap-40 py-[2rem] max-sm:inline-block max-md:gap-24">
             <Image
               src="/jtoffooterlogo.svg"
               alt="Logo"

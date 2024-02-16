@@ -13,7 +13,7 @@ const Story = () => {
         />
       </div>
 
-      <div className=" flex flex-col justify-start items-start gap-y-2 max-sm:gap-4 max-sm:items-center max-sm:justify-center max-md:gap-y-2">
+      <div className=" flex flex-col items-start gap-y-4 max-sm:gap-4 max-sm:items-center max-sm:justify-center max-md:gap-y-2">
         <h1 className=" text-[#262626] font-RobotoSlab text-3xl font-bold max-sm:text-[2rem] max-md:text-[20px]">
           Our Story
         </h1>
@@ -24,7 +24,7 @@ const Story = () => {
           intervention as well as farmer empowerment and local farming
           interventions.
         </p>
-        <p className="text-[#595959] text-lg font-Roboto font-normal max-sm:text-[1rem] max-md:text-base">
+        <p className="text-[#595959] text-lg font-Roboto font-normal max-sm:text-[1rem] max-md:text-base mb-8">
           For all the intervention projects and works mentioned above and many
           more besides, we are prouder of the investments we make into the
           future via educational interventions from donating books to students,

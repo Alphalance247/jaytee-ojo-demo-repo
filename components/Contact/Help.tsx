@@ -28,7 +28,7 @@ const Help = () => {
           sollicitudin. Sed viverra sed consectetur viverra.
         </p>
 
-        <button className="font-Roboto font-black text-sm py-6 px-10 rounded bg-[#369458] uppercase text-white max-sm:px-4 max-sm:py-2">
+        <button className="font-Roboto font-black text-sm py-6 px-10 rounded bg-[#369458] hover:bg-black uppercase text-white max-sm:px-4 max-sm:py-2">
           VOLUNTEER WITH US
         </button>
       </div>
