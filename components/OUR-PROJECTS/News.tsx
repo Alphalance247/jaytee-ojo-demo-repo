@@ -5,7 +5,7 @@ const News = () => {
   const date = new Date();
   return (
     <div className="bg-white">
-      <div className="w-[90%] mr-auto ml-auto pt-12 pb-20 max-sm:w-[95%] max-sm:pt-4 max-sm:pb-4">
+      <div className="p-24 max-sm:p-4">
         <h1 className="text-[41px] font-bold text-[#262626] font-RobotoSlab max-sm:text-[1.5rem]">
           News & Stories
         </h1>
