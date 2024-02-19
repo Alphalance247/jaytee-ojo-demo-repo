@@ -4,7 +4,6 @@ import Palliative from "./Palliative";
 
 const initiatives = () => {
   const [isActive, setIsActive] = useState("Health");
-  const [showText, setShowText] = useState(false);
 
   const handleActiveClick = (text: string) => {
     setIsActive(text);

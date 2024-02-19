@@ -12,7 +12,7 @@ const DonateAmt = () => {
     setActive(currentAmount);
   };
   return (
-    <div className=" mt-16 max-sm:mt-4 max-md:mt-0">
+    <div className="">
       <h4 className=" mb-4 font-Roboto font-semibold text-base">
         Donation amount:
       </h4>

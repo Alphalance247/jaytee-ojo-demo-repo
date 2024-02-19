@@ -12,7 +12,7 @@ const ContactInfo = () => {
             type="text"
             id="Firstname"
             name="Firstname"
-            className=" outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px] max-md:w-[330px]"
+            className=" outline-none border-[#595959] border-2 rounded-[3px] w-[100%] p-2 "
           />
         </div>
         <div>
@@ -22,7 +22,7 @@ const ContactInfo = () => {
             type="text"
             id="lastname"
             name="lastname"
-            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px] max-md:w-[330px]"
+            className="outline-none border-[#595959] border-2 rounded-[3px] w-[100%] p-2 "
           />
         </div>
         <div>
@@ -32,7 +32,7 @@ const ContactInfo = () => {
             type="email"
             id="usermail"
             name="usermail"
-            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px] max-md:w-[330px]"
+            className="outline-none border-[#595959] border-2 rounded-[3px] w-[100%] p-2"
           />
         </div>
         <div>
@@ -46,7 +46,7 @@ const ContactInfo = () => {
             type="number"
             id="number"
             name="number"
-            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px] max-md:w-[330px]"
+            className="outline-none border-[#595959] border-2 rounded-[3px] w-[100%] p-2 "
           />
         </div>
         <div>

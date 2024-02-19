@@ -186,7 +186,7 @@ const Payment = () => {
             type="text"
             id="card"
             name="text"
-            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px] max-md:w-[330px]"
+            className="outline-none border-[#595959] border-2 rounded-[3px] w-[100%] p-2"
           />
         </div>
         <div>
@@ -195,7 +195,7 @@ const Payment = () => {
           <input
             type="number"
             id="cardnumber"
-            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px] max-md:w-[330px]"
+            className="outline-none border-[#595959] border-2 rounded-[3px] w-[100%] p-2"
           />
         </div>
         <div>
@@ -218,7 +218,7 @@ const Payment = () => {
             type="text"
             id="cardverification"
             name="text"
-            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px] max-md:w-[330px]"
+            className="outline-none border-[#595959] border-2 rounded-[3px] w-[100%] p-2"
           />
         </div>
         <div>
@@ -227,7 +227,7 @@ const Payment = () => {
           <input
             type="text"
             id="carddate"
-            className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px] max-md:w-[330px]"
+            className="outline-none border-[#595959] border-2 rounded-[3px] w-[100%] p-2"
             placeholder="MM/YY"
           />
         </div>
@@ -476,7 +476,7 @@ const Payment = () => {
             One-time donation
           </p>
           <h5 className="text-black font-medium text-xl font-Roboto">
-            #5,000{" "}
+            #5,000
             <span className="text-[#595959] text-base font-Roboto font-medium">
               NGN
             </span>

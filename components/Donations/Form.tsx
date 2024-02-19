@@ -12,16 +12,16 @@ const Form = () => {
   };
   return (
     <div className="px-[200px] py-24 max-sm:p-4 max-md:p-8 max-lg:p-10 max-xl:p-20">
+      <Heading content="1. choose your donations" />
       <form
         action=""
-        className="flex flex-col gap-y-16 max-sm:gap-y-4 max-md:gap-y-12"
+        className="flex flex-col gap-y-12 max-sm:gap-y-4 max-md:gap-y-12"
       >
-        <Heading content="1. choose your donations" />
         <div>
           <h4 className="mb-4 text-base font-semibold font-Roboto">
             I want to:
           </h4>
-          <div className="flex items-start justify-start gap-12 relative max-sm:grid max-sm:gap-y-4">
+          <div className="flex items-start justify-start gap-x-12 relative max-sm:grid max-sm:grid-cols-1 max-sm:gap-y-4 max-md:grid max-md:grid-cols-2">
             <div className="inline-flex">
               <button
                 type="button"
@@ -29,7 +29,7 @@ const Form = () => {
                   active === "DONATE One time"
                     ? "bg-[#369458] text-white"
                     : "bg-white text-black"
-                } px-8 py-2 text-[12px] uppercase   rounded-t-[2px] rounded-r-[2px] border-2 border-[#369458] max-sm:mr-4 max-sm:px-4`}
+                } px-8 py-2 text-[12px] uppercase border-2 border-[#369458] max-sm:mr-4 max-sm:px-4`}
                 onClick={() => handleClick("DONATE One time")}
               >
                 DONATE One time
@@ -38,15 +38,18 @@ const Form = () => {
                 type="button"
                 className={`font-Roboto inline-flex  text-[#262626] ${
                   active === "DONATE monthly" ? "bg-[#369458] text-white" : ""
-                } font-black text-[12px] uppercase bg-[] px-8 py-2 rounded-t-[2px] rounded-r-[2px] border-2 border-[#369458] max-sm:px-4`}
+                } font-black text-[12px] uppercase bg-[] px-8 py-2  border-2 border-[#369458] max-sm:px-4`}
                 onClick={() => handleClick("DONATE monthly")}
               >
                 DONATE monthly
               </button>
             </div>
-
+            <p className=" italic text-xl text-[#E60303] w-[340px] max-sm:text-base max-md:w-[280px]">
+              Support monthly to feed children, families, and communities
+              year-round!
+            </p>
             <svg
-              className="absolute right-[32rem] bottom-[-3rem] max-sm:hidden max-md:right-[18rem]"
+              className="relative right-[29rem] top-3 max-sm:hidden max-md:absolute max-md:left-[19rem] max-md:top-4"
               xmlns="http://www.w3.org/2000/svg"
               width="98"
               height="90"
@@ -70,10 +73,6 @@ const Form = () => {
                 </clipPath>
               </defs>
             </svg>
-            <p className=" italic text-xl text-[#E60303] w-[340px] max-sm:text-base">
-              Support monthly to feed children, families, and communities
-              year-round!
-            </p>
           </div>
         </div>
         <DonateAmt />

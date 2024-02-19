@@ -3,11 +3,25 @@ import Image from "next/image";
 const Impact = () => {
   return (
     <div
-      className="relative h-[450px] max-sm:h-[250px] "
+      className="relative h-[450px] max-sm:h-[250px]"
       style={{
         background: "#369458",
       }}
     >
+      <Image
+        src="/assets/Community/right.svg"
+        className="absolute right-0 opacity-30"
+        width={396}
+        height={396}
+        alt="right"
+      />
+      <Image
+        src="/assets/Community/left.svg"
+        className="absolute bottom-0 opacity-30"
+        width={396}
+        height={396}
+        alt="left"
+      />
       <div
         className=" bg-white min-w-[90%] h-[350px] mr-auto text-center absolute top-[50%] left-[50%] max-sm:w-[95%] max-sm:h-[220px]"
         style={{

@@ -1,7 +1,7 @@
 const Mission = () => {
   return (
-    <div className="p-24 grid grid-cols-2 gap-x-36 border-y-[1px] border-[#D9D9D9] max-sm:p-6 max-sm:grid max-sm:grid-cols-1 max-sm:gap-y-8 max-md:p-8 max-md:gap-x-12">
-      <div className=" border-[#D9D9D9]">
+    <div className=" grid grid-cols-2 border-y-[1px] border-[#D9D9D9]  max-sm:grid max-sm:grid-cols-1  ">
+      <div className=" border-[#D9D9D9] border-r-[1px] p-24 max-sm:p-6 max-sm:border-r-0 max-md:p-8 ">
         <h1 className="text-[#262626] font-RobotoSlab text-4xl font-bold mb-4 max-sm:text-[2rem] max-md:text-3xl">
           Our Vision
         </h1>
@@ -20,7 +20,7 @@ const Mission = () => {
         </p>
       </div>
 
-      <div className="">
+      <div className="p-24 max-sm:p-6 max-md:p-8">
         <h1 className="text-[#262626] font-RobotoSlab text-4xl font-bold mb-4 max-sm:text-[2rem] max-md:text-3xl">
           Our Mission
         </h1>

@@ -13,7 +13,7 @@ const Billing = () => {
             <select
               name="Country"
               id="country"
-              className="w-[450px] outline-none border-[#595959] border-2 rounded-[3px] p-2 max-sm:w-[330px] max-md:w-[330px]"
+              className="w-[100%] outline-none border-[#595959] border-2 rounded-[3px] p-2"
             >
               <option value="Nigeria">Nigeria</option>
               <option value="Nigeria">Benin</option>
@@ -27,7 +27,7 @@ const Billing = () => {
             <select
               name="State"
               id="state"
-              className="w-[450px] outline-none border-[#595959] border-2 rounded-[3px] p-2 max-sm:w-[330px] max-md:w-[330px]"
+              className="w-[100%] outline-none border-[#595959] border-2 rounded-[3px] p-2"
             >
               <option value="Nigeria">Oyo</option>
               <option value="Nigeria">Ekiti</option>
@@ -41,7 +41,7 @@ const Billing = () => {
             <select
               name="City"
               id="City"
-              className="w-[450px] outline-none border-[#595959] border-2 rounded-[3px] p-2 max-sm:w-[330px] max-md:w-[330px]"
+              className="w-[100%] outline-none border-[#595959] border-2 rounded-[3px] p-2"
             >
               <option value="Nigeria">Ibadan</option>
               <option value="Nigeria">Abuga</option>
@@ -56,7 +56,7 @@ const Billing = () => {
               type="text"
               id="address"
               name="text"
-              className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px] max-md:w-[330px]"
+              className="outline-none border-[#595959] border-2 rounded-[3px] w-[100%] p-2"
             />
           </div>
           <div>
@@ -70,7 +70,7 @@ const Billing = () => {
               type="text"
               id="address2"
               name="text"
-              className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px] max-md:w-[330px]"
+              className="outline-none border-[#595959] border-2 rounded-[3px] w-[100%] p-2"
             />
           </div>
           <div>
@@ -80,7 +80,7 @@ const Billing = () => {
               type="text"
               id="postal"
               name="text"
-              className="outline-none border-[#595959] border-2 rounded-[3px] w-[450px] p-2 max-sm:w-[330px] max-md:w-[330px]"
+              className="outline-none border-[#595959] border-2 rounded-[3px] w-[100%] p-2"
             />
           </div>
         </div>
