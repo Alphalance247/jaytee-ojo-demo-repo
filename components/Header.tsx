@@ -70,10 +70,10 @@ function Header() {
         >
           <li>
             <Link
-              href="/AboutUs/About"
+              href="/about-us/about"
               className={`text-white pb-5 border-transparent hover:border-white border-b-2 max-sm:text-black max-md:pb-2 max-md:text-xs max-md:font-medium`}
               style={{ fontSize: "14px", fontWeight: `${900}` }}
-              onClick={() => handleActiveLink("/AboutUs/About")}
+              onClick={() => handleActiveLink("/about-us")}
             >
               ABOUT US
             </Link>
