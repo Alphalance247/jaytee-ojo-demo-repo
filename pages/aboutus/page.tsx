@@ -1,5 +1,5 @@
 import Layout from "@/app/layout";
-import Hero from "@/components/AboutComponent/Hero";
+import Hero from "@/components/about-us/Hero";
 import Story from "@/components/AboutComponent/Story";
 import Mission from "@/components/AboutComponent/Mission";
 import Inspire from "@/components/AboutComponent/Inspire";

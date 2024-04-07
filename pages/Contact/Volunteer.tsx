@@ -1,7 +1,7 @@
 import Layout from "@/app/layout";
-import Give from "@/components/Contact/Give";
-import Help from "@/components/Contact/Help";
-import Leadership from "@/components/Contact/Leadership";
+import Give from "@/components/contact/Give";
+import Help from "@/components/contact/Help";
+import Leadership from "@/components/contact/Leadership";
 
 const Volunteer = () => {
   return (
