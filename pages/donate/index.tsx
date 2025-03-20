@@ -1,4 +1,4 @@
-import Layout from "@/app/layout";
+import Layout from "../layout";
 import HeroD from "@/components/Donations/Hero";
 import Form from "@/components/Donations/Form";
 

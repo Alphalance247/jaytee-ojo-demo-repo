@@ -1,7 +1,7 @@
-import Layout from "@/app/layout";
 import News from "@/components/OUR-PROJECTS/News";
 import NewsData from "@/components/OUR-PROJECTS/Data/NewsData";
 import Image from "next/image";
+import Layout from "@/pages/layout";
 
 const Transform = () => {
   return (
@@ -39,7 +39,7 @@ const Transform = () => {
         </div>
       </div>
 
-      <div className="px-24 py-8 max-sm:p-5 max-md:p-8 max-lg:p-12">
+      {/* <div className="px-24 py-8 max-sm:p-5 max-md:p-8 max-lg:p-12">
         <div className="grid grid-cols-3  items-center justify-center gap-8 mt-12 max-sm:flex max-sm:flex-col max-md:grid max-md:grid-cols-2 max-md:mt-4 ">
           {NewsData.map((data) => (
             <div
@@ -100,7 +100,8 @@ const Transform = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
+      <News />
 
       <div className="text-center p-16 max-sm:p-5 max-md:p-8 max-lg:p-12">
         <button className="font-Roboto font-black text-sm py-6 px-10 border-2 border-[#262626] rounded text-[#369458] uppercase hover:bg-[#369458] hover:text-white">

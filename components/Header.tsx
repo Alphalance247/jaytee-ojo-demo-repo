@@ -1,12 +1,15 @@
-// "use client";
+"use client";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaBars, FaArrowLeft } from "react-icons/fa";
+import { useRouter } from "next/router";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isActive, setIsActive] = useState("");
+
+  const router = useRouter();
 
   const handleMenuClick = () => {
     setIsOpen(!isOpen);
@@ -19,7 +22,7 @@ function Header() {
     <header className="bg-white text-black">
       <div className="flex items-center justify-between px-20 py-4 max-sm:p-2 max-sm:text-xs max-md:px-8 max-md:py-4">
         <div className="flex items-center">
-          <Link href="/Home">
+          <Link href="/">
             <Image
               src="/logo.png"
               alt="Logo"
@@ -33,7 +36,7 @@ function Header() {
         {/* Main Menu */}
         <div className="flex space-x-4 items-center ">
           <Link
-            href="/Donate/Donate"
+            href="/donate"
             className="px-4 py-2 bg-red-600 text-white flex  max-sm:py-1 max-sm:px-2 max-sm:text-xs hover:bg-white hover:text-black hover:border-2 border-red-600"
           >
             <h3>
@@ -64,25 +67,33 @@ function Header() {
           onClick={handleMenuClick}
         />
         <ul
-          className={`flex space-x-4 gap-7 ${
+          className={`flex space-x-12 gap-7 ${
             isOpen ? "max-sm:grid" : "max-sm:hidden"
-          }  max-sm:grid-cols-1 max-sm:z-50 max-sm:text-center max-sm:font-normal max-sm:w-[100%] max-sm:absolute max-sm:top-[3rem] max-sm:text-black max-sm:bg-white max-sm:h-[400px] max-sm:left-0 max-md:gap-2 max-md:space-x-2`}
+          }  max-sm:grid-cols-1 max-sm:z-50 max-sm:text-center max-sm:font-normal max-sm:w-[100%] max-sm:absolute max-sm:top-[3rem] max-sm:py-8 max-sm:text-black max-sm:bg-white max-sm:h-[auto] max-sm:left-0 max-md:gap-2 max-md:space-x-2`}
         >
           <li>
             <Link
-              href="/about-us/about"
-              className={`text-white pb-5 border-transparent hover:border-white border-b-2 max-sm:text-black max-md:pb-2 max-md:text-xs max-md:font-medium`}
+              href="/about-us"
+              className={`text-white pb-5  ${
+                router.pathname === "/about-us"
+                  ? "border-b-4 border-[white]"
+                  : "hover:border-white hover:border-b-4"
+              }  max-sm:text-black max-md:pb-2 max-md:text-xs max-md:font-medium`}
               style={{ fontSize: "14px", fontWeight: `${900}` }}
-              onClick={() => handleActiveLink("/about-us")}
+              onClick={() => handleActiveLink("about-us")}
             >
               ABOUT US
             </Link>
           </li>
 
-          <li className="inline-block">
+          <li className={`inline-block `}>
             <Link
-              href=""
-              className="text-white border-b-2 pb-5 border-transparent hover:border-white max-sm:text-black max-md:pb-2"
+              href="/volunteer"
+              className={`text-white  ${
+                router.pathname === "/volunteer"
+                  ? "border-b-4 border-[white]"
+                  : "hover:border-white hover:border-b-4"
+              } pb-5 border-transparent hover:border-white max-sm:text-black max-md:pb-2`}
               style={{ fontSize: "14px", fontWeight: "900" }}
             >
               GET INVOLVED
@@ -90,8 +101,12 @@ function Header() {
           </li>
           <li className="inline-block">
             <Link
-              href="/Project/ourProjects"
-              className="text-white border-b-2 pb-5 border-transparent hover:border-white max-sm:text-black max-md:pb-2"
+              href="/our-project"
+              className={`text-white ${
+                router.pathname === "/our-project"
+                  ? "border-b-4 border-[white]"
+                  : "hover:border-white hover:border-b-4"
+              } pb-5  hover:border-white max-sm:text-black max-md:pb-2`}
               style={{ fontSize: "14px", fontWeight: "900" }}
             >
               OUR PROJECTS
@@ -100,7 +115,11 @@ function Header() {
           <li className="inline-block">
             <Link
               href="#"
-              className="text-white border-b-2 pb-5 border-transparent hover:border-white max-sm:text-black max-md:pb-2"
+              className={`text-white ${
+                router.pathname === "#"
+                  ? "border-b-4 border-[white]"
+                  : "hover:border-white hover:border-b-4"
+              } pb-5  hover:border-white max-sm:text-black max-md:pb-2`}
               style={{ fontSize: "14px", fontWeight: "900" }}
             >
               MEDIA
@@ -108,8 +127,12 @@ function Header() {
           </li>
           <li className="inline-block">
             <Link
-              href="/News&Stories/NewsCampaign"
-              className="text-white border-b-2 pb-5 border-transparent hover:border-white max-sm:text-black max-md:pb-2"
+              href="/news"
+              className={`text-white pb-5 ${
+                router.pathname === "/news"
+                  ? "border-b-4 border-[white]"
+                  : "hover:border-white hover:border-b-4"
+              } hover:border-white max-sm:text-black max-md:pb-2`}
               style={{ fontSize: "14px", fontWeight: "900" }}
             >
               NEWS & STORIES
@@ -117,8 +140,12 @@ function Header() {
           </li>
           <li className="inline-block">
             <Link
-              href="/Contact/ContactUs"
-              className="text-white border-b-2 pb-5 border-transparent hover:border-white max-sm:pb-2 max-sm:text-black max-md:pb-2"
+              href="/contact-us"
+              className={`text-white pb-5 ${
+                router.pathname === "/contact-us"
+                  ? "border-b-4 border-[white]"
+                  : "hover:border-white hover:border-b-4"
+              } hover:border-white max-sm:pb-2 max-sm:text-black max-md:pb-2`}
               style={{ fontSize: "14px", fontWeight: "900" }}
             >
               CONTACT US

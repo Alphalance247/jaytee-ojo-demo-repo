@@ -1,7 +1,7 @@
-import Layout from "@/app/layout";
 import Projects from "@/components/OUR-PROJECTS/CommunityProj/Project";
 import Techy from "@/components/OUR-PROJECTS/ICT/Techy";
 import Tech from "@/components/OUR-PROJECTS/CommunityProj/Tech";
+import Layout from "@/pages/layout";
 
 const TechIct = () => {
   return (

@@ -1,46 +1,44 @@
 import React from "react";
 import Button from "./Button";
+import Container from "./common/container";
+import Link from "next/link";
 
 const Trainer = () => {
   return (
-    <div
-      className="flex"
-      style={{
-        border: "10px solid",
-        borderColor: "#3BA361",
-        marginLeft: "100px",
-        marginRight: "100px",
-        marginBottom: "50PX",
-      }}
-    >
-      <div className="flex-1">
-        <div
-          className="bg-cover bg-center h-screen"
-          style={{
-            backgroundImage: 'url("assets/trainer.png")',
-            height: "400px",
-            width: "500px",
-          }}
-        ></div>
-      </div>
+    <section className="border-[#D9D9D9] border-t">
+      <Container>
+        <div className="border-[#3BA361] border-[15px] items-center grid gap-x-16 md:grid-cols-2 ">
+          <div className="">
+            <img
+              src="/assets/trainer.png"
+              width={605}
+              height={536}
+              alt="trainer"
+            />
+          </div>
 
-      <div className="flex-1 p-8" style={{ height: "400px", width: "500px" }}>
-        <h1 className="">OUR INITIATIVE</h1>
-        <h1 className="text-4xl font-bold mb-4">Train the Trainer</h1>
-        <p className="text-md text-gray-600">
-          Lorem ipsum dolor sit amet consectetur. Phasellus nibh pulvinar
-          viverra bibendum viverra bibendum viverra bibendum. Lorem ipsum dolor
-          sit amet consectetur. Phasellus nibh pulvinar viverra bibendum viverra
-          bibendum viverra bibendum. Lorem ipsum dolor sit amet consectetur.
-          Phasellus nibh pulvinar viverra bibendum viverra bibendum viverra
-          bibendum.
-        </p>
-        <Button text="LEARN MORE" />
-        {/* <button style={{ marginTop:'40px', backgroundColor: '#3BA361', color: 'white' }} className="py-2 px-4 rounded">
-        LEARN MORE
-        </button> */}
-      </div>
-    </div>
+          <div className=" max-md:px-8 max-md:py-10 max-sm:px-4 max-sm:py-6">
+            <p className="text-[#454545] font-Roboto uppercase text-sm mb-2">
+              OUR INITIATIVE
+            </p>
+            <h5 className="text-[41px] leading-[50px] tracking-[-1%] font-bold mb-4 font-RobotoSlab text-[#262626] max-sm:text-3xl">
+              Train the Trainer
+            </h5>
+            <p className="text-base text-[#595959] font-Roboto mb-8 max-sm:text-sm">
+              Lorem ipsum dolor sit amet consectetur. Phasellus nibh pulvinar
+              viverra bibendum viverra bibendum viverra bibendum. Lorem ipsum
+              dolor sit amet consectetur. Phasellus nibh pulvinar viverra
+              bibendum viverra bibendum viverra bibendum. Lorem ipsum dolor sit
+              amet consectetur. Phasellus nibh pulvinar viverra bibendum viverra
+              bibendum viverra bibendum.
+            </p>
+            <Link href={"/our-project/trainer"}>
+              <Button text="LEARN MORE" />
+            </Link>
+          </div>
+        </div>
+      </Container>
+    </section>
   );
 };
 

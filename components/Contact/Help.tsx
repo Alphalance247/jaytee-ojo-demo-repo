@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Help = () => {
   return (
     <div
@@ -28,9 +30,11 @@ const Help = () => {
           sollicitudin. Sed viverra sed consectetur viverra.
         </p>
 
-        <button className="font-Roboto font-black text-sm py-6 px-10 rounded bg-[#369458] hover:bg-black uppercase text-white max-sm:px-4 max-sm:py-2">
-          VOLUNTEER WITH US
-        </button>
+        <Link href={"/contact-us"}>
+          <button className="font-Roboto font-black text-sm py-6 px-10 rounded bg-[#369458] hover:bg-black uppercase text-white max-sm:px-4 max-sm:py-2">
+            VOLUNTEER WITH US
+          </button>
+        </Link>
       </div>
     </div>
   );

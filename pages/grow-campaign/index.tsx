@@ -1,6 +1,5 @@
-import Layout from "@/app/layout";
+import Layout from "../layout";
 import Impacts from "@/components/about-us/Impacts";
-import Story from "@/components/about-us/Story";
 import Build from "@/components/NewsComponent/Build";
 import CaroNews from "@/components/NewsComponent/CaroNews";
 import Empower from "@/components/NewsComponent/Empower";

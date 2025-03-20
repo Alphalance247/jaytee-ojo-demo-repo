@@ -16,9 +16,12 @@ const Give = () => {
         </p>
       </div>
       <div className=" grid grid-cols-3 items-center gap-x-16 max-sm:grid max-sm:grid-cols-1 gap-y-8">
-        {GiveData.map((items) => {
+        {GiveData.map((items, i) => {
           return (
-            <div className="text-center flex flex-col gap-4 max-sm:gap-2">
+            <div
+              className="text-center flex flex-col gap-4 max-sm:gap-2"
+              key={i}
+            >
               <Image
                 width={48}
                 height={48}
