@@ -114,7 +114,7 @@ function Header() {
           </li>
           <li className="inline-block">
             <Link
-              href="#"
+              href="/media"
               className={`text-white ${
                 router.pathname === "#"
                   ? "border-b-4 border-[white]"
