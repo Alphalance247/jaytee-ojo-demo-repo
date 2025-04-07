@@ -5,7 +5,7 @@ import Link from "next/link";
 const WaysToHelp = () => {
   const data = [
     {
-      img: "/assets/home/1.png",
+      img: "/assets/Home/1.png",
       heading: "Donate",
       subhead:
         "Lorem ipsum dolor sit amet consectetur. Arcu dignissim sed fermentum augue eget enim amet aenean. Viverra tortor odio vulputate scelerisque. Aenean vitae tempor scelerisque",
@@ -13,7 +13,7 @@ const WaysToHelp = () => {
       link: "/donate",
     },
     {
-      img: "/assets/home/2.png",
+      img: "/assets/Home/2.png",
       heading: "Volunteer",
       subhead:
         "Lorem ipsum dolor sit amet consectetur. Arcu dignissim sed fermentum augue eget enim amet aenean. Viverra tortor odio vulputate scelerisque. Aenean vitae tempor scelerisque",
@@ -21,7 +21,7 @@ const WaysToHelp = () => {
       link: "/volunteer",
     },
     {
-      img: "/assets/home/3.png",
+      img: "/assets/Home/3.png",
       heading: "Partnership",
       subhead:
         "Lorem ipsum dolor sit amet consectetur. Arcu dignissim sed fermentum augue eget enim amet aenean. Viverra tortor odio vulputate scelerisque. Aenean vitae tempor scelerisque",

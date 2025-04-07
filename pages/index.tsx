@@ -18,11 +18,11 @@ export default function Home() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
         <meta
           name="description"
-          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+          content="JayTee Ojo Foundation is a non-profit organization dedicated to empowering communities through education, healthcare, and sustainable development initiatives."
         />
         <meta
           name="keywords"
-          content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
+          content=" JayTee Ojo Foundation, non-profit, community empowerment, education, healthcare, sustainable development"
         />
       </Head>
 
