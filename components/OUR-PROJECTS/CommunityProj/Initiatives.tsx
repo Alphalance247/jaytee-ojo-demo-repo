@@ -2,7 +2,7 @@ import Button from "./Button";
 import { useState } from "react";
 import Palliative from "./Palliative";
 
-const initiatives = () => {
+const Initiatives = () => {
   const [isActive, setIsActive] = useState("Health");
 
   const handleActiveClick = (text: string) => {
@@ -195,4 +195,4 @@ const initiatives = () => {
     </>
   );
 };
-export default initiatives;
+export default Initiatives;
