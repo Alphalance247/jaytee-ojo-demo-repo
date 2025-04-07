@@ -116,7 +116,7 @@ function Header() {
             <Link
               href="/media"
               className={`text-white ${
-                router.pathname === "#"
+                router.pathname === "/media"
                   ? "border-b-4 border-[white]"
                   : "hover:border-white hover:border-b-4"
               } pb-5  hover:border-white max-sm:text-black max-md:pb-2`}
