@@ -241,7 +241,7 @@ const Payment = () => {
             className="bg-[#369458] "
           />
           <label htmlFor="robot" className=" text-[#369458] pl-4">
-            I'm not a robot
+            I`m not a robot
           </label>
         </div>
         <div className="flex flex-col items-center">

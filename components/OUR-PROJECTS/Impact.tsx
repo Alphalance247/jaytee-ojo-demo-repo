@@ -34,16 +34,16 @@ const Impact = () => {
             Explore Our Impact: Past and Present
           </h3>
           <p className="text-[#595959] font-Roboto text-base break-words leading-6 font-normal max-sm:text-[.7rem] max-sm:leading-3">
-            At the Jaytee Ojo Foundation, we take great pride in our ongoing
+            {`  At the Jaytee Ojo Foundation, we take great pride in our ongoing
             commitment to creating positive change in the world. Our Projects
             Portfolio is a testament to the impact we've made and continue to
-            make in communities near and far.
+            make in communities near and far.`}
           </p>
           <p className=" text-[#595959] font-Roboto text-base break-words leading-6 font-normal max-sm:text-[.7rem] max-sm:leading-3">
-            Our journey is defined by our relentless dedication to the
+            {`  Our journey is defined by our relentless dedication to the
             betterment of society. Through an array of past and present
             projects, we've addressed critical issues, empowered individuals,
-            and brought hope to those who needed it most.
+            and brought hope to those who needed it most.`}
           </p>
 
           <div className="">
