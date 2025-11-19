@@ -25,7 +25,7 @@ const Together = () => {
         />
 
         <Reuse
-          url="/our-projects"
+          url="/our-project"
           url2="/donate"
           button="OUR PROJECTS"
           button2="OTHER WAYS TO HELP"

@@ -1,6 +1,7 @@
 import Button from "./Button";
 import { useState } from "react";
 import OverView from "./OverviewContent";
+import Container from "@/components/common/container";
 
 const Toggle = () => {
   const [isActive, setIsActive] = useState("Health");
@@ -12,7 +13,7 @@ const Toggle = () => {
   return (
     <>
       <div className="bg-[#F5F5F5]">
-        <div className="w-[90%] m-auto text-center  max-sm:m-auto max-md:w-[100%] max-lg:w-[100%] uppercase">
+        <div className="w-[100%] m-auto text-center  max-sm:m-auto max-md:w-[100%] max-lg:w-[100%] uppercase">
           <button
             className={`py-6 px-6 hover:text-[#369458] ${
               isActive === "Health"
@@ -51,11 +52,14 @@ const Toggle = () => {
           />
         </div>
       </div>
-      {isActive === "Health" && (
-        <>
-          <OverView />
-        </>
-      )}
+
+      <Container>
+        {isActive === "Health" && (
+          <>
+            <OverView />
+          </>
+        )}
+      </Container>
     </>
   );
 };
