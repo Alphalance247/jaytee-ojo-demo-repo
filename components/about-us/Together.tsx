@@ -14,12 +14,17 @@ const Together = () => {
       </div>
 
       <Reuse
+        url="/"
+        url2="/donate"
         button="OUR GOALS FOR 2023"
         button2="MAKE DONATIONS"
         content1="Lorem ipsum dolor sit amet consectetur. Phasellus nibh pulvinar viverra bibendum magna fusce risus ac. Lorem ipsum dolor sit amet consectetur. Phasellus nibh pulvinar."
         content2="Lorem ipsum dolor sit amet consectetur. Phasellus nibh pulvinar viverra bibendum magna fusce risus ac. Lorem ipsum dolor sit amet consectetur. Phasellus nibh pulvinar."
       />
+
       <Reuse
+        url="/our-projects"
+        url2="/donate"
         button="OUR PROJECTS"
         button2="OTHER WAYS TO HELP"
         content1="Lorem ipsum dolor sit amet consectetur. Phasellus nibh pulvinar viverra bibendum magna fusce risus ac. Lorem ipsum dolor sit amet consectetur. Phasellus nibh pulvinar."

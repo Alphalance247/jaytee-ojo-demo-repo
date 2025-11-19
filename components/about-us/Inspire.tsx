@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "../Button";
 import Image from "next/image";
 
@@ -25,7 +26,9 @@ const Inspire = () => {
           debit or credit card, it had a chip which stored phone calling units
           which ran down as you called in the public phone booths.
         </p>
-        <Button text="LEARN MORE" />
+        <Link href={"/our-project/trainer"}>
+          <Button text="LEARN MORE" />
+        </Link>
       </div>
 
       <Image

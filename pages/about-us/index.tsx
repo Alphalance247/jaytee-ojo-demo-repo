@@ -4,7 +4,6 @@ import Mission from "@/components/about-us/Mission";
 import Inspire from "@/components/about-us/Inspire";
 import Learning from "@/components/about-us/Learning";
 import Leadership from "@/components/about-us/Leadership";
-import Image from "next/image";
 import Layout from "../layout";
 
 const About = () => {

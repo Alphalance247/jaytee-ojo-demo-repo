@@ -8,41 +8,86 @@ import {
   FaEnvelope,
   FaLinkedin,
 } from "react-icons/fa";
+import Link from "next/link";
 function Footer() {
+  const link1 = [
+    {
+      link: "/about-us",
+      name: " About Us",
+    },
+    {
+      link: "/about-us",
+      name: "Media",
+    },
+    {
+      link: "/our-story",
+      name: "Our Story",
+    },
+    {
+      link: "/impact-tech",
+      name: "Impact Tech",
+    },
+    {
+      link: "/contact-us",
+      name: "Contact Us",
+    },
+  ];
+  const link2 = [
+    {
+      link: "/grow-campaign",
+      name: "Schools programming program",
+    },
+    {
+      link: "/",
+      name: "Open programming program",
+    },
+    {
+      link: "/grow-campaign",
+      name: "Grow campaign",
+    },
+    {
+      link: "/our-project/trainer",
+      name: "Train the trainer",
+    },
+  ];
+
+  const link3 = [
+    {
+      link: "/donate",
+      name: "Sponsor a child",
+    },
+    {
+      link: "/volunteer",
+      name: "Volunteer",
+    },
+    {
+      link: "/donate",
+      name: "Make donations",
+    },
+    {
+      link: "/",
+      name: "Partnership",
+    },
+  ];
   return (
-    <footer className="bg-gray-900 text-white py-6 ">
-      <div className=" px-20 pt-20 pb-14 mx-auto grid gap-16 max-sm:w-[95%] max-sm:p-2 max-lg:p-10">
+    <footer className="bg-gray-900 text-white ">
+      <div className="max-w-[1280px] py-16 px-2 max-lg:px-4 max-lg:py-16 max-md:py-12 mx-auto grid gap-16 max-sm:w-[95%] max-lg:p-10">
         <div className=" grid grid-cols-4 gap-4 max-sm:grid-cols-1 max-md:grid-cols-2 max-md:gap-10 max-lg:grid-cols-2">
           <div className="">
             <h2 className="font-bold font-RobotoSlab text-[25px] leading-6 mb-4">
               Company
             </h2>
             <ul className="text-[#FCFCFC] flex flex-col gap-4">
-              <li className="">
-                <a href="#" className="text-[#FCFCFC] font-Roboto text-base">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="font-Roboto text-base">
-                  Media
-                </a>
-              </li>
-              <li>
-                <a href="#" className="font-Roboto text-base">
-                  Our Story
-                </a>
-              </li>
-              <li>
-                <a href="#" className="font-Roboto text-base">
-                  Impact Tech
-                </a>
-              </li>
-              <li>
-                <a href="#" className="font-Roboto text-base">
-                  Contact us
-                </a>
-              </li>
+              {link1?.map((el, i) => (
+                <li className="" key={i}>
+                  <Link
+                    href={el?.link || ""}
+                    className="text-[#FCFCFC] font-Roboto text-base"
+                  >
+                    {el?.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -51,26 +96,16 @@ function Footer() {
               What we do
             </h2>
             <ul className="text-[#FCFCFC] flex flex-col gap-8">
-              <li>
-                <a href="#" className="font-Roboto text-base">
-                  Schools programming program
-                </a>
-              </li>
-              <li>
-                <a href="#" className="font-Roboto text-base">
-                  Open programming program
-                </a>
-              </li>
-              <li>
-                <a href="#" className="font-Roboto text-base">
-                  Grow campaign
-                </a>
-              </li>
-              <li>
-                <a href="#" className="font-Roboto text-base">
-                  Train the trainer
-                </a>
-              </li>
+              {link2?.map((el, i) => (
+                <li className="" key={i}>
+                  <Link
+                    href={el?.link || ""}
+                    className="text-[#FCFCFC] font-Roboto text-base"
+                  >
+                    {el?.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -78,27 +113,18 @@ function Footer() {
             <h2 className="font-bold font-RobotoSlab text-[25px] leading-6 mb-4">
               Ways to Give
             </h2>
-            <ul className=" text-[#FCFCFC] flex flex-col gap-8">
-              <li>
-                <a href="#" className="font-Roboto text-base">
-                  Sponsor a child
-                </a>
-              </li>
-              <li>
-                <a href="#" className="font-Roboto text-base">
-                  Volunteer
-                </a>
-              </li>
-              <li>
-                <a href="#" className="font-Roboto text-base">
-                  Make donations
-                </a>
-              </li>
-              <li>
-                <a href="#" className="font-Roboto text-base">
-                  Partnership
-                </a>
-              </li>
+
+            <ul className="text-[#FCFCFC] flex flex-col gap-8">
+              {link3?.map((el, i) => (
+                <li className="" key={i}>
+                  <Link
+                    href={el?.link || ""}
+                    className="text-[#FCFCFC] font-Roboto text-base"
+                  >
+                    {el?.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
@@ -162,7 +188,7 @@ function Footer() {
                 placeholder="Enter your email"
                 className=" px-[14px] py-3 border text-black border-white rounded outline-none w-[556px] mr-4 italic max-sm:w-[100%] max-md:w-[100%] max-lg:w-[100%]"
               />
-              <button className="bg-[#369458] text-white rounded uppercase px-[24px] py-3 max-sm:mt-8">
+              <button className="bg-[#369458] w-full text-white rounded uppercase px-[24px] py-3 max-sm:mt-8">
                 Sign Up
               </button>
             </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Container from "./common/container";
+import Link from "next/link";
 
 const LearnMore = () => {
   const learnMore = [
@@ -50,13 +51,13 @@ const LearnMore = () => {
                 <h5 className="text-md font-bold mt-6">{items?.heading}</h5>
                 <p className="text-gray-600 mt-4 mb-4">{items?.paragraph}</p>
 
-                <a
+                <Link
                   href={items?.link}
                   className="font-bold text-sm"
                   style={{ color: "#3BA361" }}
                 >
                   LEARN MORE
-                </a>
+                </Link>
               </div>
             </div>
           ))}

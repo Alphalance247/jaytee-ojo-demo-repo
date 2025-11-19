@@ -10,21 +10,21 @@ const ProgramsCard = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur. Scelerisque ridiculus sit pretium enim lobortis a. Cursus urna eros bibendum integer orci. Velit vitae eleifend odio.",
       image: "/assets/cardone.png",
-      link: "/news",
+      link: "/grow-campaign",
     },
     {
       title: "Open Programming Program",
       description:
         "Lorem ipsum dolor sit amet consectetur. Scelerisque ridiculus sit pretium enim lobortis a. Cursus urna eros bibendum integer orci. Velit vitae eleifend odio.",
       image: "/assets/open.png",
-      link: "LEARN MORE",
+      link: "/",
     },
     {
       title: "Grow Campaign",
       description:
         "Lorem ipsum dolor sit amet consectetur. Scelerisque ridiculus sit pretium enim lobortis a. Cursus urna eros bibendum integer orci. Velit vitae eleifend odio.",
       image: "/assets/grow.png",
-      link: "LEARN MORE",
+      link: "/",
     },
   ];
   return (

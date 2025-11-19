@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "../Button";
+import Link from "next/link";
 
 const Story = () => {
   return (
@@ -31,7 +32,9 @@ const Story = () => {
           to multiple scholarship programmes that cover school fees, various
           examination registration fees, accommodation, and projects support.
         </p>
-        <Button text="LEARN MORE" />
+        <Link href={"/our-story"}>
+          <Button text="LEARN MORE" />
+        </Link>
       </div>
     </div>
   );

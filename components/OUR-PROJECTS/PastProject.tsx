@@ -22,8 +22,8 @@ const PastProj: React.FC<{ text: string }> = ({ text }) => {
             <Link
               href={`${
                 text === "Past Projects"
-                  ? "/Project/PastProjectsPage"
-                  : "/Project/Community"
+                  ? "/our-project/past-project"
+                  : "/our-project/community-project"
               }`}
             >
               <button

@@ -1,15 +1,21 @@
+import Link from "next/link";
+
 const Reuse: React.FC<{
   button: string;
   content1: string;
   content2: string;
   button2: string;
-}> = ({ button, content1, content2, button2 }) => {
+  url: string;
+  url2: string;
+}> = ({ button, content1, content2, button2, url, url2 }) => {
   return (
     <div className="flex flex-col gap-y-8 max-sm:gap-y-4 max-md:gap-y-4">
       <div className=" flex items-center">
-        <button className="text-[#369458] font-RobotoSlab text-xl font-extrabold hover:underline max-sm:text-base max-md:text-base">
-          {button}
-        </button>
+        <Link href={url || "/"}>
+          <button className="text-[#369458] font-RobotoSlab text-xl font-extrabold hover:underline max-sm:text-base max-md:text-base">
+            {button}
+          </button>
+        </Link>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -27,9 +33,11 @@ const Reuse: React.FC<{
         {content1}
       </p>
       <div className="flex items-center">
-        <button className="text-[#369458] font-RobotoSlab text-xl font-extrabold hover:underline max-sm:text-base max-md:text-base">
-          {button2}
-        </button>
+        <Link href={url2 || "/"}>
+          <button className="text-[#369458] font-RobotoSlab text-xl font-extrabold hover:underline max-sm:text-base max-md:text-base">
+            {button2}
+          </button>
+        </Link>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
