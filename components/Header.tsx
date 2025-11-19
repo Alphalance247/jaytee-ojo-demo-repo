@@ -21,7 +21,7 @@ function Header() {
   };
   return (
     <header className="bg-white text-black">
-      <div className="flex items-center max-w-[1280px] mx-auto justify-between px-20 py-4 max-sm:p-2 max-sm:text-xs max-md:px-8 max-md:py-4">
+      <div className="flex items-center max-w-[1280px] mx-auto justify-between px-6 py-4 max-sm:p-2 max-sm:text-xs max-md:px-8 max-md:py-4">
         <div className="flex items-center">
           <Link href="/">
             <Image
