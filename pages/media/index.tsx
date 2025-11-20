@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Layout from "../layout";
 import GalleryTabs from "@/components/media/GalleryTabs";
 import MediaGallery from "@/components/media/MediaGallery";
+import Container from "@/components/common/container";
 
 const pictures: { src: string; type: "image" | "video" }[] = [
   { src: "/assets/media/ImageDevelopment.webp", type: "image" },
@@ -31,10 +32,12 @@ const MediaPage = () => {
 
   return (
     <Layout>
-      <div className="py-[100px] mx-auto max-w-[1240px]">
-        <GalleryTabs onTabChange={setActiveTab} />
-        <MediaGallery media={activeTab === "pictures" ? pictures : videos} />
-      </div>
+      <Container>
+        <div>
+          <GalleryTabs onTabChange={setActiveTab} />
+          <MediaGallery media={activeTab === "pictures" ? pictures : videos} />
+        </div>
+      </Container>
     </Layout>
   );
 };

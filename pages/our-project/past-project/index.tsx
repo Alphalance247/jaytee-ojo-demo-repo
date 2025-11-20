@@ -2,6 +2,7 @@ import Layout from "@/pages/layout";
 import Tech from "@/components/OUR-PROJECTS/CommunityProj/Tech";
 import News from "@/components/OUR-PROJECTS/News";
 import PastProj from "@/components/OUR-PROJECTS/PastProject";
+import Container from "@/components/common/container";
 
 const PastProjectPage = () => {
   return (
@@ -34,6 +35,7 @@ const PastProjectPage = () => {
           </p>
         </div>
       </div>
+
       <PastProj text="Community" />
       <Tech text="Tech & ICT" styles="bg-[#D9D9D9]" />
       <News />

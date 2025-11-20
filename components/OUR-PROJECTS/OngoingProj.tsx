@@ -2,6 +2,7 @@ import ReuseAble from "./ReuseAble";
 import DataUtil from "./Data/OngoingDta";
 import Image from "next/image";
 import Container from "../common/container";
+import Link from "next/link";
 
 const Ongoing = () => {
   return (
@@ -35,9 +36,11 @@ const Ongoing = () => {
                 <p className="text-[#454545] text-[18px] font-[400] font-Roboto">
                   {data.paragraph}
                 </p>
-                <button className="text-[14px] font-[900] text-[#369458] border-none outline-none font-Roboto">
-                  LEARN MORE
-                </button>
+                <Link href={data?.url || "/"}>
+                  <button className="text-[14px] font-[900] text-[#369458] border-none outline-none font-Roboto">
+                    LEARN MORE
+                  </button>
+                </Link>
               </div>
             ))}
           </div>
