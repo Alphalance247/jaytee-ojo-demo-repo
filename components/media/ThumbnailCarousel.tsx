@@ -56,15 +56,28 @@ const ThumbnailCarousel: React.FC<ThumbnailCarouselProps> = ({
         className="flex overflow-x-auto gap-4 scrollbar-hide scroll-smooth"
         style={{ scrollBehavior: "smooth", whiteSpace: "nowrap" }}
       >
-        {items.map((item, index) => (
-          <img
-            key={index}
-            src={item.src}
-            alt="Thumbnail"
-            className="w-[72px] h-[72px] object-cover cursor-pointer border-2 border-transparent hover:border-green-500"
-            onClick={() => onSelect(item)}
-          />
-        ))}
+        <>
+          {items.map((item, index) =>
+            item?.type === "image" ? (
+              <img
+                key={index}
+                src={item.src}
+                alt="Thumbnail"
+                className="w-[72px] h-[72px] object-cover cursor-pointer border-2 border-transparent hover:border-green-500"
+                onClick={() => onSelect(item)}
+              />
+            ) : (
+              <video
+                controls
+                className="w-[72px] h-[72px] rounded-lg"
+                onClick={() => onSelect(item)}
+                key={index}
+              >
+                <source src={item?.src} type="video/mp4" />
+              </video>
+            )
+          )}
+        </>
       </div>
 
       {/* Right Scroll Button */}

@@ -23,8 +23,11 @@ const pictures: { src: string; type: "image" | "video" }[] = [
 ];
 
 const videos: { src: string; type: "image" | "video" }[] = [
-  { src: "/videos/video1.mp4", type: "video" },
-  { src: "/videos/video2.mp4", type: "video" },
+  { src: "/assets/videos/vidd.mp4", type: "video" },
+  { src: "/assets/videos/vidd.mp4", type: "video" },
+  { src: "/assets/videos/vidd.mp4", type: "video" },
+  { src: "/assets/videos/vidd.mp4", type: "video" },
+  { src: "/assets/media/ImageDevelopment.webp", type: "video" },
 ];
 
 const MediaPage = () => {

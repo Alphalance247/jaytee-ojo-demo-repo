@@ -17,7 +17,7 @@ const GalleryItem: React.FC<GalleryItemProps> = ({ src, type }) => {
           className="w-full h-[724px] object-cover rounded-lg max-md:h-[300px]"
         />
       ) : (
-        <video controls className="w-full h-full rounded-lg">
+        <video controls className="w-full h-[724px] rounded-lg">
           <source src={src} type="video/mp4" />
         </video>
       )}
