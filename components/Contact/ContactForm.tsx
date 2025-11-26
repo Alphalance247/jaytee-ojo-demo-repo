@@ -11,6 +11,7 @@ import Container from "../common/container";
 import toast from "react-hot-toast";
 import axios, { AxiosError } from "axios";
 import { useState } from "react";
+import { environment } from "@/pages/env/env.local";
 
 const ContactForm = () => {
   const [form, setForm] = useState({
@@ -27,12 +28,16 @@ const ContactForm = () => {
 
     try {
       setLoading(true);
-      const res = await axios.post(`${environment?.baseUrl}/jof/contact-us`, {
-        ...form,
-      });
+      const res = await axios.post(
+        `${environment?.baseUrl}/utilities/jof/contact-us`,
+        {
+          ...form,
+        }
+      );
 
       if (res.status === 200 || res.status === 201) {
         toast.success(res?.data?.message || "Form Submitted Successfully");
+        setForm((prev) => ({ ...prev, prev: "" }));
       }
 
       setLoading(false);
@@ -81,6 +86,7 @@ const ContactForm = () => {
                   <input
                     type="text"
                     id="Firstname"
+                    required
                     name="first_name_1"
                     value={form?.first_name_1 || ""}
                     onChange={handleChange}
@@ -162,6 +168,7 @@ const ContactForm = () => {
                   type="message"
                   onChange={handleChange}
                   value={form?.message_3}
+                  required
                   name="message_3"
                   placeholder="Write your message here..."
                   id="Message"

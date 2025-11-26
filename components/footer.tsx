@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import Image from "next/image";
 import {
   FaInstagram,
@@ -9,7 +9,14 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import Link from "next/link";
-function Footer() {
+import { useState } from "react";
+import axios, { AxiosError } from "axios";
+import { environment } from "@/pages/env/env.local";
+import toast from "react-hot-toast";
+const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const link1 = [
     {
       link: "/about-us",
@@ -69,6 +76,38 @@ function Footer() {
       name: "Partnership",
     },
   ];
+
+  const handleSubnmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      setLoading(true);
+      const res = await axios.post(
+        `${environment?.baseUrl}/utilities/jof/email-sub`,
+        {
+          email,
+        }
+      );
+
+      if (res.status === 200 || res.status === 201) {
+        toast.success(res?.data?.success || "Email Submitted Successfully");
+        setEmail("");
+      }
+
+      setLoading(false);
+    } catch (err) {
+      // Extract the error message from the response
+      let errorMessage = "An error occurred please try again or contact Admin";
+      if (err instanceof AxiosError) {
+        // Check if err is an instance of AxiosError
+        errorMessage = err.response?.data?.message || errorMessage;
+      }
+
+      toast.error(errorMessage);
+      setLoading(false);
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white ">
       <div className="max-w-[1280px] py-16 px-2 max-lg:px-4 max-lg:py-16 max-md:py-12 mx-auto grid gap-16 max-sm:w-[95%] max-lg:p-10">
@@ -176,22 +215,35 @@ function Footer() {
             </div>
           </div>
 
-          <div className="flex gap-[7rem]  border-b-[1px] border-[#454545] py-[2rem] max-sm:inline-block max-sm:py-4 max-md:block max-md:border-none max-lg:block">
+          <div className="flex gap-[7rem]  border-b-[1px] border-[#454545] py-[2rem] max-sm:py-4 max-md:block max-md:border-none max-lg:block">
             <div className=" mb-4">
               <p className="font-semibold uppercase">
                 Subscribe to our newsletter
               </p>
             </div>
-            <div className="flex max-sm:block">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className=" px-[14px] py-3 border text-black border-white rounded outline-none w-[556px] mr-4 italic max-sm:w-[100%] max-md:w-[100%] max-lg:w-[100%]"
-              />
-              <button className="bg-[#369458] w-full text-white rounded uppercase px-[24px] py-3 max-sm:mt-8">
-                Sign Up
-              </button>
-            </div>
+            <form
+              action="submit"
+              onSubmit={handleSubnmit}
+              className="w-[70%] max-md:w-full"
+            >
+              <div className="flex gap-3 max-md:flex-col">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  required
+                  name="email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  className=" px-[14px] py-3 border text-black border-white block rounded outline-none w-[500px] italic max-md:w-full"
+                />
+                <button
+                  className="bg-[#369458] block w-fit text-white rounded uppercase px-[24px] py-3 max-md:w-full"
+                  type="submit"
+                >
+                  {loading ? "Subscribing..." : "Sign Up"}
+                </button>
+              </div>
+            </form>
           </div>
           <div className="flex items-start gap-40 py-[2rem] max-sm:inline-block max-md:gap-24">
             <Image
@@ -218,6 +270,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
