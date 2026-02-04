@@ -11,7 +11,7 @@ import Container from "../common/container";
 import toast from "react-hot-toast";
 import axios, { AxiosError } from "axios";
 import { useState } from "react";
-import { environment } from "@/pages/env/env.local";
+import environment from "@/env.local";
 
 const ContactForm = () => {
   const [form, setForm] = useState({
@@ -32,7 +32,7 @@ const ContactForm = () => {
         `${environment?.baseUrl}/utilities/jof/contact-us`,
         {
           ...form,
-        }
+        },
       );
 
       if (res.status === 200 || res.status === 201) {
@@ -55,7 +55,7 @@ const ContactForm = () => {
   };
 
   const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => {
     const { name, value } = event.target;
     setForm((prev) => ({ ...prev, [name]: value }));

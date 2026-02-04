@@ -11,8 +11,9 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import axios, { AxiosError } from "axios";
-import { environment } from "@/pages/env/env.local";
 import toast from "react-hot-toast";
+import environment from "../env.local";
+
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
@@ -86,7 +87,7 @@ const Footer = () => {
         `${environment?.baseUrl}/utilities/jof/email-sub`,
         {
           email,
-        }
+        },
       );
 
       if (res.status === 200 || res.status === 201) {
