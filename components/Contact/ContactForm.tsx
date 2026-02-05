@@ -1,3 +1,4 @@
+"use client";
 import {
   FaInstagram,
   FaYoutube,
@@ -7,13 +8,64 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import Container from "../common/container";
+import toast from "react-hot-toast";
+import axios, { AxiosError } from "axios";
+import { useState } from "react";
+import environment from "@/env.local";
 
 const ContactForm = () => {
+  const [form, setForm] = useState({
+    email_4: "",
+    first_name_1: "",
+    last_name_2: "",
+    phone_number_5: "",
+    message_3: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleSubnmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      setLoading(true);
+      const res = await axios.post(
+        `${environment?.baseUrl}/utilities/jof/contact-us`,
+        {
+          ...form,
+        },
+      );
+
+      if (res.status === 200 || res.status === 201) {
+        toast.success(res?.data?.message || "Form Submitted Successfully");
+        setForm((prev) => ({ ...prev, prev: "" }));
+      }
+
+      setLoading(false);
+    } catch (err) {
+      // Extract the error message from the response
+      let errorMessage = "An error occurred please try again or contact Admin";
+      if (err instanceof AxiosError) {
+        // Check if err is an instance of AxiosError
+        errorMessage = err.response?.data?.message || errorMessage;
+      }
+
+      toast.error(errorMessage);
+      setLoading(false);
+    }
+  };
+
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
+    const { name, value } = event.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
   return (
     <Container>
       <div className="flex  max-sm:block">
         <div className="bg-[#F5F5F5] w-[100%] p-16 max-sm:p-5 max-lg:p-8">
-          <form action="">
+          <form action="submit" onSubmit={handleSubnmit}>
             <h3 className=" font-RobotoSlab font-bold text-4xl text-[#262626] mb-2 max-sm:text-2xl">
               Send us a message
             </h3>
@@ -34,7 +86,10 @@ const ContactForm = () => {
                   <input
                     type="text"
                     id="Firstname"
-                    name="Firstname"
+                    required
+                    name="first_name_1"
+                    value={form?.first_name_1 || ""}
+                    onChange={handleChange}
                     placeholder="Enter first name"
                     className=" outline-none border-2 rounded-[3px] w-[329px] p-2 max-sm:w-[100%] max-md:w-[100%]"
                   />
@@ -52,7 +107,10 @@ const ContactForm = () => {
                   <input
                     type="text"
                     id="lastname"
-                    name="lastname"
+                    required
+                    name="last_name_2"
+                    value={form?.last_name_2 || ""}
+                    onChange={handleChange}
                     placeholder="Enter last name"
                     className="outline-none  border-2 rounded-[3px] w-[329px] p-2 max-sm:w-[100%] max-md:w-[100%]"
                   />
@@ -70,12 +128,16 @@ const ContactForm = () => {
 
                   <input
                     type="email"
+                    value={form?.email_4 || ""}
                     id="email"
-                    name="email"
+                    required
+                    name="email_4"
+                    onChange={handleChange}
                     placeholder="Enter email address"
                     className="outline-none  border-2 rounded-[3px] w-[329px] p-2 max-sm:w-[100%] max-md:w-[100%]"
                   />
                 </div>
+
                 <div>
                   <label htmlFor="number">
                     Number
@@ -87,9 +149,12 @@ const ContactForm = () => {
                   <br />
 
                   <input
-                    type="number"
+                    type="text"
                     id="number"
-                    name="number"
+                    required
+                    value={form?.phone_number_5 || ""}
+                    onChange={handleChange}
+                    name="phone_number_5"
                     placeholder="Enter phone number"
                     className="outline-none  border-2 rounded-[3px] w-[329px] p-2 max-sm:w-[100%] max-md:w-[100%]"
                   />
@@ -101,13 +166,20 @@ const ContactForm = () => {
                 <br />
                 <input
                   type="message"
+                  onChange={handleChange}
+                  value={form?.message_3}
+                  required
+                  name="message_3"
                   placeholder="Write your message here..."
                   id="Message"
                   className="w-[674px] border-[#595959] rounded-[3px] outline-none pb-[170px] pl-2 pt-4 pr-4 break-words max-sm:w-[100%] max-md:w-[100%]"
                 />
               </div>
-              <button className="font-Roboto font-black text-sm py-6 px-10 rounded bg-[#369458] uppercase text-white">
-                submit message
+              <button
+                className="font-Roboto font-black text-sm py-6 px-10 rounded bg-[#369458] uppercase text-white"
+                type="submit"
+              >
+                {loading ? "Submitting..." : "submit message"}
               </button>
             </div>
           </form>
