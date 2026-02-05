@@ -8,21 +8,21 @@ const ProgramsCard = () => {
     {
       title: "Schools Programming Program",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Scelerisque ridiculus sit pretium enim lobortis a. Cursus urna eros bibendum integer orci. Velit vitae eleifend odio.",
+        "Education is the seed of transformation. By teaching programming and digital literacy in secondary schools, we inspire a new generation of thinkers and creators — young people who can use technology to change their lives and uplift their communities.",
       image: "/assets/cardone.png",
       link: "/grow-campaign",
     },
     {
       title: "Open Programming Program",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Scelerisque ridiculus sit pretium enim lobortis a. Cursus urna eros bibendum integer orci. Velit vitae eleifend odio.",
+        "Our Open Programming Program offers free ICT and coding training to young people across Ekiti State and beyond. Participants learn valuable digital skills, including programming with Python, empowering them to pursue careers, build startups, and contribute meaningfully to the digital economy.",
       image: "/assets/open.png",
       link: "/",
     },
     {
       title: "Grow Campaign",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Scelerisque ridiculus sit pretium enim lobortis a. Cursus urna eros bibendum integer orci. Velit vitae eleifend odio.",
+        "The Grow Campaign supports community growth and self-sustenance through agricultural empowerment, training, and access to essential resources. We help local farmers and small businesses thrive, fostering food security, job creation, and sustainable livelihoods across Ekiti State.",
       image: "/assets/grow.png",
       link: "/",
     },

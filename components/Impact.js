@@ -7,26 +7,25 @@ const Impact = () => {
     {
       icon: "/assets/book.svg",
       number: "20,000",
-      subText:
-        "  Lorem ipsum dolor sit amet consectetur. Phasellus nibh pulvinar viverra bibendum viverra bibendum viverra bibendum.",
+      subText: "Over 2,000 young people have completed our ICT and programming programs, gaining digital skills to compete globally.",
     },
     {
       icon: "/assets/book.svg",
       number: "20,000",
       subText:
-        "  Lorem ipsum dolor sit amet consectetur. Phasellus nibh pulvinar viverra bibendum viverra bibendum viverra bibendum.",
+        "More than 500 students have received scholarships, exam support, and accommodation assistance to pursue their education.",
     },
     {
       icon: "/assets/book.svg",
       number: "20,000",
       subText:
-        "  Lorem ipsum dolor sit amet consectetur. Phasellus nibh pulvinar viverra bibendum viverra bibendum viverra bibendum.",
+        "We’ve impacted 30+ communities through solar lighting projects, boreholes, food support, and medical outreach.",
     },
     {
       icon: "/assets/book.svg",
       number: "20,000",
       subText:
-        "  Lorem ipsum dolor sit amet consectetur. Phasellus nibh pulvinar viverra bibendum viverra bibendum viverra bibendum.",
+        "Over 50 secondary schools now benefit from our donations of tech-focused learning materials and digital literacy initiatives.",
     },
   ];
   return (
@@ -38,9 +37,7 @@ const Impact = () => {
               Your Impact Over the Years
             </h2>
             <p className="text-base text-[#595959] font-Roboto md:w-[80%]">
-              Lorem ipsum dolor sit amet consectetur. Phasellus nibh pulvinar
-              viverra bibendum magna fusce risus ac. Quis condimentum.
-            </p>
+              Together, we’re changing lives and building brighter futures. Through our programs, thousands of young people and communities have gained access to education, digital skills, and sustainable opportunities. </p>
           </div>
 
           {/* stats place */}
