@@ -5,7 +5,7 @@ export const NewsData = [
     content: "NEWS",
     headings: "Celebrate & Transform: Our Future Together",
     paragraph:
-      "Lorem ipsum dolor sit amet consectetur. Scelerisque ridiculus sit pretium enim lobortis a. Cursus urna eros bibendum integer orci. Velit vitae",
+      "Catch up on the latest updates from the JayTee Ojo Foundation. From program highlights to community success stories, our news section showcases the impact of our work and how we’re transforming lives across Ekiti State.",
     date: "Aug 01, 2023",
     name: "BY kayode Adepoju |",
     imageAlt: "programming",
@@ -16,7 +16,7 @@ export const NewsData = [
     content: "press release",
     headings: "Celebrate & Transform: Our Future Together",
     paragraph:
-      "Lorem ipsum dolor sit amet consectetur. Scelerisque ridiculus sit pretium enim lobortis a. Cursus urna eros bibendum integer orci. Velit vitae",
+      "Read our official announcements and statements. This section shares partnerships, achievements, and important foundation updates, keeping supporters and stakeholders informed about our initiatives and progress.",
     date: "Aug 01, 2023",
     name: "BY kayode Adepoju |",
     imageAlt: "programming",
@@ -27,7 +27,7 @@ export const NewsData = [
     content: "upcoming event",
     headings: "Celebrate & Transform: Our Future Together",
     paragraph:
-      "Lorem ipsum dolor sit amet consectetur. Scelerisque ridiculus sit pretium enim lobortis a. Cursus urna eros bibendum integer orci. Velit vitae",
+      "Join us in making a difference. Discover workshops, training sessions, community projects, and special events designed to empower youths, strengthen communities, and inspire action. Stay involved and be part of the change.",
     date: "Aug 01, 2023",
     name: "BY kayode Adepoju |",
     imageAlt: "programming",

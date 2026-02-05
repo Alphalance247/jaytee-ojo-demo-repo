@@ -25,12 +25,8 @@ const Trainer = () => {
               Train the Trainer
             </h5>
             <p className="text-base text-[#595959] font-Roboto mb-8 max-sm:text-sm">
-              Lorem ipsum dolor sit amet consectetur. Phasellus nibh pulvinar
-              viverra bibendum viverra bibendum viverra bibendum. Lorem ipsum
-              dolor sit amet consectetur. Phasellus nibh pulvinar viverra
-              bibendum viverra bibendum viverra bibendum. Lorem ipsum dolor sit
-              amet consectetur. Phasellus nibh pulvinar viverra bibendum viverra
-              bibendum viverra bibendum.
+              Our Train the Trainer initiative ensures that knowledge keeps spreading long after our programs end. We equip passionate educators, community leaders, and volunteers with the skills and tools needed to deliver ICT and empowerment training within their communities.
+              By empowering trainers, we multiply our reach, create sustainable learning networks, and build a culture of continuous knowledge-sharing across Ekiti State and beyond
             </p>
             <Link href={"/our-project/trainer"}>
               <Button text="LEARN MORE" />
