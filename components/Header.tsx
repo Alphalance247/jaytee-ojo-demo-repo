@@ -46,7 +46,7 @@ function Header() {
           </Link>
 
           <Link
-            href=""
+            href="/impact-tech"
             className="px-4 py-2 bg-white text-black border border-green-500 text-green hover:bg-green-400 max-sm:py-1 max-sm:px-2 max-sm:text-xs"
           >
             <h3>Impact Tech ↗ </h3>

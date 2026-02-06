@@ -9,7 +9,7 @@ const ProgramsCard = () => {
       title: "Schools Programming Program",
       description:
         "Education is the seed of transformation. By teaching programming and digital literacy in secondary schools, we inspire a new generation of thinkers and creators — young people who can use technology to change their lives and uplift their communities.",
-      image: "/assets/cardone.png",
+      image: "/assets/news/hero.png",
       link: "/grow-campaign",
     },
     {

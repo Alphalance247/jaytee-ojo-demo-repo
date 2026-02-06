@@ -34,7 +34,7 @@ export default function Home() {
         <Trainer />
         <LearnMore />
         <WaysToHelp />
-        <News />
+        {/* <News /> */}
       </Layout>
     </main>
   );
