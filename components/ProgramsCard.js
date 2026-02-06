@@ -9,7 +9,7 @@ const ProgramsCard = () => {
       title: "Schools Programming Program",
       description:
         "Lorem ipsum dolor sit amet consectetur. Scelerisque ridiculus sit pretium enim lobortis a. Cursus urna eros bibendum integer orci. Velit vitae eleifend odio.",
-      image: "/assets/cardone.png",
+      image: "/assets/news/hero.png",
       link: "/grow-campaign",
     },
     {
