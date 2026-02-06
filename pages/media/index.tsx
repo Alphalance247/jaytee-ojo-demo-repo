@@ -23,11 +23,22 @@ const pictures: { src: string; type: "image" | "video" }[] = [
 ];
 
 const videos: { src: string; type: "image" | "video" }[] = [
-  { src: "/assets/videos/vidd.mp4", type: "video" },
-  { src: "/assets/videos/vidd.mp4", type: "video" },
-  { src: "/assets/videos/vidd.mp4", type: "video" },
-  { src: "/assets/videos/vidd.mp4", type: "video" },
-  { src: "/assets/media/ImageDevelopment.webp", type: "video" },
+  { src: "/assets/media/videos/video1.mp4", type: "video" },
+  { src: "/assets/media/videos/video2.mp4", type: "video" },
+  { src: "/assets/media/videos/video3.mp4", type: "video" },
+  { src: "/assets/media/videos/video4.mp4", type: "video" },
+  { src: "/assets/media/videos/video1.mp4", type: "video" },
+  { src: "/assets/media/videos/video2.mp4", type: "video" },
+  { src: "/assets/media/videos/video3.mp4", type: "video" },
+  { src: "/assets/media/videos/video4.mp4", type: "video" },
+  { src: "/assets/media/videos/video1.mp4", type: "video" },
+  { src: "/assets/media/videos/video2.mp4", type: "video" },
+  { src: "/assets/media/videos/video3.mp4", type: "video" },
+  { src: "/assets/media/videos/video4.mp4", type: "video" },
+  { src: "/assets/media/videos/video2.mp4", type: "video" },
+  { src: "/assets/media/videos/video3.mp4", type: "video" },
+  { src: "/assets/media/videos/video4.mp4", type: "video" },
+  { src: "/assets/media/videos/Messi.mp4", type: "video" },
 ];
 
 const MediaPage = () => {

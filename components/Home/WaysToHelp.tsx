@@ -8,7 +8,7 @@ const WaysToHelp = () => {
       img: "/assets/Home/1.png",
       heading: "Donate",
       subhead:
-        "Lorem ipsum dolor sit amet consectetur. Arcu dignissim sed fermentum augue eget enim amet aenean. Viverra tortor odio vulputate scelerisque. Aenean vitae tempor scelerisque",
+        "Your support can change lives. By donating to the JayTee Ojo Foundation, you help provide scholarships, ICT training, community development projects, and essential resources to youths and underserved communities in Ekiti State.",
       btnText: "Make donations",
       link: "/donate",
     },
@@ -16,7 +16,7 @@ const WaysToHelp = () => {
       img: "/assets/Home/2.png",
       heading: "Volunteer",
       subhead:
-        "Lorem ipsum dolor sit amet consectetur. Arcu dignissim sed fermentum augue eget enim amet aenean. Viverra tortor odio vulputate scelerisque. Aenean vitae tempor scelerisque",
+        "Join us in creating real impact. By volunteering with the JayTee Ojo Foundation, you can mentor youths, assist in ICT training, support community projects, and help empower communities across Ekiti State. Every hour you give transforms lives.",
       btnText: "view volunteer roles",
       link: "/volunteer",
     },
@@ -24,7 +24,7 @@ const WaysToHelp = () => {
       img: "/assets/Home/3.png",
       heading: "Partnership",
       subhead:
-        "Lorem ipsum dolor sit amet consectetur. Arcu dignissim sed fermentum augue eget enim amet aenean. Viverra tortor odio vulputate scelerisque. Aenean vitae tempor scelerisque",
+        "Collaborate with us to create meaningful change. By partnering with the JayTee Ojo Foundation, your organization can support programs in education, ICT training, and community development, multiplying impact and building stronger, sustainable communities.",
       btnText: "Become a Partner",
       link: "/",
     },

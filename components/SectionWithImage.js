@@ -21,10 +21,10 @@ const SectionWithImage = () => {
         </h1>
 
         <p className="mt-8 text-lg text-[#FCFCFC] font-Roboto w-[60%] mx-auto max-sm:w-full max-sm:text-sm">
-          Lorem ipsum dolor sit amet consectetur. Scelerisque ridiculus sit
-          pretium enim lobortis a. Cursus urna eros
-          <br />
-          bibendum integer orci. Velit vitae eleifend odio ut ipsum gravida.
+          We are building a future where every young person and community can thrive. Through education, technology, <br />
+          and sustainable development, the JayTee Ojo Foundation empowers people to break barriers, <br /> unlock potential, and create lasting change.
+
+          {/* bibendum integer orci. Velit vitae eleifend odio ut ipsum gravida. */}
         </p>
 
         <Link href="/donate">

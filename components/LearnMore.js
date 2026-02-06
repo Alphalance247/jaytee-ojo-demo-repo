@@ -8,7 +8,7 @@ const LearnMore = () => {
       overview: "WHO WE ARE",
       heading: "About Jaytee Ojo Foundation",
       paragraph:
-        "Lorem ipsum dolor sit amet consectetur. Scelerisque ridiculus sit pretium enim lobortis a. Cursus urna eros bibendum integer orci. Velit vitae eleifend odio.",
+        "The JayTee Ojo Foundation is a non-profit organization based in Ekiti State, Nigeria, committed to empowering young people and uplifting communities toward self-sustenance and global competitiveness.We believe that talent and potential should never be limited by circumstance.Through education, technology, and community development initiatives, we create opportunities that transform lives, strengthen communities, and inspire lasting change.",
       img: "/assets/who.png",
       link: "/about-us",
     },
@@ -16,7 +16,7 @@ const LearnMore = () => {
       overview: "OUR PORTFOLIO",
       heading: "Creating Impact Through Action",
       paragraph:
-        "Lorem ipsum dolor sit amet consectetur. Scelerisque ridiculus sit pretium enim lobortis a. Cursus urna eros bibendum integer orci. Velit vitae eleifend odio.",
+        "Our work goes beyond ideas, it’s about real results. From empowering youths with digital skills to transforming communities through education, innovation, and sustainable development, the JayTee Ojo Foundation turns vision into measurable impact. Every project we undertake is driven by a commitment to build stronger, more resilient communities",
       img: "/assets/port.png",
       link: "/our-project",
     },
@@ -24,7 +24,7 @@ const LearnMore = () => {
       overview: "WHO WE ARE",
       heading: "OUR PARTNERSHIP",
       paragraph:
-        "Lorem ipsum dolor sit amet consectetur. Scelerisque ridiculus sit pretium enim lobortis a. Cursus urna eros bibendum integer orci. Velit vitae eleifend odio.",
+        "We believe in the power of collaboration to create lasting impact. The JayTee Ojo Foundation works closely with individuals, organizations, and community groups that share our vision of empowerment and sustainable development.Through strategic partnerships, we expand our reach, strengthen our programs, and deliver real change where it matters most.",
       img: "/assets/part.png",
       link: "/",
     },
@@ -44,7 +44,7 @@ const LearnMore = () => {
                 alt="Card 2"
                 width={377}
                 height={275}
-                // className="w-full h-48 object-cover"
+              // className="w-full h-48 object-cover"
               />
               <p className="text-sm mt-4">{items?.overview}</p>
               <div className="">
