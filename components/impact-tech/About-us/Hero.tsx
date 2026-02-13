@@ -14,7 +14,7 @@ const Hero = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className=" text-white text-center font-inter">
+      <div className=" text-white text-center font-inter md:px-0 px-6">
         <h1 className=" font-extrabold text-[32px] md:text-[48px]">About Us</h1>
         <p className=" text-base md:text-lg">
           Empowering teens with real-world tech skills for the future.
