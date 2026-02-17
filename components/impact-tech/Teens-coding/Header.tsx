@@ -18,7 +18,7 @@ const Header = () => {
           <Button
             text="get started"
             children=""
-            className=" w-[120px] md:w-[156px] bg-[#E60303]"
+            className=" w-[120px] md:w-[156px] bg-[#E60303] text-white"
           />
         </div>
       </div>

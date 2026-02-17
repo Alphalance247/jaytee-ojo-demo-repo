@@ -58,7 +58,7 @@ const TeensCoding = () => {
               children={
                 <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
               }
-              className="w-[156px] bg-[#E60303]"
+              className="w-[156px] bg-[#E60303] text-white"
             />
           </div>
         </div>

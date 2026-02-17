@@ -55,7 +55,7 @@ const SkillsGain = () => {
             children={
               <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
             }
-            className=" w-[120px] md:w-[151px] h-[30px] md:h-[38px] bg-[linear-gradient(0deg,rgba(246,75,75,0.58)_0%,rgba(246,75,75,0.58)_100%),linear-gradient(180deg,rgba(255,255,255,0.05)_0%,rgba(255,255,255,0)_100%)]"
+            className="text-white w-[120px] md:w-[151px] h-[30px] md:h-[38px] bg-[linear-gradient(0deg,rgba(246,75,75,0.58)_0%,rgba(246,75,75,0.58)_100%),linear-gradient(180deg,rgba(255,255,255,0.05)_0%,rgba(255,255,255,0)_100%)]"
           />
         </div>
         <div className="w-full md:w-2/3 md:mt-0 mt-10 md:pb-0 pb-10">

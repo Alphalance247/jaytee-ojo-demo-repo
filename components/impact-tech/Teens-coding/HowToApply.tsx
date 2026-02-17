@@ -81,7 +81,7 @@ const HowToApply = () => {
                   children={
                     <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
                   }
-                  className="w-full bg-[#E60303]"
+                  className="w-full bg-[#E60303] text-white"
                 />
               </div>
             </form>
