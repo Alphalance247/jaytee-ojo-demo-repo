@@ -5,8 +5,8 @@ const Volunteer = () => {
   return (
     // <div className="w-full">
     <div className="w-full  py-[91px]">
-      <div className="flex flex-col justify-center items-center gap-4 text-[#061C3D]  font-inter md:pb-20 pb-10  text-center">
-        <div className=" text-[32px] md:text-[48px] font-bold">
+      <div className="flex flex-col justify-center items-center gap-4 text-[#061C3D]  font-inter md:pb-20 pb-10  text-center md:px-0 px-6">
+        <div className=" text-[24px] md:text-[48px] font-bold">
           Be a Part of Our Mission
         </div>
         <div className="text-center text-base md:text-lg w-full md:w-[536px] ">

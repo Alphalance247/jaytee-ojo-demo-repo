@@ -42,8 +42,8 @@ const OurImpact = () => {
   return (
     <div>
       <div className="text-center text-[#061C3D] pt-10 md:pt-[91px] flex justify-center items-center pb-10 md:pb-[97px]">
-        <div className="">
-          <div className=" text-[32px] md:text-[48px] font-grostek font-bold ">
+        <div className="md:px-0 px-6">
+          <div className=" text-[32px] md:text-[48px] font-grostek font-bold  ">
             Our Impact
           </div>
           <div className=" pt-4 text-base md:text-lg font-inter w-full md:max-w-[536px]">
