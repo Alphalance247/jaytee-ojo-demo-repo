@@ -14,6 +14,7 @@ const config: Config = {
       xl: "1300px",
     },
     extend: {
+
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -23,6 +24,16 @@ const config: Config = {
         Roboto: ["Roboto"],
         RobotoSlab: ["Roboto Slab"],
       },
+      keyframes: {
+        carousel: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        carousel: "carousel 20s linear infinite",
+      },
+
     },
   },
   plugins: [],
