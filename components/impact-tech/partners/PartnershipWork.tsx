@@ -22,8 +22,8 @@ const lists = [
 ];
 const PartnershipWork = () => {
   return (
-    <div className="h-fit  ">
-      <div className="mx-auto w-full md:max-w-[1437px] mt-10 md:mt-[101px]  md:pb-[111px]">
+    <div className="bg-yellow-600  ">
+      <div className="mx-auto w-full md:max-w-[1441px] mt-10 md:mt-[101px]">
         <div className=" h-fit md:h-[102px] font-inter md:px-0 px-6">
           <h4 className="text-[28px] md:text-[48px] font-bold text-[#061C3D] text-center">
             How Partnership Works

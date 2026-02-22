@@ -3,7 +3,7 @@ import Button from "./Button";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import SkillsPill from "./SkillsPill";
 import { HiCodeBracket } from "react-icons/hi2";
-import { LuBriefcaseBusiness } from "react-icons/lu";
+import { TbBriefcaseFilled } from "react-icons/tb";
 const programingSkills = [
   {
     icon: <HiCodeBracket className="h-6 w-6 text-white" />,
@@ -16,25 +16,25 @@ const programingSkills = [
 ];
 const creativeSkills = [
   {
-    icon: <LuBriefcaseBusiness className="h-6 w-6 text-white" />,
+    icon: <TbBriefcaseFilled className="h-6 w-6 text-white" />,
     text: "career awareness",
   },
   {
-    icon: <LuBriefcaseBusiness className="h-6 w-6 text-white" />,
+    icon: <TbBriefcaseFilled className="h-6 w-6 text-white" />,
     text: "digital literacy",
   },
   {
-    icon: <LuBriefcaseBusiness className="h-6 w-6 text-white" />,
+    icon: <TbBriefcaseFilled className="h-6 w-6 text-white" />,
     text: "creative thinking",
   },
 ];
 const lifeSkills = [
   {
-    icon: <LuBriefcaseBusiness className="h-6 w-6 text-white" />,
+    icon: <TbBriefcaseFilled className="h-6 w-6 text-white" />,
     text: "collaboration",
   },
   {
-    icon: <LuBriefcaseBusiness className="h-6 w-6 text-white" />,
+    icon: <TbBriefcaseFilled className="h-6 w-6 text-white" />,
     text: "online safety",
   },
 ];
