@@ -78,7 +78,7 @@ const Learning = () => {
         Padd=""
         border=""
         width="w-[100%]"
-        borderColor="border-[#D9D9D9]"
+        borderColor=""
       />
       <Together />
     </div>

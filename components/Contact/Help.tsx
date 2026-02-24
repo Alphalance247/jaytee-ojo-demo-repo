@@ -25,11 +25,10 @@ const Help = () => {
             Become a Volunteer
           </h4>
           <p className="mb-12 text-base font-Roboto w-[70%] m-auto max-sm:w-[100%] max-sm:text-xs max-sm:mb-4 max-md:mb-8 max-md:text-sm max-md:w-[100%]">
-            Lorem ipsum dolor sit amet consectetur. Facilisi posuere a purus
-            pellentesque. Risus natoque velit nisl a elementum quam. Urna lacus
-            egestas maecenas venenatis est ut in lorem feugiat. At purus netus
-            nisl magna pharetra eget vitae cum. A at nec at tincidunt tortor
-            arcu sollicitudin. Sed viverra sed consectetur viverra.
+            Join us in creating real impact. By volunteering with the JayTee Ojo
+            Foundation, you can mentor youths, assist in ICT training, support
+            community projects, and help empower communities across Ekiti State.
+            Every hour you give transforms lives.
           </p>
 
           <Link href={"/contact-us"}>

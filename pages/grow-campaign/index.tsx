@@ -17,18 +17,20 @@ const NewsCampaign = () => {
       <Build />
       <Textbook />
       <Program />
-      <Impacts
-        textColor="text-[#E60303]"
-        fill="#E60303"
-        backgroundCol="bg-[#C2E2CE]"
-        Padd="p-24"
-        border="border-b-0"
-        width="0"
-        borderColor="border-black"
-      />
-      <CaroNews />
+      <div className="bg-[#C2E2CE]">
+        <Impacts
+          textColor="text-[#E60303]"
+          fill="#E60303"
+          backgroundCol="bg-[#C2E2CE]"
+          Padd=""
+          border="border-b-0"
+          width="0"
+          borderColor="border-black"
+        />
+      </div>
+      {/* <CaroNews /> */}
       <Innovate />
-      <News />
+      {/* <News /> */}
     </Layout>
   );
 };

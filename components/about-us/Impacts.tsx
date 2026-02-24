@@ -12,7 +12,7 @@ const Impacts: React.FC<{
   return (
     <Container>
       <div
-        className={`${width} pb-24 m-auto border-b border-[#D9D9D9]  ${backgroundCol} ${border} max-md:w-auto max-md:pb-6`}
+        className={`${width} m-auto border-b border-[#D9D9D9]  ${backgroundCol} ${border} max-md:w-auto max-md:pb-6`}
       >
         <h1 className="text-[#262626] font-RobotoSlab text-4xl font-bold mb-20 text-center max-sm:text-2xl max-sm:mb-6 max-md:text-3xl max-md:mb-8 ">
           Our Impact Over the Years
