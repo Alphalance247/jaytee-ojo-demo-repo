@@ -3,7 +3,6 @@ import Hero from "@/components/OUR-PROJECTS/HeroPage";
 import Impact from "@/components/OUR-PROJECTS/Impact";
 import PastProj from "@/components/OUR-PROJECTS/PastProject";
 import Ongoing from "@/components/OUR-PROJECTS/OngoingProj";
-import News from "@/components/OUR-PROJECTS/News";
 
 const Project = () => {
   return (
@@ -12,7 +11,7 @@ const Project = () => {
       <Impact />
       <PastProj text="Past Projects" />
       <Ongoing />
-      <News />
+      {/* <News /> */}
     </Layout>
   );
 };

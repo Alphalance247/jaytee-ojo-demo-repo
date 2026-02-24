@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Data } from "./Data";
 import Together from "./Together";
 import Impacts from "./Impacts";
+import Link from "next/link";
 
 const Learning = () => {
   return (
@@ -32,12 +33,15 @@ const Learning = () => {
               <h2 className=" font-RobotoSlab text-3xl font-bold text-[#262626] w-[80%] mb-8 max-md:text-2xl">
                 Enroll in Our Transformative Online Course Today
               </h2>
-              <button
-                className="font-Roboto text-sm uppercase font-extrabold text-[#FFF] py-4 px-6 bg-[#E60303] rounded"
-                style={{ boxShadow: "0px 8px 16px 0px rgba(0, 0, 0, 0.08)" }}
-              >
-                Visit Our Website <span> ↗</span>
-              </button>
+
+              <Link href={"/impact-tech"}>
+                <button
+                  className="font-Roboto text-sm uppercase font-extrabold text-[#FFF] py-4 px-6 bg-[#E60303] rounded"
+                  style={{ boxShadow: "0px 8px 16px 0px rgba(0, 0, 0, 0.08)" }}
+                >
+                  Visit Our Website <span> ↗</span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

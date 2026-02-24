@@ -26,7 +26,7 @@ const WaysToHelp = () => {
       subhead:
         "Collaborate with us to create meaningful change. By partnering with the JayTee Ojo Foundation, your organization can support programs in education, ICT training, and community development, multiplying impact and building stronger, sustainable communities.",
       btnText: "Become a Partner",
-      link: "/",
+      link: "/contact-us",
     },
   ];
   return (

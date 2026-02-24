@@ -6,24 +6,25 @@ const Impact = () => {
   const impact = [
     {
       icon: "/assets/book.svg",
-      number: "20,000",
-      subText: "Over 2,000 young people have completed our ICT and programming programs, gaining digital skills to compete globally.",
+      number: "2,000",
+      subText:
+        "Over 2,000 young people have completed our ICT and programming programs, gaining digital skills to compete globally.",
     },
     {
       icon: "/assets/book.svg",
-      number: "20,000",
+      number: "500+",
       subText:
         "More than 500 students have received scholarships, exam support, and accommodation assistance to pursue their education.",
     },
     {
       icon: "/assets/book.svg",
-      number: "20,000",
+      number: "30+",
       subText:
         "We’ve impacted 30+ communities through solar lighting projects, boreholes, food support, and medical outreach.",
     },
     {
       icon: "/assets/book.svg",
-      number: "20,000",
+      number: "50+",
       subText:
         "Over 50 secondary schools now benefit from our donations of tech-focused learning materials and digital literacy initiatives.",
     },
@@ -37,7 +38,11 @@ const Impact = () => {
               Your Impact Over the Years
             </h2>
             <p className="text-base text-[#595959] font-Roboto md:w-[80%]">
-              Together, we’re changing lives and building brighter futures. Through our programs, thousands of young people and communities have gained access to education, digital skills, and sustainable opportunities. </p>
+              Together, we’re changing lives and building brighter futures.
+              Through our programs, thousands of young people and communities
+              have gained access to education, digital skills, and sustainable
+              opportunities.{" "}
+            </p>
           </div>
 
           {/* stats place */}
