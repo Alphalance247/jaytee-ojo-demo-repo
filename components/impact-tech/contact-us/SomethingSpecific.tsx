@@ -1,19 +1,22 @@
 import React from "react";
-import VolunteerCard from "./VolunteerCard";
-
-const Volunteer = () => {
+import VolunteerCard from "../About-us/VolunteerCard";
+const SomethingSpecific = () => {
   return (
-    <div className="w-full  py-[91px]">
-      <div className="flex flex-col justify-center items-center gap-4 text-[#061C3D]  font-inter md:pb-20 pb-10  text-center md:px-0 px-6">
-        <div className=" text-[24px] md:text-[48px] font-bold">
-          Be a Part of Our Mission
+    <div className="mx-auto md:max-w-[1121px] w-full pb-10 md:pb-[141px]  md:pt-[108px] px-6 md:px-0">
+      <div className="flex flex-col justify-center items-center gap-4 text-center font-inter pb-10 md:pb-20">
+        <div className="">
+          <h4 className="text-[32px] md:text-[56px] leading-[40px] md:leading-[60px] text-[#061C3D] font-bold">
+            Looking for Something Specific?
+          </h4>
         </div>
-        <div className="text-center text-base md:text-lg w-full md:w-[536px] ">
-          Real-world outcomes from our programs across schools, communities, and
-          institutions.
+        <div>
+          <p className="font-normal text-[#42526B] md:text-lg text-base">
+            Explore opportunities to learn, collaborate, or contribute to our
+            mission.
+          </p>
         </div>
       </div>
-      <div className=" md:px-0 px-6 mx-auto max-w-[1112px] grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-[31px]">
+      <div className="flex md:flex-row flex-col gap-6 md:gap-[31px] ">
         <VolunteerCard
           btnText="Apply Now"
           className="bg-[#68D585]"
@@ -40,4 +43,4 @@ const Volunteer = () => {
   );
 };
 
-export default Volunteer;
+export default SomethingSpecific;
