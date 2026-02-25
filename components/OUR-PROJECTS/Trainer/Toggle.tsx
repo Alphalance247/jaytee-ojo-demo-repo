@@ -25,12 +25,12 @@ const Toggle = () => {
             overview
           </button>
 
-          <Button
+          {/* <Button
             text="structure"
             onClick={() => handleActiveClick("infrastructure")}
             isActive={isActive === "infrastructure"}
-          />
-          <Button
+          /> */}
+          {/* <Button
             text="facilitators"
             onClick={() => handleActiveClick("water")}
             isActive={isActive === "water"}
@@ -49,7 +49,7 @@ const Toggle = () => {
             text="security"
             onClick={() => handleActiveClick("security")}
             isActive={isActive === "security"}
-          />
+          /> */}
         </div>
       </div>
 

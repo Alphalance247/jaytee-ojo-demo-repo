@@ -38,7 +38,7 @@ const PastProjectPage = () => {
 
       <PastProj text="Community" />
       <Tech text="Tech & ICT" styles="bg-[#D9D9D9]" />
-      <News />
+      {/* <News /> */}
     </Layout>
   );
 };
