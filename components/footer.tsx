@@ -279,7 +279,7 @@ const Footer = () => {
                 the Google Privacy Policy and Terms of Service apply.
               </p>
               <p className=" text-[14px] font-Roboto  break-words">
-                © 2023 JayTee Ojo Foundation. All rights reserved | Terms of Use
+                © 2026 JayTee Ojo Foundation. All rights reserved | Terms of Use
                 Privacy Policy
               </p>
             </div>

@@ -27,21 +27,11 @@ const AccountInfo = () => {
       value: "Jaytee Ojo Foundation",
       icon: "👤",
     },
-    {
-      label: "Routing Number",
-      value: "021000021",
-      icon: "📍",
-    },
-    {
-      label: "Swift Code",
-      value: "FBANAIJA",
-      icon: "🌐",
-    },
-    {
-      label: "Branch",
-      value: "Lagos Main Branch",
-      icon: "🏢",
-    },
+    // {
+    //   label: "Routing Number",
+    //   value: "021000021",
+    //   icon: "📍",
+    // },
   ];
 
   const handleCopy = (value: string, label: string) => {
@@ -163,11 +153,11 @@ const AccountInfo = () => {
                 icon: "📱",
                 description: "Quick and easy transfers",
               },
-              {
-                title: "Online Portal",
-                icon: "💻",
-                description: "Secure payment gateway",
-              },
+              //   {
+              //     title: "Online Portal",
+              //     icon: "💻",
+              //     description: "Secure payment gateway",
+              //   },
               {
                 title: "In-Person",
                 icon: "👥",
