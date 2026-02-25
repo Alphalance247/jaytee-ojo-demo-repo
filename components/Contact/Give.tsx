@@ -33,13 +33,11 @@ const Give = () => {
                 />
                 <h5 className=" font-extrabold font-RobotoSlab text-xl text-[#262626]">
                   <span className="h-8 text-[#BFBFBF] text-4xl mr-8">-</span>{" "}
-                  GIVE
+                  {items.header}
                   <span className="h-8 text-[#BFBFBF] text-4xl ml-8">-</span>
                 </h5>
                 <p className="font-Roboto text-base text-[#595959]">
-                  Our foodbanks and medical aid give dignity to the elderly of
-                  ages 80 and over. Our scholarship program give hope to young
-                  people aspiring for a degree or vocation.
+                  {items.paragraph}
                 </p>
               </div>
             );
