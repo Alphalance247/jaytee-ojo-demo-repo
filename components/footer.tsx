@@ -195,23 +195,40 @@ const Footer = () => {
               <p className="font-semibold uppercase ">Follow Us</p>
             </div>
             <div className="flex space-x-4">
-              <a href="#">
+              <a
+                href="https://www.instagram.com/jayteeojofoundation/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram />
               </a>
-              <a href="#">
+              <a
+                href="https://www.youtube.com/@JayTeeOjoFoundationTV"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaYoutube />
               </a>
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/company/jaytee-ojofoundation/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaLinkedin />
               </a>
-              <a href="#">
+              <a
+                href="https://x.com/jayteeojofdn?s=20"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaTwitter />
               </a>
-              <a href="#">
+              <a
+                href="https://web.facebook.com/jayteeojofdn/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaFacebook />
-              </a>
-              <a href="#">
-                <FaEnvelope />
               </a>
             </div>
           </div>

@@ -8,12 +8,15 @@ const Educators = () => {
           Empowering Educators for Impactful Teaching
         </h3>
         <p className=" font-Roboto text-base text-center text-[#595959] w-fit max-sm:w-fit max-sm:text-xs max-md:w-fit">
-          Lorem ipsum dolor sit amet consectetur. Facilisi posuere a purus
-          pellentesque. Risus natoque velit nisl a elementum quam. Urna lacus
-          egestas maecenas venenatis est ut in lorem feugiat. At purus netus
-          nisl magna pharetra eget vitae cum. A at nec at tincidunt tortor arcu
-          sollicitudin. Sed viverra sed consectetur viverra. Magna eget nibh
-          pellentesque dictumst egestas sed tincidunt. Erat ullamcorper netus
+          The JayTee Ojo Foundation believes that strong educators are the key
+          to lasting change. Through this initiative, we provide teachers and
+          trainers with practical tools, mentorship, and training in ICT and
+          innovative teaching methods. By equipping educators with the skills
+          and confidence to deliver high-quality lessons, we ensure that
+          students not only learn but are inspired to explore, create, and
+          thrive. This approach multiplies the impact of our programs, building
+          a sustainable culture of learning and growth across schools and
+          communities.
         </p>
       </div>
     </Container>

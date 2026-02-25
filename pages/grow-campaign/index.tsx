@@ -20,12 +20,12 @@ const NewsCampaign = () => {
       <div className="bg-[#C2E2CE]">
         <Impacts
           textColor="text-[#E60303]"
-          fill="#E60303"
+          fill="#000000"
           backgroundCol="bg-[#C2E2CE]"
           Padd=""
           border="border-b-0"
           width="0"
-          borderColor="border-black"
+          borderColor="border-[#000000]"
         />
       </div>
       {/* <CaroNews /> */}

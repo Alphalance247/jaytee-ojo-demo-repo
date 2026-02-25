@@ -6,23 +6,16 @@ const OverView = () => {
           Welcome
         </h5>
         <p className="text-lg font-Roboto w-[90%] text-[#595959] max-sm:w-[100%] max-sm:text-sm">
-          Lorem ipsum dolor sit amet consectetur. Hendrerit sem volutpat blandit
-          proin cras orci. Dolor turpis ipsum feugiat diam. Porttitor urna
-          ligula faucibus ridiculus ut fringilla at imperdiet duis. Pellentesque
-          non nec quis laoreet ut quam. Viverra volutpat lacus amet ultrices
-          adipiscing pretium sem egestas. Et feugiat in vel dolor. Diam mattis
-          dictumst dis diam ornare nibh semper interdum sit. Nunc eu commodo
-          urna est. At mollis hendrerit volutpat sed nulla mi morbi. <br />
-          <br /> Eget aliquet dignissim pharetra sit. Feugiat pulvinar eget ante
-          pellentesque pulvinar facilisis tellus turpis sed. Tellus placerat
-          habitant quisque elementum tristique id duis at. Viverra suscipit
-          neque blandit orci pretium duis odio nulla. Lectus bibendum nisl sed
-          ac montes feugiat orci ultricies purus. <br /> <br /> Eget id ac velit
-          penatibus id id. Mattis aliquam justo at dis feugiat elit nunc in.
-          Enim urna elementum massa tortor aliquet consequat tellus. Proin donec
-          nunc tempor vivamus id nisi. Orci ac nam pellentesque non purus morbi
-          adipiscing posuere posuere. Nunc at ultrices quisque sem morbi sapien
-          metus habitasse.
+          Welcome to the JayTee Ojo Foundation’s learning and empowerment
+          programs. Our mission is to equip young people and educators with the
+          knowledge, skills, and opportunities they need to thrive in a rapidly
+          changing world. Through innovative training, mentorship, and
+          community-focused initiatives, we help students and teachers unlock
+          their potential, build confidence, and contribute meaningfully to
+          their communities. Whether you’re a student, educator, or supporter,
+          we invite you to explore our programs, learn about our impact, and
+          join us in creating a brighter, more empowered future for Ekiti State
+          and beyond.
         </p>
       </div>
       <div>
@@ -30,28 +23,19 @@ const OverView = () => {
           About the Program
         </h5>
         <p className=" text-lg font-Roboto w-[90%] text-[#595959] max-sm:w-[100%] max-sm:text-sm">
-          Lorem ipsum dolor sit amet consectetur. Hendrerit sem volutpat blandit
-          proin cras orci. Dolor turpis ipsum feugiat diam. Porttitor urna
-          ligula faucibus ridiculus ut fringilla at imperdiet duis. Pellentesque
-          non nec quis laoreet ut quam. Viverra volutpat lacus amet ultrices
-          adipiscing pretium sem egestas. Et feugiat in vel dolor. Diam mattis
-          dictumst dis diam ornare nibh semper interdum sit. Nunc eu commodo
-          urna est. At mollis hendrerit volutpat sed nulla mi morbi. <br />
-          <br /> Eget aliquet dignissim pharetra sit. Feugiat pulvinar eget ante
-          pellentesque pulvinar facilisis tellus turpis sed. Tellus placerat
-          habitant quisque elementum tristique id duis at. Viverra suscipit
-          neque blandit orci pretium duis odio nulla. Lectus bibendum nisl sed
-          ac montes feugiat orci ultricies purus. <br /> <br /> Eget id ac velit
-          penatibus id id. Mattis aliquam justo at dis feugiat elit nunc in.
-          Enim urna elementum massa tortor aliquet consequat tellus. Proin donec
-          nunc tempor vivamus id nisi. Orci ac nam pellentesque non purus morbi
-          adipiscing posuere posuere. Nunc at ultrices quisque sem morbi sapien
-          metus habitasse. ac montes feugiat orci ultricies purus. <br /> <br />
-          Eget id ac velit penatibus id id. Mattis aliquam justo at dis feugiat
-          elit nunc in. Enim urna elementum massa tortor aliquet consequat
-          tellus. Proin donec nunc tempor vivamus id nisi. Orci ac nam
-          pellentesque non purus morbi adipiscing posuere posuere. Nunc at
-          ultrices quisque sem morbi sapien metus habitasse.
+          Our programs are designed to provide hands-on learning experiences,
+          practical skills, and real-world knowledge. From coding and front-end
+          development to teacher training and community projects, each program
+          focuses on: Youth Empowerment: Training students in ICT and digital
+          skills to prepare them for academic and professional success. Educator
+          Capacity-Building: Equipping teachers and trainers with modern
+          teaching tools and methods to enhance learning outcomes. Community
+          Development: Supporting initiatives that improve access to technology,
+          education resources, and sustainable solutions in local communities.
+          Through mentorship, workshops, and collaborative projects,
+          participants gain both technical knowledge and critical life skills —
+          building confidence, creativity, and a strong foundation for future
+          opportunities.
         </p>
       </div>
     </div>
