@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "../Button";
 import Image from "next/image";
 
@@ -18,7 +19,9 @@ const Program = () => {
           intervention as well as farmer empowerment and local farming
           interventions.
         </p>
-        <Button text="Read the highlights" />
+        <Link href="/our-project/tech-ict">
+          <Button text="Read the highlights" />
+        </Link>
       </div>
       <Image
         width={720}

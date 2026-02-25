@@ -18,9 +18,10 @@ const HeroNews = () => {
           Schools Programming Program
         </h1>
         <p className=" text-lg font-Roboto text-[#FCFCFC] leading-7  max-sm:text-sm max-sm:leading-4">
-          Lorem ipsum dolor sit amet consectetur. Facilisi posuere a purus
-          pellentesque. Risus natoque velit nisl a elementum quam. Urna lacus
-          egestas maecenas venenatis est ut in lorem feugiat.
+          The Schools Programming Program is a transformative initiative by the
+          JayTee Ojo Foundation that equips students with essential digital
+          skills. Through interactive workshops, coding bootcamps, and
+          mentorship, we empower youths to thrive in the digital age.
         </p>
         <Button text="donate now" />
       </div>

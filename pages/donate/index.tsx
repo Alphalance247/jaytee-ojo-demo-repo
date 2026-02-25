@@ -1,12 +1,12 @@
 import Layout from "../layout";
 import HeroD from "@/components/Donations/Hero";
-import Form from "@/components/Donations/Form";
+import AccountInfo from "@/components/Donations/AccountInfo";
 
 const Donation = () => {
   return (
     <Layout>
       <HeroD />
-      <Form />
+      <AccountInfo />
     </Layout>
   );
 };

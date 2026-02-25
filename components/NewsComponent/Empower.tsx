@@ -5,12 +5,11 @@ const Empower = () => {
         Empowering Secondary Students with Front-End Mastery
       </h3>
       <p className=" font-Roboto text-base text-center text-[#595959] w-fit max-sm:w-fit max-sm:text-sm max-md:w-fit">
-        Lorem ipsum dolor sit amet consectetur. Facilisi posuere a purus
-        pellentesque. Risus natoque velit nisl a elementum quam. Urna lacus
-        egestas maecenas venenatis est ut in lorem feugiat. At purus netus nisl
-        magna pharetra eget vitae cum. A at nec at tincidunt tortor arcu
-        sollicitudin. Sed viverra sed consectetur viverra. Magna eget nibh
-        pellentesque dictumst egestas sed tincidunt. Erat ullamcorper netus
+        We are dedicated to empowering secondary school students with front-end
+        development skills, fostering creativity, and preparing them for the
+        digital future. Through our comprehensive training programs, we equip
+        students with the knowledge and tools to create engaging websites and
+        applications, opening doors to exciting opportunities in the tech world.
       </p>
     </div>
   );

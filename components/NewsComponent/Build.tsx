@@ -1,4 +1,3 @@
-
 const Build = () => {
   return (
     <div className="p-24 bg-[#F5F5F5] max-sm:p-5 max-md:p-8 max-lg:p-10">
@@ -7,8 +6,9 @@ const Build = () => {
           Building the future
         </h3>
         <p className=" font-Roboto text-base text-[#595959] max-sm:text-xs max-md:text-sm">
-          Lorem ipsum dolor sit amet consectetur. Ridiculus tortor enim commodo
-          fringilla venenatis lectus in. Lorem ipsum dolor sit amet
+          The JayTee Ojo Foundation is dedicated to building a brighter future
+          for Ekiti State through education, empowerment, and community
+          development.
         </p>
       </div>
 

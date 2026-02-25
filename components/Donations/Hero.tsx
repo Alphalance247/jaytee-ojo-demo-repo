@@ -20,11 +20,10 @@ const HeroD = () => {
             Empower Change with Your Contribution
           </h1>
           <p className=" text-lg font-Roboto leading-7 w-[711px] max-sm:w-full max-sm:text-sm max-sm:leading-4 max-md:w-[80%]">
-            Lorem ipsum dolor sit amet consectetur. Ultrices egestas faucibus
-            ornare nec ante vel tempus. Et potenti venenatis turpis hendrerit
-            viverra ultrices integer. Mauris tortor vel aenean eget tellus at in
-            dui. Ac at sodales etiam sed. Lacus a dui sodales risus neque massa
-            duis quis. Sed feugiat id non urna viverra.
+            Your support can change lives. By donating to the JayTee Ojo
+            Foundation, you help provide scholarships, ICT training, community
+            development projects, and essential resources to youths and
+            underserved communities in Ekiti State.
           </p>
         </div>
       </Container>

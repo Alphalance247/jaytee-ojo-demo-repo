@@ -113,7 +113,7 @@ function Header() {
               OUR PROJECTS
             </Link>
           </li>
-          <li className="inline-block">
+          {/* <li className="inline-block">
             <Link
               href="/media"
               className={`text-white ${
@@ -125,8 +125,8 @@ function Header() {
             >
               MEDIA
             </Link>
-          </li>
-          <li className="inline-block">
+          </li> */}
+          {/* <li className="inline-block">
             <Link
               href="/news"
               className={`text-white pb-5 ${
@@ -138,7 +138,7 @@ function Header() {
             >
               NEWS & STORIES
             </Link>
-          </li>
+          </li> */}
           <li className="inline-block">
             <Link
               href="/contact-us"

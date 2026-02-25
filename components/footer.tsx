@@ -23,10 +23,10 @@ const Footer = () => {
       link: "/about-us",
       name: " About Us",
     },
-    {
-      link: "/about-us",
-      name: "Media",
-    },
+    // {
+    //   link: "/about-us",
+    //   name: "Media",
+    // },
     {
       link: "/our-story",
       name: "Our Story",
@@ -46,7 +46,7 @@ const Footer = () => {
       name: "Schools programming program",
     },
     {
-      link: "/",
+      link: "/our-project/tech-ict",
       name: "Open programming program",
     },
     {
@@ -73,7 +73,7 @@ const Footer = () => {
       name: "Make donations",
     },
     {
-      link: "/",
+      link: "/contact-us",
       name: "Partnership",
     },
   ];

@@ -11,10 +11,10 @@ const Give = () => {
             Why You Should Volunteer with Us
           </h3>
           <p className=" font-Roboto text-base text-[#595959] w-[70%] m-auto max-sm:w-[100%] max-sm:text-sm">
-            Lorem ipsum dolor sit amet consectetur. Facilisi posuere a purus
-            pellentesque. Risus natoque velit nisl a elementum quam. Urna lacus
-            egestas maecenas venenatis est ut in lorem feugiat. At purus netus
-            nisl magna pharetra eget vitae cum. A at nec
+            Join us in creating real impact. By volunteering with the JayTee Ojo
+            Foundation, you can mentor youths, assist in ICT training, support
+            community projects, and help empower communities across Ekiti State.
+            Every hour you give transforms lives.
           </p>
         </div>
         <div className=" grid grid-cols-3 items-center gap-x-16 max-sm:grid max-sm:grid-cols-1 gap-y-8">

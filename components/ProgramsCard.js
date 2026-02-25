@@ -8,33 +8,39 @@ const ProgramsCard = () => {
     {
       title: "Schools Programming Program",
       description:
-        "Education is the seed of transformation. By teaching programming and digital literacy in secondary schools, we inspire a new generation of thinkers and creators — young people who can use technology to change their lives and uplift their communities.",
+        "Education is the seed of transformation. By teaching programming and digital literacy in secondary schools, we inspire a new generation of thinkers and creators....",
       image: "/assets/news/hero.png",
-      link: "/grow-campaign",
+      link: "/our-project/community-project",
     },
     {
       title: "Open Programming Program",
       description:
-        "Our Open Programming Program offers free ICT and coding training to young people across Ekiti State and beyond. Participants learn valuable digital skills, including programming with Python, empowering them to pursue careers, build startups, and contribute meaningfully to the digital economy.",
+        "Our Open Programming Program offers free ICT and coding training to young people across Ekiti State and beyond. Participants learn valuable digital skills, including....",
       image: "/assets/open.png",
-      link: "/",
+      link: "/our-project/tech-ict",
     },
     {
       title: "Grow Campaign",
       description:
-        "The Grow Campaign supports community growth and self-sustenance through agricultural empowerment, training, and access to essential resources. We help local farmers and small businesses thrive, fostering food security, job creation, and sustainable livelihoods across Ekiti State.",
+        "The Grow Campaign supports community growth and self-sustenance through agricultural empowerment, training, and access to essential resources. We help local farmers and ....",
       image: "/assets/grow.png",
-      link: "/",
+      link: "/grow-campaign",
     },
   ];
   return (
     <Container>
       <OurPrograms />
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3  mt-20">
+      <div className="grid sm:grid-cols-2 gap-8 lg:grid-cols-3  mt-20">
         {data.map((item, index) => (
           <div className="w-full mb-8" key={index}>
             <div className="bg-white overflow-hidden">
-              <Image src={item?.image} alt="Card 2" width={377} height={275} />
+              <Image
+                src={item?.image}
+                alt="Card 2"
+                className="h-[200px] w-full object-cover rounded-lg"
+                width={377}
+                height={275}
+              />
               <div className="">
                 <h5 className="text-2xl font-bold mt-4 mb-2 font-RobotoSlab text-[#262626]">
                   {item?.title}
