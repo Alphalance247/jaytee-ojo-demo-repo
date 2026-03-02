@@ -14,12 +14,12 @@ const AccountInfo = () => {
   const accountDetails: AccountDetail[] = [
     {
       label: "Bank Name",
-      value: "First Bank of Africa",
+      value: "Wema Bank",
       icon: "🏦",
     },
     {
       label: "Account Number",
-      value: "1234567890",
+      value: "0123379852",
       icon: "🔢",
     },
     {

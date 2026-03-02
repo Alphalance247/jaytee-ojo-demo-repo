@@ -32,7 +32,7 @@ const Footer = () => {
       name: "Our Story",
     },
     {
-      link: "/impact-tech",
+      link: "/",
       name: "Impact Tech",
     },
     {
