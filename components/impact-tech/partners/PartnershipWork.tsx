@@ -64,7 +64,10 @@ const PartnershipWork = () => {
         <div className="w-full md:w-1/2 ">
           <div className="gap-[42px] flex flex-col">
             {lists.map((list, index) => (
-              <div className="flex gap-[22.57px] font-graphik h-[100px] ">
+              <div
+                key={index}
+                className="flex gap-[22.57px] font-graphik h-[100px] "
+              >
                 <div className="bg-[#2A7445] h-[43px] w-[43.43px] rounded-full flex justify-center items-center flex-shrink-0">
                   <p className="text-[#FFFFFF] font-graphik font-bold text-[17px]">
                     {index + 1}

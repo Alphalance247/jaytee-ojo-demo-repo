@@ -55,11 +55,12 @@ const TeensCoding = () => {
           <div className=" pt-3 md:pt-[45px]">
             <Button
               text="apply now"
-              children={
-                <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
-              }
+              url="#applicationForm"
               className="w-[156px] bg-[#E60303] text-white"
-            />
+            >
+              {" "}
+              <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
+            </Button>
           </div>
         </div>
       </div>

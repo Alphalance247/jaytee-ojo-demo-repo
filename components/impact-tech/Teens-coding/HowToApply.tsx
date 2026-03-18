@@ -3,12 +3,22 @@ import Input from "./FormInput";
 import { IoChevronDown } from "react-icons/io5";
 import Button from "./Button";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import FormSubmitButton from "../common/FormSubmitButton";
+import Select from "../common/SelectInput";
 
-const options = ["web development", "graphics design"];
+const programs = [
+  "Teens Coding",
+  "Coding for Kids",
+  "School Ccoding Club",
+  "Train-the-Trainer",
+];
 const HowToApply = () => {
   return (
-    <div className=" bg-[url(/assets/impact-tech/how-to-apply-bg.png)] h-[795px] bg-cover bg-no-repeat flex flex-col justify-center items-center">
-      <div className="h-[120px]">
+    <div
+      id="applicationForm"
+      className=" relative bg-[url(/assets/impact-tech/howToApplyBg.png)] h-[795px] bg-cover bg-no-repeat flex flex-col justify-center items-center mt-16 md:mt-0"
+    >
+      <div className="h-[120px] z-10">
         <div className=" text-[32px] md:text-[48px] font-bold text-white text-center font-inter">
           How to Apply
         </div>
@@ -16,7 +26,13 @@ const HowToApply = () => {
           Complete the form below to get started.
         </p>
       </div>
-      <div className="w-full md:px-0 px-6">
+      <div
+        className="absolute inset-0 z-0 w-full h-[795px] "
+        style={{
+          backgroundImage: ` linear-gradient(180deg, rgba(104, 213, 133, 0.54) 0%, #2A7445 100%)`,
+        }}
+      ></div>
+      <div className="w-full md:px-0 px-6 z-10">
         <div
           className="bg-white w-full md:w-[660px] rounded-[16px] mx-auto  "
           style={{
@@ -46,7 +62,13 @@ const HowToApply = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
                 <div className="relative w-full">
-                  <select
+                  <Select
+                    placeholder="Pprogram interest"
+                    options={programs}
+                    heading="Program interest"
+                    className="md:-right-52 right-0"
+                  />
+                  {/* <select
                     name=""
                     id=""
                     className="w-full h-12 border border-[#E6E8EC] rounded-[5px] text-[#838E9E] capitalize px-[10.5px]  appearance-none bg-white focus:outline-none"
@@ -59,7 +81,7 @@ const HowToApply = () => {
                         {option}
                       </option>
                     ))}
-                  </select>
+                  </select> */}
                   <IoChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-[#838E9E] pointer-events-none" />
                 </div>
                 <div>
@@ -76,13 +98,13 @@ const HowToApply = () => {
               </div>
               <div>
                 {" "}
-                <Button
+                <FormSubmitButton
                   text="apply now"
-                  children={
-                    <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
-                  }
                   className="w-full bg-[#E60303] text-white"
-                />
+                >
+                  {" "}
+                  <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
+                </FormSubmitButton>
               </div>
             </form>
           </div>

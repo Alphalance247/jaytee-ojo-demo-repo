@@ -64,13 +64,16 @@ const Achievements = () => {
     <div className="min-h-[753px] flex justify-center items-center px-6 md:px-[101px]">
       <div className=" h-full flex justify-center items-center ">
         <div className="flex md:flex-row flex-col gap-[46px] md:gap-[92px] items-start my-10 md:my-[91px]">
-          <div className="w-full md:w-1/3 h-[571px] md:flex justify-center hidden">
+          <div
+            className="w-full md:w-1/3 h-[571px] md:flex justify-center hidden shadow-[0px_31px_34px_0px_#00000018;
+]"
+          >
             <Image
-              src="/assets/impact-tech/lady.png"
-              alt="A lady image"
-              className="w-full object-cover  hidden md:flex mb-0 md:-mb-[66px]"
+              src="/assets/impact-tech/giftPresentation.png"
+              alt="acievement"
+              className="w-full md:w-[425px] h-[500px] object-cover  hidden md:flex mb-0 md:-mb-[66px] rounded-[23px]"
               width={425}
-              height={571}
+              height={471}
             />
           </div>
           <div className="w-full md:w-2/3  ">

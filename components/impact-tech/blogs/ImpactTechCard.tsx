@@ -15,7 +15,13 @@ const ImpactTechCard = ({
   return (
     <div className="bg-[#FFFFFF] border border-[#E6E8EC] rounded-[16px] h-fit md:pb-0 pb-4 md:h-[524px] w-full md:w-[396px]">
       <div className="flex flex-col gap-8">
-        <Image src={imageUrl} width={396} height={312} alt="Blog image" />
+        <Image
+          src={imageUrl}
+          width={396}
+          height={312}
+          alt="Blog image"
+          className="w-[396px] h-[312px] rounded-t-[16px] object-cover"
+        />
         <div className="pl-4 md:pl-8">
           <p className="text-[#000000] text-sm font-normal">{time}</p>
           <p className="text-[#2A2A2A] text-lg font-medium">{title}</p>

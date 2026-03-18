@@ -16,12 +16,14 @@ const Volunteer = () => {
       <div className=" md:px-0 px-6 mx-auto max-w-[1112px] grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-[31px]">
         <VolunteerCard
           btnText="Apply Now"
+          url="/impact-tech#our-programs"
           className="bg-[#68D585]"
           title="Apply to a Program"
           description="Enroll in one of our coding programs and start learning today"
           photo="/assets/impact-tech/about-us/youngStudent.png"
         />
         <VolunteerCard
+          url="/impact-tech/volunteer#apply-to-volunteer"
           btnText="Become a Volunteer"
           className="bg-[#473BF0]"
           title="Volunteer or Mentor"
@@ -29,6 +31,7 @@ const Volunteer = () => {
           photo="/assets/impact-tech/about-us/mentor.png"
         />
         <VolunteerCard
+          url="/impact-tech/partners#start-partnership"
           btnText="Become a Partner"
           className="bg-[#F64B4B]"
           title="Sponsor or Partner"

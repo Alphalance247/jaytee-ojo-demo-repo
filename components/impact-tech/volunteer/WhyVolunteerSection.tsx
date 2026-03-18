@@ -79,9 +79,8 @@ const WhyVolunteerSection = () => {
       <div className="flex md:flex-row flex-col gap-6 pt-8 md:pt-[91px] pb-10 md:pb-[117px]">
         {/* <div className="w-full md:w-1/4"> */}
         {volunteers.map((volunteer, index) => (
-          <div className=" w-full md:w-1/4">
+          <div key={index} className=" w-full md:w-1/4">
             <FeaturedCard
-              key={index}
               icon={volunteer.icon}
               title={volunteer.title}
               desc={volunteer.description}

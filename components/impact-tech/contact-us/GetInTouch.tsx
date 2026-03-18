@@ -4,16 +4,18 @@ import { TfiEmail } from "react-icons/tfi";
 import { MdLocalPhone } from "react-icons/md";
 const contacts = [
   {
-    text: <a href="mailtto:info@impacttech.com">info@impacttech.com</a>,
+    text: "info@impacttech.com",
     icon: <TfiEmail className="text-white" />,
     heading: "Email us",
     imageUrl: "/assets/impact-tech/contact-us/IMG(4).png",
+    url: "mailto:info@impacttech.com",
   },
   {
     text: "9675435231",
     icon: <MdLocalPhone className="text-white" />,
     heading: "Call us",
     imageUrl: "/assets/impact-tech/contact-us/IMG(5).png",
+    url: "tel:9675435231",
   },
   {
     text: "Ekiti State, Nigeria",
@@ -25,6 +27,7 @@ const contacts = [
     ),
     heading: "Visit us",
     imageUrl: "/assets/impact-tech/contact-us/image281.png",
+    url: "/impact-tech",
   },
 ];
 const GetInTouch = () => {
@@ -48,8 +51,11 @@ const GetInTouch = () => {
               heading={contact.heading}
               icon={contact.icon}
               imageUrl={contact.imageUrl}
-              children={contact.text}
-            />
+            >
+              <a href={contact.url} rel="noopener noreferrer">
+                {contact.text}
+              </a>
+            </ContactsCard>
           ))}
         </div>
       </div>

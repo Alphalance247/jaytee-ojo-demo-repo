@@ -1,12 +1,36 @@
 import React from "react";
 import Input from "../Teens-coding/FormInput";
-import Button from "../Teens-coding/Button";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import FormSelect from "../common/FormSelect";
-
+import FormSubmitButton from "../common/FormSubmitButton";
+import { BiChevronRight } from "react-icons/bi";
+import Select from "../common/SelectInput";
+const roleInterested = [
+  {
+    role: "Mentor/Instructor",
+  },
+  {
+    role: "Curriculum Contributor",
+  },
+  {
+    role: "Program Facilitator",
+  },
+  {
+    role: "Community Ambassador",
+  },
+];
+const formats = [
+  "In-person volunteering",
+  "Virtual / Remote volunteering",
+  "Hybrid (both in-person and remote)",
+  "Flexible / Open to any",
+];
 const ApplytoVolunteer = () => {
   return (
-    <div className="h-auto md:h-[1115px] mx-auto max-w-[1437px]">
+    <div
+      id="apply-to-volunteer"
+      className="h-auto md:h-[1115px] mx-auto max-w-[1437px]"
+    >
       <div className="h-fit">
         <div className="flex flex-col justify-center items-center font-inter md:px-0 px-6 md:pt-[101px] pt-10">
           <h5 className="text-[32px] md:text-[48px] text-[#061C3D] font-bold text-center">
@@ -40,20 +64,37 @@ const ApplytoVolunteer = () => {
               <Input type="text" placeholderText="Location (City, Country)" />
             </div>
             <div className="grid   gap-4 w-full">
-              <FormSelect value="" className="">
-                <option value="">Role interested in</option>
-                <option value="mentor">Mentor</option>
-                <option value="trainer">Trainer</option>
-                <option value="support">Support Staff</option>
-              </FormSelect>
+              {/* <Select> */}
+              {/* <option value="" className="flex justify-between items-center">
+                  <p> Role interested in</p>
+                  <BiChevronRight />
+                </option>
+                {roleInterested.map((role, index) => (
+                  <option key={index} value={role.role}>
+                    {role.role}
+                  </option>
+                ))} */}
+              {/* </Select> */}
+              <Select
+                placeholder="Role Interested in"
+                options={roleInterested.map((r) => r.role)}
+                heading="Role Interested In"
+                className="md:-right-80 right-0"
+              />
             </div>
             <div className="grid   gap-4 w-full">
-              <FormSelect value="" className="">
+              {/* <FormSelect value="" className="">
                 <option value="">Preferred format</option>
                 <option value="mentor">Mentor</option>
                 <option value="trainer">Trainer</option>
                 <option value="support">Support Staff</option>
-              </FormSelect>
+              </FormSelect> */}
+              <Select
+                placeholder="Preferred format"
+                options={formats}
+                heading="Preferred format"
+                className="md:-right-80 right-0"
+              />
             </div>
             <div className="grid   gap-4 w-full">
               {" "}
@@ -67,19 +108,18 @@ const ApplytoVolunteer = () => {
               <textarea
                 name=""
                 id=""
-                className="resize-none h-[145px] w-full border border-[#E6E8EC] text-[#838E9E] rounded-[5px] placeholder:pt-3 pl-[10.5px]"
+                className="resize-none h-[145px] w-full border border-[#E6E8EC] placeholder:text-[#838E9E] text-[#101828] rounded-[5px] placeholder:pt-3 pl-[10.5px]"
                 placeholder="Message / Additional info"
               ></textarea>
             </div>
             <div>
               {" "}
-              <Button
+              <FormSubmitButton
                 text="Submit Application"
-                children={
-                  <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
-                }
                 className=" w-[320px] md:w-[505px] bg-[#E60303] text-white mt-4 mb-8"
-              />
+              >
+                <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
+              </FormSubmitButton>
             </div>
           </form>
         </div>

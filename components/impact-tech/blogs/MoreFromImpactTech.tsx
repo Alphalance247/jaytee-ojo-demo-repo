@@ -3,7 +3,7 @@ import ImpactTechCard from "./ImpactTechCard";
 const blogs = [
   {
     id: 1,
-    imageUrl: "/assets/impact-tech/blogs/Photo.png",
+    imageUrl: "/assets/impact-tech/blogs/students.png",
     title:
       "From Student to Instructor: How Impact Tech is Creating Future Tech Leaders",
     time: "5 min read",
@@ -19,7 +19,7 @@ const blogs = [
   },
   {
     id: 3,
-    imageUrl: "/assets/impact-tech/blogs/Photo2.png",
+    imageUrl: "/assets/impact-tech/blogs/computer.png",
     title: "Strengthening Tech Education Through Train-the-Trainer Programs",
     time: "5 min read",
     date: "15 Feb, 2026",
@@ -62,8 +62,9 @@ const MoreFromImpactTech = () => {
           </p>
         </div>
         <div className="grid md:grid-cols-3 grid-cols-1 gap-x-6 gap-6 md:gap-y-[78px] md:px-0 px-6">
-          {blogs.map((blog) => (
+          {blogs.map((blog, index) => (
             <ImpactTechCard
+              key={index}
               time={blog.time}
               title={blog.title}
               imageUrl={blog.imageUrl}

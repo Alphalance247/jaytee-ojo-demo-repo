@@ -350,6 +350,7 @@ const ThumbnailCarousel: React.FC<GalleryListProps> = ({
         {items.map((item, index) =>
           item.type === "image" ? (
             <img
+              alt="photo"
               key={index}
               src={item.src}
               className={`w-[72px] h-[72px] object-cover cursor-pointer rounded border-2  ${
@@ -371,7 +372,7 @@ const ThumbnailCarousel: React.FC<GalleryListProps> = ({
             >
               <source src={item.src} type="video/mp4" />
             </video>
-          )
+          ),
         )}
       </div>
 

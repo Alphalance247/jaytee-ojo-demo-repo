@@ -18,6 +18,7 @@ const SomethingSpecific = () => {
       </div>
       <div className="flex md:flex-row flex-col gap-6 md:gap-[31px] ">
         <VolunteerCard
+          url="/impact-tech#our-programs"
           btnText="Apply Now"
           className="bg-[#68D585]"
           title="Apply to a Program"
@@ -25,6 +26,7 @@ const SomethingSpecific = () => {
           photo="/assets/impact-tech/about-us/youngStudent.png"
         />
         <VolunteerCard
+          url="/impact-tech/volunteer/#apply-to-volunteer"
           btnText="Become a Volunteer"
           className="bg-[#473BF0]"
           title="Volunteer or Mentor"
@@ -32,6 +34,7 @@ const SomethingSpecific = () => {
           photo="/assets/impact-tech/about-us/mentor.png"
         />
         <VolunteerCard
+          url="/impact-tech/partners#start-partnership"
           btnText="Become a Partner"
           className="bg-[#F64B4B]"
           title="Sponsor or Partner"

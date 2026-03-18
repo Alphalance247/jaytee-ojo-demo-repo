@@ -1,13 +1,15 @@
 import React from "react";
 
 const AchievementCard = ({
+  titleClass,
   title,
   icon,
   description,
 }: {
+  titleClass?: string;
   title: string;
   icon: React.ReactNode;
-  description: string;
+  description?: string;
 }) => {
   return (
     <div className="flex gap-[22.2px]">
@@ -15,12 +17,16 @@ const AchievementCard = ({
         <div className=" flex items-center justify-center "> {icon}</div>
       </div>
       <div className="flex flex-col gap-[10px] font-graphik">
-        <div className="font-bold text-lg md:text-[21px] text-[#161C2D">
+        <div
+          className={`${titleClass} font-bold text-lg md:text-[21px] text-[#161C2D`}
+        >
           {title}
         </div>
-        <div className=" text-base md:text-[17px] text-[#161C2D">
-          {description}
-        </div>
+        {description && (
+          <div className=" text-base md:text-[17px] text-[#161C2D">
+            {description}
+          </div>
+        )}
       </div>
     </div>
   );

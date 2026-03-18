@@ -68,9 +68,9 @@ const WhyPartner = () => {
             </p>
             <Button
               text="Get Started"
+              url="#start-partnership"
               className="w-full md:w-[156px] text-white bg-[#E60303] mt-8 md:mt-12"
-              children=""
-            />
+            ></Button>
           </div>
         </div>
         <div className="w-full md:w-1/2 flex md:flex-row flex-col gap-6 md:mt-0 mt-6">

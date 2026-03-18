@@ -17,10 +17,10 @@ const Hero = () => {
           </div>
         </div>
         <Button
+          url="#apply-to-volunteer"
           className="text-white bg-[#E60303] md:w-[211px] w-full  "
           text="Apply to Volunteer"
-          children=""
-        />
+        ></Button>
       </div>
       <div className="w-full md:w-1/3 md:block hidden ">
         <div className="relative h-[636px] w-full ">
@@ -32,11 +32,11 @@ const Hero = () => {
             className="h-[636px] object-cover w-full  "
           />
           <Image
-            src={"/assets/impact-tech/volunteer/Photo.png"}
+            src={"/assets/impact-tech/volunteer/volunteerPhoto.png"}
             width={450}
             height={502}
             alt="bg"
-            className="h-[502px] absolute bottom-[100px] w-[450px] -left-[129px] "
+            className="h-[502px] absolute bottom-[100px] w-[450px] -left-[129px] rounded-[20px] object-cover"
           />
         </div>
       </div>

@@ -1,17 +1,19 @@
-import { title } from "process";
 import React from "react";
 import AnnoucementCard from "./AnnoucementCard";
 const annoucements = [
   {
     id: 1,
-    imageUrl: "/assets/impact-tech/blogs/open.png",
+    imageUrl: "/assets/impact-tech/blogs/open1.jpg ",
     date: "15 Feb, 2026",
+    btnText: "Apply Now",
     title: "Applications Now Open for Teens Coding Program 2026",
     text: "We are excited to announce that applications for the Teens Coding Program are now open. This program introduces secondary school students to web development and programming fundamentals through hands-on learning and mentorship.",
   },
   {
     id: 2,
-    imageUrl: "/assets/impact-tech/blogs/Photo7.png",
+    imageUrl:
+      "/assets/impact-tech/blogs/19991af8b47739029db60d08cb93a60a5239b743.png     ",
+    btnText: "Read More",
     date: "15 Feb, 2026",
     title: "Partnership with Ekiti State Ministry of Education Expanded",
     text: "Impact Tech is expanding its collaboration with the Ministry of Education to reach more schools and train more educators in digital skills and coding instruction.",
@@ -38,6 +40,7 @@ const Announcement = () => {
                 date={announcement.date}
                 title={announcement.title}
                 content={announcement.text}
+                btnText={announcement.btnText}
                 imageUrl={announcement.imageUrl}
               />
             ))}

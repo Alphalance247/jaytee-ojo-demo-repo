@@ -5,10 +5,12 @@ const VolunteerWaysCard = ({
   title,
   desc,
   className,
+  linkUrl,
 }: {
   title: string;
   desc: string;
   className: string;
+  linkUrl: string;
 }) => {
   return (
     <div
@@ -22,7 +24,7 @@ const VolunteerWaysCard = ({
         <div className="text-sm font-medium text-[#6B7280] font-rubik leading-[146%] max-w-[265px] pr-[21px]">
           {desc}
         </div>
-        <VolunteerWaysButton />
+        <VolunteerWaysButton url={linkUrl} />
       </div>
     </div>
   );

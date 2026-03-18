@@ -5,12 +5,8 @@ import { FaXTwitter } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
-const socials = [
-  <FaXTwitter />,
-  <RiInstagramFill />,
-  <FaFacebookF />,
-  <FaLinkedinIn />,
-];
+const socials = [FaXTwitter, RiInstagramFill, FaFacebookF, FaLinkedinIn];
+
 const Footer = () => {
   return (
     <div className="bg-[#F5F5F5] h-fit font-DMsans">
@@ -36,8 +32,10 @@ const Footer = () => {
         <div className="flex  justify-between items-start  md:items-center pt-6 p-7 md:pb-14">
           <div className="text-[#8B8C8E] text-sm">© 2023 Impact Tech</div>
           <div className="flex gap-2 md:gap-3">
-            {socials.map((social, index) => (
-              <SocialPill children={social} key={index} />
+            {socials.map((Icon, index) => (
+              <SocialPill key={index}>
+                <Icon />
+              </SocialPill>
             ))}
           </div>
         </div>

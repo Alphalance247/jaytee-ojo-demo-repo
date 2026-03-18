@@ -17,7 +17,7 @@ const FormSelect = ({
       <select
         className={`appearance-none border border-[#E6E8EC] h-12 rounded-[5px] placeholder:text-[#838E9E]  w-full text-[#838E9E] focus:outline-none pl-[10.5px] ${className}`}
       >
-        {children}
+        <div className="bg-white shadow-impact-shadow"> {children}</div>
       </select>
       <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
         <BiChevronDown className="w-4 h-4 text-[#838E9E]" />

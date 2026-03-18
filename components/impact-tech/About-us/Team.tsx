@@ -50,11 +50,12 @@ const Team = () => {
           <div>
             <Button
               text="Volunteer"
+              url="/impact-tech/volunteer#apply-to-volunteer"
               className="text-white bg-[#E60303] w-[110px] md:w-[201px]"
-              children={
-                <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1 " />
-              }
-            />
+            >
+              {" "}
+              <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1 " />
+            </Button>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8 px-6 md:px-[105px] py-10 md:pt-[60px] md:pb-[113px]  ">

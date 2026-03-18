@@ -38,7 +38,7 @@ const OuStory = () => {
               {/* IMAGE */}
               <div className="absolute top-[51px] left-[76px] z-20">
                 <Image
-                  src="/assets/impact-tech/about-us/excitedpeople.png"
+                  src="/assets/impact-tech/about-us/Rectangle9.png"
                   alt="excited people"
                   width={486}
                   height={376}

@@ -11,7 +11,7 @@ const ButtonFrame = ({
     <div
       className={`${className} md:h-[62px] h-10 rounded-tl-[35px] rounded-bl-[35px]  md:rounded-tl-[41px] md:rounded-bl-[41px]
       flex items-center  text-white capitalize font-bold text-sm md:text-[21px] 
-      backdrop-blur-[12px] bg-white/20`}
+      backdrop-blur-[12px]  bg-[linear-gradient(94.19deg,_rgba(255,255,255,0.25)_8.76%,_rgba(255,255,255,0)_100%)]`}
     >
       <p className="pl-[33px] font-grahik">{text}</p>
     </div>

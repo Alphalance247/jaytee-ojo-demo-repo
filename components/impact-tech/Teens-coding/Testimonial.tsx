@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import TestimonialCard from "./TestimonialCard";
-import { HiChevronLeft } from "react-icons/hi";
-import { HiChevronRight } from "react-icons/hi";
-
+import SliderCarousel from "../common/SliderCarousel";
+import Slider from "react-slick";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 const testimonials = [
   {
     name: "John Doe",
@@ -35,65 +35,59 @@ const testimonials = [
 ];
 
 const Testimonial = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const totalLength = testimonials.length;
-  const next = () => {
-    setActiveIndex((prev) => (prev + 1) % totalLength);
-    console.log(activeIndex);
-  };
+  const sliderRef = useRef<Slider | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const prev = () => {
-    setActiveIndex((prev) => (prev === 0 ? totalLength - 1 : prev - 1));
-  };
+  const nextSlide = () => sliderRef.current?.slickNext();
+  const prevSlide = () => sliderRef.current?.slickPrev();
   return (
-    <div className="h-full w-full md:h-[497px] flex justify-start md:justify-center items-start md:items-center px-6 md:px-[101px]">
-      <div className=" h-full flex flex-col md:flex-row w-full  items-center ">
-        {/* <div className="flex items-center gap-6"> */}
+    <div className="h-full w-full md:h-[497px] flex justify-start md:justify-center items-start md:items-center pl-6 md:pl-[101px]">
+      <div className=" h-full flex flex-col md:flex-row w-full items-center ">
         <div className="w-full md:w-1/3">
           <div className="py-4 text-sm font-medium text-[#2A7445] uppercase font-inter">
             Testimonial
           </div>
-          <div className="text-[32px] md:text-[48px] texxt-[#1E1E1E] font-bold font-grostek">
-            <h5>
-              {" "}
-              Our Impact <br /> Stories
-            </h5>
+          <div className="text-[32px] md:text-[48px] text-[#1E1E1E] font-bold font-grostek w-full md:max-w-[410px] leading-[50px] md:leading-[60px]">
+            <h5>Our Impact Stories</h5>
           </div>
+
           <div className="flex gap-5 items-center mt-8">
             <button
-              onClick={prev}
-              disabled={activeIndex === 0}
-              className="disabled:cursor-not-allowed "
+              onClick={prevSlide}
+              disabled={currentSlide === 0}
+              className="disabled:cursor-not-allowed"
             >
-              <HiChevronLeft className="text-[#2A7445] h-6 w-6 " />
+              <HiChevronLeft className="text-[#2A7445] h-6 w-6" />
             </button>
-            <button
-              onClick={next}
-              disabled={activeIndex === totalLength - 1}
-              className="disabled:cursor-not-allowed "
-            >
-              <HiChevronRight className="text-[#2A7445] h-6 w-6 " />
+            <button onClick={nextSlide}>
+              <HiChevronRight className="text-[#2A7445] h-6 w-6" />
             </button>
           </div>
         </div>
-        <div className="w-full md:w-2/3 overflow-auto  ">
-          <div
-            className="flex transition-transform duration-500 ease-in-out gap-[30px] "
-            style={{
-              transform: `translateX(-${activeIndex * 100}%)`,
-            }}
+
+        <div className="w-full md:w-2/3  ">
+          <SliderCarousel
+            slidesToShow={2}
+            sliderRef={sliderRef}
+            afterChange={(index) => setCurrentSlide(index)}
+            gap={30}
           >
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="w-full md:min-w-[600px]">
-                <TestimonialCard
-                  name={testimonial.name}
-                  photo={testimonial.photo}
-                  status={testimonial.status}
-                  testimonial={testimonial.testimonial}
-                />
-              </div>
-            ))}
-          </div>
+            {testimonials.map((testimonial, index) => {
+              return (
+                <div key={index} className="flex ">
+                  <TestimonialCard
+                    className="h-[324px]"
+                    photo={testimonial.photo}
+                    testimonial={testimonial.testimonial}
+                  >
+                    <div className=" text-xl font-extrabold text-[#2A7445] capitalize my-6 font-manrope">
+                      {testimonial.name}
+                    </div>
+                  </TestimonialCard>
+                </div>
+              );
+            })}
+          </SliderCarousel>
         </div>
       </div>
     </div>

@@ -8,12 +8,14 @@ const PartnerCard = ({
   description,
   photo,
   btnText,
+  url,
 }: {
   className: string;
   title: string;
   description: string;
   photo: string;
   btnText: string;
+  url: string;
 }) => {
   return (
     <div
@@ -41,10 +43,13 @@ const PartnerCard = ({
             {description}
           </div>
           <div className="flex justify-center md:pt-0 pt-3 pb-7 md:pb-[38px]">
-            <button className="outline-none focus:outline-none text-white font-bold text-[15px] md:text-[17px] flex gap-1">
-              <p className="">{btnText}</p>{" "}
+            <a
+              href={url}
+              className="outline-none focus:outline-none text-white font-bold text-[15px] md:text-[17px] flex gap-1"
+            >
+              {btnText}
               <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
-            </button>
+            </a>
           </div>
         </div>
       </div>

@@ -23,13 +23,13 @@ const ImpactProject = ({
       <div
         className={`flex flex-col md:flex-row gap-10 md:gap-[122px] ${className}`}
       >
-        <div className="w-full md:w-1/2">
+        <div className="w-full  md:w-1/2">
           <Image
             src={projectImage}
             alt="project image"
             width={513}
             height={318}
-            className="rounded-[40px] w-full h-full object-cover"
+            className="rounded-[40px] w-full md:w-[513px] h-[318px] object-cover"
           />
         </div>
 
@@ -38,22 +38,20 @@ const ImpactProject = ({
             <div className="font-inter text-sm font-normal">
               {projectSponsor}
             </div>
-            <div className="font-grostek font-bold text-lg md:text-[32px]">
+            <div className="font-grostek font-bold text-lg md:text-[32px] leading-6 md:leading-10">
               {projectTitle}
             </div>
           </div>
-
           <div className="text-[#061C3D] font-inter text-base">
             {projectDesc}
           </div>
-
           <Button
             text="View Case Study"
-            children={
-              <IoIosArrowRoundForward className="text-[#2A7445] h-6 w-6 pl-1" />
-            }
             className="bg-[#68D5854D] text-[#2A7445] w-[233px]"
-          />
+            url=""
+          >
+            <IoIosArrowRoundForward className="text-[#2A7445] h-6 w-6 pl-1" />
+          </Button>
         </div>
       </div>
     </div>

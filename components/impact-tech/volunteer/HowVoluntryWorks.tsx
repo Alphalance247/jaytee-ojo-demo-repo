@@ -32,10 +32,12 @@ const HowVoluntryWorks = () => {
           maximize impact.
         </p>
       </div>
-      <div className="mx-auto w-full md:max-w-[1174px] flex md:flex-row flex-col items-center gap-[420px] md:gap-[217px] md:px-0 px-6  h-auto md:h-[571px] mt-10 md:mt-[67px] ">
+      <div className="mx-auto w-full md:max-w-[1174px] flex md:flex-row flex-col items-center gap-[420px] md:gap-[217px] md:px-0 px-6 h-auto md:h-[571px] mt-10 md:mt-[67px]  ">
         <div className="w-full md:w-1/2 h-full">
           <div className="relative w-full md:w-[420px] ">
-            <div className="absolute w-full md:w-[358px] h-auto md:h-[500px] top-[67px] bg-[#2A7445]/10 rounded-[20px] left-0 md:left-[152px] z-0"></div>
+            {/* <div className="absolute w-[397px] h-[571px] top-[67px] bg-[#2A7445]/10 rounded-[20px] left-[110px] z-0 "></div> */}
+
+            <div className="absolute w-full md:w-[397px] top-[67px] h-auto md:h-[505px]  bg-[#2A7445]/10 rounded-[20px] left-[51px] z-0"></div>
             <div className="bg-[#161C2D] w-[341px] h-[111px] rounded-[14px] flex items-center gap-4  shadow-xl absolute top-64 md:top-[364px] z-20 left-0 px-6">
               <div className="h-[42px] w-[42px] rounded-full bg-[#68D585] flex items-center justify-center ">
                 <IoIosNotifications className="h-6 w-6 text-[#2D2D2D]" />
@@ -50,18 +52,18 @@ const HowVoluntryWorks = () => {
               </div>
             </div>
             <Image
-              src="/assets/impact-tech/volunteer/volunteer.png"
+              src="/assets/impact-tech/volunteer/image278.png"
               alt="Volunteer"
               width={425}
-              height={571}
-              className="rounded-[20px] w-full md:w-[425px] h-auto md:h-[571px] object-cover absolute left-0 md:left-[69px] z-10"
+              height={547}
+              className="rounded-[20px] w-full md:w-[425px] h-auto md:h-[547px] object-cover absolute   z-10"
             />
           </div>
         </div>
 
         <div className="w-full md:w-1/2 gap-10 flex flex-col pl-6 md:pl-16 ">
           {lists.map((list, index) => (
-            <div className="flex gap-[22.57px] font-graphik  ">
+            <div key={index} className="flex gap-[22.57px] font-graphik  ">
               <div className="bg-[#2A7445] h-[43px] w-[43.43px] rounded-full flex justify-center items-center flex-shrink-0">
                 <p className="text-[#FFFFFF] font-graphik font-bold text-[17px]">
                   {index + 1}
@@ -78,10 +80,10 @@ const HowVoluntryWorks = () => {
             </div>
           ))}
           <Button
+            url="#apply-to-volunteer"
             className="bg-[#E60303] text-white w-full md:w-[211px]"
             text="Apply to Volunteer"
-            children=""
-          />
+          ></Button>
         </div>
       </div>
     </div>

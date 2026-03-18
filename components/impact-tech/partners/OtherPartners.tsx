@@ -24,16 +24,24 @@ const partners = [
 // }
 const OtherPartners = () => {
   return (
-    <div className="">
+    <div className="relative">
       <Image
-        className="w-full object-cover bg-no-repeat"
-        src={"/assets/impact-tech/partners/children.png"}
+        className="w-full h-[684px] object-cover bg-no-repeat"
+        src={"/assets/impact-tech/partners/partners.png"}
         width={1446}
         height={684}
         alt="background image"
       />
       <div
-        className="w-full h-[350px] md:h-[463px] flex items-center "
+        className="absolute inset-0 w-full h-[684px]"
+        style={{
+          backgroundImage: ` linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+linear-gradient(0deg, rgba(42, 116, 69, 0.37), rgba(42, 116, 69, 0.37)),
+linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))`,
+        }}
+      ></div>
+      <div
+        className="w-full h-[350px] md:h-[463px] flex items-center  "
         style={{
           backgroundImage: `
             linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 100%),

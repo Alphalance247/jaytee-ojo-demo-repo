@@ -8,12 +8,14 @@ const VolunteerCard = ({
   description,
   photo,
   btnText,
+  url,
 }: {
   className: string;
   title: string;
   description: string;
   photo: string;
   btnText: string;
+  url: string;
 }) => {
   return (
     <div className={`${className} h-fit w-full md:w-[350px] rounded-[40px]`}>
@@ -37,10 +39,14 @@ const VolunteerCard = ({
           </div>
         </div>
         <div className="flex justify-center pb-7 md:pb-[38px]">
-          <button className="outline-none focus:outline-none text-white font-bold text-[15px] md:text-[17px] flex gap-1">
+          <a
+            href={url}
+            rel="noopener noreferrer"
+            className="outline-none focus:outline-none text-white font-bold text-[15px] md:text-[17px] flex gap-1"
+          >
             <p className="">{btnText}</p>{" "}
             <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
-          </button>
+          </a>
         </div>
       </div>
     </div>

@@ -1,10 +1,14 @@
 import React from "react";
 import Input from "../Teens-coding/FormInput";
-import Button from "../Teens-coding/Button";
 import { IoIosArrowRoundForward } from "react-icons/io";
+// import Select from "../common/FormSelect";
+import Select from "../common/SelectInput";
+
+import FormSubmitButton from "../common/FormSubmitButton";
+const partnership = ["partnership", "volunteer"];
 const StartPartnership = () => {
   return (
-    <div className="h-fit">
+    <div id="start-partnership" className="h-fit">
       <div className="flex flex-col justify-center items-center font-inter md:px-0 px-6">
         <h5 className="text-[32px] md:text-[48px] text-[#061C3D] font-bold text-center">
           Start a Partnership
@@ -37,6 +41,20 @@ const StartPartnership = () => {
             {" "}
             <Input type="email" placeholderText="Email" />
           </div>
+          <div className="grid gap-4 w-full">
+            <Select
+              placeholder="program interest"
+              className="md:-right-72 right-0"
+              heading="program interest"
+              options={partnership}
+            />
+            {/* <Select value="" className="">
+              <option value="">Partnership</option>
+              <option value="mentor">Mentor</option>
+              <option value="trainer">Trainer</option>
+              <option value="support">Support Staff</option>
+            </Select> */}
+          </div>
           <div className="grid   gap-4 w-full ">
             {" "}
             <Input type="text" placeholderText="School Name" />
@@ -52,13 +70,13 @@ const StartPartnership = () => {
           </div>
           <div>
             {" "}
-            <Button
+            <FormSubmitButton
               text="Submit Partnership Request"
-              children={
-                <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
-              }
               className=" w-[320px] md:w-[505px] bg-[#E60303] text-white mt-4 mb-8"
-            />
+            >
+              {" "}
+              <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
+            </FormSubmitButton>
           </div>
         </form>
       </div>

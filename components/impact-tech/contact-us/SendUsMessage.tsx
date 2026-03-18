@@ -2,9 +2,13 @@ import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Input from "../Teens-coding/FormInput";
 import Button from "../Teens-coding/Button";
+import FormSubmitButton from "../common/FormSubmitButton";
 const SendUsMessage = () => {
   return (
-    <div className="flex justify-center items-center md:max-w-[799px] w-full mx-auto my-10 md:my-0 ">
+    <div
+      id="contact-us-form"
+      className="flex justify-center items-center md:max-w-[799px] w-full mx-auto my-10 md:my-0 "
+    >
       <div className=" text-center font-inter md:px-0 px-6 w-full md:max-w-[799px] mx-auto">
         <h1 className="  text-[32px] md:text-[48px] font-bold text-[#061C3D]">
           Send Us a Message
@@ -50,13 +54,13 @@ const SendUsMessage = () => {
             </div>
             <div>
               {" "}
-              <Button
+              <FormSubmitButton
                 text="Contact Our Team"
-                children={
-                  <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
-                }
                 className=" w-[320px] md:w-[505px] bg-[#E60303] text-white mt-4 mb-8"
-              />
+              >
+                {" "}
+                <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
+              </FormSubmitButton>
             </div>
           </form>
         </div>

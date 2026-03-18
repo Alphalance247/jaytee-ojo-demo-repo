@@ -34,10 +34,11 @@ const AboutTheProgram = () => {
             <div className="absolute rounded-[40px] border-[1.5px] border-[#E60303] h-[240px] md:h-[354px] w-[300px] md:w-[374px] z-10"></div>
             <div className="absolute -top-[39px] left-[31px] z-20">
               <Image
-                src="/assets/impact-tech/about-program.png"
+                src="/assets/impact-tech/computer.png"
                 alt="Program Image"
                 width={408}
                 height={376}
+                className="rounded-[40px] w-[408px] h-[260px] md:h-[376px]"
               />
             </div>
           </div>

@@ -77,11 +77,12 @@ const HowWeWork = () => {
           <div>
             <Button
               text="get Started"
-              children={
-                <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
-              }
+              url="/impact-tech/contact-us#contact-us-form"
               className="w-[200px] bg-[#E60303] text-white"
-            />
+            >
+              {" "}
+              <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
+            </Button>
           </div>
         </div>
       </div>

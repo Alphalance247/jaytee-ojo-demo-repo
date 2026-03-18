@@ -3,10 +3,10 @@ import React from "react";
 import VolunteerWaysCard from "./VolunteerWaysCard";
 const leftCol = [
   {
-    url: "/assets/impact-tech/volunteer/Rectangle7.png",
+    url: "/assets/impact-tech/volunteer/Rectangle73.png",
     title: "Curriculum Contributor",
     desc: "Help design, review, or improve learning materials and lesson plans.",
-    class: "w-[320px] md:w-[364px] h-[219px]",
+    class: "w-[320px] md:w-[364px] h-[219px] rounded-[30px]",
   },
   {
     url: "/assets/impact-tech/volunteer/Rectangle8.png",
@@ -56,6 +56,7 @@ const WaysVoluntaryCan = () => {
               />
               <div className="absolute bottom-0 md:bottom-[23px] -right-0.5  md:-right-[233px]">
                 <VolunteerWaysCard
+                  linkUrl="#apply-to-volunteer"
                   title={item.title}
                   desc={item.desc}
                   className={item.class}
@@ -80,6 +81,7 @@ const WaysVoluntaryCan = () => {
 
             <div className="absolute bottom-0 md:bottom-[59px] -right-0.5 md:-left-[171px]">
               <VolunteerWaysCard
+                linkUrl="#apply-to-volunteer"
                 title={item.title}
                 desc={item.desc}
                 className={item.class}
