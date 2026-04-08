@@ -1,17 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
 import Input from "../Teens-coding/FormInput";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Select from "../common/SelectInput";
 import FormSubmitButton from "../common/FormSubmitButton";
-// const partneships = ["Partnership", "Volunteer"];
+import { useApplicationForm } from "@/store/impact-tech/train-the-trainer/partnershipStore";
+import { ToastContainer, toast, Bounce } from "react-toastify";
 
 const programs = [
-  " Train-the-Trainer",
+  "Train The Trainer",
   "Coding for Kids",
   "Teens Coding",
-  "School Ccoding Club",
+  "School Coding Club",
 ];
 const StartPartnership = () => {
+  const [formErrors, setFormErrors] = useState<{
+    full_name?: string;
+    email?: string;
+    program_interest?: string;
+  }>({});
+  const { formInput, updateInputField, submitForm, loading, error, resetForm } =
+    useApplicationForm();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const errors: typeof formErrors = {};
+    // Required fields
+    if (!formInput.full_name.trim()) {
+      errors.full_name = "Full name is required";
+    }
+
+    if (!formInput.email.trim()) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formInput.email)) {
+      errors.email = "Enter a valid email";
+    }
+
+    if (!formInput.program_interest) {
+      errors.program_interest = "Select a program";
+    }
+    // If errors exist → stop submit
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return;
+    }
+    // Clear errors
+    setFormErrors({});
+
+    const success = await submitForm();
+
+    if (success) {
+      toast.success("Application submitted successfully!");
+      resetForm();
+    } else {
+      toast.error(
+        error ||
+          "An error occurred while submitting the form. Please try again.",
+      );
+    }
+  };
   return (
     <div id="start-partnership" className="h-fit">
       <div className="flex flex-col justify-center items-center font-inter md:px-0 px-6 pt-10 md:pt-[101px]">
@@ -32,23 +77,56 @@ const StartPartnership = () => {
         </div>
         <form
           action=""
+          onSubmit={handleSubmit}
           className="flex flex-col  gap-4 items-center px-4 md:px-[51px] pt-8"
         >
           <div className="grid  gap-4 w-full ">
             {" "}
-            <Input type="text" placeholderText="Full name" />
+            <Input
+              type="text"
+              placeholderText="Full name"
+              value={formInput.full_name}
+              onChange={(e) => updateInputField("full_name", e.target.value)}
+            />
+            {formErrors.full_name && (
+              <p className="text-red-500 text-sm mt-1 ml-1 font-graphik">
+                {formErrors.full_name}
+              </p>
+            )}
           </div>
           <div className="grid   gap-4 w-full ">
             {" "}
-            <Input type="email" placeholderText="Email" />
+            <Input
+              type="email"
+              placeholderText="Email"
+              value={formInput.email}
+              onChange={(e) => updateInputField("email", e.target.value)}
+            />
+            {formErrors.email && (
+              <p className="text-red-500 text-sm mt-1 ml-1 font-graphik">
+                {formErrors.email}
+              </p>
+            )}
           </div>
           <div className="grid   gap-4 w-full">
             {" "}
-            <Input type="text" placeholderText="Role" />
+            <Input
+              type="text"
+              placeholderText="Role"
+              value={formInput.role}
+              onChange={(e) => updateInputField("role", e.target.value)}
+            />
           </div>
           <div className="grid   gap-4 w-full ">
             {" "}
-            <Input type="text" placeholderText="Organization/School" />
+            <Input
+              type="text"
+              placeholderText="Organization/School"
+              value={formInput.school_organization_name}
+              onChange={(e) =>
+                updateInputField("school_organization_name", e.target.value)
+              }
+            />
           </div>
           <div className="grid gap-4 w-full">
             <Select
@@ -56,7 +134,14 @@ const StartPartnership = () => {
               options={programs}
               heading="Program interest"
               className="md:-right-52 right-0"
+              value={formInput.program_interest}
+              onChange={(value) => updateInputField("program_interest", value)}
             />
+            {formErrors.program_interest && (
+              <p className="text-red-500 text-sm mt-1 ml-1 font-graphik">
+                {formErrors.program_interest}
+              </p>
+            )}
             {/* <Select value="" className="">
               <option value="">Program interest</option>
               <option value="Train the Trainer"> Train-the-Trainer</option>
@@ -71,21 +156,35 @@ const StartPartnership = () => {
             <textarea
               name=""
               id=""
-              className="resize-none h-[145px] w-full border border-[#E6E8EC] text-[#838E9E] rounded-[5px] placeholder:pt-3 pl-[10.5px]"
+              className="resize-none h-[145px] w-full border border-[#E6E8EC] text-[#101828] rounded-[5px] placeholder:pt-3 pl-[10.5px] pt-3"
               placeholder="Message / Additional info"
+              value={formInput.message}
+              onChange={(e) => updateInputField("message", e.target.value)}
             ></textarea>
           </div>
           <div>
             {" "}
             <FormSubmitButton
-              text="Submit Partnership Request"
+              text={loading ? "Submitting..." : "Submit Partnership Request"}
               className=" w-[320px] md:w-[505px] bg-[#E60303] text-white mt-4 mb-8"
             >
-              {" "}
               <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
             </FormSubmitButton>
           </div>
         </form>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          transition={Bounce}
+        />
       </div>
     </div>
   );

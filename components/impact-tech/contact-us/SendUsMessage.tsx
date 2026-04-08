@@ -3,7 +3,44 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import Input from "../Teens-coding/FormInput";
 import Button from "../Teens-coding/Button";
 import FormSubmitButton from "../common/FormSubmitButton";
+import { useContactUsForm } from "@/store/impact-tech/contact-us/ContactUsStore";
+import { ToastContainer, toast, Bounce } from "react-toastify";
 const SendUsMessage = () => {
+  const { formInput, updateInputField, submitForm, loading, error, resetForm } =
+    useContactUsForm();
+
+  const [formErrors, setFormErrors] = React.useState<{
+    full_name?: string;
+    email?: string;
+  }>({});
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const errors: typeof formErrors = {};
+    if (!formInput.full_name.trim()) {
+      errors.full_name = "Full name is required";
+    }
+    if (!formInput.email.trim()) {
+      errors.email = "Email is required";
+    }
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return;
+    }
+    // Clear errors
+    setFormErrors({});
+
+    const success = await submitForm();
+
+    if (success) {
+      toast.success("Application submitted successfully!");
+      resetForm();
+    } else {
+      toast.error(
+        error ||
+          "An error occurred while submitting the form. Please try again.",
+      );
+    }
+  };
   return (
     <div
       id="contact-us-form"
@@ -28,19 +65,45 @@ const SendUsMessage = () => {
           </div>
           <form
             action=""
+            onSubmit={handleSubmit}
             className="flex flex-col  gap-4 items-center px-4 md:px-[51px] pt-8"
           >
             <div className="grid  gap-4 w-full ">
               {" "}
-              <Input type="text" placeholderText="Full name" />
+              <Input
+                type="text"
+                placeholderText="Full name"
+                value={formInput.full_name}
+                onChange={(e) => updateInputField("full_name", e.target.value)}
+              />
+              {formErrors.full_name && (
+                <p className="text-red-500 text-sm mt-1 ml-1 font-graphik">
+                  {formErrors.full_name}
+                </p>
+              )}
             </div>
             <div className="grid   gap-4 w-full">
               {" "}
-              <Input type="text" placeholderText="Age" />
+              <Input
+                type="text"
+                placeholderText="Age"
+                value={String(formInput.age ?? "")}
+                onChange={(e) => updateInputField("age", e.target.value)}
+              />
             </div>
             <div className="grid   gap-4 w-full ">
               {" "}
-              <Input type="email" placeholderText="Email" />
+              <Input
+                type="email"
+                placeholderText="Email"
+                value={formInput.email}
+                onChange={(e) => updateInputField("email", e.target.value)}
+              />
+              {formErrors.email && (
+                <p className="text-red-500 text-sm mt-1 ml-1 font-graphik">
+                  {formErrors.email}
+                </p>
+              )}
             </div>
 
             <div className="grid   gap-4 w-full ">
@@ -48,14 +111,14 @@ const SendUsMessage = () => {
               <textarea
                 name=""
                 id=""
-                className="resize-none h-[145px] w-full border border-[#E6E8EC] text-[#838E9E] rounded-[5px] placeholder:pt-3 pl-[10.5px]"
+                className="resize-none h-[145px] w-full border border-[#E6E8EC] text-[#101828] rounded-[5px] placeholder:pt-3 pl-[10.5px] pt-3"
                 placeholder="Message / Additional info"
               ></textarea>
             </div>
             <div>
               {" "}
               <FormSubmitButton
-                text="Contact Our Team"
+                text={loading ? "Submitting..." : "Contact Our Team"}
                 className=" w-[320px] md:w-[505px] bg-[#E60303] text-white mt-4 mb-8"
               >
                 {" "}
@@ -63,6 +126,19 @@ const SendUsMessage = () => {
               </FormSubmitButton>
             </div>
           </form>
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+            transition={Bounce}
+          />
         </div>
       </div>
     </div>

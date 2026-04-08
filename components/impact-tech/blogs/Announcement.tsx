@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AnnoucementCard from "./AnnoucementCard";
-const annoucements = [
+import { useAnnouncementStore } from "@/store/impact-tech/blogs/AnnouncementStore";
+import LoadingState from "../common/LoadingState";
+const annoucementLists = [
   {
     id: 1,
     imageUrl: "/assets/impact-tech/blogs/open1.jpg ",
@@ -20,6 +22,11 @@ const annoucements = [
   },
 ];
 const Announcement = () => {
+  const { announcements, loading, error, fetchAnnouncements } =
+    useAnnouncementStore();
+  useEffect(() => {
+    fetchAnnouncements();
+  }, [fetchAnnouncements]);
   return (
     <div className="bg-[#F4F7FA] w-full h-fit">
       <div className="mx-auto md:max-w-[1440px] w-full flex justify-center items-center ">
@@ -34,7 +41,34 @@ const Announcement = () => {
             </p>
           </div>
           <div className="grid gap-6 md:gap-[46px] ">
-            {annoucements.map((announcement) => (
+            {loading ? (
+              <div className="flex justify-center items-center h-full my-6">
+                <LoadingState className="h-[400px] mx-[100px]" />
+              </div>
+            ) : error ? (
+              <div className="text-center text-red-500 flex justify-center items-center">
+                {error}
+              </div>
+            ) : loading && announcements.length === 0 ? (
+              <div className="flex justify-center items-center h-full text-[#050505] text-lg">
+                Announcement is not available
+              </div>
+            ) : (
+              announcements.map((announcement, index) => (
+                <AnnoucementCard
+                  key={announcement.id}
+                  date={announcement.date}
+                  title={announcement.title}
+                  content={announcement.body}
+                  btnText="Apply Now"
+                  imageUrl={
+                    announcement?.attachments[0]?.proxyUrl ||
+                    "/assets/impact-tech/blogs/open1.jpg "
+                  }
+                />
+              ))
+            )}
+            {/* {annoucementLists.map((announcement) => (
               <AnnoucementCard
                 key={announcement.id}
                 date={announcement.date}
@@ -43,7 +77,7 @@ const Announcement = () => {
                 btnText={announcement.btnText}
                 imageUrl={announcement.imageUrl}
               />
-            ))}
+            ))} */}
           </div>
         </div>
       </div>

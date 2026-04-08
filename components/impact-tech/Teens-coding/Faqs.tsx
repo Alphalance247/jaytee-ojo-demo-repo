@@ -1,39 +1,47 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import FaqsCard from "./FaqsCard";
-const faqs = [
-  {
-    question: "Who can apply for this program?",
-    answer:
-      "This program is open to teenagers aged 11–18, including beginners and students with little or no prior coding experience.",
-  },
-  {
-    question: "Do students need a computer to participate?",
-    answer:
-      "This program is open to teenagers aged 11–18, including beginners and students with little or no prior coding experience.",
-  },
-  {
-    question: "Is the program free or paid?",
-    answer:
-      "This program is open to teenagers aged 11–18, including beginners and students with little or no prior coding experience.",
-  },
-  {
-    question: "How long does the program last?",
-    answer:
-      "This program is open to teenagers aged 11–18, including beginners and students with little or no prior coding experience.",
-  },
-  {
-    question: " Is this an online or in-person program?",
-    answer:
-      "This program is open to teenagers aged 11–18, including beginners and students with little or no prior coding experience.",
-  },
-  {
-    question: "What happens after I apply?",
-    answer:
-      "This program is open to teenagers aged 11–18, including beginners and students with little or no prior coding experience.",
-  },
-];
+import { useFaqsStore } from "@/store/impact-tech/teens-coding/faqsStore";
+import LoadingState from "../common/LoadingState";
+// const faqs = [
+//   {
+//     question: "Who can apply for this program?",
+//     answer:
+//       "This program is open to teenagers aged 11–18, including beginners and students with little or no prior coding experience.",
+//   },
+//   {
+//     question: "Do students need a computer to participate?",
+//     answer:
+//       "This program is open to teenagers aged 11–18, including beginners and students with little or no prior coding experience.",
+//   },
+//   {
+//     question: "Is the program free or paid?",
+//     answer:
+//       "This program is open to teenagers aged 11–18, including beginners and students with little or no prior coding experience.",
+//   },
+//   {
+//     question: "How long does the program last?",
+//     answer:
+//       "This program is open to teenagers aged 11–18, including beginners and students with little or no prior coding experience.",
+//   },
+//   {
+//     question: " Is this an online or in-person program?",
+//     answer:
+//       "This program is open to teenagers aged 11–18, including beginners and students with little or no prior coding experience.",
+//   },
+//   {
+//     question: "What happens after I apply?",
+//     answer:
+//       "This program is open to teenagers aged 11–18, including beginners and students with little or no prior coding experience.",
+//   },
+// ];
 const Faqs = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const { faqs, loading, error, fetchFaqs, hasFetched } = useFaqsStore();
+
+  useEffect(() => {
+    fetchFaqs("Teens Coding");
+  }, []);
+
   return (
     <div className="bg-white h-fit w-full md:max-w-[1240px] rounded-10 mx-auto ">
       <div
@@ -48,18 +56,32 @@ const Faqs = () => {
             Everything you need to know before applying.
           </div>
         </div>
-        <div className="h-[500px] overflow-auto">
-          {faqs.map((faq, index) => (
-            <FaqsCard
-              question={faq.question}
-              answer={faq.answer}
-              key={index}
-              isOpen={openIndex === index}
-              toggleButton={() =>
-                setOpenIndex(openIndex === index ? null : index)
-              }
-            ></FaqsCard>
-          ))}
+        <div className="h-[500px] overflow-auto pb-10 md:pb-14">
+          {loading ? (
+            <div className="flex justify-center items-center h-full my-6">
+              <LoadingState className="h-[400px] mx-[100px]" />
+            </div>
+          ) : error ? (
+            <div className="text-center text-red-500 flex justify-center items-center">
+              {error}
+            </div>
+          ) : hasFetched && faqs.length === 0 ? (
+            <div className="flex justify-center items-center h-full text-[#050505] text-lg">
+              FAQs not available
+            </div>
+          ) : (
+            faqs.map((faq, index) => (
+              <FaqsCard
+                key={faq.id || index}
+                question={faq.question}
+                answer={faq.answer}
+                isOpen={openIndex === index}
+                toggleButton={() =>
+                  setOpenIndex(openIndex === index ? null : index)
+                }
+              />
+            ))
+          )}
         </div>
       </div>
     </div>

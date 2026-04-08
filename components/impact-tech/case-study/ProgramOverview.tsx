@@ -5,13 +5,13 @@ const ProgramOverview = ({
   overview,
   challenge,
   approach,
-  trainingCourse,
+  // trainingCourse,
   children,
 }: {
   overview: string;
   challenge: string;
   approach: React.ReactNode;
-  trainingCourse: string;
+  // trainingCourse: string;
   children: React.ReactNode;
 }) => {
   return (
@@ -45,7 +45,7 @@ const ProgramOverview = ({
               <p className="text-lg md:text-xl font-normal">
                 {" "}
                 Educators actively participated in building and styling web
-                pages using {trainingCourse}.
+                pages using CSS.
               </p>
             </ProgramOverviewCard>
           </div>

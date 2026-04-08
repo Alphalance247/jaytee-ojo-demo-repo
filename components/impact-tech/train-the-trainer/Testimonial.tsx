@@ -71,7 +71,6 @@ const Testimonial = () => {
             slidesToShow={2}
             sliderRef={sliderRef}
             afterChange={(index) => setCurrentSlide(index)}
-            gap={30}
           >
             {testimonials.map((testimonial, index) => {
               return (

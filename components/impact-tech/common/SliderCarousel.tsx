@@ -7,7 +7,7 @@ interface SliderCarouselProps {
   children: ReactNode;
   sliderRef: RefObject<Slider>;
   afterChange?: (index: number) => void;
-  gap: number;
+  // gap: number;
   slidesToShow: number;
 }
 
@@ -16,64 +16,64 @@ const SliderCarousel = ({
   sliderRef,
   afterChange,
   slidesToShow,
-  gap,
+  // gap,
 }: SliderCarouselProps) => {
   var settings = {
-    infinite: true,
+    infinite: false, // ✅ key fix
     speed: 500,
     slidesToShow: slidesToShow,
     slidesToScroll: 1,
     arrows: false,
     afterChange: afterChange,
-    gap: gap,
+    // gap: gap,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          infinite: true,
+          infinite: false, // ✅ key fix
           slidesToShow: 2,
           slidesToScroll: 1,
           initialSlide: 0,
-          gap: 43,
+          // gap: 43,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          infinite: true,
+          infinite: false, // ✅ key fix
           slidesToShow: 2,
           slidesToScroll: 1,
           initialSlide: 0,
           dots: true,
-          gap: 16,
+          // gap: 16,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          infinite: true,
+          infinite: false, // ✅ key fix
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
           initialSlide: 0,
-          gap: 10,
+          // gap: 10,
         },
       },
       {
         breakpoint: 360,
         settings: {
-          infinite: true,
+          infinite: false, // ✅ key fix
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
           initialSlide: 0,
-          gap: 10,
+          // gap: 10,
         },
       },
     ],
   };
   const slides = React.Children.toArray(children).map((child, index) => (
-    <div key={index} className={`px-[${gap / 2}px]`}>
+    <div key={index} className={`px-[16px] flex`}>
       {child}
     </div>
   ));

@@ -34,13 +34,21 @@ const testimonials = [
     photo: "",
   },
 ];
+interface Testimonial {
+  ImageUrl: string;
+  name: string;
+  text: string;
+}
 
-const Testimonial = () => {
+const Testimonial = ({ testimonials }: { testimonials: Testimonial[] }) => {
   const sliderRef = useRef<Slider | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => sliderRef.current?.slickNext();
   const prevSlide = () => sliderRef.current?.slickPrev();
+  const slidesToShow = 2; // same as your slider
+  const totalSlides = testimonials.length;
+  console.log(currentSlide);
   return (
     <div className="h-full w-full  md:h-[497px] flex justify-start md:justify-center items-start md:items-center pl-6 md:pl-[101px]">
       <div className=" h-full flex flex-col md:flex-row w-full items-center ">
@@ -60,35 +68,44 @@ const Testimonial = () => {
             >
               <HiChevronLeft className="text-[#2A7445] h-6 w-6" />
             </button>
-            <button onClick={nextSlide}>
+            <button
+              onClick={nextSlide}
+              disabled={currentSlide === totalSlides - slidesToShow}
+              className="disabled:cursor-not-allowed"
+            >
               <HiChevronRight className="text-[#2A7445] h-6 w-6" />
             </button>
           </div>
         </div>
 
         <div className="w-full md:w-2/3  ">
-          <SliderCarousel
-            slidesToShow={2}
-            sliderRef={sliderRef}
-            afterChange={(index) => setCurrentSlide(index)}
-            gap={30}
-          >
-            {testimonials.map((testimonial, index) => {
-              return (
-                <div key={index} className="flex ">
-                  <TestimonialCard
-                    className="h-[268px]"
-                    photo={testimonial.photo}
-                    testimonial={testimonial.testimonial}
-                  >
-                    <div className=" text-xl font-extrabold text-[#2A7445] capitalize my-6 font-manrope">
-                      {testimonial.name}
-                    </div>
-                  </TestimonialCard>
-                </div>
-              );
-            })}
-          </SliderCarousel>
+          {testimonials.length === 0 ? (
+            <div className="h-[300px] flex justify-center items-center text-black font-graphik">
+              No testimonials available
+            </div>
+          ) : (
+            <SliderCarousel
+              slidesToShow={2}
+              sliderRef={sliderRef}
+              afterChange={(index) => setCurrentSlide(index)}
+            >
+              {testimonials.map((testimonial, index) => {
+                return (
+                  <div key={index} className="">
+                    <TestimonialCard
+                      className="h-[268px]"
+                      photo={testimonial.ImageUrl}
+                      testimonial={testimonial.text}
+                    >
+                      <div className=" text-xl font-extrabold text-[#2A7445] capitalize my-6 font-manrope">
+                        {testimonial.name}
+                      </div>
+                    </TestimonialCard>
+                  </div>
+                );
+              })}
+            </SliderCarousel>
+          )}
         </div>
       </div>
     </div>

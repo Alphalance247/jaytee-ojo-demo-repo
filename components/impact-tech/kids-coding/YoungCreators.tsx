@@ -70,7 +70,7 @@ const YoungCreators = () => {
               <div className="absolute  right-4 md:right-7 bottom-10 h-[60px] w-[60px] bg-[#FAB900] rounded-full flex items-center justify-center z-20">
                 <FaChevronUp className="text-white text-[24px] " />
               </div>
-              <div className="absolute inset-0 h-full w-[999px] rounded-[20px] bg-[#2A744585] z-0 pointer-events-none "></div>
+              <div className="absolute inset-0 h-full w-full md:w-[999px] rounded-[20px] bg-[#2A744585] z-0 pointer-events-none "></div>
             </div>
           </div>
         </div>

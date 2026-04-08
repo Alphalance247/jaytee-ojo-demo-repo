@@ -11,6 +11,7 @@ import Faqs from "@/components/impact-tech/train-the-trainer/Faqs";
 import StartPartnership from "@/components/impact-tech/train-the-trainer/StartPartnership";
 import HowToApply from "@/components/impact-tech/train-the-trainer/HowToApply";
 import ReadyToTransformEducation from "@/components/impact-tech/train-the-trainer/ReadyToTransformEducation";
+import WhoCanApply from "@/components/impact-tech/train-the-trainer/WhoCanApply";
 
 const index = () => {
   return (
@@ -21,6 +22,7 @@ const index = () => {
       <WhatToWalkAwayWith />
       <TheRippleEffect />
       <HowTheTrainingWorks />
+      <WhoCanApply />
       <HowToApply />
       <Testimonial />
       <StartPartnership />

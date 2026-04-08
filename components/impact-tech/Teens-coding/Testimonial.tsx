@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import TestimonialCard from "./TestimonialCard";
 import SliderCarousel from "../common/SliderCarousel";
 import Slider from "react-slick";
+import { useTestimonialStore } from "@/store/impact-tech/teens-coding/TestimonialStore";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 const testimonials = [
   {
@@ -40,6 +41,11 @@ const Testimonial = () => {
 
   const nextSlide = () => sliderRef.current?.slickNext();
   const prevSlide = () => sliderRef.current?.slickPrev();
+  const { testimonials, loading, error, fetchTestimonials } =
+    useTestimonialStore();
+  React.useEffect(() => {
+    fetchTestimonials();
+  }, [fetchTestimonials]);
   return (
     <div className="h-full w-full md:h-[497px] flex justify-start md:justify-center items-start md:items-center pl-6 md:pl-[101px]">
       <div className=" h-full flex flex-col md:flex-row w-full items-center ">
@@ -70,7 +76,6 @@ const Testimonial = () => {
             slidesToShow={2}
             sliderRef={sliderRef}
             afterChange={(index) => setCurrentSlide(index)}
-            gap={30}
           >
             {testimonials.map((testimonial, index) => {
               return (
@@ -80,8 +85,13 @@ const Testimonial = () => {
                     photo={testimonial.photo}
                     testimonial={testimonial.testimonial}
                   >
-                    <div className=" text-xl font-extrabold text-[#2A7445] capitalize my-6 font-manrope">
-                      {testimonial.name}
+                    <div>
+                      <div className=" text-xl font-extrabold text-[#2A7445] capitalize  font-manrope">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-base font-medium text-[#555555] font-manrope">
+                        {testimonial.role}
+                      </div>
                     </div>
                   </TestimonialCard>
                 </div>

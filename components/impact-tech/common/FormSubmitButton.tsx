@@ -3,11 +3,18 @@ interface ButtonProps {
   children?: React.ReactNode;
   text?: string;
   className?: string;
+  disabled?: boolean;
 }
-const FormSubmitButton = ({ children, text, className }: ButtonProps) => {
+const FormSubmitButton = ({
+  children,
+  text,
+  className,
+  disabled,
+}: ButtonProps) => {
   return (
     <button
       type="submit"
+      disabled={disabled}
       className={`  flex justify-center  items-center h-10 md:h-12 cursor-pointer rounded-[30px]  md:rounded-[41px] ${className}`}
     >
       <div className="font-dm-sans capitalize text-sm md:text-base font-bold font-DMSans">

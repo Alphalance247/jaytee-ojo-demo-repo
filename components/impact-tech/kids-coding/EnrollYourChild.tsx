@@ -4,27 +4,66 @@ import Input from "../Teens-coding/FormInput";
 // import Select from "../common/FormSelect";
 import Select from "../common/SelectInput";
 import FormSubmitButton from "../common/FormSubmitButton";
+import { useApplicationForm } from "@/store/impact-tech/kids-coding/EnrollmentStore";
+import { ToastContainer, toast, Bounce } from "react-toastify";
 const programs = [
-  "Coding for Kids",
+  "Coding For Kids",
   "Teens Coding",
-  "School Ccoding Club",
-  "Train-the-Trainer",
+  "School Coding Club",
+  "Train the Trainer",
 ];
 const EnrollYourChild = () => {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    role: "",
-    organization: "",
-    program: "",
-    message: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   fullName: "",
+  //   email: "",
+  //   role: "",
+  //   organization: "",
+  //   program: "",
+  //   message: "",
+  // });
 
-  const handleChange = (field: string, value: string) => {
-    setFormData((prev) => ({
-      ...prev,
-      [field]: value,
-    }));
+  const { formInput, updateInputField, submitForm, loading, error, resetForm } =
+    useApplicationForm();
+  const [formErrors, setFormErrors] = useState<{
+    full_name?: string;
+    email?: string;
+    program_interest?: string;
+  }>({});
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const errors: typeof formErrors = {};
+
+    // Required fields
+    if (!formInput.full_name.trim()) {
+      errors.full_name = "Full name is required";
+    }
+
+    if (!formInput.email.trim()) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formInput.email)) {
+      errors.email = "Enter a valid email";
+    }
+
+    if (!formInput.program_interest) {
+      errors.program_interest = "Select a program";
+    }
+    // If errors exist → stop submit
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return;
+    }
+
+    const success = await submitForm();
+
+    if (success) {
+      toast.success("Application submitted successfully!");
+      resetForm();
+    } else {
+      toast.error(
+        error ||
+          "An error occurred while submitting the form. Please try again.",
+      );
+    }
   };
   return (
     <div id="enroll-form" className="bg-[#F4F7FA] h-fit  ">
@@ -46,11 +85,24 @@ const EnrollYourChild = () => {
           </div>
           <form
             action=""
+            onSubmit={handleSubmit}
             className="flex flex-col  gap-4 items-center px-4 md:px-[51px] pt-8"
           >
             <div className="grid  gap-4 w-full ">
               {" "}
-              <Input type="text" placeholderText="Parent/Guardian Name " />
+              <Input
+                type="text"
+                placeholderText="Parent/Guardian Name "
+                value={formInput.parent_guardian_name}
+                onChange={(e) =>
+                  updateInputField("parent_guardian_name", e.target.value)
+                }
+              />
+              {/* {formErrors.parent_guardian_name && (
+                <p className="text-red-500 text-sm mt-1 ml-1 font-graphik">
+                  {formErrors.parent_guardian_name}
+                </p>
+              )} */}
             </div>
             <div className="grid   gap-4 w-full ">
               {" "}
@@ -58,21 +110,41 @@ const EnrollYourChild = () => {
                 type="email"
                 placeholderText="Email"
                 name="email"
-                value={formData.email}
-                onChange={(e) => handleChange("email", e.target.value)}
+                value={formInput.email}
+                onChange={(e) => updateInputField("email", e.target.value)}
               />
+              {formErrors.email && (
+                <p className="text-red-500 text-sm mt-1 ml-1 font-graphik">
+                  {formErrors.email}
+                </p>
+              )}
             </div>
-            <div className="grid   gap-4 w-full ">
+            {/* <div className="grid   gap-4 w-full ">
               {" "}
-              <Input type="tel" placeholderText="Phone" />
-            </div>
+              <Input type="tel" placeholderText="Phone" value={formInput.phone} onChange={(e) => updateInputField("phone", e.target.value)} />
+            </div> */}
             <div className="grid   gap-4 w-full">
               {" "}
-              <Input type="text" placeholderText="Child Name" />
+              <Input
+                type="text"
+                placeholderText="Child Name"
+                value={formInput.full_name}
+                onChange={(e) => updateInputField("full_name", e.target.value)}
+              />
+              {formErrors.full_name && (
+                <p className="text-red-500 text-sm mt-1 ml-1 font-graphik">
+                  {formErrors.full_name}
+                </p>
+              )}
             </div>
             <div className="grid   gap-4 w-full ">
               {" "}
-              <Input type="text" placeholderText="Age" />
+              <Input
+                type="text"
+                placeholderText="Age"
+                value={formInput.age}
+                onChange={(e) => updateInputField("age", e.target.value)}
+              />
             </div>
             <div className="grid gap-4 w-full">
               <Select
@@ -80,7 +152,10 @@ const EnrollYourChild = () => {
                 options={programs}
                 heading="Program interest"
                 className="md:-right-52 right-0"
-                onChange={(value) => handleChange("program", value)}
+                value={formInput.program_interest}
+                onChange={(value) =>
+                  updateInputField("program_interest", value)
+                }
               />
               {/* <Select value="" className="">
                 <option value="">Partnership</option>
@@ -91,21 +166,30 @@ const EnrollYourChild = () => {
             </div>
             <div className="grid   gap-4 w-full ">
               {" "}
-              <Input type="text" placeholderText="School" />
+              <Input
+                type="text"
+                placeholderText="School"
+                value={formInput.school_name}
+                onChange={(e) =>
+                  updateInputField("school_name", e.target.value)
+                }
+              />
             </div>
             <div className="grid   gap-4 w-full ">
               {" "}
               <textarea
                 name=""
                 id=""
-                className="resize-none h-[145px] w-full border border-[#E6E8EC] text-[#838E9E] rounded-[5px] placeholder:pt-3 pl-[10.5px]"
+                className="resize-none h-[145px] w-full border border-[#E6E8EC] text-[#101828] rounded-[5px] placeholder:pt-3 pl-[10.5px] pt-3"
                 placeholder="Message / Additional info"
+                value={formInput.message}
+                onChange={(e) => updateInputField("message", e.target.value)}
               ></textarea>
             </div>
             <div>
               {" "}
               <FormSubmitButton
-                text="Enroll Now"
+                text={loading ? "Submitting..." : "Enroll Now"}
                 className=" w-[320px] md:w-[505px] bg-[#E60303] text-white mt-4 mb-8"
               >
                 {" "}
@@ -113,6 +197,19 @@ const EnrollYourChild = () => {
               </FormSubmitButton>
             </div>
           </form>
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+            transition={Bounce}
+          />
         </div>
       </div>
     </div>

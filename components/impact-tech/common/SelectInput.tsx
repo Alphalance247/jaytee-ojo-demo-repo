@@ -7,12 +7,14 @@ const Select = ({
   heading,
   className,
   onChange,
+  value,
 }: {
   options: string[];
   placeholder: string;
   heading?: string;
   className?: string;
   onChange?: (value: string) => void;
+  value?: string;
 }) => {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("");

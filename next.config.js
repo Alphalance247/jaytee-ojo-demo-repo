@@ -1,4 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "site-api.alluvium.net",
+            },
+        ],
+    },
+
+};
 
 module.exports = nextConfig;

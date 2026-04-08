@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import FaqsCard from "../Teens-coding/FaqsCard";
+import { useFaqsStore } from "@/store/impact-tech/teens-coding/faqsStore";
+import LoadingState from "../common/LoadingState";
 const faqs = [
   {
     question: "Who can apply for this program?",
@@ -34,6 +36,12 @@ const faqs = [
 ];
 const Faqs = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const { faqs, loading, error, fetchFaqs, hasFetched } = useFaqsStore();
+
+  useEffect(() => {
+    fetchFaqs("Kids Coding");
+  }, []);
+
   return (
     <div className="bg-white h-fit w-full md:max-w-[1240px] rounded-10 mx-auto ">
       <div
@@ -49,17 +57,31 @@ const Faqs = () => {
           </div>
         </div>
         <div className="h-[500px] overflow-auto pb-10 md:pb-14">
-          {faqs.map((faq, index) => (
-            <FaqsCard
-              question={faq.question}
-              answer={faq.answer}
-              key={index}
-              isOpen={openIndex === index}
-              toggleButton={() =>
-                setOpenIndex(openIndex === index ? null : index)
-              }
-            ></FaqsCard>
-          ))}
+          {loading ? (
+            <div className="flex justify-center items-center h-full my-6">
+              <LoadingState className="h-[400px] mx-[100px]" />
+            </div>
+          ) : error ? (
+            <div className="text-center text-red-500 flex justify-center items-center">
+              {error}
+            </div>
+          ) : hasFetched && faqs.length === 0 ? (
+            <div className="flex justify-center items-center h-full text-[#050505] text-lg">
+              FAQs not available
+            </div>
+          ) : (
+            faqs.map((faq, index) => (
+              <FaqsCard
+                key={faq.id || index}
+                question={faq.question}
+                answer={faq.answer}
+                isOpen={openIndex === index}
+                toggleButton={() =>
+                  setOpenIndex(openIndex === index ? null : index)
+                }
+              />
+            ))
+          )}
         </div>
       </div>
     </div>

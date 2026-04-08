@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Input from "./FormInput";
 import { IoChevronDown } from "react-icons/io5";
 import Button from "./Button";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import FormSubmitButton from "../common/FormSubmitButton";
 import Select from "../common/SelectInput";
+import { useApplicationForm } from "@/store/impact-tech/teens-coding/HowToApplyStore";
+import { ToastContainer, toast, Bounce } from "react-toastify";
 
 const programs = [
   "Teens Coding",
@@ -13,6 +15,51 @@ const programs = [
   "Train-the-Trainer",
 ];
 const HowToApply = () => {
+  const [formErrors, setFormErrors] = useState<{
+    full_name?: string;
+    email?: string;
+    program_interest?: string;
+  }>({});
+  const { formInput, updateInputField, submitForm, loading, error, resetForm } =
+    useApplicationForm();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const errors: typeof formErrors = {};
+    // Required fields
+    if (!formInput.full_name.trim()) {
+      errors.full_name = "Full name is required";
+    }
+
+    if (!formInput.email.trim()) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formInput.email)) {
+      errors.email = "Enter a valid email";
+    }
+
+    if (!formInput.program_interest) {
+      errors.program_interest = "Select a program";
+    }
+    // If errors exist → stop submit
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return;
+    }
+    // Clear errors
+    setFormErrors({});
+
+    const success = await submitForm();
+
+    if (success) {
+      toast.success("Application submitted successfully!");
+      resetForm();
+    } else {
+      toast.error(
+        error ||
+          "An error occurred while submitting the form. Please try again.",
+      );
+    }
+  };
   return (
     <div
       id="applicationForm"
@@ -43,31 +90,74 @@ const HowToApply = () => {
             <div className="text-[#061C3D] text-lg md:text-xl font-medium text-center pb-4 md:pb-8">
               Get Started Today
             </div>
-            <form action="" className="grid gap-4">
+            <form action="" className="grid gap-4" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
                 <div>
-                  <Input type="text" placeholderText="Full name" />
+                  <Input
+                    type="text"
+                    placeholderText="Full name"
+                    value={formInput.full_name}
+                    onChange={(e) =>
+                      updateInputField("full_name", e.target.value)
+                    }
+                  />
+                  {formErrors.full_name && (
+                    <p className="text-red-500 text-sm mt-1 ml-1 font-graphik">
+                      {formErrors.full_name}
+                    </p>
+                  )}
                 </div>
                 <div>
-                  <Input type="text" placeholderText="Age" />
+                  <Input
+                    type="text"
+                    placeholderText="Age"
+                    value={formInput.age ?? ""}
+                    onChange={(e) => updateInputField("age", e.target.value)}
+                  />
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
                 <div>
-                  <Input type="text" placeholderText="Parent/Guardian Name" />
+                  <Input
+                    type="text"
+                    placeholderText="Parent/Guardian Name"
+                    value={formInput.parent_guardian_name}
+                    onChange={(e) =>
+                      updateInputField("parent_guardian_name", e.target.value)
+                    }
+                  />
                 </div>
                 <div>
-                  <Input type="email" placeholderText="Email" />
+                  <Input
+                    type="email"
+                    placeholderText="Email"
+                    value={formInput.email}
+                    onChange={(e) => updateInputField("email", e.target.value)}
+                  />
+                  {formErrors.email && (
+                    <p className="text-red-500 text-sm mt-1 ml-1 font-graphik">
+                      {formErrors.email}
+                    </p>
+                  )}
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
                 <div className="relative w-full">
                   <Select
-                    placeholder="Pprogram interest"
+                    placeholder="Program interest"
                     options={programs}
                     heading="Program interest"
                     className="md:-right-52 right-0"
+                    value={formInput.program_interest}
+                    onChange={(value) =>
+                      updateInputField("program_interest", value)
+                    }
                   />
+                  {formErrors.program_interest && (
+                    <p className="text-red-500 text-sm mt-1 ml-1 font-graphik">
+                      {formErrors.program_interest}
+                    </p>
+                  )}
                   {/* <select
                     name=""
                     id=""
@@ -82,31 +172,53 @@ const HowToApply = () => {
                       </option>
                     ))}
                   </select> */}
-                  <IoChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-[#838E9E] pointer-events-none" />
+                  {/* <IoChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-[#838E9E] pointer-events-none" /> */}
                 </div>
                 <div>
-                  <Input type="text" placeholderText="School Name" />
+                  <Input
+                    type="text"
+                    placeholderText="School Name"
+                    value={formInput.school_name}
+                    onChange={(e) =>
+                      updateInputField("school_name", e.target.value)
+                    }
+                  />
                 </div>
               </div>
               <div>
                 <textarea
                   name=""
                   id=""
-                  className="resize-none h-[88px] w-full border border-[#E6E8EC] text-[#838E9E] rounded-[5px] placeholder:pt-3 pl-[10.5px]"
+                  className="resize-none h-[88px] w-full border border-[#E6E8EC] text-[text-[#101828]  rounded-[5px] placeholder:pt-3 pl-[10.5px] pt-3"
                   placeholder="Message / Additional info"
+                  value={formInput.message}
+                  onChange={(e) => updateInputField("message", e.target.value)}
                 ></textarea>
               </div>
               <div>
                 {" "}
                 <FormSubmitButton
-                  text="apply now"
+                  text={loading ? "Submitting..." : "apply now"}
                   className="w-full bg-[#E60303] text-white"
+                  disabled={loading}
                 >
-                  {" "}
                   <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
                 </FormSubmitButton>
               </div>
             </form>
+            <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick={false}
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+              transition={Bounce}
+            />
           </div>
         </div>
       </div>

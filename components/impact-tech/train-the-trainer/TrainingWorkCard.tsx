@@ -28,7 +28,7 @@ const TrainingWorkCard = ({
           <div className="text-[#101828] text-lg md:text-xl font-medium ">
             {title}
           </div>
-          <div className="w-[90.61px] h-[30px] rounded-[10px] border border-[#E5E7EB] flex justify-center items-center text-[#4A5565]">
+          <div className="w-fit px-3  h-[30px] rounded-[10px] border border-[#E5E7EB] flex justify-center items-center text-[#4A5565]">
             {duration}
           </div>
           <div className="text-black text-base font-inter font-normal">

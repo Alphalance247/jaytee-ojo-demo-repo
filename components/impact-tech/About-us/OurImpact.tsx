@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ImpactProject from "./ImpactProject";
+import { useCaseStudyStore } from "@/store/impact-tech/case-study/CaseStudyStore";
+import Link from "next/link";
 const impacts = [
   {
     title: "CSS Train The Trainer Program (2024)",
@@ -39,6 +41,10 @@ const impacts = [
   },
 ];
 const OurImpact = () => {
+  const { caseStudies, loading, error, fetchCaseStudies } = useCaseStudyStore();
+  useEffect(() => {
+    fetchCaseStudies();
+  }, [fetchCaseStudies]);
   return (
     <div>
       <div className="text-center text-[#061C3D] pt-10 md:pt-[91px] flex justify-center items-center pb-10 md:pb-[97px]">
@@ -53,23 +59,25 @@ const OurImpact = () => {
         </div>
       </div>
 
-      {impacts.map((impact, index) => (
+      {caseStudies.map((impact, index) => (
         <div
           key={index}
           className={`w-full ${index === 0 ? "border-b border-[#2A7445]" : ""}`}
         >
-          <div className="grid gap-[101px] ">
-            <ImpactProject
-              className={`
+          <Link href={`/impact-tech/about-us/${impact.key}`}>
+            <div className="grid gap-[101px] ">
+              <ImpactProject
+                className={`
                 ${index % 2 === 1 ? " flex gap-6 md:gap-[112px] md:flex-row-reverse" : "flex flex-col md:flex-row gap-6 md:gap-[112px]"}
               `}
-              index={index}
-              projectDesc={impact.desc}
-              projectSponsor={impact.sponsor}
-              projectTitle={impact.title}
-              projectImage={impact.url}
-            />
-          </div>
+                index={index}
+                projectDesc={impact.title}
+                projectSponsor={impact.partners}
+                projectTitle={impact.title}
+                projectImage={`/assets/impact-tech/about-us/maleStudent.png`}
+              />
+            </div>
+          </Link>
         </div>
       ))}
     </div>

@@ -23,8 +23,8 @@ const TestimonialCard = ({
             <Image
               src={photo}
               alt="student"
-              width={50}
-              height={50}
+              width={80}
+              height={80}
               className="w-20 h-20 rounded-full object-cover bg-[#4E5550]"
             />
           ) : (

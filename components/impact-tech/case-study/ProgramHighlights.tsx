@@ -5,33 +5,39 @@ import SliderButton from "./SliderButton";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import Image from "next/image";
 
-const programs = [
-  {
-    ImageUrl: "/assets/impact-tech/case-study/teaching.jpg",
-  },
-  {
-    ImageUrl: "/assets/impact-tech/case-study/teaching.jpg",
-  },
-  {
-    ImageUrl: "/assets/impact-tech/case-study/teaching.jpg",
-  },
-  {
-    ImageUrl: "/assets/impact-tech/case-study/teaching.jpg",
-  },
-  {
-    ImageUrl: "/assets/impact-tech/case-study/teaching.jpg",
-  },
-  {
-    ImageUrl: "/assets/impact-tech/case-study/teaching.jpg",
-  },
-];
+// const programs = [
+//   {
+//     ImageUrl: "/assets/impact-tech/case-study/teaching.jpg",
+//   },
+//   {
+//     ImageUrl: "/assets/impact-tech/case-study/teaching.jpg",
+//   },
+//   {
+//     ImageUrl: "/assets/impact-tech/case-study/teaching.jpg",
+//   },
+//   {
+//     ImageUrl: "/assets/impact-tech/case-study/teaching.jpg",
+//   },
+//   {
+//     ImageUrl: "/assets/impact-tech/case-study/teaching.jpg",
+//   },
+//   {
+//     ImageUrl: "/assets/impact-tech/case-study/teaching.jpg",
+//   },
+// ];
+interface ProgramHighlight {
+  ImageUrl: string;
+}
 
-const ProgramHighlights = () => {
+const ProgramHighlights = ({ programs }: { programs: ProgramHighlight[] }) => {
   const sliderRef = useRef<Slider | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => sliderRef.current?.slickNext();
   const prevSlide = () => sliderRef.current?.slickPrev();
+  const slidesToShow = 2; // same as your slider
+  const totalSlides = programs.length;
+
   return (
     <div className="w-full md:pb-0 pb-10 md:px-0 px-6">
       <div className="flex items-center justify-between md:pt-[91px] md:pb-12 pt-10 pb-6 w-full md:max-w-[1440px] mx-auto ">
@@ -50,7 +56,14 @@ const ProgramHighlights = () => {
           >
             <HiChevronLeft className="h-4 w-4 md:h-6 md:w-6" />
           </SliderButton>
-          <SliderButton onClick={nextSlide}>
+          <SliderButton
+            onClick={nextSlide}
+            className={
+              currentSlide === totalSlides - slidesToShow
+                ? "disabled:cursor-not-allowed text-[#3E323280]"
+                : "text-[#2A7445] cursor-pointer"
+            }
+          >
             <HiChevronRight className="text-[#2A7445] h-4 w-4 md:h-6 md:w-6" />
           </SliderButton>
         </div>
@@ -81,7 +94,6 @@ const ProgramHighlights = () => {
             slidesToShow={2}
             sliderRef={sliderRef}
             afterChange={(index) => setCurrentSlide(index)}
-            gap={30}
           >
             {programs.map((program, index) => {
               return (
