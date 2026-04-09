@@ -56,7 +56,7 @@ const lastIndex = applications.length - 1;
 const WhoCanApply = () => {
   return (
     <div className="">
-      <div className="max-w-[956px] mx-auto flex justify-center items-center h-fit md:h-[1142px] md:px-0 px-6 py-10 md:py-0">
+      <div className="w-full md:max-w-[956px] mx-auto flex justify-center items-center h-fit md:h-[1142px] md:px-0 px-6 py-10 md:py-0">
         <div className="flex flex-col gap-[64px] justify-center items-center">
           <div>
             <h4 className="font-grostek font-bold leading-10 text-3xl md:text-5xl text-[#101828] text-center">
@@ -77,7 +77,7 @@ const WhoCanApply = () => {
                   content={application.text}
                 />
                 {index === lastIndex && (
-                  <div className="flex justify-center items-center h-[246px] px-[33px] w-[454px] rounded-[16px] bg-[#2B643D] ">
+                  <div className="flex justify-center items-center h-[246px] px-[33px] w-full md:w-[454px] rounded-[16px] bg-[#2B643D] ">
                     <div className="grid gap-6">
                       <div>
                         <div className="text-white font-inter font-medium text-lg md:text-xl">
