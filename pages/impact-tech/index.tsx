@@ -5,17 +5,18 @@ import WhoWeAre from "@/components/impact-tech/whoWeAre";
 import OurWork from "@/components/impact-tech/ourWork";
 import CommunityVoices from "@/components/impact-tech/communityVoices";
 import GetInvolved from "@/components/impact-tech/getInvolved";
+import ImpactTechLayout from "./layout";
 
 const ImpactTechPage = () => {
   return (
-    <Layout>
+    <ImpactTechLayout>
       <Hero />
       <WhatWeOffer />
       <WhoWeAre />
       <OurWork />
       <CommunityVoices />
       <GetInvolved />
-    </Layout>
+    </ImpactTechLayout>
   );
 };
 

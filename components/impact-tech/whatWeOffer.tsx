@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface OfferItem {
   title: string;
   description: string;
   buttonText: string;
+  url: string;
   image: string;
   badges: { label: string; icon: string }[];
   imageOnLeft?: boolean;
@@ -17,6 +19,7 @@ const WhatWeOffer = () => {
         "Teaching children how to code at a young age offers numerous benefits. First and foremost, it cultivates critical thinking and problem-solving skills as youngsters break down complex challenges into manageable steps. This early exposure to coding nurtures creativity and innovation, encouraging children to think creatively and develop new solutions.",
       buttonText: "Start Learning →",
       image: "/assets/impact-tech/1.png",
+      url: "/impact-tech/kids-coding",
       badges: [
         { label: "Play based learning", icon: "✱" },
         { label: "Digital Thinking", icon: "✱" },
@@ -30,6 +33,7 @@ const WhatWeOffer = () => {
         "Teaching children how to code at a young age offers numerous benefits. First and foremost, it cultivates critical thinking and problem-solving skills as youngsters break down complex challenges into manageable steps. This early exposure to coding nurtures creativity and innovation, encouraging children to think creatively and develop new solutions. ",
       buttonText: "Start Learning →",
       image: "/assets/impact-tech/2.png",
+      url: "/impact-tech/school-coding",
       badges: [
         { label: "TODO: Badge 1", icon: "✱" },
         { label: "TODO: Badge 2", icon: "✱" },
@@ -43,6 +47,7 @@ const WhatWeOffer = () => {
         "Teaching children how to code at a young age offers numerous benefits. First and foremost, it cultivates critical thinking and problem-solving skills as youngsters break down complex challenges into manageable steps. This early exposure to coding nurtures creativity and innovation, encouraging children to think creatively and develop new solutions. ",
       buttonText: "Start Learning →",
       image: "/assets/impact-tech/3.png",
+      url: "/impact-tech/train-the-trainer",
       badges: [
         { label: "TODO: Badge 1", icon: "✱" },
         { label: "TODO: Badge 2", icon: "✱" },
@@ -53,7 +58,10 @@ const WhatWeOffer = () => {
   ];
 
   return (
-    <div className="w-full bg-white px-4 py-12 sm:py-16 md:py-20">
+    <div
+      id="our-programs"
+      className="w-full bg-white px-4 py-12 sm:py-16 md:py-20"
+    >
       <div className="max-w-[1222px] mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12 sm:mb-14 md:mb-20">
@@ -89,7 +97,8 @@ const WhatWeOffer = () => {
                     {item.description}
                   </p>
                   <div>
-                    <button
+                    <Link
+                      href={item.url}
                       style={{
                         backgroundColor: "#DC143C",
                         color: "white",
@@ -97,7 +106,7 @@ const WhatWeOffer = () => {
                       className="py-3 px-6 sm:px-8 rounded-full inline-flex justify-center items-center font-Roboto text-base font-bold hover:opacity-90 transition-opacity"
                     >
                       {item.buttonText}
-                    </button>
+                    </Link>
                   </div>
                 </div>
 

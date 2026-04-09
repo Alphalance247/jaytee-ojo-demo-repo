@@ -1,0 +1,148 @@
+import React from "react";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import Input from "../Teens-coding/FormInput";
+import Button from "../Teens-coding/Button";
+import FormSubmitButton from "../common/FormSubmitButton";
+import { useContactUsForm } from "@/store/impact-tech/contact-us/ContactUsStore";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+const SendUsMessage = () => {
+  const { formInput, updateInputField, submitForm, loading, error, resetForm } =
+    useContactUsForm();
+
+  const [formErrors, setFormErrors] = React.useState<{
+    full_name?: string;
+    email?: string;
+  }>({});
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const errors: typeof formErrors = {};
+    if (!formInput.full_name.trim()) {
+      errors.full_name = "Full name is required";
+    }
+    if (!formInput.email.trim()) {
+      errors.email = "Email is required";
+    }
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return;
+    }
+    // Clear errors
+    setFormErrors({});
+
+    const success = await submitForm();
+
+    if (success) {
+      toast.success("Application submitted successfully!");
+      resetForm();
+    } else {
+      toast.error(
+        error ||
+          "An error occurred while submitting the form. Please try again.",
+      );
+    }
+  };
+  return (
+    <div
+      id="contact-us-form"
+      className="flex justify-center items-center md:max-w-[799px] w-full mx-auto my-10 md:my-0 "
+    >
+      <div className=" text-center font-inter md:px-0 px-6 w-full md:max-w-[799px] mx-auto">
+        <h1 className="  text-[32px] md:text-[48px] font-bold text-[#061C3D]">
+          Send Us a Message
+        </h1>
+        <div className=" flex justify-center items-center  md:px-[88px] pt-4 md:pt-[34px]">
+          <p className="text-[#42526B] text-base md:text-lg items-center leading-[26px] px-4 font-normal ">
+            Fill out the form below and a member of our team will get back to
+            you as soon as possible.
+          </p>
+        </div>
+        <div
+          className="md:px-0 px-6 w-full md:max-w-[607px] mx-auto bg-[#FFFFFF] h-fit mt-6 md:mt-[74px] rounded-[16px] mb-12 md:mb-[101px]"
+          style={{ boxShadow: "0px 24px 56px 0px #061C3D1F" }}
+        >
+          <div className="text-center flex justify-center items-center pt-8">
+            Get Started Today
+          </div>
+          <form
+            action=""
+            onSubmit={handleSubmit}
+            className="flex flex-col  gap-4 items-center px-4 md:px-[51px] pt-8"
+          >
+            <div className="grid  gap-4 w-full ">
+              {" "}
+              <Input
+                type="text"
+                placeholderText="Full name"
+                value={formInput.full_name}
+                onChange={(e) => updateInputField("full_name", e.target.value)}
+              />
+              {formErrors.full_name && (
+                <p className="text-red-500 text-sm mt-1 ml-1 font-graphik">
+                  {formErrors.full_name}
+                </p>
+              )}
+            </div>
+            <div className="grid   gap-4 w-full">
+              {" "}
+              <Input
+                type="text"
+                placeholderText="Age"
+                value={String(formInput.age ?? "")}
+                onChange={(e) => updateInputField("age", e.target.value)}
+              />
+            </div>
+            <div className="grid   gap-4 w-full ">
+              {" "}
+              <Input
+                type="email"
+                placeholderText="Email"
+                value={formInput.email}
+                onChange={(e) => updateInputField("email", e.target.value)}
+              />
+              {formErrors.email && (
+                <p className="text-red-500 text-sm mt-1 ml-1 font-graphik">
+                  {formErrors.email}
+                </p>
+              )}
+            </div>
+
+            <div className="grid   gap-4 w-full ">
+              {" "}
+              <textarea
+                name=""
+                id=""
+                className="resize-none h-[145px] w-full border border-[#E6E8EC] text-[#101828] rounded-[5px] placeholder:pt-3 pl-[10.5px] pt-3"
+                placeholder="Message / Additional info"
+              ></textarea>
+            </div>
+            <div>
+              {" "}
+              <FormSubmitButton
+                text={loading ? "Submitting..." : "Contact Our Team"}
+                className=" w-[320px] md:w-[505px] bg-[#E60303] text-white mt-4 mb-8"
+              >
+                {" "}
+                <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
+              </FormSubmitButton>
+            </div>
+          </form>
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+            transition={Bounce}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SendUsMessage;

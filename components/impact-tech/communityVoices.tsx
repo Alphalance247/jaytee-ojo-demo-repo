@@ -1,55 +1,61 @@
 import Image from "next/image";
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import { useCommunityVoices } from "@/store/impact-tech/homepage/CommunityVoices";
+import LoadingState from "./common/LoadingState";
 interface Testimonial {
   rating: number;
   text: string;
   name: string;
   role: string;
-  avatar: string;
+  photo: string;
 }
 
 const CommunityVoices = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { voices, loading, error, fetchCommunityVoices } = useCommunityVoices();
+  useEffect(() => {
+    fetchCommunityVoices();
+  }, [fetchCommunityVoices]);
 
-  const testimonials: Testimonial[] = [
-    {
-      rating: 5,
-      text: '"Impact Tech helped us introduce structured digital skills training to our students. The results were immediate, increased confidence, creativity, and engagement."',
-      name: "Ajero Alara",
-      role: "Ekill",
-      avatar: "/assets/impact-tech/avatar.svg",
-    },
-    {
-      rating: 5,
-      text: "TODO: Add second testimonial",
-      name: "TODO: Name",
-      role: "TODO: Role",
-      avatar: "/assets/impact-tech/avatar.svg",
-    },
-    {
-      rating: 5,
-      text: "TODO: Add third testimonial",
-      name: "TODO: Name",
-      role: "TODO: Role",
-      avatar: "/assets/impact-tech/avatar.svg",
-    },
-    {
-      rating: 5,
-      text: "TODO: Add fourth testimonial",
-      name: "TODO: Name",
-      role: "TODO: Role",
-      avatar: "/assets/impact-tech/avatar.svg",
-    },
-    {
-      rating: 5,
-      text: "TODO: Add fifth testimonial",
-      name: "TODO: Name",
-      role: "TODO: Role",
-      avatar: "/assets/impact-tech/avatar.svg",
-    },
-  ];
-
+  // const testimonials: Testimonial[] = [
+  //   {
+  //     rating: 5,
+  //     text: '"Impact Tech helped us introduce structured digital skills training to our students. The results were immediate, increased confidence, creativity, and engagement."',
+  //     name: "Ajero Alara",
+  //     role: "Ekill",
+  //     avatar: "/assets/impact-tech/avatar.svg",
+  //   },
+  //   {
+  //     rating: 5,
+  //     text: "TODO: Add second testimonial",
+  //     name: "TODO: Name",
+  //     role: "TODO: Role",
+  //     avatar: "/assets/impact-tech/avatar.svg",
+  //   },
+  //   {
+  //     rating: 5,
+  //     text: "TODO: Add third testimonial",
+  //     name: "TODO: Name",
+  //     role: "TODO: Role",
+  //     avatar: "/assets/impact-tech/avatar.svg",
+  //   },
+  //   {
+  //     rating: 5,
+  //     text: "TODO: Add fourth testimonial",
+  //     name: "TODO: Name",
+  //     role: "TODO: Role",
+  //     avatar: "/assets/impact-tech/avatar.svg",
+  //   },
+  //   {
+  //     rating: 5,
+  //     text: "TODO: Add fifth testimonial",
+  //     name: "TODO: Name",
+  //     role: "TODO: Role",
+  //     avatar: "/assets/impact-tech/avatar.svg",
+  //   },
+  // ];
+  const testimonials = voices;
+  console.log(testimonials);
   const handlePrev = () => {
     setCurrentSlide((prev) =>
       prev === 0 ? testimonials.length - 1 : prev - 1,
@@ -61,7 +67,8 @@ const CommunityVoices = () => {
   };
 
   const currentTestimonial = testimonials[currentSlide];
-
+  const rating = Math.floor(currentTestimonial?.rating ?? 0);
+  console.log(currentTestimonial?.photo);
   return (
     <div className="w-full bg-white px-4 py-12 sm:py-16 md:py-20">
       <div className="max-w-[1222px] mx-auto">
@@ -117,65 +124,77 @@ const CommunityVoices = () => {
           </div>
 
           {/* Right Section - Testimonial Card */}
-          <div className=" border-[1rem] border-[#2A744580] rounded-3xl p-6 sm:p-8 md:p-10 bg-white">
-            {/* Stars */}
-            <div className="flex gap-1 sm:gap-2 mb-4 sm:mb-6 md:mb-8">
-              {[...Array(currentTestimonial.rating)].map((_, i) => (
-                <span
-                  key={i}
-                  className="text-2xl sm:text-3xl text-[#FF8800] md:text-4xl"
-                >
-                  ★
-                </span>
-              ))}
+          {loading ? (
+            <LoadingState className="h-[400px] mx-[50px] my-6" />
+          ) : error ? (
+            <div className="text-center text-red-500 flex justify-center items-center">
+              {error}
             </div>
-
-            {/* Testimonial Text */}
-            <p className="text-base sm:text-lg md:text-xl text-gray-800 mb-6 sm:mb-8 md:mb-10 leading-relaxed font-light">
-              {currentTestimonial.text}
-            </p>
-
-            {/* User Info */}
-            <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8 md:mb-10">
-              {/* Avatar */}
-              <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 rounded-full overflow-hidden bg-gray-300 flex-shrink-0">
-                {/* TODO: Replace with actual user avatar */}
-                <Image
-                  src={currentTestimonial.avatar}
-                  alt={currentTestimonial.name}
-                  width={64}
-                  height={64}
-                  className="w-full h-full object-cover"
-                />
+          ) : !loading && testimonials.length === 0 ? (
+            <div className="text-lg  text-[#050505] flex justify-center items-center">
+              Community voices are not available
+            </div>
+          ) : (
+            <div className=" border-[1rem] border-[#2A744580] rounded-3xl p-6 sm:p-8 md:p-10 bg-white">
+              {/* Stars */}
+              <div className="flex gap-1 sm:gap-2 mb-4 sm:mb-6 md:mb-8">
+                {[...Array(rating)].map((_, i) => (
+                  <span
+                    key={i}
+                    className="text-2xl sm:text-3xl text-[#FF8800] md:text-4xl"
+                  >
+                    ★
+                  </span>
+                ))}
               </div>
 
-              {/* Name and Role */}
-              <div>
-                <p className="text-base sm:text-lg font-bold text-black">
-                  {currentTestimonial.name}
-                </p>
-                <p className="text-sm sm:text-base text-gray-600">
-                  {currentTestimonial.role}
-                </p>
+              {/* Testimonial Text */}
+              <p className="text-base sm:text-lg md:text-xl text-gray-800 mb-6 sm:mb-8 md:mb-10 leading-relaxed font-light">
+                {currentTestimonial.quote}
+              </p>
+
+              {/* User Info */}
+              <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8 md:mb-10">
+                {/* Avatar */}
+                <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 rounded-full overflow-hidden bg-gray-300 flex-shrink-0">
+                  {/* TODO: Replace with actual user avatar */}
+                  <img
+                    src={currentTestimonial?.photo}
+                    alt={currentTestimonial.name}
+                    width={64}
+                    height={64}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Name and Role */}
+                <div>
+                  <p className="text-base sm:text-lg font-bold text-black">
+                    {currentTestimonial.name}
+                  </p>
+                  <p className="text-sm sm:text-base text-gray-600">
+                    {currentTestimonial.role}
+                  </p>
+                </div>
+              </div>
+
+              {/* Navigation Dots */}
+              <div className="flex gap-2 sm:gap-3">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 sm:w-4 h-3 sm:h-4 rounded-full transition-all ${
+                      index === currentSlide
+                        ? "bg-green-600 w-6 sm:w-8"
+                        : "bg-gray-400 hover:bg-gray-500"
+                    }`}
+                    aria-label={`Go to testimonial ${index + 1}`}
+                  />
+                ))}
               </div>
             </div>
-
-            {/* Navigation Dots */}
-            <div className="flex gap-2 sm:gap-3">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 sm:w-4 h-3 sm:h-4 rounded-full transition-all ${
-                    index === currentSlide
-                      ? "bg-green-600 w-6 sm:w-8"
-                      : "bg-gray-400 hover:bg-gray-500"
-                  }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
