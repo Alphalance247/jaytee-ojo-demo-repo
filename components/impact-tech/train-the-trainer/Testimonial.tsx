@@ -3,6 +3,9 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import Slider from "react-slick";
 import SliderCarousel from "../common/SliderCarousel";
 import TestimonialCard from "../Teens-coding/TestimonialCard";
+import { useTestimonialStore } from "@/store/impact-tech/train-the-trainer/TestimonialStore";
+import LoadingState from "../common/LoadingState";
+
 const testimonials = [
   {
     name: "Program Participant",
@@ -40,7 +43,11 @@ const Testimonial = () => {
 
   const nextSlide = () => sliderRef.current?.slickNext();
   const prevSlide = () => sliderRef.current?.slickPrev();
-
+  const { testimonials, loading, error, fetchTestimonials } =
+    useTestimonialStore();
+  React.useEffect(() => {
+    fetchTestimonials();
+  }, [fetchTestimonials]);
   return (
     <div className="h-full w-full md:h-[497px] flex justify-start md:justify-center items-start md:items-center pl-6 md:pl-[101px] bg-[#F4F7FA]">
       <div className=" h-full flex flex-col md:flex-row w-full items-center gap-[61px] ">
@@ -67,27 +74,39 @@ const Testimonial = () => {
         </div>
 
         <div className="w-full md:w-2/3  ">
-          <SliderCarousel
-            slidesToShow={2}
-            sliderRef={sliderRef}
-            afterChange={(index) => setCurrentSlide(index)}
-          >
-            {testimonials.map((testimonial, index) => {
-              return (
-                <div key={index} className="flex ">
-                  <TestimonialCard
-                    className="h-[268px]"
-                    photo={testimonial.photo}
-                    testimonial={testimonial.testimonial}
-                  >
-                    <div className=" text-xl font-extrabold text-[#2A7445] capitalize my-6 font-manrope">
-                      {testimonial.name}
-                    </div>
-                  </TestimonialCard>
-                </div>
-              );
-            })}
-          </SliderCarousel>
+          {loading ? (
+            <LoadingState />
+          ) : error ? (
+            <div className="text-black flex justify-center items-center h-[297px]">
+              {error}
+            </div>
+          ) : loading && testimonials.length == 0 ? (
+            <div className="text-black flex justify-center items-center h-[297px]">
+              No testimonials available
+            </div>
+          ) : (
+            <SliderCarousel
+              slidesToShow={2}
+              sliderRef={sliderRef}
+              afterChange={(index) => setCurrentSlide(index)}
+            >
+              {testimonials.map((testimonial, index) => {
+                return (
+                  <div key={index} className="flex ">
+                    <TestimonialCard
+                      className="h-[268px]"
+                      photo={testimonial.photo}
+                      testimonial={testimonial.testimonial}
+                    >
+                      <div className=" text-xl font-extrabold text-[#2A7445] capitalize my-6 font-manrope">
+                        {testimonial.name}
+                      </div>
+                    </TestimonialCard>
+                  </div>
+                );
+              })}
+            </SliderCarousel>
+          )}
         </div>
       </div>
     </div>
