@@ -56,7 +56,7 @@ const WhyPartner = () => {
         background: ` linear-gradient(90deg, #FFFFFF 0%, #F5F6F7 40.63%, rgba(104, 213, 133, 0.05) 100%)`,
       }}
     >
-      <div className="px-6 md:px-[109.5px] md:py-0 py-10 flex flex-col md:flex-row items-center justify-center h-full">
+      <div className="px-6 md:px-0  max-w-[1240px] mx-auto md:py-0 py-10 flex flex-col md:flex-row items-center justify-center h-full">
         <div className="w-full md:w-1/2">
           <div className="text-[#061C3D] w-full  md:max-w-[474px]">
             <h2 className=" md:text-[48px] text-[32px] font-bold font-grostek leading-[100%]">
@@ -69,7 +69,7 @@ const WhyPartner = () => {
             <Button
               text="Get Started"
               url="#start-partnership"
-              className="w-full md:w-[156px] text-white bg-[#E60303] mt-8 md:mt-12"
+              className="w-full md:w-[156px] text-white bg-[#E60303] hover:bg-red-700 mt-8 md:mt-12"
             ></Button>
           </div>
         </div>

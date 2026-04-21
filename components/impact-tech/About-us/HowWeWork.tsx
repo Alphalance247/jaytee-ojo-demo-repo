@@ -40,7 +40,7 @@ const works = [
 const HowWeWork = () => {
   return (
     <div className="bg-[#68D5851A] h-full md:h-[827px] ">
-      <div className=" pt-10 md:pt-20  mx-auto w-full md:max-w-[991px] md:px-0 px-6">
+      <div className=" pt-10 md:pt-20  mx-auto w-full max-w-[991px] md:px-0 px-6">
         <h4 className="text-[#061C3D] text-[32px] md:text-[48px] font-grostek font-bold text-center">
           How We Work
         </h4>
@@ -78,7 +78,7 @@ const HowWeWork = () => {
             <Button
               text="get Started"
               url="/impact-tech/contact-us#contact-us-form"
-              className="w-[200px] bg-[#E60303] text-white"
+              className="w-[200px] bg-[#E60303] text-white hover:bg-red-700"
             >
               {" "}
               <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />

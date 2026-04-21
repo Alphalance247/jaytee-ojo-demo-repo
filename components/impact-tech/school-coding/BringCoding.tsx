@@ -4,16 +4,16 @@ import { IoCodeSlash } from "react-icons/io5";
 
 const BringCoding = () => {
   return (
-    <div className="mx-auto w-full max-w-[1440px] py-10 md:pt-[131px] md:pb-[125px]">
-      <div className="relative bg-impact-radical h-[392px] rounded-[11.25px] shadow-colored-shadow ">
-        <div className="flex flex-col gap-5 md:gap-8 justify-center items-center h-full md:px-0 px-6">
+    <div className=" py-10 md:pt-[131px] md:pb-[125px]">
+      <div className="relative bg-impact-radical h-[392px] rounded-[11.25px] shadow-colored-shadow w-full max-w-[1240px] mx-auto ">
+        <div className="flex flex-col gap-5 md:gap-8 justify-center items-center h-full md:px-0 px-6  ">
           <h5 className="text-white font-semibold font-grostek text-2xl md:text-5xl leading-[130%]">
             Bring Coding Education to Your School
           </h5>
           <Button
             text="Schedule a Consultation"
             url="#school-coding-form"
-            className="text-white bg-[#E60303] w-full md:w-[256px]"
+            className="text-white bg-[#E60303] hover:bg-red-700 w-full md:w-[256px]"
           />
         </div>
         <div className="absolute top-5">

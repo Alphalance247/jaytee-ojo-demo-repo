@@ -46,7 +46,7 @@ const SendUsMessage = () => {
       id="contact-us-form"
       className="flex justify-center items-center md:max-w-[799px] w-full mx-auto my-10 md:my-0 "
     >
-      <div className=" text-center font-inter md:px-0 px-6 w-full md:max-w-[799px] mx-auto">
+      <div className=" text-center font-inter md:px-0 px-6 w-full max-w-[799px] mx-auto">
         <h1 className="  text-[32px] md:text-[48px] font-bold text-[#061C3D]">
           Send Us a Message
         </h1>

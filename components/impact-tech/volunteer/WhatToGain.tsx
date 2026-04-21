@@ -57,8 +57,8 @@ const gains = [
 ];
 const WhatToGain = () => {
   return (
-    <div className="bg-[url('/assets/impact-tech/volunteer/Rectangle.png')] bg-cover bg-no-repeat h-full w-full grid ">
-      <div className="relative">
+    <div className="bg-[url('/assets/impact-tech/volunteer/Rectangle.png')] bg-cover bg-no-repeat h-full w-full grid md:rounded-none rounded-[20px] items-center">
+      <div className="relative ">
         <img
           src="/assets/impact-tech/volunteer/curveShape1.svg"
           alt="left curve shape"
@@ -73,7 +73,7 @@ const WhatToGain = () => {
           className="absolute top-0 left-0 h-auto w-auto"
         />
       </div>
-      <div className="">
+      <div className="mx-auto max-w-[1081px] ">
         <div className="font-inter text-center  text-white grid items-center justify-center pt-10 md:pt-[91px] px-6 md:px0">
           <h5 className="text-[32px] md:text-[48px] leading-[80px] font-bold">
             What You’ll Gain

@@ -29,7 +29,7 @@ const Announcement = () => {
   }, [fetchAnnouncements]);
   return (
     <div className="bg-[#F4F7FA] w-full h-fit">
-      <div className="mx-auto md:max-w-[1440px] w-full flex justify-center items-center ">
+      <div className="mx-auto max-w-[1240px] w-full flex justify-center items-center ">
         <div className=" py-10 md:pt-[p1px] md:pb-[96px] flex flex-col ">
           <div className=" flex flex-col justify-center items-center text-center pb-10 md:pb-20 gap-4 md:gap-8">
             <h5 className="text-[28px] md:text-[58px] font-bold text-[#061C3D] leading-9 md:leading-[60px] font-grostek">

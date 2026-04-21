@@ -11,8 +11,8 @@ const YoungCreators = () => {
   const handlePlay = () => setIsPlaying(true);
   return (
     <div className="w-full">
-      <div className="mx-auto w-full md:max-w-[1060px] py-10 md:pt-[91px] flex flex-col  items-center">
-        <div className="text-[#1F1C14] text-center font-nunito px-6 md:px-0">
+      <div className="mx-auto w-full md:max-w-[1060px] px-6 md:px-0 py-10 md:pt-[91px] flex flex-col  items-center">
+        <div className="text-[#1F1C14] text-center font-nunito ">
           <h4 className=" font-bold text-3xl md:text-5xl">
             Young Creators in Action
           </h4>
@@ -23,7 +23,7 @@ const YoungCreators = () => {
             <Button
               url="#enroll-form"
               text="Enroll Now"
-              className=" w-full md:w-[146px] bg-[#E60303] text-white mt-4 mb-8"
+              className=" w-full md:w-[146px] bg-[#E60303] hover:bg-red-700 text-white mt-4 mb-8"
             />
           </div>
         </div>

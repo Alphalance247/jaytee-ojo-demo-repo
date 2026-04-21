@@ -34,7 +34,7 @@ const GetInTouch = () => {
   return (
     <div className="max-w-[1440px] mx-auto flex justify-center items-center h-fit md:h-[733px] md:px-0 px-6">
       <div className="h-full items-center">
-        <div className="text-center text-[#061C3D] flex justify-center flex-col items-center md:mt-[70px] my-10 md:mb-[46px] w-full md:max-w-[692px] mx-auto ">
+        <div className="text-center text-[#061C3D] flex justify-center flex-col items-center md:mt-[70px] my-10 md:mb-[46px] w-full max-w-[692px] mx-auto ">
           {" "}
           <div className="text-[32px] md:text-[48px] font-sembold font-grostek">
             Get in Touch

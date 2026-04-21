@@ -56,7 +56,7 @@ const lastIndex = applications.length - 1;
 const WhoCanApply = () => {
   return (
     <div className="">
-      <div className="w-full md:max-w-[956px] mx-auto flex justify-center items-center h-fit md:h-[1142px] md:px-0 px-6 py-10 md:py-0">
+      <div className="w-full max-w-[956px] mx-auto flex justify-center items-center h-fit md:h-[1142px] md:px-0 px-6 py-10 md:py-0">
         <div className="flex flex-col gap-[64px] justify-center items-center">
           <div>
             <h4 className="font-grostek font-bold leading-10 text-3xl md:text-5xl text-[#101828] text-center">

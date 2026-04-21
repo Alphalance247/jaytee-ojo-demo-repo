@@ -13,7 +13,7 @@ const kidCoding = [
 const Hero = () => {
   return (
     <div className="w-full">
-      <div className="mx-auto md:max-w-[1440px] w-full flex md:flex-row flex-col gap-6 items-center md:px-0 px-6 md:gap-[132px] md:pt-[63px] py-10 md:pb-[67px] ">
+      <div className="mx-auto md:max-w-[1219px] w-full flex md:flex-row flex-col gap-6 items-center md:px-0 px-6 md:gap-[132px] md:pt-[63px] py-10 md:pb-[67px] ">
         <div className="w-full md:w-1/2">
           <div className="w-full md:w-[478px] relative">
             <div className="absolute -top-12 left-0">
@@ -32,7 +32,7 @@ const Hero = () => {
             <Button
               url="#enroll-form"
               text="Enroll Now"
-              className="text-white bg-[#E60303] w-full md:w-[146px]"
+              className="text-white bg-[#E60303] hover:bg-red-700 w-full md:w-[146px]"
             />
           </div>
         </div>
@@ -45,7 +45,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="bg-[#201D1F] bg-impact-gradient shadow-impact-shadow w-full">
-        <div className="mx-auto  md:max-w-[1440px] px-6 md:px-0 md:py-0 py-8 h-fit md:h-[219px] w-full  grid md:flex-row items-center  gap-6 md:grid-cols-4 grid-cols-1">
+        <div className="mx-auto  md:max-w-[1219px] px-6 md:px-0 md:py-0 py-8 h-fit md:h-[219px] w-full  grid md:flex-row items-center  gap-6 md:grid-cols-4 grid-cols-1">
           {kidCoding.map((list, index) => (
             <ButtonFrame key={index} text={list.text} className={list.class} />
           ))}

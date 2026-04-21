@@ -5,7 +5,7 @@ import { BsDot } from "react-icons/bs";
 const Hero = () => {
   return (
     <div className="w-full flex justify-center items-start md:items-center h-fit md:h-[580px] px-6 md:px-0 md:py-0 py-10">
-      <div className=" h-fit md:h-[398px] w-full md:max-w-[787px] mx-auto ">
+      <div className=" h-fit md:h-[398px] w-full max-w-[787px] mx-auto ">
         <div className="flex flex-col justify-center items-center gap-[18px]">
           <div className="flex items-center justify-center gap-[5px] w-full md:w-[251.98px] bg-[#ECFDF5] border border-[#A4F4CF] rounded-2xl h-[38px]">
             <BsDot className="text-[#007A55] " />
@@ -14,8 +14,9 @@ const Hero = () => {
             </p>
           </div>
           <div>
-            <h1 className="font-grostek text-3xl md:text-6xl leading-10 md:leading-[80px] text-center">
-              Train the Trainers. <br /> <span> Multiply the Impact.</span>
+            <h1 className="font-grostek text-3xl md:text-6xl leading-10 md:leading-[80px] text-center font-[800] text-[#03363D]">
+              Train the Trainers. <br />{" "}
+              <span className="text-[#2A7445]"> Multiply the Impact.</span>
             </h1>
           </div>
           <div>
@@ -28,7 +29,7 @@ const Hero = () => {
           <div>
             <Button
               text="partner with us"
-              className="bg-[#E60303] text-white w-[210px] md:w-[187px]"
+              className="bg-[#E60303] hover:bg-red-700 text-white w-[210px] md:w-[187px]"
               url="#partnership-form"
             />
           </div>

@@ -5,8 +5,8 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 const HeadStartTechnology = () => {
   return (
     <div className="w-full">
-      <div className="py-10 md:py-[91px] mx-auto bg-[#68D585] w-full md:max-w-[1245px] shadow-colored-shadow bg-impact-radical h-[392px] grid items-center justify-center rounded-[11px]">
-        <div className="text-center text-white px-6 md:px-0">
+      <div className="py-10 md:py-[91px]  bg-[#68D585] w-full  shadow-colored-shadow bg-impact-radical h-[392px] grid items-center justify-center rounded-[11px]">
+        <div className="text-center text-white px-6 md:px-0 md:max-w-[1245px] mx-auto">
           <h6 className="font-grostek font-semibold text-3xl md:text-5xl ">
             Give Your Child a Head Start in Technology
           </h6>
@@ -18,7 +18,7 @@ const HeadStartTechnology = () => {
             <Button
               text="get started"
               url="/impact-tech/contact-us#contact-us-form"
-              className=" w-full md:w-[156px] bg-[#E60303] text-white mt-4 mb-8"
+              className=" w-full md:w-[156px] bg-[#E60303] hover:bg-red-700 text-white mt-4 mb-8"
             />
           </div>
         </div>

@@ -61,44 +61,45 @@ const achievements = [
 ];
 const Achievements = () => {
   return (
-    <div className="min-h-[753px] flex justify-center items-center px-6 md:px-[101px]">
-      <div className=" h-full flex justify-center items-center ">
-        <div className="flex md:flex-row flex-col gap-[46px] md:gap-[92px] items-start my-10 md:my-[91px]">
-          <div
-            className="w-full md:w-1/3 h-[571px] md:flex justify-center hidden shadow-[0px_31px_34px_0px_#00000018;
+    <div className="w-full">
+      <div className="min-h-[753px] flex justify-center items-center px-6 md:px-0 max-w-[1219px] mx-auto">
+        <div className=" h-full flex justify-center items-center ">
+          <div className="flex md:flex-row flex-col gap-[46px] md:gap-[92px] items-start my-10 md:my-[91px]">
+            <div
+              className="w-full md:w-1/3 h-[571px] md:flex justify-center hidden shadow-[0px_31px_34px_0px_#00000018;
 ]"
-          >
-            <Image
-              src="/assets/impact-tech/giftPresentation.png"
-              alt="acievement"
-              className="w-full md:w-[425px] h-[500px] object-cover  hidden md:flex mb-0 md:-mb-[66px] rounded-[23px]"
-              width={425}
-              height={471}
-            />
-          </div>
-          <div className="w-full md:w-2/3  ">
-            <div className="mb-[53px] w-full md:w-[589px] mx-0 md:mx-[67px] bg-white flex md:justify-center flex-col md:items-center items-start justify-start font-graphik">
-              <h4 className="text-[32px] md:text-[48px] font-bold text-[#161C2D] ">
-                What You’ll Achieve
-              </h4>
-              <p className="text-[#161C2D] text-[19px]">
-                The results students gain by completing this program.
-              </p>
+            >
+              <Image
+                src="/assets/impact-tech/giftPresentation.png"
+                alt="acievement"
+                className="w-full md:w-[425px] h-[500px] object-cover  hidden md:flex mb-0 md:-mb-[66px] rounded-[23px]"
+                width={425}
+                height={471}
+              />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {achievements.map((achievement, index) => (
-                <AchievementCard
-                  key={index}
-                  title={achievement.name}
-                  icon={achievement.icon}
-                  description={achievement.description}
-                />
-              ))}
+            <div className="w-full md:w-2/3  ">
+              <div className="mb-[53px] w-full md:w-[589px] mx-0 md:mx-[67px] bg-white flex md:justify-center flex-col md:items-center items-start justify-start font-graphik">
+                <h4 className="text-[32px] md:text-[48px] font-bold text-[#161C2D] ">
+                  What You’ll Achieve
+                </h4>
+                <p className="text-[#161C2D] text-[19px]">
+                  The results students gain by completing this program.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {achievements.map((achievement, index) => (
+                  <AchievementCard
+                    key={index}
+                    title={achievement.name}
+                    icon={achievement.icon}
+                    description={achievement.description}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-        </div>{" "}
-      </div>
-      {/* <div className="flex md:flex-row flex-col gap-[46px] md:gap-[92px] items-start md:min-h-full bg-green-300">
+          </div>{" "}
+        </div>
+        {/* <div className="flex md:flex-row flex-col gap-[46px] md:gap-[92px] items-start md:min-h-full bg-green-300">
         <div className="w-full md:w-1/3 h-full ">
           <Image
             src="/assets/impact-tech/lady.png"
@@ -129,6 +130,7 @@ const Achievements = () => {
           </div>
         </div>
       </div> */}
+      </div>
     </div>
   );
 };

@@ -32,7 +32,7 @@ const rightCol = [
 ];
 const WaysVoluntaryCan = () => {
   return (
-    <div className="flex flex-col md:flex-row  w-full justify-between items-start max-w-[1441px] gap-10 mx-auto py-10 md:pt-[91px] md:px-0 px-6">
+    <div className="flex flex-col md:flex-row  w-full justify-between items-start max-w-[1240px] gap-10 mx-auto py-10 md:pt-[91px] md:px-0 px-6">
       {/* LEFT COLUMN */}
       <div className=" w-full md:max-w-[438px] flex flex-col ">
         <div className="">

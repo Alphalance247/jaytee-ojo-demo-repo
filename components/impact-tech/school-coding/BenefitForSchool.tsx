@@ -49,7 +49,7 @@ const BenefitForSchool = () => {
   return (
     <div className=" h-full md:min-h-[753px] flex justify-center flex-col items-center px-6 md:px-[101px] pt-28 md:pt-0 md:pb-0 pb-10">
       <div className=" h-full flex justify-center">
-        <div className="flex md:flex-row flex-col gap-[46px] md:gap-[145px] items-center ">
+        <div className="flex md:flex-row flex-col gap-[46px] md:gap-[145px] items-center max-w-[1190px] mx-auto ">
           <div className="w-full md:w-1/2 h-[456px] md:flex justify-center hidden  ">
             <div className="shadow-[0px_31px_34px_0px_#00000018] relative w-[425px] h-[456px] rounded-[23px]">
               <Image
@@ -90,7 +90,7 @@ const BenefitForSchool = () => {
           <Button
             url="/impact-tech/partners#start-partnership"
             text="Partner With Us"
-            className="text-white bg-[#E60303] w-full md:w-[187px]"
+            className="text-white bg-[#E60303] hover:bg-red-700 w-full md:w-[187px]"
           />
         </div>
       </div>

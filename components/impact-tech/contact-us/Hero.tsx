@@ -2,12 +2,11 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div
-      className="h-[220px] md:h-[470px] flex justify-center items-center w-full 
-  bg-[linear-gradient(0deg,rgba(104,213,133,0.48),rgba(104,213,133,0.48)),linear-gradient(0deg,rgba(42,116,69,0.4),rgba(42,116,69,0.4)),linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('/assets/impact-tech/contact-us/telephone.jpg')]
-  bg-cover bg-center bg-no-repeat"
-    >
-      <div className=" text-white text-center font-inter md:px-0 px-6 w-full md:max-w-[667px] mx-auto">
+    <div className="h-[220px] md:h-[470px]  justify-center bg-cover bg-no-repeat flex bg-center  items-center w-full relative bg-[url('/assets/impact-tech/contact-us/telephone.jpg')]">
+      <div className="absolute inset-0 z-0 bg-[#68D5857A] h-[220px] md:h-[470px]" />
+      <div className="absolute inset-0 h-[220px] md:h-[470px] bg-[#2A744566] z-10" />
+      <div className="bg-[#00000033] absolute inset-0 h-[220px] md:h-[470px] w-full z-20"></div>
+      <div className="z-50 absolute text-white text-center font-inter md:px-0 px-6 w-full max-w-[667px] mx-auto">
         <div className=" flex flex-col  justify-center items-center h-full">
           <h1 className="text-[32px] md:text-[72px] font-extrabold">
             Contact US

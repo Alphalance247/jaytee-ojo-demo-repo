@@ -16,11 +16,14 @@ export interface CaseStudyStore {
     body: string | null;
     partners: string;
     year: string;
-
-    program_overview: DocBody;
-    our_approach: DocBody;
-    the_challenge: DocBody;
-    impact_outcomes: DocBody;
+    program_overview: string;
+    our_approach: string;
+    the_challenge: string;
+    impact_outcomes: string;
+    // program_overview: DocBody;
+    // our_approach: DocBody;
+    // the_challenge: DocBody;
+    // impact_outcomes: DocBody;
 
     program_testimonials: any[];   // update later when backend structure is known
     program_highlights: any[];

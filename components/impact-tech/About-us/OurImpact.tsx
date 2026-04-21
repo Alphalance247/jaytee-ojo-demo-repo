@@ -46,40 +46,42 @@ const OurImpact = () => {
     fetchCaseStudies();
   }, [fetchCaseStudies]);
   return (
-    <div>
-      <div className="text-center text-[#061C3D] pt-10 md:pt-[91px] flex justify-center items-center pb-10 md:pb-[97px]">
-        <div className="md:px-0 px-6">
-          <div className=" text-[32px] md:text-[48px] font-grostek font-bold  ">
-            Our Impact
-          </div>
-          <div className=" pt-4 text-base md:text-lg font-inter w-full md:max-w-[536px]">
-            Real-world outcomes from our programs across schools, communities,
-            and institutions.
+    <div className="w-full">
+      <div className="max-w-[1240px] mx-auto">
+        <div className="text-center text-[#061C3D] pt-10 md:pt-[91px] flex justify-center items-center pb-10 md:pb-[97px]">
+          <div className="md:px-0 px-6">
+            <div className=" text-[32px] md:text-[48px] font-grostek font-bold  ">
+              Our Impact
+            </div>
+            <div className=" pt-4 text-base md:text-lg font-inter w-full md:max-w-[536px]">
+              Real-world outcomes from our programs across schools, communities,
+              and institutions.
+            </div>
           </div>
         </div>
-      </div>
 
-      {caseStudies.map((impact, index) => (
-        <div
-          key={index}
-          className={`w-full ${index === 0 ? "border-b border-[#2A7445]" : ""}`}
-        >
-          <Link href={`/impact-tech/about-us/${impact.key}`}>
-            <div className="grid gap-[101px] ">
-              <ImpactProject
-                className={`
+        {caseStudies.map((impact, index) => (
+          <div
+            key={index}
+            className={`w-full ${index === 0 ? "border-b border-[#2A7445]" : ""}`}
+          >
+            <Link href={`/impact-tech/about-us/${impact.key}`}>
+              <div className="grid gap-[101px] ">
+                <ImpactProject
+                  className={`
                 ${index % 2 === 1 ? " flex gap-6 md:gap-[112px] md:flex-row-reverse" : "flex flex-col md:flex-row gap-6 md:gap-[112px]"}
               `}
-                index={index}
-                projectDesc={impact.title}
-                projectSponsor={impact.partners}
-                projectTitle={impact.title}
-                projectImage={`/assets/impact-tech/about-us/maleStudent.png`}
-              />
-            </div>
-          </Link>
-        </div>
-      ))}
+                  index={index}
+                  projectDesc={impact.title}
+                  projectSponsor={impact.partners}
+                  projectTitle={impact.title}
+                  projectImage={`/assets/impact-tech/about-us/maleStudent.png`}
+                />
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

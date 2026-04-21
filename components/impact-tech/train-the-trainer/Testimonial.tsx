@@ -49,8 +49,8 @@ const Testimonial = () => {
     fetchTestimonials();
   }, [fetchTestimonials]);
   return (
-    <div className="h-full w-full md:h-[497px] flex justify-start md:justify-center items-start md:items-center pl-6 md:pl-[101px] bg-[#F4F7FA]">
-      <div className=" h-full flex flex-col md:flex-row w-full items-center gap-[61px] ">
+    <div className="h-full w-full md:h-[497px] flex justify-start md:justify-center items-start md:items-center pl-6 md:pl-0 bg-[#F4F7FA] ">
+      <div className=" h-full flex flex-col md:flex-row w-full items-center gap-[61px] max-w-[1219px]">
         <div className="w-full md:w-1/3">
           <div className="py-4 text-sm font-medium text-[#2A7445] uppercase font-inter">
             Testimonial

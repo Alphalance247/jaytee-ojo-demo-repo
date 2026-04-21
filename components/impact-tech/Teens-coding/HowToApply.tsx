@@ -65,7 +65,7 @@ const HowToApply = () => {
       id="applicationForm"
       className=" relative bg-[url(/assets/impact-tech/howToApplyBg.png)] h-[795px] bg-cover bg-no-repeat flex flex-col justify-center items-center mt-16 md:mt-0"
     >
-      <div className="h-[120px] z-10">
+      <div className="h-[120px] z-10 max-w-[480px] mx-auto">
         <div className=" text-[32px] md:text-[48px] font-bold text-white text-center font-inter">
           How to Apply
         </div>
@@ -79,7 +79,7 @@ const HowToApply = () => {
           backgroundImage: ` linear-gradient(180deg, rgba(104, 213, 133, 0.54) 0%, #2A7445 100%)`,
         }}
       ></div>
-      <div className="w-full md:px-0 px-6 z-10">
+      <div className="w-full md:px-0 px-6 z-10 max-w-[660px] mx-auto">
         <div
           className="bg-white w-full md:w-[660px] rounded-[16px] mx-auto  "
           style={{
@@ -199,7 +199,7 @@ const HowToApply = () => {
                 {" "}
                 <FormSubmitButton
                   text={loading ? "Submitting..." : "apply now"}
-                  className="w-full bg-[#E60303] text-white"
+                  className="w-full bg-[#E60303] hover:bg-red-700 text-white"
                   disabled={loading}
                 >
                   <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />

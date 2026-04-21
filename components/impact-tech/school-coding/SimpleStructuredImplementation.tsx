@@ -57,8 +57,8 @@ const gains = [
 ];
 const SimpleStructuredImplementation = () => {
   return (
-    <div className="relative h-[1317px]">
-      <div className="mx-auto w-full md:max-w-[1110px] ">
+    <div className="relative h-[1317px] w-full">
+      <div className="mx-auto max-w-[1110px] ">
         <div className="flex justify-center items-center relative">
           <img
             src="/assets/impact-tech/school-coding/group1.png"
@@ -68,7 +68,7 @@ const SimpleStructuredImplementation = () => {
           <div className="absolute inset-0 rounded-[20px] bg-[#2A744533] w-full "></div>
         </div>
       </div>
-      <div className="bg-[url(/assets/impact-tech/school-coding/BG3.png)] bg-no-repeat bg-cover h-[1100px] md:h-[875px] absolute inset-x-0 -bottom-16 md:bottom-3 ">
+      <div className="bg-[url(/assets/impact-tech/school-coding/BG3.png)]  bg-no-repeat bg-cover h-[1100px] md:h-[875px] absolute inset-x-0 -bottom-16 md:bottom-3 ">
         <div className="mx-auto max-w-[1081px] pb-10 md:pb-[91px] flex flex-col justify-center items-center h-full ">
           <div className="pt-10">
             <h4 className="text-2xl md:text-[58px] font-bold font-graphik text-white md:pl-0 pl-6">

@@ -15,16 +15,16 @@ const trainingData = [
 ];
 const TheRippleEffect = () => {
   return (
-    <div className="w-full mx-auto max-w-[1440px] py-10 md:py-[91px] ">
+    <div className="w-full mx-auto max-w-[1230px] py-10 md:py-[91px] ">
       <div className="relative shadow-[0px_25px_50px_-12px_#00000040] rounded-none md:rounded-[24px] ">
         <img
           src="/assets/impact-tech/train-the-trainer/bg2.jpg"
           alt="bg"
-          className="w-full md:w-[1444px] object-cover rounded-none md:rounded-[24px] h-[400px] md:h-[600px]"
+          className="w-full md:w-[1230px] object-cover rounded-none md:rounded-[24px] h-[400px] md:h-[600px]"
         />
 
         <div
-          className="absolute inset-0 w-full md:w-[1444px] rounded-none md:rounded-[24px] h-[400px] md:h-[600px] z-0 shadow-[0px_25px_50px_-12px_#00000040]
+          className="absolute inset-0 w-full md:w-[1230px] rounded-none md:rounded-[24px] h-[400px] md:h-[600px] z-0 shadow-[0px_25px_50px_-12px_#00000040]
 "
           style={{
             background: `linear-gradient(90deg, rgba(0, 79, 59, 0.95) 0%, rgba(0, 79, 59, 0.7) 100%),

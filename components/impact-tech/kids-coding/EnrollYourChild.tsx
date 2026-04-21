@@ -67,7 +67,7 @@ const EnrollYourChild = () => {
   };
   return (
     <div id="enroll-form" className="bg-[#F4F7FA] h-fit  ">
-      <div className="mx-auto w-full md:w-[607px] py-10 md:py-[91px]">
+      <div className="mx-auto w-full md:max-w-[607px] py-10 md:py-[91px]">
         <div className="text-center font-inter">
           <h5 className="font-bold text-3xl md:text-5xl text-[#061C3D]">
             Enroll Your Child Today
@@ -190,7 +190,7 @@ const EnrollYourChild = () => {
               {" "}
               <FormSubmitButton
                 text={loading ? "Submitting..." : "Enroll Now"}
-                className=" w-[320px] md:w-[505px] bg-[#E60303] text-white mt-4 mb-8"
+                className=" w-[320px] md:w-[505px] bg-[#E60303] hover:bg-red-700 text-white mt-4 mb-8"
               >
                 {" "}
                 <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />

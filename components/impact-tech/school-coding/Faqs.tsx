@@ -42,7 +42,7 @@ const Faqs = () => {
     fetchFaqs("School Coding");
   }, [fetchFaqs]);
   return (
-    <div className="bg-white h-fit w-full md:max-w-[1240px] rounded-10 mx-auto ">
+    <div className="bg-white h-fit w-full max-w-[1240px] rounded-10 mx-auto ">
       <div
         className="bg-white md:px-0 px-6 my-10 md:my-[91px] "
         style={{ boxShadow: "0px 12px 26px 0px #4A3AFF12" }}
@@ -62,7 +62,7 @@ const Faqs = () => {
               <LoadingState className="h-[400px] mx-[100px] my-10" />
             </div>
           ) : error ? (
-            <div className="text-center text-red-500 flex justify-center items-center">
+            <div className="text-center text-red-500 flex justify-center items-center h-[500px]">
               {error}
             </div>
           ) : hasFetched && faqs.length === 0 ? (

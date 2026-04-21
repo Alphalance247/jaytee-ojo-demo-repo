@@ -46,7 +46,7 @@ const AnnoucementCard = ({
           </p>
         </div>
         <div className="flex gap-2 items-center">
-          <button className="bg-[#E60303] flex items-center justify-center h-12 w-[185px] rounded-[7px] text-[#FFFFFF]">
+          <button className="bg-[#E60303] hover:bg-red-700 flex items-center justify-center h-12 w-[185px] rounded-[7px] text-[#FFFFFF]">
             {btnText}
             <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
           </button>

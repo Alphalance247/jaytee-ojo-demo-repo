@@ -14,21 +14,21 @@ const TestimonialCard = ({
 }) => {
   return (
     <div
-      className={`bg-white w-full  rounded-[12px] ${className}`}
+      className={`bg-white w-full rounded-[12px] ${className}`}
       style={{ boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.05)" }}
     >
       <div className=" p-6 md:p-10 ">
-        <div className="flex gap-[15px] items-center">
+        <div className="flex gap-[15px] items-center flex-shrink-0  ">
           {photo ? (
             <Image
               src={photo}
               alt="student"
               width={80}
               height={80}
-              className="w-20 h-20 rounded-full object-cover bg-[#4E5550]"
+              className="w-20 h-20 rounded-full object-cover bg-[#4E5550] "
             />
           ) : (
-            <div className="w-20 h-20 rounded-full bg-[#4E5550]" />
+            <div className="w-20 h-20 rounded-full bg-[#4E5550] " />
           )}
 
           {children}

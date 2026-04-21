@@ -25,6 +25,8 @@ const SliderCarousel = ({
     slidesToScroll: 1,
     arrows: false,
     afterChange: afterChange,
+    centerMode: false,
+    // rtl: true,
     // gap: gap,
     responsive: [
       {
@@ -34,6 +36,7 @@ const SliderCarousel = ({
           slidesToShow: 2,
           slidesToScroll: 1,
           initialSlide: 0,
+          centerMode: false,
           // gap: 43,
         },
       },
@@ -45,6 +48,7 @@ const SliderCarousel = ({
           slidesToScroll: 1,
           initialSlide: 0,
           dots: true,
+          centerMode: false,
           // gap: 16,
         },
       },
@@ -56,6 +60,7 @@ const SliderCarousel = ({
           slidesToScroll: 1,
           dots: true,
           initialSlide: 0,
+          centerMode: false,
           // gap: 10,
         },
       },
@@ -67,18 +72,27 @@ const SliderCarousel = ({
           slidesToScroll: 1,
           dots: true,
           initialSlide: 0,
+          centerMode: false,
           // gap: 10,
         },
       },
     ],
   };
   const slides = React.Children.toArray(children).map((child, index) => (
-    <div key={index} className={`px-[16px] flex`}>
+    <div
+      key={index}
+      className={`pr-4`}
+      style={{
+        display: "flex !important",
+        alignItems: "start",
+        justifyContent: "start",
+      }}
+    >
       {child}
     </div>
   ));
   return (
-    <div className="slider-container w-full ">
+    <div className="slider-container w-full  ">
       <Slider ref={sliderRef} {...settings}>
         {slides}
       </Slider>

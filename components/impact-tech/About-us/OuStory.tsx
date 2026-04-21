@@ -4,7 +4,7 @@ import Image from "next/image";
 const OuStory = () => {
   return (
     <div className="w-full bg-white min-h-[500px] md:min-h-[710px] grid items-center">
-      <div className="  px-6 md:px-[110px] py-[50px] md:py-[91px]">
+      <div className="  px-6 md:px-0 mx-auto max-w-[1240px] py-[50px] md:py-[91px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-20 items-center">
           <div className="flex flex-col justify-center">
             <h2 className="font-grostek text-[#061C3D] text-[32px] md:text-[48px] font-bold pb-[30px] ">
@@ -31,7 +31,7 @@ const OuStory = () => {
               </div>
 
               {/* BOTTOM GREEN BG */}
-              <div className="absolute bottom-0 z-0 right-[35px]">
+              <div className="absolute top-72 z-0 right-[35px]">
                 <ColoredBg />
               </div>
 

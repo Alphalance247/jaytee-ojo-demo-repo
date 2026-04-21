@@ -22,18 +22,42 @@ const lists = [
 ];
 const PartnershipWork = () => {
   return (
-    <div className="mx-auto w-full md:max-w-[1441px] mt-10 md:mt-[101px]">
+    <div className="mx-auto w-full max-w-[1240px] my-10 md:my-[101px]">
       <div className=" h-fit md:h-[102px] font-inter md:px-0 px-6">
         <h4 className="text-[28px] md:text-[48px] font-bold text-[#061C3D] text-center">
           How Partnership Works
         </h4>
-        <p className="text-[#42526B] text-base md:text-lg text-center font-normal">
+        <p className="text-[#42526B] text-base md:text-lg text-center font-normal font-inter leading-[26px]">
           A simple, collaborative process to create meaningful impact.
         </p>
       </div>
-      <div className="flex md:flex-row flex-col items-center relative gap-20  md:gap-[185px] mt-10 md:mt-[135px] pb-20 md:pb-[111px] md:px-0 px-6">
-        <div className="w-full md:w-1/2 items-center h-[571px] md:h-full ">
-          <div className="bg-[#2A7445] opacity-[9.86%] rounded-[10px] w-full md:w-[397px] h-[547px] absolute z-0 top-14 md:top-0 left-0 md:left-[280px]"></div>
+      <div className=" mx-auto w-full max-w-[1174px] flex md:flex-row flex-col items-center gap-[60px] md:gap-[217px] justify-between md:px-0 px-6 h-auto md:h-[571px] mt-10 md:mt-[67px] ">
+        {/* <div className="flex md:flex-row flex-col items-center relative gap-20  md:gap-[185px] mt-10 md:mt-[135px] pb-20 md:pb-[111px] md:px-0 px-6"> */}
+        <div className="w-full md:w-1/2 h-full ">
+          <div className="relative w-full md:w-[420px] ml-0 md:ml-[83px] ">
+            <Image
+              src="/assets/impact-tech/partners/Group1.png"
+              alt="Volunteer"
+              width={425}
+              height={571}
+              className=" md:w-[425px] md:h-[571px] w-full h-full"
+            />
+            <div className="bg-[#161C2D] w-[341px] h-[111px] rounded-[14px] flex items-center gap-4  shadow-xl absolute bottom-16 md:bottom-[138px] z-20 -left-4 md:-left-[60px] px-6">
+              <div className="h-[42px] w-[42px] rounded-full bg-[#68D585] flex items-center justify-center ">
+                <IoIosNotifications className="h-6 w-6 text-[#2D2D2D]" />
+              </div>
+              <div>
+                <p className="text-white/70 text-[15px]">
+                  You are shaping the future
+                </p>
+                <p className="text-white font-bold text-[17px]">
+                  Congratulations!!
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* <div className="relative w-full md:w-[420px] "> */}
+          {/* <div className="bg-[#2A7445] opacity-[9.86%] rounded-[10px] w-full md:w-[397px] h-[547px] absolute z-0 top-14 md:top-0 left-0 md:left-[280px]"></div>
           <div className="absolute z-20 top-0 md:-top-[68px] h-[571px] w-full md:w-[425px] left-0 md:left-[211px]">
             <Image
               src="/assets/impact-tech/partners/BitmapBg.png"
@@ -59,8 +83,23 @@ const PartnershipWork = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
+          {/* <div className="absolute w-full md:w-[397px] top-[67px] h-auto md:h-[547px]  bg-[#2A7445]/10 rounded-[20px] -left-10 md:left-[152px] z-0"></div> */}
+          {/* <div className="bg-[#161C2D] w-[341px] h-[111px] rounded-[14px] flex items-center gap-4  shadow-xl absolute top-64 md:top-[364px] z-20 -left-4 md:left-0 px-6">
+            <div className="h-[42px] w-[42px] rounded-full bg-[#68D585] flex items-center justify-center ">
+              <IoIosNotifications className="h-6 w-6 text-[#2D2D2D]" />
+            </div>
+            <div>
+              <p className="text-white/70 text-[15px]">
+                You are shaping the future
+              </p>
+              <p className="text-white font-bold text-[17px]">
+                Congratulations!!
+              </p>
+            </div>
+          </div> */}
         </div>
+        {/* </div> */}
         <div className="w-full md:w-1/2 ">
           <div className="gap-[42px] flex flex-col">
             {lists.map((list, index) => (

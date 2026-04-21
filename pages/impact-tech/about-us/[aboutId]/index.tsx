@@ -153,9 +153,10 @@ export default function CaseStudy({
               ))}
             </Hero>
             <ProgramOverview
-              overview={renderRichText(data.result.program_overview)}
-              challenge={renderRichText(data.result.the_challenge)}
-              approach={renderRichText(data.result.our_approach)}
+              overview={data.result.program_overview}
+              challenge={data.result.the_challenge}
+              approach={data.result.our_approach}
+              impactOutcome={data.result.impact_outcomes}
             >
               <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
                 {/* {funFacts.map((fact, index) => ( */}

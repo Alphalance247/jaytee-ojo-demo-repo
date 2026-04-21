@@ -50,31 +50,33 @@ const Testimonial = ({ testimonials }: { testimonials: Testimonial[] }) => {
   const totalSlides = testimonials.length;
   console.log(currentSlide);
   return (
-    <div className="h-full w-full  md:h-[497px] flex justify-start md:justify-center items-start md:items-center pl-6 md:pl-[101px]">
-      <div className=" h-full flex flex-col md:flex-row w-full items-center ">
+    <div className="h-full w-full  md:h-[497px] flex justify-start md:justify-center items-start md:items-center">
+      <div className=" h-full flex flex-col md:flex-row w-full items-center  ">
         <div className="w-full md:w-1/3">
-          <div className="py-4 text-sm font-medium text-[#2A7445] uppercase font-inter">
-            Testimonial
-          </div>
-          <div className="text-[32px] md:text-[48px] text-[#1E1E1E] font-bold font-grostek w-full md:max-w-[410px] leading-[50px] md:leading-[60px]">
-            <h5>Program Testimonials</h5>
-          </div>
+          <div className="mx-auto max-w-[408px] ml-6 md:ml-[117px]">
+            <div className="py-4 text-sm font-medium text-[#2A7445] uppercase font-inter ">
+              Testimonial
+            </div>
+            <div className="text-[32px] md:text-[48px] text-[#1E1E1E] font-bold font-grostek w-full md:max-w-[410px] leading-[50px] md:leading-[60px]">
+              <h5>Program Testimonials</h5>
+            </div>
 
-          <div className="flex gap-5 items-center mt-8">
-            <button
-              onClick={prevSlide}
-              disabled={currentSlide === 0}
-              className="disabled:cursor-not-allowed"
-            >
-              <HiChevronLeft className="text-[#2A7445] h-6 w-6" />
-            </button>
-            <button
-              onClick={nextSlide}
-              disabled={currentSlide === totalSlides - slidesToShow}
-              className="disabled:cursor-not-allowed"
-            >
-              <HiChevronRight className="text-[#2A7445] h-6 w-6" />
-            </button>
+            <div className="flex gap-5 items-center mt-8 md:mb-0 mb-10">
+              <button
+                onClick={prevSlide}
+                disabled={currentSlide === 0}
+                className="disabled:cursor-not-allowed"
+              >
+                <HiChevronLeft className="text-[#2A7445] h-6 w-6" />
+              </button>
+              <button
+                onClick={nextSlide}
+                disabled={currentSlide === totalSlides - slidesToShow}
+                className="disabled:cursor-not-allowed"
+              >
+                <HiChevronRight className="text-[#2A7445] h-6 w-6" />
+              </button>
+            </div>
           </div>
         </div>
 
@@ -93,7 +95,7 @@ const Testimonial = ({ testimonials }: { testimonials: Testimonial[] }) => {
                 return (
                   <div key={index} className="">
                     <TestimonialCard
-                      className="h-[268px]"
+                      className="h-[268px] w-full"
                       photo={testimonial.ImageUrl}
                       testimonial={testimonial.text}
                     >

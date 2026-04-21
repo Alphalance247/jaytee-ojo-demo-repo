@@ -26,7 +26,7 @@ const OtherPartners = () => {
   return (
     <div className="relative">
       <Image
-        className="w-full h-[684px] object-cover bg-no-repeat"
+        className="w-full h-[684px] object-cover bg-no-repeat "
         src={"/assets/impact-tech/partners/partners.png"}
         width={1446}
         height={684}
@@ -66,11 +66,12 @@ linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))`,
             </div>
           </div>
         </div> */}
-        <div className="w-full">
-          <h3 className="text-[32px] md:text-[48px] text-white font-[800] font-inter  px-6 md:px-[107px]">
-            Our Partners
-          </h3>
-
+        <div className="w-full ">
+          <div className="max-w-[1240px] mx-auto">
+            <h3 className="text-[32px] md:text-[48px] text-white font-[800] font-inter  px-6 md:px-0">
+              Our Partners
+            </h3>
+          </div>
           {/* ✅ carousel wrapper */}
           <div className="pt-10 md:pt-[68px] overflow-hidden w-full">
             {/* ✅ animated track */}

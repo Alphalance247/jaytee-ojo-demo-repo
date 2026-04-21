@@ -63,12 +63,12 @@ const WhatToWalkAwayWith = () => {
           className="absolute top-0 left-0 h-auto w-auto"
         />
       </div>
-      <div className="">
+      <div className="max-w-[600px] mx-auto">
         <div className="font-inter text-center  text-white grid items-center justify-center pt-10 md:pt-[91px] px-6 md:px0">
           <h5 className="text-[32px] md:text-[48px] leading-[80px] font-bold">
             What You’ll Gain
           </h5>
-          <p className="text-lg md:text-xl font-normal max-w-[600px] leading-[28px]">
+          <p className="text-lg md:text-xl font-normal  leading-[28px]">
             Volunteering with us gives back, to your career, your purpose, and
             your network.
           </p>

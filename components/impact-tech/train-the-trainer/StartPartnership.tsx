@@ -59,7 +59,7 @@ const StartPartnership = () => {
   };
   return (
     <div id="start-partnership" className="h-fit">
-      <div className="flex flex-col justify-center items-center font-inter md:px-0 px-6 pt-10 md:pt-[101px]">
+      <div className="flex flex-col justify-center items-center font-inter md:px-0 px-6 pt-10 md:pt-[101px] max-w-[799px] mx-auto">
         <h5 className="text-[32px] md:text-[48px] text-[#061C3D] font-bold text-center">
           Start a Partnership
         </h5>
@@ -69,7 +69,7 @@ const StartPartnership = () => {
         </p>
       </div>
       <div
-        className="md:px-0 px-6 w-full md:max-w-[607px] mx-auto bg-[#FFFFFF] h-fit mt-6 md:mt-[74px] rounded-[16px] mb-12 md:mb-[101px]"
+        className="md:px-0 px-6 w-full max-w-[607px] mx-auto bg-[#FFFFFF] h-fit mt-6 md:mt-[74px] rounded-[16px] mb-12 md:mb-[101px]"
         style={{ boxShadow: "0px 24px 56px 0px #061C3D1F" }}
       >
         <div className="text-center flex justify-center items-center pt-8">
@@ -166,7 +166,7 @@ const StartPartnership = () => {
             {" "}
             <FormSubmitButton
               text={loading ? "Submitting..." : "Submit Partnership Request"}
-              className=" w-[320px] md:w-[505px] bg-[#E60303] text-white mt-4 mb-8"
+              className=" w-[320px] md:w-[505px] bg-[#E60303] hover:bg-red-700 text-white mt-4 mb-8"
             >
               <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
             </FormSubmitButton>

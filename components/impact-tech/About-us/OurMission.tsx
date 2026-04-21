@@ -3,7 +3,7 @@ import React from "react";
 const OurMission = () => {
   return (
     <div className="bg-[#FBFDFE] min-h-[350px] md:min-h-[455px] grid items-center ">
-      <div className="px-6 md:px-0 text-center w-full md:max-w-[779px] mx-auto ">
+      <div className="px-6 md:px-0 text-center w-full max-w-[779px] mx-auto ">
         {" "}
         <h2 className="text-[#061C3D] text-[32px] md:text-[48px] font-bold text-center font-grostek pb-4 md:pb-[30px]">
           {" "}

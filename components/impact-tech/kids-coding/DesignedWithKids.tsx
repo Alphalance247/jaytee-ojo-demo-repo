@@ -10,7 +10,7 @@ const thoughts = [
 const DesignedWithKids = () => {
   return (
     <div className="w-full ">
-      <div className="flex flex-col items-center md:flex-row md:max-w-[1440px] w-full mx-auto md:px-0 px-6 gap-10 md:gap-[117px] ">
+      <div className="flex flex-col items-center md:flex-row md:max-w-[1219px]  w-full mx-auto md:px-0 px-6 gap-10 md:gap-[117px] ">
         <div className="w-full md:w-1/2 mt-10 md:mt-[110px]">
           <div className="md:relative md:flex hidden ">
             <div className="mt-32 ">

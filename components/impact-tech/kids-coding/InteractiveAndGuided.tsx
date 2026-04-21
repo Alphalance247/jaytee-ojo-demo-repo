@@ -53,7 +53,7 @@ const row2Items = [
 const InteractiveAndGuided = () => {
   return (
     <div className="bg-[#F4F7FA]">
-      <div className="mx-auto w-full md:w-[1440px]  md:px-0 px-6 py-10 md:py-[91px]">
+      <div className="mx-auto w-full md:max-w-[1219px]   md:px-0 px-6 py-10 md:py-[91px]">
         <div className="flex flex-col justify-center items-center  gap-10 md:gap-[57px] w-full">
           <div className="flex flex-col md:flex-row items-center  gap-[22.41px]">
             <div className="w-full md:w-1/3">
@@ -71,7 +71,7 @@ const InteractiveAndGuided = () => {
                 <Button
                   url="#enroll-form"
                   text="Enroll Now"
-                  className="text-white bg-[#E60303] w-full md:w-[146px]"
+                  className="text-white bg-[#E60303] hover:bg-red-700 w-full md:w-[146px]"
                 />
               </div>
             </div>

@@ -58,46 +58,48 @@ const MoreFromImpactTech = () => {
   }, [fetchBlogs]);
   const ourImpactBlogs = blogs.slice(1);
   return (
-    <div className="mx-auto md:max-w-[1440px] w-full flex justify-center items-center">
-      <div className="flex flex-col justify-center items-center gap-10 md:gap-[78px] py-10 md:py-[94px]">
-        <div className="font-inter flex flex-col justify-center items-center text-center gap-4 md:gap-8">
-          <h4 className="text-[28px] md:text-[56px] font-bold text-[#061C3D] leading-9 md:leading-[60px]">
-            More from Impact Tech
-          </h4>
-          <p className="text-base md:text-lg font-normal text-[#42526B]">
-            Stay informed with stories, insights, and highlights from our
-            ecosystem
-          </p>
-        </div>
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-x-6 gap-6 md:gap-y-[78px] md:px-0 px-6">
-          {loading ? (
-            <div className="flex justify-center items-center h-full my-6">
-              <LoadingState className="h-[400px] mx-[100px]" />
-            </div>
-          ) : error ? (
-            <div className="text-center text-red-500 flex justify-center items-center">
-              {error}
-            </div>
-          ) : !loading && ourImpactBlogs.length === 0 ? (
-            <div className="flex justify-center items-center h-full text-[#050505] text-lg">
-              Our impact blog is not available
-            </div>
-          ) : (
-            ourImpactBlogs.map((blog, index) => (
-              <Link
-                key={index}
-                href={`/impact-tech/blogs/${blog.key}`}
-                rel="noopener noreferrer"
-              >
-                <ImpactTechCard
-                  time={blog.minute_read}
-                  title={blog.title}
-                  imageUrl={`/assets/impact-tech/blogs/students.png`}
-                  date={blog.date}
-                />
-              </Link>
-            ))
-          )}
+    <div className="w-full">
+      <div className="mx-auto max-w-[1240px] w-full flex justify-center items-center">
+        <div className="flex flex-col justify-center items-center gap-10 md:gap-[78px] py-10 md:py-[94px]">
+          <div className="font-inter flex flex-col justify-center items-center text-center gap-4 md:gap-8">
+            <h4 className="text-[28px] md:text-[56px] font-bold text-[#061C3D] leading-9 md:leading-[60px]">
+              More from Impact Tech
+            </h4>
+            <p className="text-base md:text-lg font-normal text-[#42526B]">
+              Stay informed with stories, insights, and highlights from our
+              ecosystem
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-x-6 gap-6 md:gap-y-[78px] md:px-0 px-6">
+            {loading ? (
+              <div className="flex justify-center items-center h-full my-6">
+                <LoadingState className="h-[400px] mx-[100px]" />
+              </div>
+            ) : error ? (
+              <div className="text-center text-red-500 flex justify-center items-center">
+                {error}
+              </div>
+            ) : !loading && ourImpactBlogs.length === 0 ? (
+              <div className="flex justify-center items-center h-full text-[#050505] text-lg">
+                Our impact blog is not available
+              </div>
+            ) : (
+              ourImpactBlogs.map((blog, index) => (
+                <Link
+                  key={index}
+                  href={`/impact-tech/blogs/${blog.key}`}
+                  rel="noopener noreferrer"
+                >
+                  <ImpactTechCard
+                    time={blog.minute_read}
+                    title={blog.title}
+                    imageUrl={`/assets/impact-tech/blogs/students.png`}
+                    date={blog.date}
+                  />
+                </Link>
+              ))
+            )}
+          </div>
         </div>
       </div>
     </div>

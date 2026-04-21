@@ -54,7 +54,7 @@ const volunteers = [
 ];
 const WhyVolunteerSection = () => {
   return (
-    <div className="w-full md:max-w-[1441px] mx-auto md:px-0 px-6 relative">
+    <div className="w-full max-w-[1240px] mx-auto md:px-0 px-6 relative">
       <div className=" hidden md:absolute -left-32 top-12">
         <img
           src={"/assets/impact-tech/volunteer/Shapes.png"}

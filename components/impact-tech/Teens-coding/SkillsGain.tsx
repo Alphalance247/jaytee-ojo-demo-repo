@@ -41,8 +41,8 @@ const lifeSkills = [
 const SkillsGain = () => {
   return (
     <div className="rounded-[16px] md:mt-0 mt-72 flex items-start md:items-center  bg-[linear-gradient(252.53deg,rgba(42,116,69,0.5)_-0.87%,rgba(104,213,133,0.5)_-0.87%,rgba(40,108,65,0.5)_25.15%,rgba(42,116,69,0.425)_97.92%)] bg-[#201D1F] shadow-[0px_4px_10px_0px_#0000004D,_0px_1px_0px_0px_#FFFFFF0F_inset] h-fit md:h-[509px]">
-      <div className="flex md:flex-row flex-col w-full items-center">
-        <div className="w-full md:w-1/3 pl-6 md:pl-[101px] ">
+      <div className="flex md:flex-row flex-col w-full items-center  max-w-[1219px] mx-auto">
+        <div className="w-full md:w-1/3 pl-6 md:pl-0 ">
           <h3 className="text-[32px] md:text-[48px]  leading-[48px]  text-white font-bold md:pt-0 pt-10 font-graphik">
             {" "}
             Skills You’ll <br /> Gain
@@ -53,7 +53,7 @@ const SkillsGain = () => {
           <Button
             text="apply now"
             url="#applicationForm"
-            className="text-white w-[120px] md:w-[151px] h-[30px] md:h-[38px] bg-[linear-gradient(0deg,rgba(246,75,75,0.58)_0%,rgba(246,75,75,0.58)_100%),linear-gradient(180deg,rgba(255,255,255,0.05)_0%,rgba(255,255,255,0)_100%)]"
+            className="text-white w-[120px] md:w-[151px] h-[30px] md:h-[38px] bg-[linear-gradient(0deg,rgba(246,75,75,0.58)_0%,rgba(246,75,75,0.58)_100%),linear-gradient(180deg,rgba(255,255,255,0.05)_0%,rgba(255,255,255,0)_100%)] hover:bg-red-600"
           >
             {" "}
             <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />

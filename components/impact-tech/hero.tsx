@@ -1,13 +1,14 @@
 import Image from "next/image";
 import PrimaryButton from "../common/button";
 import MeasuredImpact from "./measuredImpact";
+import Link from "next/link";
 
 const Hero = () => {
   return (
     <>
       <div className="w-full bg-white py-8 sm:py-12 md:py-16 px-4">
         {/* Content Container */}
-        <div className="max-w-[1262px] mx-auto">
+        <div className="max-w-[1219px] mx-auto">
           {/* Heading Section */}
           <div className="text-center max-w-full w-full mx-auto mb-8 sm:w-full md:w-[80%] sm:mb-10 md:mb-12">
             <h1 className="text-3xl sm:text-4xl md:text-[52px] md:leading-[67px] font-bold text-black mb-4 sm:mb-5 md:mb-6 leading-tight">
@@ -17,7 +18,9 @@ const Hero = () => {
               Training, mentoring, and equipping African youth with future–ready
               tech skills.
             </p>
-            <PrimaryButton text="View Programs →" />
+            <Link href="/impact-tech#our-programs">
+              <PrimaryButton text="View Programs →" />
+            </Link>
           </div>
 
           {/* Image Cards Section */}

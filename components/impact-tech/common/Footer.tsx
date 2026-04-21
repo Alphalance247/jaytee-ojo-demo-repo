@@ -10,7 +10,7 @@ const socials = [FaXTwitter, RiInstagramFill, FaFacebookF, FaLinkedinIn];
 const Footer = () => {
   return (
     <div className="bg-[#F5F5F5] h-fit font-DMsans">
-      <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-[269px] pt-7 md:pt-14 px-6 md:px-[100px]">
+      <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-[269px] pt-7 md:pt-14 px-6 md:px-0 max-w-[1239px] mx-auto">
         <div className="w-full md:w-1/2">
           <Image
             src="/assets/impact-tech/impact_tech.png"
@@ -28,8 +28,8 @@ const Footer = () => {
         </div>
       </div>
       {/* <div className=""></div> */}
-      <div className="md:px-[100px] border-t border-[#D9D9D9] mt-10 md:mt-20">
-        <div className="flex  justify-between items-start  md:items-center pt-6 p-7 md:pb-14">
+      <div className=" border-t border-[#D9D9D9] mt-10 md:mt-20  max-w-[1239px] mx-auto ">
+        <div className="flex  justify-between items-start  md:items-center pt-6 p-7 md:pb-14 ">
           <div className="text-[#8B8C8E] text-sm">© 2023 Impact Tech</div>
           <div className="flex gap-2 md:gap-3">
             {socials.map((Icon, index) => (

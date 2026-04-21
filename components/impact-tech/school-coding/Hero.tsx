@@ -5,8 +5,8 @@ import RatingCard from "./RatingCard";
 
 const Hero = () => {
   return (
-    <div className="w-full relative mb-16 md:mb-0">
-      <div className="mx-auto w-full md:max-w-[985px] mt-16 md:mt-[128px] md:px-0 px-6">
+    <div className="w-full relative mb-16 md:mb-0 ">
+      <div className="mx-auto max-w-[985px] mt-16 md:mt-[128px] md:px-0 px-6">
         <div className="flex flex-col gap-5 items-center text-center w-full  mx-auto md:max-w-[864px] ">
           <h1 className="font-bold font-grostek text-3xl md:text-[64px] text-[#1D1D1D] leading-[100%]">
             Coding Programs for Forward-Thinking Schools
@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="flex justify-center items-center pt-[82px]">
           <Button
             url="/impact-tech/partners#start-partnership"
-            className="text-white bg-[#E60303] w-full md:w-[187px]"
+            className="text-white bg-[#E60303] hover:bg-red-700 w-full md:w-[187px]"
             text="Partner With Us"
           />
         </div>

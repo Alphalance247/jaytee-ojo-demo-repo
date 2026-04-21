@@ -38,6 +38,21 @@ export default function FullBlog({
       day: "numeric",
     });
   };
+  const renderRichText = (doc: any) => {
+    if (!doc?.content) return null;
+
+    return doc.content.map((block: any, index: number) => {
+      if (block.type === "paragraph") {
+        return (
+          <p key={index} className="mb-4">
+            {block.content?.map((child: any) => child.text).join("")}
+          </p>
+        );
+      }
+
+      return null;
+    });
+  };
   return (
     <ImpactTechLayout>
       {error ? (
@@ -61,17 +76,18 @@ export default function FullBlog({
               <BlogDetailsCard headingText="Intoduction" id="introduction">
                 {/* <p>{params.slug}</p> */}
                 <p className="font-inter text-base font-normal pt-5">
-                  Technology is shaping every part of our world, from how we
+                  {renderRichText(data.result.body)}
+                  {/* Technology is shaping every part of our world, from how we
                   communicate to how we work and solve problems. Yet, many young
                   students in underserved communities lack access to the skills
                   and resources needed to participate in this digital future. At
                   Impact Tech, our mission is to bridge that gap by introducing
                   secondary school students to coding and digital skills early,
                   empowering them to become creators, not just consumers of
-                  technology.
+                  technology. */}
                 </p>
               </BlogDetailsCard>
-              <BlogDetailsCard
+              {/* <BlogDetailsCard
                 headingText="Bringing Coding to the Classroom"
                 id="bring-coding"
               >
@@ -132,7 +148,7 @@ export default function FullBlog({
                   generation of innovators, creators, and leaders can come from
                   anywherewith the right support.
                 </p>
-              </BlogDetailsCard>
+              </BlogDetailsCard> */}
               <div className="pt-6 md:pt-0">
                 <BePartCard />
               </div>

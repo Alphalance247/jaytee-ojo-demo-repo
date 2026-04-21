@@ -20,7 +20,7 @@ const items = [
 const WhyTrain = () => {
   return (
     <div className="bg-[#F4F7FA] h-full md:h-[584px] flex justify-center items-center px-6 md:px-0 md:py-0 py-10">
-      <div className=" flex flex-col justify-center items-center">
+      <div className=" flex flex-col justify-center items-center max-w-[1219px] mx-auto">
         <div>
           <h2 className="font-grostek font-bold text-[#101828] md:text-5xl text-3xl text-center">
             Why Train-the-Trainer?

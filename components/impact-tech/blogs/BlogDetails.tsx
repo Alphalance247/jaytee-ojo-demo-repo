@@ -102,8 +102,8 @@ const BlogDetails = ({
   };
 
   return (
-    <div className="relative mx-auto md:max-w-[1440px] w-full">
-      <div className="flex md:flex-row flex-col md:gap-0 gap-6 pt-[34px] pb-10 md:pb-[101px] items-start relative">
+    <div className="relative mx-auto max-w-[1240px] w-full">
+      <div className="flex md:flex-row flex-col md:gap-[45px] gap-6  pt-[34px] pb-10 md:pb-[101px] items-start relative">
         <div className="w-full md:w-2/3">
           <div id="article-boundary" className="flex flex-col gap-[30px]">
             <div className="relative h-full md:h-[462px] w-full md:max-w-[852px] rounded-none md:rounded-[10px] ">

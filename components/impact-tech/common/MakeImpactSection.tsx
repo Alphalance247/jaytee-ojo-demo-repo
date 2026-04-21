@@ -22,7 +22,7 @@ const MakeImpactSection = ({
   imageClass: string;
 }) => {
   return (
-    <div className="w-full md:max-w-[1440px] mx-auto h-auto md:h-[601.33px] grid items-start md:items-center ">
+    <div className="w-full md:max-w-[1239px] mx-auto h-auto md:h-[601.33px] grid items-start md:items-center ">
       <div className="h-full items-center flex md:flex-row flex-col gap-0 md:gap-10">
         <div className="w-full md:w-2/3 font-arial md:px-0 px-6 pb-6 md:pb-0 md:pt-0 pt-6">
           <div
@@ -40,7 +40,7 @@ const MakeImpactSection = ({
             <Button
               url="/impact-tech/volunteer#apply-to-volunteer"
               text={btnText}
-              className="bg-[#E60303] text-white w-[150px] sm:w-[211px]"
+              className="bg-[#E60303] hover:bg-red-700 text-white w-[150px] sm:w-[211px]"
             />
             <Link
               href="/impact-tech#our-programs"

@@ -34,7 +34,7 @@ const LatestBlog = () => {
   ];
   return (
     <div className="bg-[#F5F5F5] w-full ">
-      <div className="mx-auto w-full md:max-w-[1230px] py-10 md:pt-[98px] md:pb-[95px]">
+      <div className="mx-auto w-full max-w-[1230px] py-10 md:pt-[98px] md:pb-[95px]">
         <div className="flex gap-[5px] items-center pb-10 md:pb-[51px] pl-6 md:pl-0">
           <div className="border-r-4 border-[#F81539] rounded-[12px] h-[38px] "></div>
           <div>

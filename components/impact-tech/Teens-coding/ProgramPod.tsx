@@ -9,7 +9,7 @@ const ProgramPod = ({
 }) => {
   return (
     <div
-      className="bg-[#0D0F1B] w-full md:w-[411px] h-full md:h-[203px] rounded-[16px]"
+      className="bg-[#0D0F1B] w-full md:w-[375px] h-full md:h-[203px] rounded-[16px]"
       style={{
         background:
           "linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.125) 68.53%)",
@@ -20,7 +20,7 @@ const ProgramPod = ({
         <h3 className="text-white text-xl md:text-[29.61px] font-bold ">
           {title}
         </h3>
-        <p className="text-white mt-4 text-base md:text-[20px] leading[26.92px]">
+        <p className="text-white mt-4 text-base md:text-[20px] leading[26.92px] pr-4">
           {description}
         </p>
       </div>

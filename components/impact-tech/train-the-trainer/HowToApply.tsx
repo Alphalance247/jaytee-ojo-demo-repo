@@ -23,7 +23,7 @@ const lists = [
 const HowToApply = () => {
   return (
     <div className="py-10 md:py-[91px] ">
-      <div className="font-inter text-center text-[#061C3D] flex flex-col items-center justify-center  md:px-0 px-6">
+      <div className="font-inter text-center text-[#061C3D] flex flex-col items-center justify-center  md:px-0 px-6 mx-auto w-full max-w-[1091px]">
         <h4 className="text-[32px] md:text-[48px] leading-[90%%] md:leading-[80px] font-bold">
           How to Apply
         </h4>
@@ -32,7 +32,7 @@ const HowToApply = () => {
           maximize impact.
         </p>
       </div>
-      <div className=" mx-auto w-full md:max-w-[1174px] flex md:flex-row flex-col items-center gap-[420px] md:gap-[217px]   h-auto md:h-[571px] mt-10 md:mt-[67px] md:mb-24 mb-0">
+      <div className=" mx-auto w-full max-w-[1091px] flex md:flex-row flex-col items-center gap-[420px] md:gap-[217px]   h-auto md:h-[571px] mt-10 md:mt-[67px] md:mb-24 mb-0">
         <div className="w-full md:w-1/2 h-full md:block hidden">
           <div className="relative w-full md:w-[420px]  ">
             <div className="absolute w-[397px] h-[571px] top-[67px] bg-[#2A7445]/10 rounded-[20px] left-[110px] z-0 "></div>
@@ -79,7 +79,7 @@ const HowToApply = () => {
           ))}
           <Button
             url="#apply-to-volunteer"
-            className="bg-[#E60303] text-white w-full md:w-[201px]"
+            className="bg-[#E60303] hover:bg-red-700 text-white w-full md:w-[201px]"
             text="Apply to Program"
           ></Button>
         </div>

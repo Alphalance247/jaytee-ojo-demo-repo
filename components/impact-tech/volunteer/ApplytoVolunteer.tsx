@@ -77,11 +77,8 @@ const ApplytoVolunteer = () => {
     }
   };
   return (
-    <div
-      id="apply-to-volunteer"
-      className="h-auto md:h-[1115px] mx-auto max-w-[1437px]"
-    >
-      <div className="h-fit">
+    <div id="apply-to-volunteer" className="h-auto md:h-[1115px] w-full">
+      <div className="h-fit max-w-[607px] mx-auto w-full">
         <div className="flex flex-col justify-center items-center font-inter md:px-0 px-6 md:pt-[101px] pt-10">
           <h5 className="text-[32px] md:text-[48px] text-[#061C3D] font-bold text-center">
             Apply to Volunteer
@@ -91,7 +88,7 @@ const ApplytoVolunteer = () => {
           </p>
         </div>
         <div
-          className="md:px-0 px-6 w-full md:max-w-[607px] mx-auto bg-[#FFFFFF] h-fit mt-6 md:mt-[74px] rounded-[16px] mb-12 md:mb-[101px]"
+          className="md:px-0 px-6 w-full  bg-[#FFFFFF] h-fit mt-6 md:mt-[74px] rounded-[16px] mb-12 md:mb-[101px]"
           style={{ boxShadow: "0px 24px 56px 0px #061C3D1F" }}
         >
           <div className="text-center flex justify-center items-center pt-8">
@@ -215,7 +212,7 @@ const ApplytoVolunteer = () => {
               {" "}
               <FormSubmitButton
                 text={loading ? "Submitting..." : "Submit Application"}
-                className=" w-[320px] md:w-[505px] bg-[#E60303] text-white mt-4 mb-8"
+                className=" w-[320px] md:w-[505px] bg-[#E60303] hover:bg-red-700 text-white mt-4 mb-8"
               >
                 <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
               </FormSubmitButton>

@@ -14,7 +14,7 @@ const links = [
   { url: "/impact-tech/about-us", text: "about" },
   { url: "", text: "programs" },
   { url: "/impact-tech/blogs", text: "blog" },
-  { url: "/impact-tech/contact-us", text: "contact" },
+  // { url: "/impact-tech/contact-us", text: "contact" },
   { url: "/impact-tech/partners", text: "partnership" },
   { url: "/impact-tech/volunteer", text: "volunteering" },
 ];
@@ -51,7 +51,7 @@ const Header = () => {
 
   return (
     <div className="border-b border-[#F0F0F0] relative">
-      <div className="flex justify-between items-center py-4 px-3 md:px-[100px]">
+      <div className="flex justify-between items-center py-4 px-3 md:px-0 max-w-[1239px] mx-auto">
         {/* Logo */}
         <Image
           src="/assets/impact-tech/impactTech-logo.png"
@@ -71,7 +71,7 @@ const Header = () => {
                     onClick={togglePrograms}
                     className="flex items-center gap-1"
                   >
-                    <p className="text-base capitalize text-[#364153] font-inter">
+                    <p className="text-base capitalize text-[#364153] font-inter outline-none">
                       {link.text}
                     </p>
                     <BiChevronDown className="h-4 w-4" />
@@ -95,7 +95,7 @@ const Header = () => {
 
                             <Link
                               href={option.url}
-                              className="text-[#101828] font-inter font-medium"
+                              className="text-[#101828] font-inter font-medium outline-none"
                               onClick={() => setShowPrograms(false)}
                             >
                               {option.text}
@@ -122,8 +122,9 @@ const Header = () => {
         <div className="hidden md:block">
           <Button
             text="contact us"
-            url="/impact-tech/contact-us#contact-us-form"
-            className="w-[156px] bg-[#E60303] text-white"
+            url="/impact-tech/contact-us"
+            className="w-[156px] bg-[#E60303] text-white hover:bg-red-700
+            "
           ></Button>
         </div>
 

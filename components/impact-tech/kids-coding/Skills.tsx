@@ -101,7 +101,7 @@ const skills = [
 const Skills = () => {
   return (
     <div className="h-full">
-      <div className="text-center py-[91px]">
+      <div className="text-center py-[91px] md:px-0 px-6 max-w-[1219px] mx-auto">
         <h2 className="text-[#1F1C14] text-3xl md:text-5xl font-[800] font-grostek leading-[55px] ">
           Skills Your Child Will Develop
         </h2>
@@ -109,7 +109,7 @@ const Skills = () => {
           We teach foundational skills through fun and hands-on activities.
         </p>
       </div>
-      <div className="flex flex-col justify-center items-center  md:px-0 px-6 mt-10">
+      <div className="flex flex-col justify-center items-center  md:px-0 px-6 mt-10 max-w-[1219px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 justify-center items-center gap-x-[41px]  gap-10 md:gap-y-28 -mb-[840px]">
           {skills.map((skill, index) => (
             <CustomizedSkillCard
