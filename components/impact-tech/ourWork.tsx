@@ -64,13 +64,13 @@ const OurWork = () => {
               </div>
 
               {/* Main Image Carousel */}
-              <div className="flex-1 relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-400">
+              <div className="flex-1 relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px]  overflow-hidden bg-gray-400">
                 {/* TODO: Replace with actual carousel images */}
 
-                <Image
+                <img
                   src={imageSrc}
                   alt={slides[currentSlide]?.title || "Inside Our Work"}
-                  width={908}
+                  width={1000}
                   height={500}
                   className="w-full h-full object-cover"
                 />

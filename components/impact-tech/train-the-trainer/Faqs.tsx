@@ -39,7 +39,7 @@ const Faqs = () => {
   const { faqs, loading, error, hasFetched, fetchFaqs } = useFaqsStore();
 
   useEffect(() => {
-    fetchFaqs("Train the trainer");
+    fetchFaqs("Train The Trainer");
   }, [fetchFaqs]);
   return (
     <div className="bg-white h-fit w-full max-w-[1240px] rounded-10 mx-auto ">

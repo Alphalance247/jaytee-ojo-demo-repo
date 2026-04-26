@@ -39,7 +39,7 @@ const Faqs = () => {
   const { faqs, loading, error, fetchFaqs, hasFetched } = useFaqsStore();
 
   useEffect(() => {
-    fetchFaqs("Kids Coding");
+    fetchFaqs("Coding For Kids");
   }, []);
 
   return (

@@ -4,7 +4,7 @@ interface Testimonial {
     id: string;
     name: string;
     key: string
-    testimonial: string;
+    quote: string;
     photo: string;
     role: string;
     rating: number | null;

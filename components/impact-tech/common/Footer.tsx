@@ -5,8 +5,25 @@ import { FaXTwitter } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
-const socials = [FaXTwitter, RiInstagramFill, FaFacebookF, FaLinkedinIn];
-
+// const socials = [FaXTwitter, RiInstagramFill, FaFacebookF, FaLinkedinIn];
+const socials = [
+  {
+    url: "https://x.com/jayteeojofdn",
+    icon: <FaXTwitter />,
+  },
+  {
+    url: "https://www.instagram.com/jayteeojofnd?igsh=MWw4d3BmZW1hemw0",
+    icon: <RiInstagramFill />,
+  },
+  {
+    url: "https://www.facebook.com/share/1ADXdaVZck/",
+    icon: <FaFacebookF />,
+  },
+  {
+    url: "https://www.facebook.com/share/1ADXdaVZck/",
+    icon: <FaLinkedinIn />,
+  },
+];
 const Footer = () => {
   return (
     <div className="bg-[#F5F5F5] h-fit font-DMsans">
@@ -32,9 +49,11 @@ const Footer = () => {
         <div className="flex  justify-between items-start  md:items-center pt-6 p-7 md:pb-14 ">
           <div className="text-[#8B8C8E] text-sm">© 2023 Impact Tech</div>
           <div className="flex gap-2 md:gap-3">
-            {socials.map((Icon, index) => (
+            {socials.map((social, index) => (
               <SocialPill key={index}>
-                <Icon />
+                <a href={social.url} target="_blank" rel="noopener noreferrer">
+                  {social.icon}
+                </a>
               </SocialPill>
             ))}
           </div>

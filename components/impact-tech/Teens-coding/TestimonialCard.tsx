@@ -34,7 +34,7 @@ const TestimonialCard = ({
           {children}
         </div>
 
-        <div className="font-inter pt-6 w-full md:max-w-[520px] text-base font-[#1E1E1E] md:text-lg pb-10 h-fit">
+        <div className="font-inter pt-6 w-full md:max-w-[520px] text-base font-[#1E1E1E] md:text-lg pb-10 ">
           {testimonial}
         </div>
       </div>

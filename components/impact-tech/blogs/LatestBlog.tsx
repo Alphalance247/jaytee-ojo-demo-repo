@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useBlogsStore } from "@/store/impact-tech/blogs/OurImpactBlogsStore";
+import parse, { domToReact } from "html-react-parser";
 const LatestBlog = () => {
   const router = useRouter();
   const { blogs, loading, error, fetchBlogs } = useBlogsStore();
@@ -11,13 +12,27 @@ const LatestBlog = () => {
   }, [fetchBlogs]);
   const latestBlog = blogs[0];
   console.log(latestBlog);
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+  const stripHTML = (html?: unknown) => {
+    if (!html) return "";
+    return String(html)
+      .replace(/<[^>]+>/g, "")
+      .trim();
+  };
+  const formatHtmlDate = (html: string) => {
+    const safeHtml = String(html || "");
 
-    return date.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-    });
+    const clean = safeHtml
+      .replace(/<p>|<\/p>/g, "")
+      .replace(/<del>(\d{2})<\/del>/, "-$1-");
+
+    const date = new Date(clean);
+
+    return isNaN(date.getTime())
+      ? ""
+      : date.toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+        });
   };
   const modifiedBlog = [
     {
@@ -32,6 +47,13 @@ const LatestBlog = () => {
         "Technology is shaping every part of our world, from how we communicate to how we work and solve problems. Yet, many young students in underserved communities lack access to the skills and resources needed to participate in this digital future.",
     },
   ];
+  const getFirstTwoSentences = (text: string) => {
+    if (!text) return "";
+
+    const sentences = text.match(/[^.]+\.?/g) || [];
+
+    return sentences.slice(0, 2).join("").trim();
+  };
   return (
     <div className="bg-[#F5F5F5] w-full ">
       <div className="mx-auto w-full max-w-[1230px] py-10 md:pt-[98px] md:pb-[95px]">
@@ -70,7 +92,7 @@ const LatestBlog = () => {
             )} */}
         {/* {latestBlog.map((blog) => ( */}
         <Link
-          href={`/impact-tech/blogs/${latestBlog?.key || ""}`}
+          href={`/impact-tech/blogs/${latestBlog?.key}`}
           rel="noopener noreferrer"
         >
           <div className=" relative h-[662px] bg-[url(/assets/impact-tech/blogs/unsplash_XyZxxJI8g30.png)] bg-cover bg-no-repeat flex  items-center rounded-[12px]">
@@ -87,16 +109,16 @@ const LatestBlog = () => {
                         />
                       </div>
                       <div className="text-sm font-normal">
-                        {formatDate(latestBlog?.date)}
+                        {formatHtmlDate(latestBlog?.date)}
                       </div>
                     </div>
                     <div className="">
                       <ul className="flex  items-center gap-5 list-disc">
                         <li className="text-sm font-normal">
-                          {latestBlog?.minute_read} read
+                          {stripHTML(latestBlog?.minute_read) || ""} read
                         </li>
                         <li className="text-[13px]  italic font-light">
-                          {latestBlog?.tech_program} team
+                          {stripHTML(latestBlog?.tech_program) || ""} team
                         </li>
                       </ul>
                     </div>
@@ -104,9 +126,18 @@ const LatestBlog = () => {
                   <h3 className="font-grostek text-[24px] md:text-[40px] font-semibold leading-[100%]">
                     {latestBlog?.title}
                   </h3>
-                  <p className="text-base md:text-lg font-inter font-normal font-inter ">
-                    {latestBlog?.body}
-                  </p>
+                  <div className="text-base md:text-lg font-inter font-normal leading-[150%]">
+                    {getFirstTwoSentences(latestBlog?.body)}{" "}
+                    <span>
+                      <Link
+                        href={`/impact-tech/blogs/${latestBlog?.key}`}
+                        rel="noopener noreferrer"
+                        className="cursor-pointer"
+                      >
+                        Read More{" "}
+                      </Link>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

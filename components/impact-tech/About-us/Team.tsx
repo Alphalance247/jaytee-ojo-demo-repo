@@ -4,34 +4,34 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import TeamCard from "./TeamCard";
 const teamMembers = [
   {
-    photo: "/assets/impact-tech/Bg.png",
-    name: "taiwo ojo",
-    role: "product design",
+    photo: "/assets/impact-tech/about-us/DSC_3339.JPG",
+    name: "Omodele Oluwaseun John",
+    role: "Manager",
   },
   {
-    photo: "/assets/impact-tech/Bg.png",
-    name: "taiwo ojo",
-    role: "product design",
+    photo: "",
+    name: "Omotayo Temitope Olaoluwa",
+    role: "impact-Tech Team Leader",
   },
   {
-    photo: "/assets/impact-tech/Bg.png",
-    name: "taiwo ojo",
-    role: "product design",
+    photo: "",
+    name: "Nathaniel Victor",
+    role: "Volunteer",
   },
   {
-    photo: "/assets/impact-tech/Bg.png",
-    name: "taiwo ojo",
-    role: "product design",
+    photo: "/assets/impact-tech/about-us/IMG-20260401-WA0141.jpg.jpeg",
+    name: "Joy Queenesther Okorochukwu",
+    role: "Volunteer",
   },
   {
-    photo: "/assets/impact-tech/Bg.png",
-    name: "taiwo ojo",
-    role: "product design",
+    photo: "",
+    name: "Faniyi Oluwatobiloba Ayodeji",
+    role: "Volunteer",
   },
   {
-    photo: "/assets/impact-tech/Bg.png",
-    name: "taiwo ojo",
-    role: "product design",
+    photo: "/assets/impact-tech/about-us/ojo_Ayomide.jpeg",
+    name: "Ojo Oyeleke Ayomide",
+    role: "Volunteer",
   },
 ];
 const Team = () => {

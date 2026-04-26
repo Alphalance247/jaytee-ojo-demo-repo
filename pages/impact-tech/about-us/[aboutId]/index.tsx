@@ -7,6 +7,8 @@ import ProgramHighlights from "@/components/impact-tech/case-study/ProgramHighli
 import Testimonial from "@/components/impact-tech/case-study/Testimonial";
 import Image from "next/image";
 import FunfactCard from "@/components/impact-tech/case-study/FunFactCard";
+import parse, { domToReact } from "html-react-parser";
+
 import {
   useCaseStudyDetailsStore,
   CaseStudyStore,
@@ -54,6 +56,19 @@ export default function CaseStudy({
   // useEffect(() => {
   //   fetchCaseStudyDetails(caseStudyId);
   // }, [fetchCaseStudyDetails]);
+  const options = {
+    replace: (domNode: any) => {
+      if (domNode.name === "ul") {
+        return (
+          <ul className="list-disc ml-7">{domToReact(domNode.children)}</ul>
+        );
+      }
+
+      if (domNode.name === "li") {
+        return <li className="">{domToReact(domNode.children)}</li>;
+      }
+    },
+  };
   const renderRichText = (doc: any) => {
     if (!doc?.content) return null;
 
@@ -135,7 +150,7 @@ export default function CaseStudy({
         ) : (
           <>
             <Hero
-              imgUrl="/assets/impact-tech/case-study/teaching.jpg"
+              imgUrl={data.result.image}
               title={data.result.title}
               desc=" Empowering educators across Ekiti State with foundational web
               development skills to expand access to digital education."
@@ -153,10 +168,10 @@ export default function CaseStudy({
               ))}
             </Hero>
             <ProgramOverview
-              overview={data.result.program_overview}
-              challenge={data.result.the_challenge}
-              approach={data.result.our_approach}
-              impactOutcome={data.result.impact_outcomes}
+              overview={parse(data.result.program_overview)}
+              challenge={parse(data.result.the_challenge)}
+              approach={parse(data.result.our_approach, options)}
+              impactOutcome={parse(data.result.impact_outcomes)}
             >
               <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
                 {/* {funFacts.map((fact, index) => ( */}

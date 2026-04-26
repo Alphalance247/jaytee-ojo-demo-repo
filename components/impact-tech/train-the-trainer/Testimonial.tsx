@@ -80,7 +80,7 @@ const Testimonial = () => {
             <div className="text-black flex justify-center items-center h-[297px]">
               {error}
             </div>
-          ) : loading && testimonials.length == 0 ? (
+          ) : !loading && testimonials.length === 0 ? (
             <div className="text-black flex justify-center items-center h-[297px]">
               No testimonials available
             </div>

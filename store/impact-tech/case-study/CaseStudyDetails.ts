@@ -16,6 +16,7 @@ export interface CaseStudyStore {
     body: string | null;
     partners: string;
     year: string;
+    image: string;
     program_overview: string;
     our_approach: string;
     the_challenge: string;

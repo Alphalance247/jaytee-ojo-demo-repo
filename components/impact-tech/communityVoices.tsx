@@ -68,6 +68,7 @@ const CommunityVoices = () => {
 
   const currentTestimonial = testimonials[currentSlide];
   const rating = Math.floor(currentTestimonial?.rating ?? 0);
+  console.log(rating);
   console.log(currentTestimonial?.photo);
   return (
     <div className="w-full bg-white px-4 py-12 sm:py-16 md:py-20">
@@ -150,7 +151,7 @@ const CommunityVoices = () => {
 
               {/* Testimonial Text */}
               <p className="text-base sm:text-lg md:text-xl text-gray-800 mb-6 sm:mb-8 md:mb-10 leading-relaxed font-light">
-                {currentTestimonial.quote}
+                {`“I${currentTestimonial.quote}”`}
               </p>
 
               {/* User Info */}

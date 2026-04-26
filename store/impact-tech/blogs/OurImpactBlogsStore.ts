@@ -9,6 +9,10 @@ interface Blog {
     detailUrl: string,
     minute_read: string,
     tech_program: string,
+    bringing_coding_to_the_classroom: string,
+    real_impact_real_stories: string,
+    beyond_technical_skills: string,
+    looking_ahead: string
     date: string,
 }
 interface BlogsStore {

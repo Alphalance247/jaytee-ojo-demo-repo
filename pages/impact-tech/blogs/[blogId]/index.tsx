@@ -4,15 +4,20 @@ import BlogDetails from "@/components/impact-tech/blogs/BlogDetails";
 import BlogDetailsCard from "@/components/impact-tech/blogs/BlogDetailsCard";
 import BePartCard from "@/components/impact-tech/blogs/BePartCard";
 import { DocBody } from "@/store/impact-tech/case-study/CaseStudyStore";
+import parse, { domToReact } from "html-react-parser";
 // import { useBlogsStore } from "@/store/impact-tech/blogs/OurImpactBlogsStore";
 interface BlogDetailsProp {
   id: string;
   key: string;
   title: string;
-  body: DocBody;
+  body: string;
   minute_read: string;
   tech_program: string;
   date: string;
+  bringing_coding_to_the_classroom: string;
+  real_impact_real_stories: string;
+  beyond_technical_skills: string;
+  looking_ahead: string;
   attachments: [];
 }
 interface BlogDetails {
@@ -30,28 +35,52 @@ export default function FullBlog({
   // useEffect(() => {
   //   fetchBlogs();
   // }, [fetchBlogs]);
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-
-    return date.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-    });
+  const stripHTML = (html: string) => {
+    return html.replace(/<[^>]+>/g, "");
   };
-  const renderRichText = (doc: any) => {
-    if (!doc?.content) return null;
+  const formatHtmlDate = (html: any) => {
+    const safeHtml = String(html || "");
 
-    return doc.content.map((block: any, index: number) => {
-      if (block.type === "paragraph") {
+    const clean = safeHtml
+      .replace(/<p>|<\/p>/g, "")
+      .replace(/<del>(\d{2})<\/del>/, "-$1-");
+
+    const date = new Date(clean);
+
+    return isNaN(date.getTime())
+      ? ""
+      : date.toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+        });
+  };
+  // const renderRichText = (doc: any) => {
+  //   if (!doc?.content) return null;
+
+  //   return doc.content.map((block: any, index: number) => {
+  //     if (block.type === "paragraph") {
+  //       return (
+  //         <p key={index} className="mb-4">
+  //           {block.content?.map((child: any) => child.text).join("")}
+  //         </p>
+  //       );
+  //     }
+
+  //     return null;
+  //   });
+  // };
+  const options = {
+    replace: (domNode: any) => {
+      if (domNode.name === "ul") {
         return (
-          <p key={index} className="mb-4">
-            {block.content?.map((child: any) => child.text).join("")}
-          </p>
+          <ul className="list-disc ml-7">{domToReact(domNode.children)}</ul>
         );
       }
 
-      return null;
-    });
+      if (domNode.name === "li") {
+        return <li className="">{domToReact(domNode.children)}</li>;
+      }
+    },
   };
   return (
     <ImpactTechLayout>
@@ -68,7 +97,7 @@ export default function FullBlog({
           <BlogDetails
             imageUrl=""
             title={data.result.title}
-            date={formatDate(data.result.date)}
+            date={formatHtmlDate(data.result?.date)}
             time={data.result.minute_read}
             team={data.result.tech_program}
           >
@@ -76,7 +105,7 @@ export default function FullBlog({
               <BlogDetailsCard headingText="Intoduction" id="introduction">
                 {/* <p>{params.slug}</p> */}
                 <p className="font-inter text-base font-normal pt-5">
-                  {renderRichText(data.result.body)}
+                  {stripHTML(data.result.body)}
                   {/* Technology is shaping every part of our world, from how we
                   communicate to how we work and solve problems. Yet, many young
                   students in underserved communities lack access to the skills
@@ -87,21 +116,12 @@ export default function FullBlog({
                   technology. */}
                 </p>
               </BlogDetailsCard>
-              {/* <BlogDetailsCard
+              <BlogDetailsCard
                 headingText="Bringing Coding to the Classroom"
                 id="bring-coding"
               >
                 <p className="font-inter text-base font-normal pt-5">
-                  Our coding programs are designed to be practical, engaging,
-                  and accessible. Students learn foundational skills in HTML,
-                  CSS, and Python, enabling them to build their own websites and
-                  simple applications. Through our ICT Coding Club initiative,
-                  we have established coding clubs in over 10 secondary schools
-                  across Ekiti State. These clubs provide students with
-                  consistent exposure to technology, guided by trained
-                  instructors and mentors. Students are not only learning
-                  technical skills—they are learning how to think critically,
-                  solve problems, and express their creativity.
+                  {stripHTML(data.result.bringing_coding_to_the_classroom)}
                 </p>
               </BlogDetailsCard>
               <BlogDetailsCard
@@ -109,15 +129,7 @@ export default function FullBlog({
                 id="real-impact"
               >
                 <p className="font-inter text-base font-normal pt-5">
-                  One of our proudest moments was seeing a student from our ICT
-                  Coding Club present their HTML project at a state technology
-                  event organized by the Ministry of Innovation, Science and
-                  Digital Economy. Moments like these demonstrate the potential
-                  that exists when young people are given the right
-                  opportunities and support. Additionally, several graduates of
-                  our programs have gone on to become instructors themselves,
-                  teaching other students and multiplying the impact across
-                  communities.
+                  {stripHTML(data.result.real_impact_real_stories)}
                 </p>
               </BlogDetailsCard>
               <BlogDetailsCard
@@ -125,10 +137,9 @@ export default function FullBlog({
                 id="beyond-technical-skills"
               >
                 <p className="font-inter text-base font-normal pt-5">
-                  Our programs focus on more than just coding. Students also
-                  develop:{" "}
+                  {parse(data.result.beyond_technical_skills, options)}
                 </p>
-                <ul className="list-disc ml-6">
+                {/* <ul className="list-disc ml-6">
                   <li>Confidence in their abilities </li>
                   <li> Problem-solving skills </li>
                   <li>Team collaboration experience</li>
@@ -137,18 +148,13 @@ export default function FullBlog({
                 <p className="font-inter text-base font-normal ">
                   These skills prepare them not just for careers in tech, but
                   for success in any field they choose.
-                </p>
+                </p> */}
               </BlogDetailsCard>
               <BlogDetailsCard headingText="Looking Ahead" id="looking-ahead">
                 <p className="font-inter text-base font-normal pt-5">
-                  As technology continues to evolve, the need for digital skills
-                  will only grow. Impact Tech remains committed to expanding
-                  access to tech education, reaching more schools, and
-                  empowering more young people. We believe that the next
-                  generation of innovators, creators, and leaders can come from
-                  anywherewith the right support.
+                  {stripHTML(data.result.looking_ahead)}
                 </p>
-              </BlogDetailsCard> */}
+              </BlogDetailsCard>
               <div className="pt-6 md:pt-0">
                 <BePartCard />
               </div>
@@ -176,7 +182,25 @@ export async function getServerSideProps({
     const data = await res.json();
     console.log(data);
     console.log(params);
-    return { props: { data } };
+    const formattedDate = new Date(data.result.date).toLocaleDateString(
+      "en-US",
+      {
+        month: "short",
+        day: "numeric",
+        timeZone: "UTC", // ✅ important
+      },
+    );
+    return {
+      props: {
+        data: {
+          ...data,
+          result: {
+            ...data.result,
+            formattedDate,
+          },
+        },
+      },
+    };
   } catch (error) {
     return { props: { data: null, error: "Failed to fetch case study" } };
   }

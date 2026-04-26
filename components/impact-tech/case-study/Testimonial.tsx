@@ -95,7 +95,7 @@ const Testimonial = ({ testimonials }: { testimonials: Testimonial[] }) => {
                 return (
                   <div key={index} className="">
                     <TestimonialCard
-                      className="h-[268px] w-full"
+                      className="h-[324px] w-full"
                       photo={testimonial.ImageUrl}
                       testimonial={testimonial.text}
                     >

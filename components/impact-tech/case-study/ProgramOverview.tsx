@@ -12,7 +12,7 @@ const ProgramOverview = ({
   overview: React.ReactNode;
   challenge: React.ReactNode;
   approach: React.ReactNode;
-  impactOutcome: string;
+  impactOutcome: React.ReactNode;
   // trainingCourse: string;
   children: React.ReactNode;
 }) => {
@@ -29,8 +29,8 @@ const ProgramOverview = ({
         </div>
       </div>
       <div className="bg-[#2A7445] w-full ">
-        <div className="w-full md:max-w-[1239px] mx-auto px-4 md:px-0 ">
-          <div className="py-10 md:py-[91px] md:w-[983px] w-full flex flex-col gap-[38px]">
+        <div className="w-full md:max-w-[1235px] mx-auto px-4 md:px-0 ">
+          <div className="py-10 md:py-[91px] w-full flex flex-col gap-[38px]">
             <ProgramOverviewCard title="The Challenge">
               <p className="text-lg md:text-xl font-normal pt-8 md:pt-[46px] pr-6 md:pr-[52px] whitespace-pre-line ">
                 {challenge}
@@ -45,11 +45,11 @@ const ProgramOverview = ({
                 The program included: */}
               </p>
               {/* {approach} */}
-              <p className="text-lg md:text-xl font-normal">
+              {/* <p className="text-lg md:text-xl font-normal">
                 {" "}
                 Educators actively participated in building and styling web
                 pages using CSS.
-              </p>
+              </p> */}
             </ProgramOverviewCard>
           </div>
         </div>

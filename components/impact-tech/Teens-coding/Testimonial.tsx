@@ -4,36 +4,36 @@ import SliderCarousel from "../common/SliderCarousel";
 import Slider from "react-slick";
 import { useTestimonialStore } from "@/store/impact-tech/teens-coding/TestimonialStore";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
-const testimonials = [
-  {
-    name: "John Doe",
-    testimonial:
-      "Their attention to detail and creative design approach transformed our website into a visually stunning and highly functional platform. We’ve seen a 30% increase in traffic since the relaunch. I highly recommend them to anyone seeking professional web design services!",
-    status: "student",
-    photo: "",
-  },
-  {
-    name: "Jane Smith",
-    testimonial:
-      "The team's expertise in web development helped us create a seamless user experience that our customers love. Their attention to detail and professionalism made the entire process smooth and efficient.",
-    status: "student",
-    photo: "",
-  },
-  {
-    name: "Michael Johnson",
-    testimonial:
-      "I was impressed by their ability to understand our vision and translate it into a functional, visually appealing website. The results exceeded my expectations!",
-    status: "student",
-    photo: "",
-  },
-  {
-    name: "Sarah Williams",
-    testimonial:
-      "Working with this team was a game-changer for our business. Their innovative approach and dedication to quality helped us stand out in a competitive market.",
-    status: "student",
-    photo: "",
-  },
-];
+// const testimonials = [
+//   {
+//     name: "John Doe",
+//     testimonial:
+//       "Their attention to detail and creative design approach transformed our website into a visually stunning and highly functional platform. We’ve seen a 30% increase in traffic since the relaunch. I highly recommend them to anyone seeking professional web design services!",
+//     status: "student",
+//     photo: "",
+//   },
+//   {
+//     name: "Jane Smith",
+//     testimonial:
+//       "The team's expertise in web development helped us create a seamless user experience that our customers love. Their attention to detail and professionalism made the entire process smooth and efficient.",
+//     status: "student",
+//     photo: "",
+//   },
+//   {
+//     name: "Michael Johnson",
+//     testimonial:
+//       "I was impressed by their ability to understand our vision and translate it into a functional, visually appealing website. The results exceeded my expectations!",
+//     status: "student",
+//     photo: "",
+//   },
+//   {
+//     name: "Sarah Williams",
+//     testimonial:
+//       "Working with this team was a game-changer for our business. Their innovative approach and dedication to quality helped us stand out in a competitive market.",
+//     status: "student",
+//     photo: "",
+//   },
+// ];
 
 const Testimonial = () => {
   const sliderRef = useRef<Slider | null>(null);
@@ -83,7 +83,7 @@ const Testimonial = () => {
                   <TestimonialCard
                     className="h-[324px]"
                     photo={testimonial.photo}
-                    testimonial={testimonial.testimonial}
+                    testimonial={testimonial.quote}
                   >
                     <div>
                       <div className=" text-xl font-extrabold text-[#2A7445] capitalize  font-manrope">
