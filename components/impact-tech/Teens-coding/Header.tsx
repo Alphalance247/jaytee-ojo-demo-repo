@@ -139,7 +139,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {mobileMenu && (
-        <div className="md:hidden bg-white shadow-lg px-6 pb-6">
+        <div className="md:hidden bg-white shadow-lg px-6 pb-6 z-50">
           <div className="flex flex-col gap-6 pt-6">
             {links.map((link) => (
               <div key={link.text}>

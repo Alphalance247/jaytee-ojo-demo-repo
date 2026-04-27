@@ -14,7 +14,7 @@ const TestimonialCard = ({
 }) => {
   return (
     <div
-      className={`bg-white w-full rounded-[12px] ${className}`}
+      className={`bg-white w-full md:w-[600px] rounded-[12px] ${className}`}
       style={{ boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.05)" }}
     >
       <div className=" p-6 md:p-10 ">

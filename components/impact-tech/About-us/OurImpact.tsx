@@ -72,7 +72,7 @@ const OurImpact = () => {
                 ${index % 2 === 1 ? " flex gap-6 md:gap-[112px] md:flex-row-reverse" : "flex flex-col md:flex-row gap-6 md:gap-[112px]"}
               `}
                   index={index}
-                  projectDesc={impact.title}
+                  projectDesc={impact.description}
                   projectSponsor={impact.partners}
                   projectTitle={impact.title}
                   projectImage={`/assets/impact-tech/about-us/maleStudent.png`}

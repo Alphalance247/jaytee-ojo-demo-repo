@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 bg-[#68D5857A] h-[220px] md:h-[460px]" />
       <div className="absolute inset-0 h-[220px] md:h-[460px] bg-[#2A744566] z-10" />
       <div className="bg-[#00000033] absolute inset-0 h-[220px] md:h-[460px] w-full z-20"></div>
-      <div className="z-50 absoulte text-white text-center font-inter md:px-0 px-6 w-full max-w-[667px] mx-auto">
+      <div className="z-30 absoulte text-white text-center font-inter md:px-0 px-6 w-full max-w-[667px] mx-auto">
         <h1 className="font-extrabold text-[32px] md:text-[64px] leading-[100%] md:leading-[72px]">
           Partner With Impact Tech
         </h1>

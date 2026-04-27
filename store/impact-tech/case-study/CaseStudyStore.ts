@@ -10,6 +10,7 @@ export interface CaseStudy {
     key: string;
     title: string;
     body: DocBody;
+    description: string;
     attachments: Attachment[];
     detailUrl: string;
     partners: string;

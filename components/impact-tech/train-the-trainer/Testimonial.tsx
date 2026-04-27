@@ -94,9 +94,9 @@ const Testimonial = () => {
                 return (
                   <div key={index} className="flex ">
                     <TestimonialCard
-                      className="h-[268px]"
+                      className="h-[324px]"
                       photo={testimonial.photo}
-                      testimonial={testimonial.testimonial}
+                      testimonial={testimonial.quote}
                     >
                       <div className=" text-xl font-extrabold text-[#2A7445] capitalize my-6 font-manrope">
                         {testimonial.name}

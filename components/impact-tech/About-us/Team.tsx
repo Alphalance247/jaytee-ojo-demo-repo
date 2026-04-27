@@ -14,7 +14,7 @@ const teamMembers = [
     role: "impact-Tech Team Leader",
   },
   {
-    photo: "",
+    photo: "/assets/impact-tech/about-us/nathaniel_victor.jpeg",
     name: "Nathaniel Victor",
     role: "Volunteer",
   },
