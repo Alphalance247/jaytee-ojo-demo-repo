@@ -37,7 +37,7 @@ const Hero = ({
             <img
               src={imgUrl}
               alt="csae study image"
-              className="w-full h-full object-cover md:rounded-tr-none md:rounded-br-none rounded-[32px] "
+              className="w-full h-full md:h-[666px] object-cover md:rounded-tr-none md:rounded-br-none rounded-[32px] "
             />
             <div className="absolute inset-0 bg-[#2A744566] h-full w-full md:rounded-tr-none md:rounded-br-none rounded-[32px] "></div>
           </div>

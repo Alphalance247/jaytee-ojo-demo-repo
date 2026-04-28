@@ -1,5 +1,19 @@
 import { create } from "zustand";
 import axios, { AxiosError } from "axios";
+import { DocBody } from "../case-study/CaseStudyStore";
+
+
+interface Content {
+    type: string,
+    text: string
+}
+interface ButtonLink {
+    type: string,
+    version: number,
+    content: [
+        { type: string, content: Content[] }
+    ]
+}
 interface Announcement {
     id: string;
     title: string;
@@ -15,7 +29,8 @@ interface Announcement {
             proxyUrl: string,
         }
     ],
-    date: string
+    date: string,
+    button_link: ButtonLink
 }
 
 interface AnnouncementStore {

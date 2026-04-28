@@ -11,6 +11,7 @@ export interface CaseStudy {
     title: string;
     body: DocBody;
     description: string;
+    cover_image: Attachment
     attachments: Attachment[];
     detailUrl: string;
     partners: string;

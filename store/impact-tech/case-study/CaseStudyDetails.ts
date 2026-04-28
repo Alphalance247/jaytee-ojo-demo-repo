@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import axios, { AxiosError } from "axios";
 import { DocBody } from "./CaseStudyStore";
+import { Attachment } from "./CaseStudyStore";
 interface ProgramHighlights {
     id: string;
     filename: string,
@@ -8,6 +9,10 @@ interface ProgramHighlights {
     size: string,
     proxyUrl: string
 
+}
+interface FunFact {
+    impactValue: string;
+    text: string
 }
 export interface CaseStudyStore {
     id: string;
@@ -21,6 +26,8 @@ export interface CaseStudyStore {
     our_approach: string;
     the_challenge: string;
     impact_outcomes: string;
+    fun_facts: FunFact[]
+    cover_image: Attachment
     // program_overview: DocBody;
     // our_approach: DocBody;
     // the_challenge: DocBody;

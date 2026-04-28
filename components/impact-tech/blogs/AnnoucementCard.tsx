@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
@@ -8,12 +9,14 @@ const AnnoucementCard = ({
   content,
   date,
   btnText,
+  linkUrl,
 }: {
   title: string;
   content: string;
   date: string;
   btnText: string;
   imageUrl: string;
+  linkUrl: string;
 }) => {
   return (
     <div className="bg-[#FFFFFF] drop-shadow-[#0000000A] w-full md:max-w-[1256px] md:h-[354px] flex md:flex-row flex-col items-center gap-10 md:gap-[88px] rounded-[32px] p-6 md:p-8">
@@ -46,10 +49,13 @@ const AnnoucementCard = ({
           </p>
         </div>
         <div className="flex gap-2 items-center">
-          <button className="bg-[#E60303] hover:bg-red-700 flex items-center justify-center h-12 w-[185px] rounded-[7px] text-[#FFFFFF]">
+          <Link
+            href={linkUrl}
+            className="bg-[#E60303] hover:bg-red-700 flex items-center justify-center h-12 w-[185px] rounded-[7px] text-[#FFFFFF] cursor-pointer"
+          >
             {btnText}
             <IoIosArrowRoundForward className="text-white h-6 w-6 pl-1" />
-          </button>
+          </Link>
           <div className="border-l border-[#CDD2D8] w-8 h-8"></div>
         </div>
       </div>

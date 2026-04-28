@@ -150,7 +150,7 @@ export default function CaseStudy({
         ) : (
           <>
             <Hero
-              imgUrl={data.result.image}
+              imgUrl={data.result.cover_image.proxyUrl}
               title={data.result.title}
               desc=" Empowering educators across Ekiti State with foundational web
               development skills to expand access to digital education."
@@ -174,19 +174,14 @@ export default function CaseStudy({
               impactOutcome={parse(data.result.impact_outcomes)}
             >
               <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
-                {/* {funFacts.map((fact, index) => ( */}
-                {renderRichText(data.result.impact_outcomes) && (
-                  <FunfactCard>
+                {data.result.fun_facts.map((fact, index) => (
+                  <FunfactCard key={index}>
                     <h5 className="text-[40px] font-bold">
-                      {/* {fact.impactValue} */}
+                      {fact.impactValue}
                     </h5>
-                    <p className="text-sm">
-                      {renderRichText(data.result.impact_outcomes)}
-                    </p>
+                    <p className="text-sm">{fact.text}</p>
                   </FunfactCard>
-                )}
-
-                {/* ))} */}
+                ))}
               </div>
             </ProgramOverview>
             <ProgramHighlights programs={programHighlights} />

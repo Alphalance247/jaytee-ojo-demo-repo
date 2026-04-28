@@ -18,6 +18,9 @@ const ImpactProject = ({
   className: string;
   index: number;
 }) => {
+  const stripHTML = (html: string) => {
+    return html.replace(/<[^>]+>/g, "");
+  };
   return (
     <div className=" w-full md:max-w-[1227px] mx-auto px-6 md:px-0 py-10">
       <div
@@ -43,7 +46,7 @@ const ImpactProject = ({
             </div>
           </div>
           <div className="text-[#061C3D] font-inter text-base">
-            {projectDesc}
+            {stripHTML(projectDesc)}
           </div>
           <Button
             text="View Case Study"

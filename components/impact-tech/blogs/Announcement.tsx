@@ -61,6 +61,7 @@ const Announcement = () => {
                   title={announcement.title}
                   content={announcement.body}
                   btnText="Apply Now"
+                  linkUrl={announcement.button_link.content[0].content[0].text}
                   imageUrl={
                     announcement?.attachments[0]?.proxyUrl ||
                     "/assets/impact-tech/blogs/open1.jpg "

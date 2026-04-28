@@ -75,7 +75,7 @@ const OurImpact = () => {
                   projectDesc={impact.description}
                   projectSponsor={impact.partners}
                   projectTitle={impact.title}
-                  projectImage={`/assets/impact-tech/about-us/maleStudent.png`}
+                  projectImage={impact.cover_image.proxyUrl}
                 />
               </div>
             </Link>
