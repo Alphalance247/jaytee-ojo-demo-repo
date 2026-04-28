@@ -19,6 +19,7 @@ interface BlogDetailsProp {
   beyond_technical_skills: string;
   looking_ahead: string;
   attachments: [];
+  // detailUrl: string;
 }
 interface BlogDetails {
   result: BlogDetailsProp;
@@ -35,13 +36,11 @@ export default function FullBlog({
   // useEffect(() => {
   //   fetchBlogs();
   // }, [fetchBlogs]);
-  const stripHTML = (html: string) => {
-    return html.replace(/<[^>]+>/g, "");
+  const stripHTML = (html: any) => {
+    return String(html ?? "").replace(/<[^>]+>/g, "");
   };
   const formatHtmlDate = (html: any) => {
-    const safeHtml = String(html || "");
-
-    const clean = safeHtml
+    const clean = String(html ?? "")
       .replace(/<p>|<\/p>/g, "")
       .replace(/<del>(\d{2})<\/del>/, "-$1-");
 
@@ -80,7 +79,14 @@ export default function FullBlog({
       if (domNode.name === "li") {
         return <li className="">{domToReact(domNode.children)}</li>;
       }
+      if (domNode.name === "p") {
+        return <p className="">{domToReact(domNode.children)}</p>;
+      }
     },
+  };
+  const safeParse = (html: any, options?: any) => {
+    if (!html || typeof html !== "string") return null;
+    return parse(html, options);
   };
   return (
     <ImpactTechLayout>
@@ -137,7 +143,7 @@ export default function FullBlog({
                 id="beyond-technical-skills"
               >
                 <p className="font-inter text-base font-normal pt-5">
-                  {parse(data.result.beyond_technical_skills, options)}
+                  {safeParse(data.result.beyond_technical_skills, options)}
                 </p>
                 {/* <ul className="list-disc ml-6">
                   <li>Confidence in their abilities </li>

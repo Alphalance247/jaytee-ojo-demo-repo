@@ -69,6 +69,10 @@ export default function CaseStudy({
       }
     },
   };
+  const safeParse = (html: any, options?: any) => {
+    if (!html || typeof html !== "string") return null;
+    return parse(html, options);
+  };
   const renderRichText = (doc: any) => {
     if (!doc?.content) return null;
 
@@ -168,10 +172,10 @@ export default function CaseStudy({
               ))}
             </Hero>
             <ProgramOverview
-              overview={parse(data.result.program_overview)}
-              challenge={parse(data.result.the_challenge)}
-              approach={parse(data.result.our_approach, options)}
-              impactOutcome={parse(data.result.impact_outcomes)}
+              overview={safeParse(data.result.program_overview)}
+              challenge={safeParse(data.result.the_challenge)}
+              approach={safeParse(data.result.our_approach, options)}
+              impactOutcome={safeParse(data.result.impact_outcomes)}
             >
               <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
                 {data.result.fun_facts.map((fact, index) => (

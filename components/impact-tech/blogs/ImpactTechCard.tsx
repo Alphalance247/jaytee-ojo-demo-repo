@@ -24,7 +24,7 @@ const ImpactTechCard = ({
           className="w-[396px] h-[312px] rounded-t-[16px] object-cover"
         />
         <div className="pl-4 md:pl-8">
-          <p className="text-[#000000] text-sm font-normal">{time}</p>
+          <p className="text-[#000000] text-sm font-normal">{time} read</p>
           <p className="text-[#2A2A2A] text-lg font-medium">{title}</p>
         </div>
         <div className="flex gap-[5px] items-center pl-4 md:pl-8">
