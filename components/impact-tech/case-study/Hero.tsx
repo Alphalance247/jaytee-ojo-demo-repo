@@ -14,11 +14,11 @@ const Hero = ({
 }) => {
   return (
     <div className="w-full">
-      <div className="flex md:flex-row flex-col gap-y-6 items-center h-full md:h-[873px] md:px-0 px-6 md:pt-0 pt-6  ">
-        <div className="w-full md:w-1/2">
-          <div className="pl-0 md:pl-[100px] w-full md:max-w-[648px] mx-auto flex flex-col gap-8 md:gap-[44px]">
+      <div className="flex md:flex-row flex-col gap-[26px] items-center h-full md:h-[873px] md:px-0 px-6 md:pt-0 pt-6  ">
+        <div className="w-full md:w-1/2  ">
+          <div className="pl-0 md:pl-[120px] w-full md:max-w-[648px] mx-auto  flex flex-col gap-8 md:gap-[44px]">
             <div>
-              <h1 className="font-inter font-bold text-[36px] md:text-[64px] leading-normal md:leading-[80px] text-[#061C3D]">
+              <h1 className="font-inter font-bold text-[36px] md:text-[64px] leading-normal md:leading-[80px] text-[#061C3D] w-full md:w-[539px]">
                 {title}
               </h1>
             </div>
@@ -37,7 +37,7 @@ const Hero = ({
             <img
               src={imgUrl}
               alt="csae study image"
-              className="w-full h-full md:h-[666px] object-cover md:rounded-tr-none md:rounded-br-none rounded-[32px] "
+              className="w-full md:w-[760px] h-full md:h-[666px] object-cover md:rounded-tr-none md:rounded-br-none rounded-[32px] "
             />
             <div className="absolute inset-0 bg-[#2A744566] h-full w-full md:rounded-tr-none md:rounded-br-none rounded-[32px] "></div>
           </div>

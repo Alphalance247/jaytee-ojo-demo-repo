@@ -1,11 +1,19 @@
 import { create } from "zustand";
 import axios, { AxiosError } from "axios";
+
+interface Attachment {
+    id: string,
+    filename: string,
+    mimeType: string,
+    size: number,
+    proxyUrl: string
+}
 interface Blog {
     id: string,
     key: string,
     title: string,
     body: string,
-    attachments: [],
+    attachments: Attachment[],
     detailUrl: string,
     minute_read: string,
     tech_program: string,

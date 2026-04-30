@@ -73,13 +73,13 @@ const MoreFromImpactTech = () => {
           <div className="grid md:grid-cols-3 grid-cols-1 gap-x-6 gap-6 md:gap-y-[78px] md:px-0 px-6">
             {loading ? (
               <div className="flex justify-center items-center h-full my-6">
-                <LoadingState className="h-[400px] mx-[100px]" />
+                <LoadingState className="h-[400px]" />
               </div>
             ) : error ? (
               <div className="text-center text-red-500 flex justify-center items-center">
                 {error}
               </div>
-            ) : !loading && ourImpactBlogs.length === 0 ? (
+            ) : !loading && !ourImpactBlogs ? (
               <div className="flex justify-center items-center h-full text-[#050505] text-lg">
                 Our impact blog is not available
               </div>
@@ -93,7 +93,7 @@ const MoreFromImpactTech = () => {
                   <ImpactTechCard
                     time={blog.minute_read}
                     title={blog.title}
-                    imageUrl={`/assets/impact-tech/blogs/students.png`}
+                    imageUrl={blog.attachments[0].proxyUrl}
                     date={blog.date}
                   />
                 </Link>

@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useBlogsStore } from "@/store/impact-tech/blogs/OurImpactBlogsStore";
 import parse, { domToReact } from "html-react-parser";
+import LoadingState from "../common/LoadingState";
 const LatestBlog = () => {
   const router = useRouter();
   const { blogs, loading, error, fetchBlogs } = useBlogsStore();
@@ -65,85 +66,67 @@ const LatestBlog = () => {
             </h2>
           </div>
         </div>
-        {/* {loading ? (
-              <div className="flex justify-center items-center h-full my-6">
-                <LoadingState className="h-[400px] mx-[100px]" />
-              </div>
-            ) : error ? (
-              <div className="text-center text-red-500 flex justify-center items-center">
-                {error}
-              </div>
-            ) : loading && latestBlog.length === 0 ? (
-              <div className="flex justify-center items-center h-full text-[#050505] text-lg">
-                Latest blog not available
-              </div>
-            ) : (
-              
-              announcements.map((announcement, index) => (
-                <AnnoucementCard
-                  key={announcement.id}
-                  date={announcement.date}
-                  title={announcement.title}
-                  content={announcement.text}
-                  btnText={announcement.btnText}
-                  imageUrl={announcement.imageUrl}
-                />
-              ))
-            )} */}
-        {/* {latestBlog.map((blog) => ( */}
-        {/* <Link
-          href={`/impact-tech/blogs/${latestBlog?.key}`}
-          rel="noopener noreferrer"
-        > */}
-        <div className=" relative h-[662px] bg-[url(/assets/impact-tech/blogs/unsplash_XyZxxJI8g30.png)] bg-cover bg-no-repeat flex  items-center rounded-[12px]">
-          <div className="absolute bottom-16 md:bottom-[31px] h-fit md:h-[324px] bg-[#FFFFFF1A] w-full md:w-[1152px] backdrop-blur-[35px] rounded-[20px] left-0 md:left-[31.7px]">
-            <div className="px-6 md:pl-[65px] py-10 md:py-[39px]">
-              <div className="text-white w-full md:max-w-[860px] flex flex-col gap-4 ">
-                <div className="flex gap-6 font-inter items-center">
-                  <div className="flex gap-1 items-center ">
-                    <div>
-                      <img
-                        src={`/assets/impact-tech/blogs/calendar.png`}
-                        alt="calendr icon"
-                        className="w-6 h-6"
-                      />
+        {loading ? (
+          <div className="flex justify-center items-center h-full my-6">
+            <LoadingState className="h-[400px] mx-[100px]" />
+          </div>
+        ) : error ? (
+          <div className="text-center text-red-500 flex justify-center items-center">
+            {error}
+          </div>
+        ) : !loading && !latestBlog ? (
+          <div className="flex justify-center items-center h-full text-[#050505] text-lg">
+            Latest blog not available
+          </div>
+        ) : (
+          <div className=" relative h-[662px] bg-[url(/assets/impact-tech/blogs/unsplash_XyZxxJI8g30.png)] bg-cover bg-no-repeat flex  items-center rounded-[12px]">
+            <div className="absolute bottom-16 md:bottom-[31px] h-fit md:h-[324px] bg-[#FFFFFF1A] w-full md:w-[1152px] backdrop-blur-[35px] rounded-[20px] left-0 md:left-[31.7px]">
+              <div className="px-6 md:pl-[65px] py-10 md:py-[39px]">
+                <div className="text-white w-full md:max-w-[860px] flex flex-col gap-4 ">
+                  <div className="flex gap-6 font-inter items-center">
+                    <div className="flex gap-1 items-center ">
+                      <div>
+                        <img
+                          src={`/assets/impact-tech/blogs/calendar.png`}
+                          alt="calendr icon"
+                          className="w-6 h-6"
+                        />
+                      </div>
+                      <div className="text-sm font-normal">
+                        {formatHtmlDate(latestBlog?.date)}
+                      </div>
                     </div>
-                    <div className="text-sm font-normal">
-                      {formatHtmlDate(latestBlog?.date)}
+                    <div className="">
+                      <ul className="flex  items-center gap-5 list-disc">
+                        <li className="text-sm font-normal">
+                          {stripHTML(latestBlog?.minute_read) || ""} read
+                        </li>
+                        <li className="text-[13px]  italic font-light">
+                          {stripHTML(latestBlog?.tech_program) || ""} team
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                  <div className="">
-                    <ul className="flex  items-center gap-5 list-disc">
-                      <li className="text-sm font-normal">
-                        {stripHTML(latestBlog?.minute_read) || ""} read
-                      </li>
-                      <li className="text-[13px]  italic font-light">
-                        {stripHTML(latestBlog?.tech_program) || ""} team
-                      </li>
-                    </ul>
+                  <h3 className="font-grostek text-[24px] md:text-[40px] font-semibold leading-[100%]">
+                    {latestBlog?.title}
+                  </h3>
+                  <div className="text-base md:text-lg font-inter font-normal leading-[150%]">
+                    {getFirstTwoSentences(latestBlog?.body)}{" "}
+                    <span>
+                      <Link
+                        href={`/impact-tech/blogs/${latestBlog?.key}`}
+                        rel="noopener noreferrer"
+                        className="cursor-pointer"
+                      >
+                        Read More{" "}
+                      </Link>
+                    </span>
                   </div>
-                </div>
-                <h3 className="font-grostek text-[24px] md:text-[40px] font-semibold leading-[100%]">
-                  {latestBlog?.title}
-                </h3>
-                <div className="text-base md:text-lg font-inter font-normal leading-[150%]">
-                  {getFirstTwoSentences(latestBlog?.body)}{" "}
-                  <span>
-                    <Link
-                      href={`/impact-tech/blogs/${latestBlog?.key}`}
-                      rel="noopener noreferrer"
-                      className="cursor-pointer"
-                    >
-                      Read More{" "}
-                    </Link>
-                  </span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        {/* </Link> */}
-        {/* ))} */}
+        )}
       </div>
     </div>
   );
